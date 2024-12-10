@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+/* @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"); */
 
 /* Import Vendor CSS */
 *,
@@ -290,12 +290,12 @@ body {
 }
 
 /* colors */
-.tl-blue {
-  color: #4374c9 !important;
+.tl-red {
+  color: #fa2828 !important;
 }
 
 .tl-bk {
-  color: #1D1D1D !important;
+  color: #242428 !important;
 }
 
 .gray-01 {
