@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>위탁판매내역 상세 - NHN LINKSAM</title>
+
+    <link rel="stylesheet" href="../../../css/lnb.css" />
+    <link rel="stylesheet" href="../../../css/common.css" />
+    <link rel="stylesheet" href="../../../css/reset.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    
+    <script>
+      $(document).ready( function() {
+        $("#lnb").load("../../../html/lnb.html", function() {
+        });
+      });
+    </script>
+  
+  </head>
+  <body>
+    <div id="app">
+      <div id="wrap" class="clear">
+      <!-- lnb -->
+      <div id="lnb" class="lnb"></div>
+        <!-- contents -->
+        <div id="contents" class="contents-area">
+          <div id="top-bar" class="top-bar-area">
+            <!-- 탭 -->
+            <div class="common-tab type-capsule">
+              <div class="common-tab-area">
+                <ul class="common-tab-list">
+                  <li class="common-tab-item">
+                    <!-- 선택된 tab button에 aria-selected="true", 그 외 aria-selected="false" -->
+                    <button type="button" class="common-tab-btn" aria-selected="true">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close-selected ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="table" class="table-area">
+            <!-- 위탁판매내역 -->
+            <div id="con-list-top">
+              <h1 class="t-20 t-medium mb-40">위탁판매내역</h1>
+              <!-- 기타조정내역 테이블 -->
+              <table class="table-b04">
+                <colgroup>
+                  <col style="width: 180px"><col>
+                  <col style="width: 180px"><col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th><div class="th t-left">파트너명</div></th>
+                    <td><div class="td-form t-left">(주)티모넷</div></td>
+                    <th><div class="th t-left">사업자번호</div></th>
+                    <td><div class="td-form t-left">120-81-11223</div></td>
+                  </tr>
+                  <tr>
+                    <th><div class="th t-left">계약명</div></th>
+                    <td><div class="td-form t-left">티모넷_빛의시어터:구스타프클림트</div></td>
+                    <th><div class="th t-left">담당계약자</div></th>
+                    <td><div class="td-form t-left">박*호</div></td>
+                  </tr>
+                  <tr>
+                    <th><div class="th t-left">상품명</div></th>
+                    <td><div class="td-form t-left">[8월 오픈특가할인] 빛의시어터 : 구스타프 클림트 (32549)</div></td>
+                    <th><div class="th t-left">관람기간</div></th>
+                    <td><div class="td-form t-left">2022.07.01~2022.07.31</div></td>
+                  </tr>
+                  <tr>
+                    <th><div class="th t-left">정산유형</div></th>
+                    <td><div class="td-form t-left t-bold">영수</div></td>
+                    <th><div class="th t-left">정산주기</div></th>
+                    <td><div class="td-form t-left">매월</div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- 위탁판매수수료 -->
+            <div id="fee" class="mt-40">
+              <h2 class="t-18 t-medium mb-12">위탁판매수수료</h2>
+              <!-- 위탁판매수수료 테이블 -->
+              <table class="table-b01">
+                <thead>
+                  <tr>
+                    <th><div class="th">위탁판매채널</div></th>
+                    <th><div class="th">판매 매수</div></th>
+                    <th><div class="th">판매 금액</div></th>
+                    <th><div class="th">수수료율</div></th>
+                    <th><div class="th">판매 수수료</div></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th><div class="th t-left">티켓몬스터</div></th>
+                    <td><div class="td t-right">00,000매</div></td>
+                    <td><div class="td t-right">000,000,000원</div></td>
+                    <td><div class="td t-right">5.50%</div></td>
+                    <td><div class="td t-right">000,000,000원</div></td>
+                  </tr>
+                  <tr>
+                    <th><div class="th t-left">쿠팡</div></th>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                  </tr>
+                  <tr>
+                    <th><div class="th t-left">야놀자</div></th>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                  </tr>
+                  <tr>
+                    <th><div class="th t-left">합계</div></th>
+                    <td><div class="td t-right t-bold">00,000매</div></td>
+                    <td><div class="td t-right t-bold">000,000,000원</div></td>
+                    <td><div class="td t-right">-</div></td>
+                    <td><div class="td t-right t-bold">000,000,000원</div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- 위탁판매내역 -->
+            <div id="list" class="mt-40">
+              <h2 class="t-18 t-medium mb-12">위탁판매내역</h2>
+              <!-- 위탁판매내역 테이블 : 스크롤 -->
+              <div class="table-scroll">
+                <table class="table-b01 scroll-table">
+                  <colgroup>
+                    <col style="width: 50px"><col style="width: 100px">
+                    <col style="width: 80px"><col style="width: 80px">
+                    <col style="width: 100px"><col style="width: 100px">
+                    <col style="width: 100px"><col style="width: 100px">
+                    <col style="width: 400px"><col style="width: 80px">
+                    <col style="width: 80px">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th><div class="th">NO</div></th>
+                      <th><div class="th">정산일</div></th>
+                      <th><div class="th">정산차수</div></th>
+                      <th><div class="th">상태</div></th>
+                      <th><div class="th">채널</div></th>
+                      <th><div class="th">위탁판매매수</div></th>
+                      <th><div class="th">위탁판매금액</div></th>
+                      <th><div class="th">위탁판매수수료</div></th>
+                      <th><div class="th">내역관리</div></th>
+                      <th><div class="th">등록자</div></th>
+                      <th><div class="th">등록일시</div></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><div class="td">1</div></td>
+                      <td><div class="td">2022.07.01</div></td>
+                      <td><div class="td">1</div></td>
+                      <td><div class="td">정산확정</div></td>
+                      <td><div class="td">티켓몬스터</div></td>
+                      <td><div class="td t-right">000,000매</div></td>
+                      <td><div class="td t-right">00,000,000원</div></td>
+                      <td><div class="td t-right">00,000,000원</div></td>
+                      <td>
+                        <div class="td t-left">
+                          <a class="t-underline cu-p">8월_구스타프클림트_티몬.xlsx</a>
+                        </div>
+                      </td>
+                      <td><div class="td">신*정</div></td>
+                      <td><div class="td">2022.09.07 23:59</div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="td">2</div></td>
+                      <td><div class="td">2022.08.01</div></td>
+                      <td><div class="td">1</div></td>
+                      <td><div class="td">확정요청</div></td>
+                      <td><div class="td">위메프</div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td>
+                        <div class="td t-left">
+                          <a class="t-underline cu-p"></a>
+                        </div>
+                      </td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="td">3</div></td>
+                      <td><div class="td">2022.08.01</div></td>
+                      <td><div class="td">1</div></td>
+                      <td><div class="td">확정요청</div></td>
+                      <td><div class="td">쿠팡</div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td>
+                        <div class="td t-left">
+                          <a class="t-underline cu-p"></a>
+                        </div>
+                      </td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="td">4</div></td>
+                      <td><div class="td">2022.09.01</div></td>
+                      <td><div class="td">2</div></td>
+                      <td><div class="td">정산요청</div></td>
+                      <td><div class="td">티켓몬스터</div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td>
+                        <div class="td t-left">
+                          <a class="t-underline cu-p"></a>
+                        </div>
+                      </td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td>
+                        <div class="td t-left">
+                          <a class="t-underline cu-p"></a>
+                        </div>
+                      </td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td>
+                        <div class="td t-left">
+                          <a class="t-underline cu-p"></a>
+                        </div>
+                      </td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td>
+                        <div class="td t-left">
+                          <a class="t-underline cu-p"></a>
+                        </div>
+                      </td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td>
+                        <div class="td t-left">
+                          <a class="t-underline cu-p"></a>
+                        </div>
+                      </td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td>
+                        <div class="td t-left">
+                          <a class="t-underline cu-p"></a>
+                        </div>
+                      </td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td>
+                        <div class="td t-left">
+                          <a class="t-underline cu-p"></a>
+                        </div>
+                      </td>
+                      <td><div class="td"></div></td>
+                      <td><div class="td"></div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- 최하단 버튼 영역 -->
+            <div class="contents-footer">
+              <button href="#" class="btn-h46 btn-grayline">목록</button>
+            </div>
+            <!-- 탑 버튼 -->
+            <button class="btn-top pa-0" id="topButtonImg">
+              <img src="../../../img/svg/icons/top-btn.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    $(document).ready(function () {
+        // top버튼 클릭시
+        $(window).scroll(function () {
+          // top button controll
+          if ($(this).scrollTop() > 500) {
+            $("#topButton").fadeIn();
+          } else {
+            $("#topButton").fadeOut();
+          }
+        });
+        $("#topButtonImg").click(function () {
+          $("#table").animate({ scrollTop: 0 }, "300");
+        });
+  
+        // 영역 노출
+        $('#onDisplay').click(function(){
+            if($("#noneDiv").css("display") == "none"){
+                  $('#noneDiv').show();
+                  $('#onDisplay').hide();
+            }
+          });
+      });
+      // 타입 Date 금일 날짜 출력
+      document.getElementById('currentDate1').value = new Date().toISOString().substring(0, 10);;
+      document.getElementById('currentDate2').value = new Date().toISOString().substring(0, 10);;
+      // 가격 폼 자동 콤마
+      $('#inputFix').blur(function(){
+          var value = $('#inputLabel').text()+$(this).val();
+      });
+      function inputNumberFormat(obj) {
+            obj.value = comma(uncomma(obj.value));
+        }
+        function comma(str) {
+            str = String(str);
+            return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+        }
+
+        function uncomma(str) {
+            str = String(str);
+            return str.replace(/[^\d]+/g, '');
+        }
+    </script>
+  </body>
+</html>

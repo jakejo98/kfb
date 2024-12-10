@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>상품별 판매조회 - NHN LINKSAM</title>
+
+  <link rel="stylesheet" href="../../../css/lnb.css" />
+  <link rel="stylesheet" href="../../../css/common.css" />
+  <link rel="stylesheet" href="../../../css/reset.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+  <script>
+    $(document).ready( function() {
+      $("#lnb").load("../../../html/lnb.html", function() {
+      });
+    });
+  </script>
+
+</head>
+<body>
+  <div id="app">
+    <div id="wrap" class="clear">
+      <!-- lnb -->
+      <div id="lnb" class="lnb"></div>
+      <!-- contents -->
+      <div id="contents" class="contents-area">
+        <div id="top-bar" class="top-bar-area">
+          <!-- 탭 -->
+          <div class="common-tab type-capsule">
+            <div class="common-tab-area">
+              <ul class="common-tab-list">
+                <li class="common-tab-item">
+                  <!-- 선택된 tab button에 aria-selected="true", 그 외 aria-selected="false" -->
+                  <button type="button" class="common-tab-btn" aria-selected="true">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close-selected ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="table" class="table-area">
+          <div id="lookup-top">
+            <h2 class="t-18 t-medium mb-12">상품별 판매조회</h2>
+            <!-- 조회 영역 -->
+            <div class="lookup-wrap">
+              <!-- 첫 번째 줄 -->
+              <div class="form-field" style="display: flex;">
+                <!-- 거래일 -->
+                <label for="DealDate" class="form-label mr-8">거래일</label>
+                <div class="input-field" style="width: 149px;">
+                  <input type="date" class="input input-icon" required="" style="top: 0;">
+                </div>
+                <i class="mx-8 mt-4">-</i>
+                <div class="input-field" style="width: 149px;">
+                  <input type="date" class="input input-icon" required="" style="top: 0;">
+                </div>
+                <!-- 상품명 -->
+                <label for="ProductName" class="form-label ml-26 mr-8">상품명</label>
+                <div class="input-field">
+                  <input type="text" class="input-txt-auto" id="ProductName" placeholder="직접입력" style="width: 320px;">
+                </div>
+                <!-- MD명 -->
+                <label for="MDName" class="form-label ml-26 mr-8">MD명</label>
+                <div class="input-field">
+                  <input type="text" class="input-txt-auto" id="MDName" placeholder="MD명" style="width: 320px;">
+                </div>
+              </div>
+              <div class="form-field mt-30" style="display: flex;">
+                <!-- 관리 카테고리 -->
+                <label for="AdminCategory" class="form-label mr-8" style="display: inline-flex;">관리 카테고리</label>
+                <div class="input-field">
+                  <select name="selectForm" id="AdminCategory" style="width: 156px;">
+                    <option value="전체">전체</option>
+                    <option value="공연">공연</option>
+                    <option value="전시">전시</option>
+                    <option value="링크온">링크온</option>
+                    <option value="연동상품">연동상품</option>
+                    <option value="스포츠">스포츠</option>
+                  </select>
+                </div>
+                <div class="input-field pl-8">
+                  <select name="selectForm" id="AdminCategory" style="width: 156px;">
+                    <option value="전체">전체</option>
+                    <option value="텍스트2">텍스트</option>
+                    <option value="텍스트3">텍스트</option>
+                  </select>
+                </div>
+                <!-- 상품코드 -->
+                <label for="ProductCode" class="form-label ml-26 mr-8">상품코드</label>
+                <div class="input-field">
+                  <input type="text" class="input-txt-auto" id="ProductCode" placeholder="상품코드" style="width: 320px;">
+                </div>
+                <!-- 파트너명 -->
+                <label for="PartnerName" class="form-label ml-26 mr-8">파트너명</label>
+                <div class="input-field">
+                  <input type="text" class="input-txt-auto" id="PartnerName" placeholder="파트너명" style="width: 320px;">
+                </div>
+              </div>
+              <!-- 조회 버튼 -->
+              <div>
+                <button href="#" id="lookup-btn" class="btn-h38 btn-red">조회</button>
+              </div>
+            </div>
+          </div>
+          <!-- 조회결과 -->
+          <div id="result" class="mt-40">
+            <h2 class="t-18 t-medium mb-12">
+              조회결과                
+              <span class="t-14 t-normal ml-2">총 312건</span>
+            </h2>
+            <!-- 조회결과 테이블 -->
+            <div class="table-scroll">
+              <table class="table-b03 scroll-table-two">
+                <colgroup>
+                <col style="width:50px;"><col style="width:70px;">
+                <col style="width:70px;"><col style="width:70px;">
+                <col style="width:225px;"><col>
+                <col style="width:55px;"><col>
+                <col><col>
+                <col><col>
+                <col><col>
+                <col><col>
+                <col><col>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th rowspan="2" class="header-fix"><div class="th">NO</div></th>
+                    <th colspan="6" class="header-fix"><div class="th">상품정보</div></th>
+                    <th colspan="3" class="header-fix"><div class="th">거래내역</div></th>
+                    <th colspan="8" class="header-fix"><div class="th">거래금액 구분</div></th>
+                  </tr>
+                  <tr>
+                    <th colspan="2" class="header-fix-two"><div class="th">카테고리</div></th>
+                    <th class="header-fix-two"><div class="th">상품<br>코드</div></th>
+                    <th class="header-fix-two"><div class="th">상품명</div></th>
+                    <th class="header-fix-two"><div class="th">파트너명</div></th>
+                    <th class="header-fix-two"><div class="th">담당<br>MD</div></th>
+                    <th class="header-fix-two"><div class="th">티켓매수</div></th>
+                    <th class="header-fix-two"><div class="th">부가상품수량</div></th>
+                    <th class="header-fix-two"><div class="th">거래금액</div></th>
+                    <th class="header-fix-two"><div class="th">티켓금액</div></th>
+                    <th class="header-fix-two"><div class="th">부가상품<br>금액</div></th>
+                    <th class="header-fix-two"><div class="th">우편배송료</div></th>
+                    <th class="header-fix-two"><div class="th">예매수수료</div></th>
+                    <th class="header-fix-two"><div class="th">취소수수료</div></th>
+                    <th class="header-fix-two"><div class="th">휴대폰결제수수료</div></th>
+                    <th class="header-fix-two"><div class="th">송금수수료</div></th>
+                    <th class="header-fix-two"><div class="th">취소표대기수수료</div></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><div class="td">1</div></td>
+                    <td><div class="td">공연</div></td>
+                    <td><div class="td">뮤지컬</div></td>
+                    <td><div class="td">12345</div></td>
+                    <td><div class="td">2022 장윤정 라이브 콘서트 - 성남</div></td>
+                    <td><div class="td">아트컴퍼니</div></td>
+                    <td><div class="td">홍*동</div></td>
+                    <td><div class="td t-right">999,999</div></td>
+                    <td><div class="td t-right">99,999</div></td>
+                    <td><div class="td t-right">99,999,999,999</div></td>
+                    <td><div class="td t-right">99,999,999,999</div></td>
+                    <td><div class="td t-right">99,999,999,999</div></td>
+                    <td><div class="td t-right">99,999,999</div></td>
+                    <td><div class="td t-right">99,999,999</div></td>
+                    <td><div class="td t-right">99,999,999</div></td>
+                    <td><div class="td t-right">999,999</div></td>
+                    <td><div class="td t-right">999,999</div></td>
+                    <td><div class="td t-right">9,999,999</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">2</div></td>
+                    <td><div class="td">공연</div></td>
+                    <td><div class="td">연극</div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td t-right">-123</div></td>
+                    <td><div class="td t-right">0</div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right">-99,999</div></td>
+                    <td><div class="td t-right">-99,999</div></td>
+                    <td><div class="td t-right">0</div></td>
+                    <td><div class="td t-right">0</div></td>
+                    <td><div class="td t-right">0</div></td>
+                    <td><div class="td t-right">0</div></td>
+                    <td><div class="td t-right">0</div></td>
+                    <td><div class="td t-right">0</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">3</div></td>
+                    <td><div class="td">전시</div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">&nbsp;</div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">&nbsp;</div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">&nbsp;</div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">&nbsp;</div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">&nbsp;</div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">&nbsp;</div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">&nbsp;</div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">&nbsp;</div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">&nbsp;</div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">&nbsp;</div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">&nbsp;</div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">&nbsp;</div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td t-right"></div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- 탑 버튼 -->
+          <button class="btn-top pa-0" id="topButtonImg">
+            <img src="../../../img/svg/icons/top-btn.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  // 탑 버튼
+    $(document).ready(function () {
+      $(window).scroll(function () { 
+        if ($(this).scrollTop() > 500) {
+          $("#topButton").fadeIn();
+        } else {
+          $("#topButton").fadeOut();
+        }
+      });
+
+      $("#topButtonImg").click(function () {
+        $("#table").animate({ scrollTop: 0 }, "300");
+      });
+    });
+</script>
+</html>

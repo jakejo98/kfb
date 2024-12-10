@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>정산확정 재무팀 - NHN LINKSAM</title>
+
+    <link rel="stylesheet" href="../../../css/lnb.css" />
+    <link rel="stylesheet" href="../../../css/common.css" />
+    <link rel="stylesheet" href="../../../css/reset.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../../lib/jquery/jquery.tablednd.js"></script>
+    
+    <script>
+      $(document).ready( function() {
+        $("#lnb").load("../../../html/lnb.html", function() {
+        });
+      });
+    </script>
+
+  </head>
+  <body>
+    <div id="app">
+      <div id="wrap" class="clear">
+      <!-- lnb -->
+      <div id="lnb" class="lnb"></div>
+        <!-- contents -->
+        <div id="contents" class="contents-area">
+          <div id="top-bar" class="top-bar-area">
+            <!-- 탭 -->
+            <div class="common-tab type-capsule">
+              <div class="common-tab-area">
+                <ul class="common-tab-list">
+                  <li class="common-tab-item">
+                    <!-- 선택된 tab button에 aria-selected="true", 그 외 aria-selected="false" -->
+                    <button type="button" class="common-tab-btn" aria-selected="true">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close-selected ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="table" class="table-area">
+            <div id="lookup-top">
+              <!-- 정산확정 -->
+              <h2 class="t-18 t-medium mb-12">정산확정</h2>
+              <!-- 조회 영역 -->
+              <div class="lookup-wrap">
+                <!-- 첫 번째 줄 -->
+                <div class="form-field" style="display: flex;">
+                  <!-- 정산일 -->
+                  <label for="calculateDate" class="form-label mr-8">정산일</label>
+                  <div class="input-field" style="width: 149px;">
+                    <input type="date" class="input input-icon" id="currentDate1" required="" style="top: 0;">
+                  </div>
+                  <i class="mx-8 mt-4">-</i>
+                  <div class="input-field" style="width: 149px;">
+                    <input type="date" class="input input-icon" id="currentDate2" required="" style="top: 0;">
+                  </div>
+                  <!-- 카테고리 -->
+                  <label for="category" class="form-label ml-26 mr-8" style="display: inline-flex;">카테고리</label>
+                  <div class="input-field">
+                    <select name="selectForm" id="category" style="width: 320px">
+                      <option value="전체">전체</option>
+                      <option value="공연">공연</option>
+                      <option value="전시">전시</option>
+                      <option value="스포츠">스포츠</option>
+                      <option value="링크온">링크온</option>
+                      <option value="연동상품">연동상품</option>
+                    </select>
+                  </div>
+                  <!-- 파트너명 -->
+                  <label for="partnerName" class="form-label ml-26 mr-8">파트너명</label>
+                  <div class="input-field">
+                    <input type="text" class="input-txt-auto" id="partnerName" placeholder="파트너명" style="width: 320px;">
+                  </div>
+                </div>
+                <!-- 두 번째 줄 -->
+                <div class="form-field mt-30" style="display: flex;">
+                  <!-- 정산주기 -->
+                  <label for="calculateCycle" class="form-label mr-8" style="display: inline-flex;">정산주기</label>
+                  <div class="input-field">
+                    <select name="selectForm" id="calculateCycle" style="width: 320px;">
+                      <option value="전체">전체</option>
+                      <option value="1주단위">1주단위</option>
+                      <option value="2주단위">2주단위</option>
+                      <option value="매월">매월</option>
+                      <option value="종료후">종료후</option>
+                    </select>
+                  </div>
+                  <!-- 상품정보 -->
+                  <label for="productInfo" class="form-label ml-26 mr-8">상품정보</label>
+                  <div class="input-field">
+                    <input type="text" class="input-txt-auto" id="productInfo" placeholder="상품명" style="width: 206px;">
+                  </div>
+                  <div class="input-field">
+                    <input type="text" class="input-txt-auto ml-8" id="productInfo" placeholder="상품번호" style="width: 106px;">
+                  </div>
+                  <!-- 지급정보 -->
+                  <label for="payInfo" class="form-label ml-26 mr-8">판매/정산정보</label>
+                  <div class="input-field">
+                    <select name="selectForm" id="payInfo" style="width: 320px;">
+                      <option value="전체">전체</option>
+                      <option value="판매매수 0매">판매매수 0매</option>
+                      <option value="판매금액 0원">판매금액 0원</option>
+                      <option value="지급금액 0원">지급금액 0원</option>
+                      <option value="현장현금관리 Y">현장현금관리 Y</option>
+                      <option value="위탁판매 Y">위탁판매 Y</option>
+                      <option value="현장운영수수료 Y">현장운영수수료 Y</option>
+                      <option value="가압류 Y">가압류 Y</option>
+                      <option value="선급금 Y">선급금 Y</option>
+                      <option value="예외정산 Y">예외정산 Y</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- 세 번째 줄 -->
+                <div class="form-field mt-30" style="display: flex;">
+                  <!-- 정산상태 -->
+                  <label for="calSitu" class="form-label mr-8">정산상태</label>
+                  <div class="input-field">
+                    <select name="selectForm" id="calSitu" style="width: 320px;">
+                      <option value="전체">전체</option>
+                      <option value="차수생성" selected>차수생성</option>
+                      <option value="확정요청">확정요청</option>
+                      <option value="정산반려">정산반려</option>
+                      <option value="정산확정">정산확정</option>
+                    </select>
+                  </div>
+                  <!-- 계약정보 -->
+                  <label for="contractInfo" class="form-label ml-26 mr-8">계약정보</label>
+                  <div class="input-field">
+                    <input type="text" class="input-txt-auto" id="contractInfo" placeholder="계약명" style="width: 206px;">
+                  </div>
+                  <div class="input-field">
+                    <input type="text" class="input-txt-auto ml-8" id="contractInfo" placeholder="계약번호" style="width: 106px;">
+                  </div>
+                  <!-- 계약담당자 -->
+                  <label for="contractManager" class="form-label ml-26 mr-8">계약담당자</label>
+                  <div class="input-field">
+                    <input type="text" class="input-txt-auto" id="contractManager" placeholder="계약담당자" style="width: 320px;">
+                  </div>
+                </div>
+                <!-- 조회 버튼 -->
+                <div>
+                  <button href="#" id="lookup-btn" class="btn-h38 btn-red">조회</button>
+                </div>
+              </div>
+            </div>
+            <!-- 조회 결과 -->
+            <div id="result" class="mt-40">
+              <h2 class="t-18 t-medium mb-12 over-h">
+                조회 결과
+                <span class="t-14 t-normal ml-2">총 312건</span>
+                <!-- 사업부 권한의 경우 모든 버튼 미노출 -->
+                <div class="f-right">
+                  <button href="#" class="btn-h32 btn-blackline mr-4">위탁판매내역등록</button>
+                  <button href="#" class="btn-h32 btn-blackline mr-4">기타금액조정</button>
+                  <button href="#" class="btn-h32 btn-blackline mr-4">현장운영수수료</button>
+                  <button href="#" class="btn-h32 btn-blackline mr-4">현장 현금 관리</button>
+                  <button href="#" class="btn-h32 btn-red mr-4 advance-payment">선급금 조정</button>
+                  <button href="#" class="btn-h32 btn-red mr-4 provisional-btn">가압류 금액조정</button>
+                  <button href="#" class="btn-h32 btn-red mr-4 multiple-btn">복수분배</button>
+                  <button href="#" class="btn-h32 btn-black mr-4">차수 재생성</button>
+                  <button href="#" class="btn-h32 btn-black">확정요청</button>
+                </div>
+              </h2>
+              <!-- 조회 결과 테이블 -->
+              <div class="table-scroll-container">
+                <div class="table-scroll">
+                  <table class="table-b03">
+                    <colgroup>
+                    <col style="width: 46px"><col style="width: 100px">
+                    <col style="width: 80px"><col style="width: 70px">
+                    <col style="width: 70px"><col style="width: 250px">
+                    <col style="width: 100px"><col style="width: 150px">
+                    <col style="width: 70px"><col style="width: 70px">
+                    <col style="width: 100px"><col style="width: 70px">
+                    <col style="width: 60px"><col style="width: 60px">
+                    <col style="width: 60px"><col style="width: 60px">
+                    <col style="width: 110px"><col style="width: 110px">
+                    <col style="width: 120px"><col style="width: 110px">
+                    <col style="width: 110px"><col style="width: 110px">
+                    <col style="width: 110px"><col style="width: 100px">
+                    <col style="width: 100px"><col style="width: 100px">
+                    <col style="width: 100px"><col style="width: 100px">
+                    <col style="width: 100px"><col style="width: 100px">
+                    <col style="width: 100px"><col style="width: 100px">
+                    <col style="width: 100px"><col style="width: 100px">
+                    <col style="width: 100px"><col style="width: 100px">
+                    <col style="width: 100px"><col style="width: 100px">
+                    <col style="width: 100px"><col style="width: 100px">
+                    <col style="width: 100px"><col style="width: 70px">
+                    <col style="width: 70px"><col style="width: 70px">
+                    <col style="width: 70px"><col style="width: 100px">
+                    <col style="width: 70px">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>
+                          <div class="th">
+                            <label class="checkbox checkbox-none">
+                              <input type="checkbox" name="checkboxGroupNone">
+                              <span class="label label-none"></span>
+                            </label>
+                          </div>
+                        </th>
+                        <th><div class="th">정산일</div></th>
+                        <th><div class="th">정산상태</div></th>
+                        <th><div class="th">카테고리</div></th>
+                        <th><div class="th">상품번호</div></th>
+                        <th><div class="th">상품명</div></th>
+                        <th><div class="th">관람기간</div></th>
+                        <th><div class="th">파트너명</div></th>
+                        <th><div class="th">정산주기</div></th>
+                        <th><div class="th">정산차수</div></th>
+                        <th><div class="th">정산기간</div></th>
+                        <th><div class="th">정산유형</div></th>
+                        <th><div class="th">예외정산</div></th>
+                        <th><div class="th">선급금</div></th>
+                        <th><div class="th">지급보류</div></th>
+                        <th><div class="th">가압류</div></th>
+                        <th><div class="th">지급금액</div></th>
+                        <th><div class="th">선급금<br>상계금액</div></th>
+                        <th><div class="th">예외정산<br>선급금액</div></th>
+                        <th><div class="th">가압류금액</div></th>
+                        <th><div class="th">복수분배금액</div></th>
+                        <th><div class="th">정산금액</div></th>
+                        <th><div class="th">티켓판매<br>금액</div></th>
+                        <th><div class="th">부가상품<br>판매금액</div></th>
+                        <th><div class="th">위탁판매<br>금액</div></th>
+                        <th><div class="th">기타판매<br>금액</div></th>
+                        <th><div class="th">판매수수<br>료</div></th>
+                        <th><div class="th">위탁판매<br>수수료</div></th>
+                        <th><div class="th">발권수수료</div></th>
+                        <th><div class="th">현장운영<br>수수료</div></th>
+                        <th><div class="th">기타수수료</div></th>
+                        <th><div class="th">권종수수료</div></th>
+                        <th><div class="th">쿠폰사용판매수수료 제외</div></th>
+                        <th><div class="th">고객수수료 분배금액</div></th>
+                        <th><div class="th">기타지급금액</div></th>
+                        <th><div class="th">기타포인트사용금액</div></th>
+                        <th><div class="th">쿠폰금액<br>(파트너)</div></th>
+                        <th><div class="th">현장현금<br>보유금액</div></th>
+                        <th><div class="th">특정권종<br>지급제외</div></th>
+                        <th><div class="th">계약번호</div></th>
+                        <th><div class="th">사업부</div></th>
+                        <th><div class="th">계약담당자</div></th>
+                        <th><div class="th">확정처리자</div></th>
+                        <th><div class="th">확정일자</div></th>
+                        <th><div class="th">지급일자</div></th>
+                        <th><div class="th">세금계산서<br>발행일자</div></th>
+                        <th><div class="th">다운로드</div></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="td">
+                            <label class="checkbox checkbox-none">
+                              <input type="checkbox" name="checkboxGroupNone">
+                              <span class="label label-none"></span>
+                            </label>
+                          </div>
+                        </td>
+                        <td><div class="td">2022.09.07</div></td>
+                        <td><div class="td">차수생성</div></td>
+                        <td><div class="td">공연</div></td>
+                        <td><div class="td">23345</div></td>
+                        <td><div class="td t-underline">제8회 서승연 가야금 독주회</div></td>
+                        <td><div class="td">2022.07.01~2022.07.31</div></td>
+                        <td><div class="td">(주)티모넷</div></td>
+                        <td><div class="td">종료후</div></td>
+                        <td><div class="td">1</div></td>
+                        <td><div class="td t-underline">2022.07.01~2022.07.31</div></td>
+                        <td><div class="td">영수</div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td">Y</div></td>
+                        <td><div class="td">Y</div></td>
+                        <td><div class="td">Y</div></td>
+                        <td><div class="td t-right t-bold">4,000,000</div></td>
+                        <td><div class="td t-right">5,000,000</div></td>
+                        <td><div class="td t-right">0</div></td>
+                        <td><div class="td t-right">1,000,000</div></td>
+                        <td><div class="td t-right">10,000,000</div></td>
+                        <td><div class="td t-right">55,000,000</div></td>
+                        <td><div class="td t-right">55,000,000</div></td>
+                        <td><div class="td t-right">0</div></td>
+                        <td><div class="td t-right">0</div></td>
+                        <td><div class="td t-right">0</div></td>
+                        <td><div class="td t-right">11,000,000</div></td>
+                        <td><div class="td t-right">0</div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right">0</div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right">250,000</div></td>
+                        <td><div class="td t-right">0</div></td>
+                        <td><div class="td t-right t-underline">0</div></td>
+                        <td><div class="td t-right">0</div></td>
+                        <td><div class="td t-right">0</div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right">1,000,000</div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td>
+                          <div class="td">
+                            <a class="t-underline cu-p">12345</a>
+                          </div>
+                        </td>
+                        <td><div class="td">전시팀</div></td>
+                        <td><div class="td">박*호</div></td>
+                        <td><div class="td">-</div></td>
+                        <td><div class="td">-</div></td>
+                        <td><div class="td">-</div></td>
+                        <td><div class="td t-underline">2022.09.07</div></td>
+                        <td>
+                          <div class="td py-6 px-0">
+                            <button class="btn-h32 btn-grayline" style="background: none;">받기</button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="td">
+                            <label class="checkbox checkbox-none">
+                              <input type="checkbox" name="checkboxGroupNone">
+                              <span class="label label-none"></span>
+                            </label>
+                          </div>
+                        </td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td t-underline"></div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td t-underline"></div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td">Y</div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td t-right t-bold"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right t-underline"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td>
+                          <div class="td">
+                            <a class="t-underline cu-p"></a>
+                          </div>
+                        </td>
+                        <td><div class="td">스포츠사업팀</div></td>
+                        <td><div class="td">안*규</div></td>
+                        <td><div class="td">정*호</div></td>
+                        <td><div class="td">2022.09.07</div></td>
+                        <td>
+                          <div class="td">
+                            <a class="t-underline cu-p">2022.09.10</a>
+                          </div>
+                        </td>
+                        <td><div class="td t-underline">2022.09.07</div></td>
+                        <td>
+                          <div class="td py-6 px-0">
+                            <button class="btn-h32 btn-grayline" style="background: none;">받기</button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- 탑 버튼 -->
+            <button class="btn-top pa-0" id="topButtonImg">
+              <img src="../../../img/svg/icons/top-btn.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 팝업창 -->
+    <!-- 팝업 : 정산기간 변경 -->
+    <div class="modal date-change" tabindex="-1" id="modalBasic">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content" style="height: 400px;">
+          <div class="modal-header">
+            <h3 class="modal-title t-24 t-bold">정산기간 변경</h3>
+            <button class="close icon-close common-icon ty-sm" data-dismiss="modal"><i>닫기</i></button>
+          </div>
+          <div class="modal-body py-40">
+            <!-- 테이블 -->
+            <table class="table-b02">
+              <colgroup>
+              <col style="width: 148px"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="t-left th-form">기존</div></th>
+                  <td><div class="t-left td-form">2022.03.15~2022.07.31</div></td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">변경</div></th>
+                  <td>
+                    <div class="t-left td-form display-f">
+                      <div class="input-field" style="width: 149px;">
+                        <input type="date" class="input input-icon" required="" style="top: 0;">
+                      </div>
+                      <i class="mx-8 mt-4">-</i>
+                      <div class="input-field" style="width: 149px;">
+                        <input type="date" class="input input-icon" required="" style="top: 0;">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 하단 버튼 영역 -->
+          <div class="modal-footer">
+            <button class="btn-h46 btn-blackline modal-close" data-dismiss="modal" style="width: 200px">닫기</button>
+            <button class="btn-h46 btn-black ml-10" data-dismiss="modal" style="width: 200px">수정</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <!-- 팝업 : 지급일자 변경 -->
+    <div class="modal pay-change" tabindex="-1" id="modalBasic">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content" style="height: 400px;">
+          <div class="modal-header">
+            <h3 class="modal-title t-24 t-bold">지급일자 변경</h3>
+            <button class="close icon-close common-icon ty-sm" data-dismiss="modal"><i>닫기</i></button>
+          </div>
+          <div class="modal-body py-40">
+            <!-- 테이블 -->
+            <table class="table-b02">
+              <colgroup>
+              <col style="width: 148px"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="t-left th-form">기존</div></th>
+                  <td><div class="t-left td-form">2022.10.11</div></td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">변경</div></th>
+                  <td>
+                    <div class="t-left td-form">
+                      <div class="input-field" style="width: 174px;">
+                        <input type="date" class="input input-icon" required="" style="top: 0;">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 하단 버튼 영역 -->
+          <div class="modal-footer">
+            <button class="btn-h46 btn-blackline modal-close" data-dismiss="modal" style="width: 200px">닫기</button>
+            <button class="btn-h46 btn-black ml-10" data-dismiss="modal" style="width: 200px">수정</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <!-- 팝업 : 지급일자 변경 -->
+    <div class="modal pay-change" tabindex="-1" id="modalBasic">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content" style="height: 400px;">
+          <div class="modal-header">
+            <h3 class="modal-title t-24 t-bold">지급일자 변경</h3>
+            <button class="close icon-close common-icon ty-sm" data-dismiss="modal"><i>닫기</i></button>
+          </div>
+          <div class="modal-body py-40">
+            <!-- 테이블 -->
+            <table class="table-b02">
+              <colgroup>
+              <col style="width: 148px"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="t-left th-form">기존</div></th>
+                  <td><div class="t-left td-form">2022.10.11</div></td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">변경</div></th>
+                  <td>
+                    <div class="t-left td-form">
+                      <div class="input-field" style="width: 174px;">
+                        <input type="date" class="input input-icon" required="" style="top: 0;">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 하단 버튼 영역 -->
+          <div class="modal-footer">
+            <button class="btn-h46 btn-blackline modal-close" data-dismiss="modal" style="width: 200px">닫기</button>
+            <button class="btn-h46 btn-black ml-10" data-dismiss="modal" style="width: 200px">수정</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 팝업 : 세금계산서 발행일자 변경 -->
+    <div class="modal tax-change" tabindex="-1" id="modalBasic">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content" style="height: 400px;">
+          <div class="modal-header">
+            <h3 class="modal-title t-24 t-bold">세금계산서 발행일자 변경</h3>
+            <button class="close icon-close common-icon ty-sm" data-dismiss="modal"><i>닫기</i></button>
+          </div>
+          <div class="modal-body py-40">
+            <!-- 테이블 -->
+            <table class="table-b02">
+              <colgroup>
+              <col style="width: 148px"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="t-left th-form">기존</div></th>
+                  <td><div class="t-left td-form">2022.10.11</div></td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">변경</div></th>
+                  <td>
+                    <div class="t-left td-form">
+                      <div class="input-field" style="width: 174px;">
+                        <input type="date" class="input input-icon" required="" style="top: 0;">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 하단 버튼 영역 -->
+          <div class="modal-footer">
+            <button class="btn-h46 btn-blackline modal-close" data-dismiss="modal" style="width: 200px">닫기</button>
+            <button class="btn-h46 btn-black ml-10" data-dismiss="modal" style="width: 200px">수정</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 팝업 : 선급금 상계 금액 조정 -->
+    <div class="modal set-off" tabindex="-1" id="modalBasic">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title t-24 t-bold">선급금 상계 금액 조정</h3>
+            <button class="close icon-close common-icon ty-sm" data-dismiss="modal"><i>닫기</i></button>
+          </div>
+          <div class="modal-body py-40">
+            <h3 class="mb-12 t-18 t-medium">정산 대상</h3>
+            <!-- 테이블 -->
+            <table class="table-b04">
+              <colgroup>
+                <col style="width:148px;"><col>
+                <col style="width:148px;"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="th t-left">정산일</div></th>
+                  <td><div class="td t-left">2022.08.01</div></td>
+                  <th><div class="th t-left">파트너명</div></th>
+                  <td><div class="td t-left">(주)티모넷</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">상품명</div></th>
+                  <td><div class="td t-left">[8월 오픈특가할인] 빛의시어터 : 구스타프 클림트 (32549)</div></td>
+                  <th><div class="th t-left">계약번호</div></th>
+                  <td><div class="td t-left">14125</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">정산차수</div></th>
+                  <td><div class="td t-left">3</div></td>
+                  <th><div class="th t-left">정산유형</div></th>
+                  <td><div class="td t-left">영수</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">정산기간</div></th>
+                  <td><div class="td t-left">2022.07.01~2022.07.31</div></td>
+                  <th><div class="th t-left">정산주기</div></th>
+                  <td><div class="td t-left">매월</div></td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="mt-40 mb-12 t-18 t-medium">선급금 상계 금액 조정</h3>
+            <!-- 테이블 -->
+            <table class="table-b02">
+              <colgroup>
+              <col style="width: 148px"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="t-left th-form">지급금액</div></th>
+                  <td><div class="t-left td-form t-bold">40,000,000원</div></td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">판매수수료</div></th>
+                  <td><div class="t-left td-form t-bold">100,000,000원</div></td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">선급금 상계 금액</div></th>
+                  <td><div class="t-left td-form t-bold">50,000,000원 (50%)</div></td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">조정 금액</div></th>
+                  <td>
+                    <div class="t-left td-form">
+                      <div class="input-field">
+                        <input type="text" class="input input-price" id="inputFix" name="inputFix" onkeyup="inputNumberFormat(this)" style="width: 174px;">
+                        <span class="input-won" style="left: 153px;">원</span>
+                        <span class="t-13 gray-03">* 입력된 금액으로 선급금 상계 금액이 변경됩니다.</span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">조정 사유</div></th>
+                  <td>
+                    <div class="t-left td-form">
+                      <textarea class="textarea-memo" placeholder="선급금 상계 금액 조정의 근거 내용을 상세히 입력해 주세요. 입력된 내용은 정산서에 포함되어 파트너에게 제공됩니다." style="height: 60px;"></textarea>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 하단 버튼 영역 -->
+          <div class="modal-footer">
+            <button class="btn-h46 btn-blackline modal-close" data-dismiss="modal" style="width: 200px">닫기</button>
+            <button class="btn-h46 btn-black ml-10" data-dismiss="modal" style="width: 200px">등록</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <!-- 팝업 : 가압류 금액 조정 -->
+    <div class="modal provisional" tabindex="-1" id="modalBasic">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title t-24 t-bold">가압류 금액 조정</h3>
+            <button class="close icon-close common-icon ty-sm" data-dismiss="modal"><i>닫기</i></button>
+          </div>
+          <div class="modal-body py-40">
+            <h3 class="mb-12 t-18 t-medium">정산 대상</h3>
+            <!-- 테이블 -->
+            <table class="table-b04">
+              <colgroup>
+                <col style="width:148px;"><col>
+                <col style="width:148px;"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="th t-left">정산일</div></th>
+                  <td><div class="td t-left">2022.08.01</div></td>
+                  <th><div class="th t-left">파트너명</div></th>
+                  <td><div class="td t-left">(주)티모넷</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">상품명</div></th>
+                  <td><div class="td t-left">[8월 오픈특가할인] 빛의시어터 : 구스타프 클림트 (32549)</div></td>
+                  <th><div class="th t-left">계약번호</div></th>
+                  <td><div class="td t-left">14125</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">정산차수</div></th>
+                  <td><div class="td t-left">3</div></td>
+                  <th><div class="th t-left">정산유형</div></th>
+                  <td><div class="td t-left">영수</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">정산기간</div></th>
+                  <td><div class="td t-left">2022.07.01~2022.07.31</div></td>
+                  <th><div class="th t-left">정산주기</div></th>
+                  <td><div class="td t-left">매월</div></td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="mt-40 mb-12 t-18 t-medium">가압류 금액 조정</h3>
+            <!-- 테이블 -->
+            <table class="table-b02">
+              <colgroup>
+              <col style="width: 148px"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="t-left th-form">지급금액</div></th>
+                  <td><div class="t-left td-form t-bold">100,000,000원</div></td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">가압류 금액</div></th>
+                  <td>
+                    <div class="t-left td-form">
+                      <div class="input-field">
+                        <input type="text" class="input input-price" id="inputFix" name="inputFix" onkeyup="inputNumberFormat(this)" style="width: 174px;">
+                        <span class="input-won" style="left: 153px;">원</span>
+                        <span class="t-13 gray-03">* 입력된 금액으로 가압류 금액이 조정 됩니다.</span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">조정 사유</div></th>
+                  <td>
+                    <div class="t-left td-form">
+                      <textarea class="textarea-memo" placeholder="가압류 근거 내용을 상세히 입력해 주세요. 입력된 내용은 정산서에 포함되어 파트너에게 제공됩니다."></textarea>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 하단 버튼 영역 -->
+          <div class="modal-footer">
+            <button class="btn-h46 btn-blackline modal-close" data-dismiss="modal" style="width: 200px">닫기</button>
+            <button class="btn-h46 btn-black ml-10" data-dismiss="modal" style="width: 200px">등록</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <!-- 팝업 : 복수분배(등록) -->
+    <div class="modal multiple" tabindex="-1" id="modalBasic">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title t-24 t-bold">복수 분배</h3>
+            <button class="close icon-close common-icon ty-sm" data-dismiss="modal"><i>닫기</i></button>
+          </div>
+          <div class="modal-body py-40">
+            <h3 class="mb-12 t-18 t-medium">정산 대상</h3>
+            <!-- 테이블 -->
+            <table class="table-b04">
+              <colgroup>
+                <col style="width:148px;"><col>
+                <col style="width:148px;"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="th t-left">정산일</div></th>
+                  <td><div class="td t-left">2022.08.01</div></td>
+                  <th><div class="th t-left">파트너명</div></th>
+                  <td><div class="td t-left">(주)티모넷</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">상품명</div></th>
+                  <td><div class="td t-left">[8월 오픈특가할인] 빛의시어터 : 구스타프 클림트 (32549)</div></td>
+                  <th><div class="th t-left">계약번호</div></th>
+                  <td><div class="td t-left">14125</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">정산차수</div></th>
+                  <td><div class="td t-left">3</div></td>
+                  <th><div class="th t-left">정산유형</div></th>
+                  <td><div class="td t-left">영수</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">정산기간</div></th>
+                  <td><div class="td t-left">2022.07.01~2022.07.31</div></td>
+                  <th><div class="th t-left">정산주기</div></th>
+                  <td><div class="td t-left">매월</div></td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="mt-40 mb-12 t-18 t-medium over-h">
+              복수 분배
+              <div class="f-right">
+                <button class="btn-h32 btn-black mr-4">파트너 조회</button>
+                <button class="btn-h32 btn-black">분배금액 적용</button>
+              </div>
+            </h3>
+            <!-- 테이블 -->
+            <table class="table-b01">
+              <colgroup>
+                <col style="width: 46px;"><col style="width: 100px;">
+                <col style="width: 100px;"><col style="width: 200px;">
+                <col style="width: 200px;"><col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th><div class="th">NO</div></th>
+                  <th><div class="th">구분</div></th>
+                  <th><div class="th">파트너번호</div></th>
+                  <th><div class="th">파트너명</div></th>
+                  <th><div class="th">분배금액</div></th>
+                  <th><div class="th">메모</div></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th><div class="th">-</div></th>
+                  <th><div class="th">주업체</div></th>
+                  <th><div class="th">55424</div></th>
+                  <th><div class="th t-left">(주)티모넷</div></th>
+                  <th><div class="th t-right">70,000,000원</div></th>
+                  <th><div class="th t-right"></div></th>
+                </tr>
+                <tr>
+                  <td><div class="td">1</div></td>
+                  <td><div class="td">분배업체</div></td>
+                  <td><div class="td">12345</div></td>
+                  <td><div class="td t-left">(주)LG네트웍스</div></td>
+                  <td>
+                    <div class="td-form">
+                      <div class="input-field">
+                        <input type="text" class="input input-price wd-100" id="inputFix" name="inputFix" onkeyup="inputNumberFormat(this)">
+                        <span class="input-won" style="left: 136px;">원</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="td-form">
+                      <div class="input-field display-f">
+                        <input type="text" class="input input-txt" placeholder="메모">
+                        <button class="btn-h32 btn-grayline mx-4">삭제</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div class="td">2</div></td>
+                  <td><div class="td">분배업체</div></td>
+                  <td><div class="td">12345</div></td>
+                  <td><div class="td t-left">(주)삼정네트웍스</div></td>
+                  <td>
+                    <div class="td-form">
+                      <div class="input-field">
+                        <input type="text" class="input input-price wd-100" id="inputFix" name="inputFix" onkeyup="inputNumberFormat(this)">
+                        <span class="input-won" style="left: 136px;">원</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="td-form">
+                      <div class="input-field display-f">
+                        <input type="text" class="input input-txt" placeholder="메모">
+                        <button class="btn-h32 btn-grayline mx-4">삭제</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 하단 버튼 영역 -->
+          <div class="modal-footer">
+            <button class="btn-h46 btn-blackline modal-close" data-dismiss="modal" style="width: 200px">닫기</button>
+            <button class="btn-h46 btn-black ml-10" data-dismiss="modal" style="width: 200px">등록</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <!-- 팝업 : 복수분배(등록) 후 -->
+    <div class="modal multiple-after" tabindex="-1" id="modalBasic">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title t-24 t-bold">복수 분배</h3>
+            <button class="close icon-close common-icon ty-sm" data-dismiss="modal"><i>닫기</i></button>
+          </div>
+          <div class="modal-body py-40">
+            <h3 class="mb-12 t-18 t-medium">정산 대상</h3>
+            <!-- 테이블 -->
+            <table class="table-b04">
+              <colgroup>
+                <col style="width:148px;"><col>
+                <col style="width:148px;"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="th t-left">정산일</div></th>
+                  <td><div class="td t-left">2022.08.01</div></td>
+                  <th><div class="th t-left">파트너명</div></th>
+                  <td><div class="td t-left">(주)티모넷</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">상품명</div></th>
+                  <td><div class="td t-left">[8월 오픈특가할인] 빛의시어터 : 구스타프 클림트 (32549)</div></td>
+                  <th><div class="th t-left">계약번호</div></th>
+                  <td><div class="td t-left">14125</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">정산차수</div></th>
+                  <td><div class="td t-left">3</div></td>
+                  <th><div class="th t-left">정산유형</div></th>
+                  <td><div class="td t-left">영수</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">정산기간</div></th>
+                  <td><div class="td t-left">2022.07.01~2022.07.31</div></td>
+                  <th><div class="th t-left">정산주기</div></th>
+                  <td><div class="td t-left">매월</div></td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="mt-40 mb-12 t-18 t-medium over-h">
+              복수 분배
+              <div class="f-right">
+                <button class="btn-h32 btn-black">복수분배 취소</button>
+              </div>
+            </h3>
+            <!-- 테이블 -->
+            <table class="table-b01">
+              <colgroup>
+                <col style="width: 46px;"><col style="width: 100px;">
+                <col style="width: 100px;"><col style="width: 200px;">
+                <col style="width: 200px;"><col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th><div class="th">NO</div></th>
+                  <th><div class="th">구분</div></th>
+                  <th><div class="th">파트너번호</div></th>
+                  <th><div class="th">파트너명</div></th>
+                  <th><div class="th">분배금액</div></th>
+                  <th><div class="th">메모</div></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th><div class="th">-</div></th>
+                  <th><div class="th">주업체</div></th>
+                  <th><div class="th">55424</div></th>
+                  <th><div class="th t-left">(주)티모넷</div></th>
+                  <th><div class="th t-right">70,000,000원</div></th>
+                  <th><div class="th t-right"></div></th>
+                </tr>
+                <tr>
+                  <td><div class="td">1</div></td>
+                  <td><div class="td">분배업체</div></td>
+                  <td><div class="td">12345</div></td>
+                  <td><div class="td t-left">(주)LG네트웍스</div></td>
+                  <td><div class="td t-right">10,000,000원</div></td>
+                  <td><div class="td t-left">해당 사유로 복수분배를 진행 합니다.</div></td>
+                </tr>
+                <tr>
+                  <td><div class="td">2</div></td>
+                  <td><div class="td">분배업체</div></td>
+                  <td><div class="td">12345</div></td>
+                  <td><div class="td t-left">(주)삼정네트웍스</div></td>
+                  <td><div class="td t-right">20,000,000원</div></td>
+                  <td><div class="td t-left"></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 하단 버튼 영역 -->
+          <div class="modal-footer">
+            <button class="btn-h46 btn-blackline modal-close" data-dismiss="modal" style="width: 200px">닫기</button>
+            <button class="btn-h46 btn-black ml-10" data-dismiss="modal" style="width: 200px">등록</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <!-- 케이스뷰 -->
+    <div class="caseview">
+      <button type="button" class="caseview-btn">케이스뷰 on/off</button>
+      <button type="button" class="caseview-btn1">[팝업] 정산기간 변경</button>
+      <button type="button" class="caseview-btn2">[팝업] 지급일자 변경</button>
+      <button type="button" class="caseview-btn3">[팝업] 세금계산서 발행일자 변경</button>
+      <button type="button" class="caseview-btn4">[팝업] 선급금 상계 금액 조정</button>
+      <button type="button" class="caseview-btn5">[팝업] 가압류 금액 조정</button>
+      <button type="button" class="caseview-btn6">[팝업] 복수분배 등록</button>
+      <button type="button" class="caseview-btn7">[팝업] 복수분배 등록 후</button>
+    </div>
+    <style>
+      .caseview {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1100;
+        min-width: 20px;
+        min-height: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .caseview button {
+        display: block;
+        padding: 5px 10px;
+        border: 0;
+        background: transparent;
+        font-size: 12px;
+        color: #fff;
+        text-align: left;
+      }
+    </style>
+    <script>
+      // 조회결과 버튼 팝업 연결
+      $('.advance-payment').on('click', function() {
+        $('.set-off').show();
+      });
+      $('.provisional-btn').on('click', function() {
+        $('.provisional').show();
+      });
+      $('.multiple-btn').on('click', function() {
+        $('.multiple').show();
+      });
+      // 모달 닫기
+      $('.close, .modal-close').on('click', function() {
+        $('.modal').hide();
+      })
+      // 탑 버튼
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 500) {
+            $("#topButton").fadeIn();
+          } else {
+            $("#topButton").fadeOut();
+          }
+        });
+  
+        $("#topButtonImg").click(function () {
+          $("#table").animate({ scrollTop: 0 }, "300");
+        });
+        
+      });
+      // 가격 폼 자동 콤마
+      $('#inputFix').blur(function(){
+          var value = $('#inputLabel').text()+$(this).val();
+      });
+      function inputNumberFormat(obj) {
+            obj.value = comma(uncomma(obj.value));
+        }
+        function comma(str) {
+            str = String(str);
+            return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+        }
+
+        function uncomma(str) {
+            str = String(str);
+            return str.replace(/[^\d]+/g, '');
+        }
+      // 날짜 당일 셀렉트
+      document.getElementById('currentDate1').value = new Date().toISOString().substring(0, 10);;
+      document.getElementById('currentDate2').value = new Date().toISOString().substring(0, 10);;
+      // 케이스뷰
+      $(".caseview-btn").on("click", function () {
+        $(this).siblings().toggle();
+      });
+      $(".caseview-btn1").on("click", function () {
+        $(".date-change").toggle();
+      });
+      $(".caseview-btn2").on("click", function () {
+        $(".pay-change").toggle();
+      });
+      $(".caseview-btn3").on("click", function () {
+        $(".tax-change").toggle();
+      });
+      $(".caseview-btn4").on("click", function () {
+        $(".set-off").toggle();
+      });
+      $(".caseview-btn5").on("click", function () {
+        $(".provisional").toggle();
+      });
+      $(".caseview-btn6").on("click", function () {
+        $(".multiple").toggle();
+      });
+      $(".caseview-btn7").on("click", function () {
+        $(".multiple-after").toggle();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>결제수단별 조회 - NHN LINKSAM</title>
+
+  <link rel="stylesheet" href="../../../css/lnb.css" />
+  <link rel="stylesheet" href="../../../css/common.css" />
+  <link rel="stylesheet" href="../../../css/reset.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+  <script>
+    $(document).ready( function() {
+      $("#lnb").load("../../../html/lnb.html", function() {
+      });
+    });
+  </script>
+
+</head>
+<body>
+  <div id="app">
+    <div id="wrap" class="clear">
+      <!-- lnb -->
+      <div id="lnb" class="lnb"></div>
+      <!-- contents -->
+      <div id="contents" class="contents-area">
+        <div id="top-bar" class="top-bar-area">
+          <!-- 탭 -->
+          <div class="common-tab type-capsule">
+            <div class="common-tab-area">
+              <ul class="common-tab-list">
+                <li class="common-tab-item">
+                  <!-- 선택된 tab button에 aria-selected="true", 그 외 aria-selected="false" -->
+                  <button type="button" class="common-tab-btn" aria-selected="true">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close-selected ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="table" class="table-area">
+          <div id="lookup-top">
+            <h2 class="t-18 t-medium mb-12">결제수단별 조회</h2>
+            <!-- 조회 영역 -->
+            <div class="lookup-wrap">
+              <!-- 첫 번째 줄 -->
+              <div class="form-field" style="display: flex">
+                <!-- 기간 -->
+                <label for="selectDate" class="form-label mr-8">기간</label>
+                <div class="input-field">
+                  <select name="selectForm" id="selectDate" style="width: 103px">
+                    <option value="거래일">거래일</option>
+                    <option value="입금일">입금일</option>
+                  </select>
+                </div>
+                <div class="input-field ml-8" style="width: 126px;">
+                  <input type="date" class="input input-icon" required="" style="top: 0;">
+                </div>
+                <i class="mx-8 mt-4">-</i>
+                <div class="input-field" style="width: 126px;">
+                  <input type="date" class="input input-icon" required="" style="top: 0;">
+                </div>
+                <!-- 결제서비스 -->
+                <label for="PayService" class="form-label ml-26">결제서비스</label>
+                <div class="input-field">
+                  <select name="selectForm" id="PayService" style="width: 320px">
+                    <option value="PAYCO">PAYCO</option>
+                    <option value="NPAY">NPAY</option>
+                    <option value="티켓링크">티켓링크</option>
+                    <option value="KCP">KCP</option>
+                    <option value="네이버예약">네이버예약</option>
+                  </select>
+                </div>
+              </div>
+              <!-- 두 번째 줄 -->
+              <div class="form-field" style="display: flex;">
+                <!-- 결제수단 -->
+                <label for="paymentCheck" class="form-label mr-8">결제수단</label>
+                <div class="py-4">
+                  <label class="checkbox">
+                    <input type="checkbox" name="paymentCheck" checked="">
+                    <span class="label">전체</span>
+                  </label>
+                </div>
+                <div class="py-4">
+                  <label class="checkbox">
+                    <input type="checkbox" name="paymentCheck" checked="">
+                    <span class="label">신용카드</span>
+                  </label>
+                </div>
+                <div class="py-4">
+                  <label class="checkbox">
+                    <input type="checkbox" name="paymentCheck" checked="">
+                    <span class="label">휴대폰</span>
+                  </label>
+                </div>
+                <div class="py-4">
+                  <label class="checkbox">
+                    <input type="checkbox" name="paymentCheck" checked="">
+                    <span class="label">무통장입금</span>
+                  </label>
+                </div>
+                <div class="py-4">
+                  <label class="checkbox">
+                    <input type="checkbox" name="paymentCheck" checked="">
+                    <span class="label">계좌이체</span>
+                  </label>
+                </div>
+                <div class="py-4">
+                  <label class="checkbox">
+                    <input type="checkbox" name="paymentCheck" checked="">
+                    <span class="label">PAYCO 포인트</span>
+                  </label>
+                </div>
+                <div class="py-4">
+                  <label class="checkbox">
+                    <input type="checkbox" name="paymentCheck" checked="">
+                    <span class="label">PAYCO 쿠폰</span>
+                  </label>
+                </div>
+                <div class="py-4">
+                  <label class="checkbox">
+                    <input type="checkbox" name="paymentCheck" checked="">
+                    <span class="label">상품권</span>
+                  </label>
+                </div>
+                <div class="py-4">
+                  <label class="checkbox">
+                    <input type="checkbox" name="paymentCheck" checked="">
+                    <span class="label">예매권</span>
+                  </label>
+                </div>
+              </div>
+              <!-- 조회버튼 -->
+              <div>
+                <button href="#" id="lookup-btn" class="btn-h38 btn-red">조회</button>
+              </div>
+            </div>
+          </div>
+          <!-- 조회결과 -->
+          <div id="result" class="mt-40">
+            <h2 class="t-18 t-medium mb-12">조회결과</h2>
+            <!-- 조회결과 테이블 -->
+            <div class="table-scroll-xy-container">
+              <div class="table-scroll pb-0">
+                <table class="table-b03 scroll-table-two">
+                  <colgroup>
+                  <col style="width:120px;"><col style="width:40px;">
+                  <col style="width:100px;"><col style="width:100px;">
+                  <col style="width:100px;"><col style="width:100px;">
+                  <col style="width:100px;"><col style="width:100px;">
+                  <col style="width:100px;"><col style="width:100px;">
+                  <col style="width:100px;"><col style="width:100px;">
+                  <col style="width:100px;"><col style="width:100px;">
+                  <col style="width:100px;"><col style="width:100px;">
+                  <col style="width:100px;"><col style="width:100px;">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th rowspan="2" colspan="2" class="header-fix"><div class="th">거래일</div></th>
+                      <th colspan="2" class="header-fix"><div class="th">신용카드</div></th>
+                      <th colspan="2" class="header-fix"><div class="th">휴대폰</div></th>
+                      <th colspan="2" class="header-fix"><div class="th">무통장입금</div></th>
+                      <th colspan="2" class="header-fix"><div class="th">계좌이체</div></th>
+                      <th colspan="2" class="header-fix"><div class="th">PAYCO포인트</div></th>
+                      <th colspan="2" class="header-fix"><div class="th">PAYCO쿠폰</div></th>
+                      <th colspan="2" class="header-fix"><div class="th">상품권</div></th>
+                      <th colspan="2" class="header-fix"><div class="th">예매권</div></th>
+                    </tr>
+                    <tr>
+                      <th class="header-fix-two"><div class="th">결제금액</div></th>
+                      <th class="header-fix-two"><div class="th">수수료</div></th>
+                      <th class="header-fix-two"><div class="th">결제금액</div></th>
+                      <th class="header-fix-two"><div class="th">수수료</div></th>
+                      <th class="header-fix-two"><div class="th">결제금액</div></th>
+                      <th class="header-fix-two"><div class="th">수수료</div></th>
+                      <th class="header-fix-two"><div class="th">결제금액</div></th>
+                      <th class="header-fix-two"><div class="th">수수료</div></th>
+                      <th class="header-fix-two"><div class="th">결제금액</div></th>
+                      <th class="header-fix-two"><div class="th">수수료</div></th>
+                      <th class="header-fix-two"><div class="th">결제금액</div></th>
+                      <th class="header-fix-two"><div class="th">수수료</div></th>
+                      <th class="header-fix-two"><div class="th">결제금액</div></th>
+                      <th class="header-fix-two"><div class="th">수수료</div></th>
+                      <th class="header-fix-two"><div class="th">결제금액</div></th>
+                      <th class="header-fix-two"><div class="th">수수료</div></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="2"><div class="td">합계</div></td>
+                      <td><div class="td t-right">999,999,999</div></td>
+                      <td><div class="td t-right">999,999,999</div></td>
+                      <td><div class="td t-right">999,999,999</div></td>
+                      <td><div class="td t-right">999,999,999</div></td>
+                      <td><div class="td t-right">999,999,999</div></td>
+                      <td><div class="td t-right">999,999,999</div></td>
+                      <td><div class="td t-right">999,999,999</div></td>
+                      <td><div class="td t-right">999,999,999</div></td>
+                      <td><div class="td t-right">999,999,999</div></td>
+                      <td><div class="td t-right">999,999,999</div></td>
+                      <td><div class="td t-right">999,999,999</div></td>
+                      <td><div class="td t-right">999,999,999</div></td>
+                      <td><div class="td t-right">999,999,999</div></td>
+                      <td><div class="td t-right">0</div></td>
+                      <td><div class="td t-right">999,999,999</div></td>
+                      <td><div class="td t-right">0</div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="td">2022.04.05</div></td>
+                      <td><div class="td">수</div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="td">2022.04.05</div></td>
+                      <td><div class="td">목</div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="td">2022.04.05</div></td>
+                      <td><div class="td">금</div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="td">2022.04.05</div></td>
+                      <td><div class="td">토</div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="td">2022.04.05</div></td>
+                      <td><div class="td">토</div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="td">2022.04.05</div></td>
+                      <td><div class="td">토</div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="td">2022.04.05</div></td>
+                      <td><div class="td">토</div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="td">2022.04.05</div></td>
+                      <td><div class="td">토</div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="td">2022.04.05</div></td>
+                      <td><div class="td">토</div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="td">2022.04.05</div></td>
+                      <td><div class="td">토</div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="td">2022.04.05</div></td>
+                      <td><div class="td">토</div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="td">2022.04.05</div></td>
+                      <td><div class="td">토</div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="td">2022.04.05</div></td>
+                      <td><div class="td">토</div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="td">2022.04.05</div></td>
+                      <td><div class="td">토</div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                      <td><div class="td t-right"></div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <button href="#" class="btn-h32 btn-blackline mt-10">수수료율 확인</button>
+          </div>
+          <div class="contents-footer">
+          </div>
+          <!-- 탑 버튼 -->
+          <button class="btn-top pa-0" id="topButtonImg">
+            <img src="../../../img/svg/icons/top-btn.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 팝업창 -->
+  <!-- 팝업 : 수수료율 확인 -->
+  <div class="modal charge-check" tabindex="-1" id="modalBasic">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close icon-close common-icon ty_sm" data-dismiss="modal"><i>닫기</i></button>
+        </div>
+        <div class="modal-body py-40">
+          <table class="table-b03">
+            <colgroup>
+            <col style="width: 300px;"><col style="width: 250px;">
+            <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th><div class="th">결제서비스</div></th>
+                <th><div class="th">결제수단</div></th>
+                <th><div class="th">수수료율 (VAT별도)</div></th>
+                <!-- <th><div class="th">입금일</div></th> -->
+              </tr>
+              <tr>
+                <th rowspan="8"><div class="th">PAYCO</div></th>
+                <th><div class="th">신용카드</div></th>
+                <td><div class="td">2.27%</div></td>
+              </tr>
+              <tr>
+                <th><div class="th">휴대폰</div></th>
+                <td><div class="td">2.60%</div></td>
+              </tr>
+              <tr>
+                <th><div class="th">실시간 계좌이체</div></th>
+                <td><div class="td">1.10%</div></td>
+              </tr>
+              <tr>
+                <th><div class="th">무통장입금</div></th>
+                <td><div class="td">건당 170원</div></td>
+              </tr>
+              <tr>
+                <th><div class="th">PAYCO포인트</div></th>
+                <td><div class="td">2.30%</div></td>
+              </tr>
+              <tr>
+                <th><div class="th">PAYCO쿠폰</div></th>
+                <td><div class="td">2.30%</div></td>
+              </tr>
+              <tr>
+                <th><div class="th">상품권</div></th>
+                <td><div class="td">0</div></td>
+              </tr>
+              <tr>
+                <th><div class="th">예매권</div></th>
+                <td><div class="td">0</div></td>
+              </tr>
+              <tr>
+                <th rowspan="3"><div class="th">NPAY</th>
+                <th><div class="th">신용카드</div></th>
+                <td><div class="td">2.97%</div></td>
+              </tr>
+              <tr>
+                <th><div class="th">계좌이체</div></th>
+                <td><div class="td">1.65%</div></td>
+              </tr>
+              <tr>
+                <th><div class="th">NAVER포인트</div></th>
+                <td><div class="td">2.97%</div></td>
+              </tr>
+              <tr>
+                <th><div class="th">KCP</div></th>
+                <th><div class="th">신용카드</div></th>
+                <td><div class="td">확인필요</div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 케이스뷰 -->
+  <div class="caseview">
+    <button type="button" class="caseview-btn">케이스뷰 on/off</button>
+    <button type="button" class="caseview-btn1">[팝업] 수수료율 확인</button>
+  </div>
+  <style>
+    .caseview {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 1100;
+      min-width: 20px;
+      min-height: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .caseview button {
+      display: block;
+      padding: 5px 10px;
+      border: 0;
+      background: transparent;
+      font-size: 12px;
+      color: #fff;
+      text-align: left;
+    }
+  </style>
+  <script>
+  $(document).ready(function () {
+      // 케이스뷰
+      $(".caseview-btn").on("click", function () {
+        $(this).siblings().toggle();
+      });
+      $(".caseview-btn1").on("click", function () {
+        $(".charge-check").toggle();
+      });
+
+      // top버튼 클릭시
+      $(window).scroll(function () {
+        // top button controll
+        if ($(this).scrollTop() > 500) {
+          $("#topButton").fadeIn();
+        } else {
+          $("#topButton").fadeOut();
+        }
+      });
+      $("#topButtonImg").click(function () {
+        $("#table").animate({ scrollTop: 0 }, "300");
+      });
+
+      // 영역 노출
+      $('#onDisplay').click(function(){
+          if($("#noneDiv").css("display") == "none"){
+                $('#noneDiv').show();
+                $('#onDisplay').hide();
+          }
+        });
+    });
+    // 가격 폼 자동 콤마
+    $('#inputFix').keyup(function(){
+        $(this).css('color','#000');   
+      });
+      $('#inputFix').blur(function(){
+          var value = $('#inputLabel').text()+$(this).val();
+        
+        alert(value);
+      });
+      function inputNumberFormat(obj) {
+            obj.value = comma(uncomma(obj.value));
+        }
+        function comma(str) {
+            str = String(str);
+            return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+        }
+
+        function uncomma(str) {
+            str = String(str);
+            return str.replace(/[^\d]+/g, '');
+        }
+  </script>
+</body>
+</html>

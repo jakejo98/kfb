@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>판매대사 불일치 내역 상세 - NHN LINKSAM</title>
+
+  <link rel="stylesheet" href="../../../css/lnb.css" />
+  <link rel="stylesheet" href="../../../css/common.css" />
+  <link rel="stylesheet" href="../../../css/reset.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+  <script>
+    $(document).ready( function() {
+      $("#lnb").load("../../../html/lnb.html", function() {
+      });
+    });
+  </script>
+
+</head>
+<body>
+  <div id="app">
+    <div id="wrap" class="clear">
+      <!-- lnb -->
+      <div id="lnb" class="lnb"></div>
+      <!-- contents -->
+      <div id="contents" class="contents-area">
+        <div id="top-bar" class="top-bar-area">
+          <!-- 탭 -->
+          <div class="common-tab type-capsule">
+            <div class="common-tab-area">
+              <ul class="common-tab-list">
+                <li class="common-tab-item">
+                  <!-- 선택된 tab button에 aria-selected="true", 그 외 aria-selected="false" -->
+                  <button type="button" class="common-tab-btn" aria-selected="true">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close-selected ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+                <li class="common-tab-item">
+                  <button type="button" class="common-tab-btn" aria-selected="false">
+                    <span class="common-tab-btn-span">타이틀</span>
+                    <a class="common-icon icon-close ty-xs"></a>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="table" class="table-area">
+          <!-- 판매대사 -->
+          <div id="inconsistency">
+            <h2 class="t-18 t-medium mb-12 over-h">
+              판매대사 &gt; 불일치내역
+              <div class="f-right">
+                <button href="#" class="btn-h32 btn-red" style="width: 110px">뒤로</button>
+              </div>
+            </h2>
+            <!-- 불일치내역 테이블 -->
+            <div class="table-scroll">
+              <table class="table-b03 scroll-table">
+                <colgroup>
+                  <col style="width: 50px"><col style="width: 93px">
+                  <col style="width: 280px"><col style="width: 110px">
+                  <col style="width: 110px"><col style="width: 83px">
+                  <col style="width: 110px"><col style="width: 79px;">
+                  <col style="width: 83px"><col style="width: 100px">
+                  <col style="width: 100px"><col style="width: 100px">
+                  <col style="width: 260px">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th rowspan="2"><div class="th">NO</div></th>
+                    <th rowspan="2"><div class="th">거래일</div></th>
+                    <th rowspan="2"><div class="th">상품명</div></th>
+                    <th colspan="3"><div class="th">판매데이터</div></th>
+                    <th colspan="3"><div class="th">빌링데이터</div></th>
+                    <th colspan="4"><div class="th">대사결과</div></th>
+                  </tr>
+                  <tr>
+                    <th><div class="th">예매번호</div></th>
+                    <th><div class="th">예매상태</div></th>
+                    <th><div class="th">거래금액</div></th>
+                    <th><div class="th">가맹점 주문번호</div></th>
+                    <th><div class="th">결제타입</div></th>
+                    <th><div class="th">거래금액</div></th>
+                    <th><div class="th">불일치 구분</div></th>
+                    <th><div class="th">처리</div></th>
+                    <th><div class="th">처리자</div></th>
+                    <th><div class="th">메모</div></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><div class="td">1</div></td>
+                    <td><div class="td">2022.04.01</div></td>
+                    <td><div class="td">뮤지컬 블러디 사일런스 뱀파이어 헌터</div></td>
+                    <td><div class="td">1200012345</div></td>
+                    <td><div class="td">예매완료</div></td>
+                    <td><div class="td t-right">15,000</div></td>
+                    <td><div class="td">1200012345</div></td>
+                    <td><div class="td">승인</div></td>
+                    <td><div class="td t-right">5,000</div></td>
+                    <td><div class="td">가승인취소</div></td>
+                    <td>
+                      <div class="td px-2">
+                        <button href="#" class="btn-h32 btn-grayline mb-2">판매취소</button>
+                        <button href="#" class="btn-h32 btn-grayline">손실처리</button>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td">홍*동</div>
+                    </td>
+                    <td>
+                      <div class="td pa-0">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <input type="text" class="input-txt-auto" id="inputMemo1" placeholder="텍스트" style="width: 180px;">
+                            <button href="#" class="btn-h32 btn-blackline">저장</button>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">2</div></td>
+                    <td><div class="td">2022.05.10</div></td>
+                    <td><div class="td">뮤지컬 블러디 사일런스 뱀파이어 헌터</div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td">취소</div></td>
+                    <td><div class="td t-right">-15,000</div></td>
+                    <td><div class="td">가승인</div></td>
+                    <td>
+                      <div class="td pa-0">
+                        <button href="#" class="btn-h32 btn-grayline">빌링취소</button>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td"></div>
+                    </td>
+                    <td>
+                      <div class="td">
+                        <input type="text" class="input-txt-auto" id="inputMemo2" value="메모가 입력되었습니다." style="width: 180px;">
+                        <button href="#" class="btn-h32 btn-blackline">수정</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">3</div></td>
+                    <td><div class="td">2022.05.10</div></td>
+                    <td><div class="td">뮤지컬 블러디 사일런스 뱀파이어 헌터</div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td">승인</div></td>
+                    <td><div class="td t-right">35,000</div></td>
+                    <td><div class="td">취소오류</div></td>
+                    <td>
+                      <div class="td pa-0">
+                        <button href="#" class="btn-h32 btn-grayline">빌링취소</button>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td"></div>
+                    </td>
+                    <td>
+                      <div class="td"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">4</div></td>
+                    <td><div class="td">2022.06.20</div></td>
+                    <td><div class="td">뮤지컬 블러디 사일런스 뱀파이어 헌터</div></td>
+                    <td><div class="td">1200012345</div></td>
+                    <td><div class="td">예매완료</div></td>
+                    <td><div class="td t-right">15,000</div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td">결제오류</div></td>
+                    <td>
+                      <div class="td px-2">
+                        <button href="#" class="btn-h32 btn-grayline mb-2">판매취소</button>
+                        <button href="#" class="btn-h32 btn-grayline">손실처리</button>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td"></div>
+                    </td>
+                    <td>
+                      <div class="td"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">5</div></td>
+                    <td><div class="td">2022.07.05</div></td>
+                    <td><div class="td">뮤지컬 블러디 사일런스 뱀파이어 헌터</div></td>
+                    <td><div class="td">1200012345</div></td>
+                    <td><div class="td">예매취소</div></td>
+                    <td><div class="td t-right">15,000</div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td t-right"></div></td>
+                    <td><div class="td">취소오류</div></td>
+                    <td><div class="td pa-0"></div></td>
+                    <td><div class="td"></div></td>
+                    <td><div class="td"></div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- 탑 버튼 -->
+          <button class="btn-top pa-0" id="topButtonImg">
+            <img src="../../../img/svg/icons/top-btn.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  $(document).ready(function () {
+    $(window).scroll(function () {
+      // 탑 버튼
+      if ($(this).scrollTop() > 500) {
+        $("#topButton").fadeIn();
+      } else {
+        $("#topButton").fadeOut();
+      }
+    });
+
+    $("#topButtonImg").click(function () {
+      $("#table").animate({ scrollTop: 0 }, "300");
+    });
+  });
+</script>
+</html>

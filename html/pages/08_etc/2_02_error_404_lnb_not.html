@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>에러 404 - NHN LINKSAM</title>
+
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../../../css/lnb.css">
+  <link rel="stylesheet" href="../../../css/reset.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="../../../lib/jquery/jquery.tablednd.js"></script>
+  
+  <script>
+    $(document).ready( function() {
+      $("#lnb").load("../../../html/lnb.html", function() {
+      });
+    });
+  </script>
+
+</head>
+<body>
+  <div id="app">
+    <div id="wrap" class="clear">
+      <div class="error-area">
+        <div class="error-container">
+          <div class="error-404"></div>
+          <h1 class="t-18 t-bold pt-40">페이지를 찾을 수 없습니다.</h1>
+          <span class="t-14 t-normal gray-01 pt-10">요청하신 페이지 주소가 삭제되었거나 잘못된 경로로 접근하였습니다.<br>입력하신 주소가 정확한지 다시 한 번 확인해 주세요.</span>
+        </div>
+        <div class="contents-footer my-50">
+          <button class="btn-h46 btn-grayline" style="width: 200px;">홈</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

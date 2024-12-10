@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>파트너관리 수수료등록 - NHN LINKSAM</title>
+
+    <link rel="stylesheet" href="../../../css/lnb.css" />
+    <link rel="stylesheet" href="../../../css/common.css" />
+    <link rel="stylesheet" href="../../../css/reset.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../../lib/jquery/jquery.tablednd.js"></script>
+    
+    <script>
+      $(document).ready( function() {
+        $("#lnb").load("../../../html/lnb.html", function() {
+        });
+      });
+    </script>
+
+  </head>
+  <body>
+    <div id="app">
+      <div id="wrap" class="clear">
+      <!-- lnb -->
+      <div id="lnb" class="lnb"></div>
+        <!-- contents -->
+        <div id="contents" class="contents-area">
+          <div id="top-bar" class="top-bar-area">
+            <div class="common-tab type-capsule">
+              <div class="common-tab-area">
+                <ul class="common-tab-list">
+                  <li class="common-tab-item">
+                    <!-- 선택된 tab button에 aria-selected="true", 그 외 aria-selected="false" -->
+                    <button type="button" class="common-tab-btn" aria-selected="true">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close-selected ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="table" class="table-area">
+            <h1 class="t-20 t-medium mb-40">2. 수수료 등록</h1>
+            <div id="lookup-top">
+              <h2 class="t-18 t-medium mb-12">파트너 정보</h2>
+              <table class="table-b04">
+                <colgroup>
+                  <col style="width: 80px;"><col style="width: 120px;">
+                  <col style="width: 200px;"><col style="width: 200px;">
+                  <col style="width: 200px;"><col style="width: 200px;">
+                  <col style="width: 200px;"><col style="width: 200px;">
+                  <col style="width: 200px;">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th colspan="2"><div class="th">판매상품</div></th>
+                    <td colspan="7">
+                      <div class="td">
+                        <div class="">
+                          <div class="f-left mr-24">
+                            <label class="checkbox display-u">
+                              <input type="checkbox" name="checkboxGroup" checked="">
+                              <span class="label">티켓</span>
+                            </label>
+                          </div>
+                          <div class="f-left">
+                            <label class="checkbox display-u">
+                              <input type="checkbox" name="checkboxGroup" checked="" disabled="">
+                              <span class="label">부가상품</span>
+                            </label>
+                          </div>
+                          <div class="f-right">
+                            <label class="checkbox display-u">
+                              <input type="checkbox" name="checkboxGroup" checked="" disabled="">
+                              <span class="label">표준 수수료 적용</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th colspan="2"><div class="th">구분</div></th>
+                    <th><div class="th">구분</div></th>
+                    <th><div class="th">구분</div></th>
+                    <th><div class="th">구분</div></th>
+                    <th><div class="th">구분</div></th>
+                    <th><div class="th">구분</div></th>
+                    <th><div class="th">구분</div></th>
+                    <th><div class="th">구분</div></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th rowspan="4"><div class="th">티켓</div></th>
+                    <th><div class="th">현금</div></th>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 87px;">
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 84px;">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 87px;">
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 84px;">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 87px;">
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 84px;">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 87px;">
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 84px;">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 87px;">
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 84px;">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 91px;" disabled="">
+                              <option value="사용안함">사용안함</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 80px;" disabled="">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 91px;" disabled="">
+                              <option value="사용안함">사용안함</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 80px;" disabled="">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><div class="th">카드</div></th>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 87px;">
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 84px;">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 87px;">
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 84px;">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 87px;">
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 84px;">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 87px;">
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 84px;">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 87px;">
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 84px;">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 91px;" disabled="">
+                              <option value="사용안함">사용안함</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 80px;" disabled="">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 91px;" disabled="">
+                              <option value="사용안함">사용안함</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 80px;" disabled="">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><div class="th">PAYCO포인트</div></th>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 87px;">
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 84px;">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 87px;">
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 84px;">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 87px;">
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 84px;">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 87px;">
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 84px;">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 87px;">
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 84px;">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 91px;" disabled="">
+                              <option value="사용안함">사용안함</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 80px;" disabled="">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 91px;" disabled="">
+                              <option value="사용안함">사용안함</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 80px;" disabled="">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><div class="th">기타포인트</div></th>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 87px;">
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 84px;">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 87px;">
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 84px;">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 87px;">
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 84px;">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 87px;">
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 84px;">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 87px;">
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                              <option value="정률">정률</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 84px;">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 91px;" disabled="">
+                              <option value="사용안함">사용안함</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 80px;" disabled="">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="td py-8 px-12">
+                        <div class="form-field">
+                          <div class="input-field">
+                            <select name="selectForm" id="select" style="width: 91px;" disabled="">
+                              <option value="사용안함">사용안함</option>
+                            </select>
+                            <input type="text" class="input t-right" id="inputDefault" placeholder="정률" style="width: 80px;" disabled="">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="mt-40 display-f">
+              <h2 class="t-18 t-medium mb-12">
+                고객수수료
+                <span class="t-14 t-medium ml-10 gray-02 py-4">고객수수료 정산 기준을 입력해주세요.</span>
+              </h2>
+            </div>
+            <table class="table-b02">
+              <colgroup>
+              <col style="width: 148px"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="t-left th-form">예매수수료</div></th>
+                  <td>
+                  <div class="">
+                    <div class="t-left td-form px-20 display-f">
+                      <div class="mr-10 py-6">
+                        <label class="checkbox">
+                          <input type="checkbox" name="checkboxGroup" checked="">
+                          <span class="label">티켓링크</span>
+                        </label>
+                      </div>
+                      <div class="input-field pa-0" style="width: 84px">
+                        <input type="text" class="input t-right" id="inputDefault" value="100%" placeholder="텍스트">
+                      </div>
+                      <span class="py-6 ml-10">:</span>
+                      <div class="input-field pa-0 ml-10" style="width: 84px">
+                        <input type="text" class="input t-right" id="inputDefault" placeholder="0%">
+                      </div>
+                      <span class="py-6 ml-10" style="width: 254px">파트너 분배</span>
+                      <div class="mr-10 py-6 ml-10">
+                        <label class="checkbox">
+                          <input type="checkbox" name="checkboxGroup">
+                          <span class="label">파트너 부담</span>
+                        </label>
+                      </div>
+                      <div class="form-field">
+                        <div class="input-field">
+                          <input type="text" class="input input-price mr-8" id="inputFix" name="inputFix" onkeyup="inputNumberFormat(this)" value="" disabled="" style="width:84px;">
+                          <span class="input-won gray-03" style="left:60px">원</span>
+                          <span class="t-14 gray-03">(1매 당)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">취소수수료</div></th>
+                  <td>
+                    <div class="">
+                      <div class="t-left td-form px-20 display-f">
+                        <div class="mr-10 py-6">
+                          <label class="checkbox">
+                            <input type="checkbox" name="checkboxGroup" checked="">
+                            <span class="label">티켓링크</span>
+                          </label>
+                        </div>
+                        <div class="input-field pa-0" style="width: 84px">
+                          <input type="text" class="input t-right" id="inputDefault" value="100%" placeholder="텍스트">
+                        </div>
+                        <span class="py-6 ml-10">:</span>
+                        <div class="input-field pa-0 ml-10" style="width: 84px">
+                          <input type="text" class="input t-right" id="inputDefault" placeholder="0%">
+                        </div>
+                        <span class="py-6 ml-10" style="width: 254px">파트너 분배</span>
+                        <div class="mr-10 py-6 ml-10">
+                          <label class="checkbox">
+                            <input type="checkbox" name="checkboxGroup">
+                            <span class="label">파트너 부담</span>
+                          </label>
+                        </div>
+                        <div class="form-field">
+                          <div class="input-field">
+                            <input type="text" class="input input-price mr-8" id="inputFix" name="inputFix" onkeyup="inputNumberFormat(this)" value="" disabled="" style="width:84px; height:32px;">
+                            <span class="input-won gray-03 py-8" style="left:60px">원</span>
+                            <span class="t-14 gray-03">(1매 당)</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">우편배송료</div></th>
+                  <td>
+                    <div class="">
+                      <div class="t-left td-form px-20 display-f">
+                        <div class="mr-10 py-6">
+                          <label class="checkbox">
+                            <input type="checkbox" name="checkboxGroup" checked="">
+                            <span class="label">티켓링크</span>
+                          </label>
+                        </div>
+                        <div class="input-field pa-0" style="width: 84px">
+                          <input type="text" class="input t-right" id="inputDefault" value="100%" placeholder="텍스트">
+                        </div>
+                        <span class="py-6 ml-10">:</span>
+                        <div class="input-field pa-0 ml-10" style="width: 84px">
+                          <input type="text" class="input t-right" id="inputDefault" placeholder="0%">
+                        </div>
+                        <span class="py-6 ml-10" style="width: 254px">파트너 분배</span>
+                        <div class="mr-10 py-6 ml-10">
+                          <label class="checkbox">
+                            <input type="checkbox" name="checkboxGroup">
+                            <span class="label">파트너 부담</span>
+                          </label>
+                        </div>
+                        <div class="form-field">
+                          <div class="input-field">
+                            <input type="text" class="input input-price mr-8" id="inputFix" name="inputFix" onkeyup="inputNumberFormat(this)" value="" disabled="" style="width:84px; height:32px;">
+                            <span class="input-won gray-03 py-8" style="left:60px">원</span>
+                            <span class="t-14 gray-03">(1매 당)</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="mt-40 display-f">
+              <h2 class="t-18 t-medium mb-12">발권수수료</h2>
+              <span class="t-14 t-medium ml-10 gray-02 py-4">발권 수수료를 입력해주세요.</span>
+            </div>
+            <table class="table-b02">
+              <colgroup>
+              <col style="width: 148px"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="t-left th-form">무료권 수수료</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <div class="form-field">
+                        <div class="input-field">
+                          <input type="text" class="input input-price" id="inputFix" name="inputFix" onkeyup="inputNumberFormat(this)" style="width: 174px; height: 32px;">
+                          <span class="input-won py-8 gray-03" style="left:150px;">원</span>
+                          <span class="t-14 gray-03 ml-8">(1매 당)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">취소수수료</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <div class="form-field">
+                        <div class="input-field">
+                          <input type="text" class="input input-price" id="inputFix" name="inputFix" onkeyup="inputNumberFormat(this)" style="width: 174px; height: 32px;">
+                          <span class="input-won py-8 gray-03" style="left:150px;">원</span>
+                          <span class="t-14 gray-03 ml-8">(1매 당)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="mt-40">
+              <h2 class="t-18 t-medium mb-12">
+                위탁판매 수수료
+                <span class="t-14 t-medium ml-10 gray-02 py-4">기타 채널 판매를 위탁한 경우 수수료율을 입력해주세요.</span>
+              </h2>
+            </div>
+            <table class="table-b02">
+              <colgroup>
+              <col style="width: 148px"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="t-left th-form">위탁판매</div></th>
+                  <td>
+                    <div class="">
+                      <div class="t-left td-form px-20 display-f">
+                        <div class="mr-10 py-6">
+                          <label class="checkbox">
+                            <input type="checkbox" name="checkboxGroup" checked="">
+                            <span class="label">티켓링크</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">티켓몬스터</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <div class="form-field">
+                        <div class="input-field">
+                          <input type="text" class="input input-price" id="inputFix" name="inputFix" onkeyup="inputNumberFormat(this)" style="width: 174px; height: 32px;">
+                          <span class="input-won py-8 gray-03" style="left:150px;">%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">쿠팡</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <div class="form-field">
+                        <div class="input-field">
+                          <input type="text" class="input input-price" id="inputFix" name="inputFix" onkeyup="inputNumberFormat(this)" style="width: 174px; height: 32px;">
+                          <span class="input-won py-8 gray-03" style="left:150px;">%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">위메프</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <div class="form-field">
+                        <div class="input-field">
+                          <input type="text" class="input input-price" id="inputFix" name="inputFix" onkeyup="inputNumberFormat(this)" style="width: 174px; height: 32px;">
+                          <span class="input-won py-8 gray-03" style="left:150px;">%</span>
+                          <span class="t-14 gray-03 ml-8">(1매 당)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">네이버</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <div class="form-field">
+                        <div class="input-field">
+                          <input type="text" class="input input-price" id="inputFix" name="inputFix" onkeyup="inputNumberFormat(this)" style="width: 174px; height: 32px;">
+                          <span class="input-won py-8 gray-03" style="left:150px;">%</span>
+                          <span class="t-14 gray-03 ml-8">(1매 당)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">기타</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <div class="form-field display-f">
+                        <div class="input-field mr-10">
+                          <input type="text" class="input" placeholder="판매처명" style="width: 174px; height: 32px;">
+                        </div>
+                        <div class="input-field mr-10">
+                          <input type="text" class="input input-price" id="inputFix" name="inputFix" onkeyup="inputNumberFormat(this)" style="width: 174px; height: 32px;">
+                          <span class="input-won py-8 gray-03" style="left:150px;">%</span>
+                        </div>
+                        <button href="#" class="btn-h32 btn-black t-normal">위탁판매처 추가</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="mt-40">
+              <h2 class="t-18 t-medium mb-12">
+                현장운영 수수료
+                <span class="t-14 t-medium ml-10 gray-02 py-4">현장운영 수수료가 발생될 경우 항목 및 단가를 입력해주세요.</span>
+              </h2>
+            </div>
+            <table class="table-b02">
+              <colgroup>
+              <col style="width: 148px"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="t-left th-form">현장운영</div></th>
+                  <td>
+                    <div class="">
+                      <div class="t-left td-form px-20 display-f">
+                        <div class="mr-10 py-6">
+                          <label class="checkbox">
+                            <input type="checkbox" name="checkboxGroup" checked="">
+                            <span class="label">현장운영수수료</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">현장운영비</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <div class="form-field">
+                        <div class="input-field">
+                          <input type="text" class="input input-price" id="inputFix" name="inputFix" onkeyup="inputNumberFormat(this)" style="width: 174px; height: 32px;">
+                          <span class="input-won py-8 gray-03" style="left:150px;">%</span>
+                          <input type="text" class="input t-right ml-8" id="inputTextDisabled" placeholder="1경기" disabled="" style="width: 174px;">
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">인건비</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <div class="form-field">
+                        <div class="input-field">
+                          <input type="text" class="input input-price" id="inputFix" name="inputFix" onkeyup="inputNumberFormat(this)" style="width: 174px; height: 32px;">
+                          <span class="input-won py-8 gray-03" style="left:150px;">%</span>
+                          <input type="text" class="input t-right ml-8" id="inputTextDisabled" placeholder="1인" disabled="" style="width: 174px;">
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">게이트</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <div class="form-field">
+                        <div class="input-field">
+                          <input type="text" class="input input-price" id="inputFix" name="inputFix" onkeyup="inputNumberFormat(this)" style="width: 174px; height: 32px;">
+                          <span class="input-won py-8 gray-03" style="left:150px;">%</span>
+                          <input type="text" class="input t-right ml-8" id="inputTextDisabled" placeholder="1대" disabled="" style="width: 174px;">
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">기타</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <div class="form-field">
+                        <div class="input-field">
+                          <input type="text" class="input" id="inputTextDisabled" placeholder="항목" style="width: 174px;">
+                          <input type="text" class="input ml-8" id="inputTextDisabled" placeholder="단가" style="width: 174px;">
+                          <input type="text" class="input ml-8" id="inputTextDisabled" placeholder="단위" style="width: 174px;">
+                          <button href="#" class="btn-h32 btn-grayline t-normal ml-8">삭제</button>
+                          <button href="#" class="btn-h32 btn-black t-normal ml-8">기타항목 추가</button>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">기타</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <div class="form-field">
+                        <div class="input-field">
+                          <input type="text" class="input" id="inputTextDisabled" placeholder="항목" style="width: 174px;">
+                          <input type="text" class="input ml-8" id="inputTextDisabled" placeholder="단가" style="width: 174px;">
+                          <input type="text" class="input ml-8" id="inputTextDisabled" placeholder="단위" style="width: 174px;">
+                          <button href="#" class="btn-h32 btn-grayline t-normal ml-8">삭제</button>
+                          <button href="#" class="btn-h32 btn-black t-normal ml-8">기타항목 추가</button>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="mt-40">
+              <h2 class="t-18 t-medium mb-12">정산 정보</h2>
+            </div>
+            <table class="table-b02">
+              <colgroup>
+              <col style="width: 148px"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="t-left th-form">정산 유형</div></th>
+                  <td>
+                    <div class="">
+                      <div class="t-left td-form px-20 display-f">
+                        <label class="radio pa-0">
+                          <input type="radio" name="radioGroup-01" checked="">
+                          <span class="label">영수 (수수료 차감 후 지급)</span>
+                        </label>
+                        <label class="radio ml-20">
+                          <input type="radio" name="radioGroup-01">
+                          <span class="label">청구 (지급 후 수수료 청구)</span>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">정산 주기</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <label class="radio pa-0">
+                        <input type="radio" name="radioGroup-02" checked="">
+                        <span class="label">1주</span>
+                      </label>
+                      <span class="mr-6 ml-8">&#40;</span>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxGroup">
+                        <span class="label">월</span>
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxGroup">
+                        <span class="label">화</span>
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxGroup">
+                        <span class="label">수</span>
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxGroup">
+                        <span class="label">목</span>
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxGroup">
+                        <span class="label">금</span>
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxGroup">
+                        <span class="label">토</span>
+                      </label>
+                      <label class="checkbox pa-0">
+                        <input type="checkbox" name="checkboxGroup">
+                        <span class="label">일</span>
+                      </label>
+                      <span class="ml-6">&#41;</span>
+                      <label class="radio pa-0 ml-20">
+                        <input type="radio" name="radioGroup-02">
+                        <span class="label">2주</span>
+                      </label>
+                      <span class="mr-6 ml-8">&#40;</span>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxGroup">
+                        <span class="label">월</span>
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxGroup">
+                        <span class="label">화</span>
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxGroup">
+                        <span class="label">수</span>
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxGroup">
+                        <span class="label">목</span>
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxGroup">
+                        <span class="label">금</span>
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxGroup">
+                        <span class="label">토</span>
+                      </label>
+                      <label class="checkbox pa-0">
+                        <input type="checkbox" name="checkboxGroup">
+                        <span class="label">일</span>
+                      </label>
+                      <span class="ml-6">&#41;</span>
+                      <label class="radio ml-20 pa-0">
+                        <input type="radio" name="radioGroup-02">
+                        <span class="label">매월 1일</span>
+                      </label>
+                      <label class="radio ml-20 pa-0">
+                        <input type="radio" name="radioGroup-02">
+                        <span class="label">종료 후</span>
+                      </label>
+                      <label class="radio ml-20">
+                        <input type="radio" name="radioGroup-02">
+                        <span class="label">경기단위별</span>
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">세금계산서 발행 주기</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <label class="radio pa-0">
+                        <input type="radio" name="radioGroup-03" checked="">
+                        <span class="label">정산주기와 동일</span>
+                      </label>
+                      <label class="radio ml-20 pa-0">
+                        <input type="radio" name="radioGroup-03">
+                        <span class="label">임의지정</span>
+                      </label>
+                      <label class="radio ml-20 pa-0">
+                        <input type="radio" name="radioGroup-03">
+                        <span class="label">월말</span>
+                      </label>
+                      <label class="radio ml-20 pa-0">
+                        <input type="radio" name="radioGroup-03">
+                        <span class="label">종료 후(1회)</span>
+                      </label>
+                      <label class="radio ml-20 pa-0">
+                        <input type="radio" name="radioGroup-03">
+                        <span class="label">경기단위별</span>
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">정산대상 금액구분</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <label class="radio pa-0">
+                        <input type="radio" name="radioGroup-04" checked="">
+                        <span class="label">판매가</span>
+                      </label>
+                      <label class="radio ml-20 pa-0">
+                        <input type="radio" name="radioGroup-04">
+                        <span class="label">표시가</span>
+                      </label>
+                      <label class="radio ml-20 pa-0">
+                        <input type="radio" name="radioGroup-04">
+                        <span class="label">정산가</span>
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="mt-40">
+              <h2 class="t-18 t-medium mb-12">지급 정보</h2>
+            </div>
+            <table class="table-b02">
+              <colgroup>
+              <col style="width: 148px"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="t-left th-form">정산 유형</div></th>
+                  <td>
+                    <div class="">
+                      <div class="t-left td-form px-20 display-f">
+                        <button href="#" class="btn-h32 btn-grayline">불러오기</button>
+                        <label class="radio py-8 ml-20">
+                          <input type="radio" name="radioGroup-05" checked="">
+                          <span class="label">고지서</span>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">정산 주기</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <button href="#" class="btn-h32 btn-grayline">불러오기</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">세금계산서 담당자</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <div class="form-field">
+                        <div class="input-field">
+                          <form action="#">
+                            <input type="text" class="input" id="inputTextDisabled" placeholder="항목" style="width: 174px;">
+                            <input type="text" class="input ml-8" id="inputTextDisabled" placeholder="단가" style="width: 174px;">
+                            <input type="text" class="input ml-8" id="inputTextDisabled" placeholder="단위" style="width: 174px;">
+                            <span class="ml-8">&#64;</span>
+                            <select name="selectForm" id="select" class="ml-10" style="width: 174px;">
+                              <option value="naver.com">naver.com</option>
+                              <option value="naver.com">naver.com</option>
+                              <option value="naver.com">naver.com</option>
+                            </select>
+                            <label class="checkbox ml-10">
+                              <input type="checkbox" name="checkboxGroup" checked="">
+                              <span class="label">정산 담당자와 동일</span>
+                            </label>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="mt-40">
+              <h2 class="t-18 t-medium mb-12 over-h">
+                계약 상품
+                <span class="t-14 t-normal gray-02 ml-10">그룹번호가 동일할 경우 대표상품으로 설정된 상품명으로 그룹으로 설정된 모든 상품을 하나의 정산서로 정산합니다.</span>
+                <div class="f-right">
+                  <button href="#" class="btn-h32 btn-blackline mr-4">상품추가</button>
+                  <button href="#" class="btn-h32 btn-blackline">그룹정보 업데이트</button>
+                </div>
+              </h2>
+            </div>
+            <table class="table-b01" id="table-contract">
+              <colgroup>
+                <col style="width: 50px"><col style="width: 46px">
+                <col style="width: 70px"><col style="width: 70px">
+                <col style="width: 120px"><col style="width: 316px">
+                <col style="width: 180px"><col style="width: 100px">
+                <col style="width: 69px"><col style="width: 69px">
+                <col style="width: 69px"><col style="width: 69px">
+                <col style="width: 69px"><col style="width: 69px">
+                <col style="width: 69px"><col style="width: 69px">
+                <col style="width: 69px">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th><div class="th py-6">순서<br>변경</div></th>
+                  <th><div class="th py-6" style="padding-inline: 11.5px">그룹</div></th>
+                  <th><div class="th py-6">대표상품</div></th>
+                  <th><div class="th py-6">카테고리</div></th>
+                  <th><div class="th py-6">상품코드</div></th>
+                  <th><div class="th py-6">상품명</div></th>
+                  <th><div class="th py-6">관람기간</div></th>
+                  <th><div class="th py-6">정산시작일</div></th>
+                  <th><div class="th py-6">상품유형</div></th>
+                  <th><div class="th py-6">위탁판매</div></th>
+                  <th><div class="th py-6">선급금</div></th>
+                  <th><div class="th py-6">채권양도</div></th>
+                  <th><div class="th py-6">가압류</div></th>
+                  <th><div class="th py-6">지급보류</div></th>
+                  <th><div class="th py-6">메모</div></th>
+                  <th><div class="th py-6">회차묶음</div></th>
+                  <th><div class="th py-6">삭제</div></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="1">
+                  <td>
+                    <div class="td dragHandle cu-m" style="padding: 17.5px;">
+                      <img src="../../../img/svg/icons/td_change.svg" alt="" />
+                    </div>
+                  </td>
+                  <td><div class="td">1</div></td>
+                  <td>
+                    <div class="td">
+                      <label class="checkbox checkbox-none ma-0 pa-0">
+                      <input type="checkbox" name="checkboxGroup">
+                      <span class="label label-none"></span>
+                      </label>
+                    </div>
+                  </td>
+                  <td><div class="td py-6">공연</div></td>
+                  <td><div class="td py-6">12345</div></td>
+                  <td><div class="td py-6">현대적인 의상과 라이브연주가 함께하는 『상상(想像)-상상하는 우리춤』</div></td>
+                  <td><div class="td py-6">2022.05.01~2022.05.31</div></td>
+                  <td><div class="td py-6">2022.04.01</div></td>
+                  <td><div class="td py-6">당일권</div></td>
+                  <td>
+                    <div class="td py-6">
+                      <label class="checkbox checkbox-none ma-0 pa-0">
+                      <input type="checkbox" name="checkboxGroup">
+                      <span class="label label-none"></span>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="td py-6">
+                      <label class="checkbox checkbox-none ma-0 pa-0">
+                      <input type="checkbox" name="checkboxGroup">
+                      <span class="label label-none"></span>
+                      </label>
+                    </div>
+                  </td>
+                  <td><div class="td py-6">V</div></td>
+                  <td><div class="td py-6">-</div></td>
+                  <td><div class="td py-6">V</div></td>
+                  <td>
+                    <div class="td py-6">
+                      <a class="t-underline" href="#">2</a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="td py-9 px-7">
+                    <button href="#" class="btn-h32 btn-grayline" style="height: 30px; width: 55px;">설정</button>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="td py-9 px-7">
+                    <button href="#" class="btn-h32 btn-grayline" style="height: 30px; width: 55px;">삭제</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr id="2">
+                  <td>
+                    <div class="td dragHandle cu-m" style="padding: 17.5px;">
+                      <img src="../../../img/svg/icons/td_change.svg" alt="" />
+                    </div>
+                  </td>
+                  <td><div class="td">2</div></td>
+                  <td>
+                    <div class="td">
+                      <label class="checkbox checkbox-none ma-0 pa-0">
+                      <input type="checkbox" name="checkboxGroup">
+                      <span class="label label-none"></span>
+                      </label>
+                    </div>
+                  </td>
+                  <td><div class="td py-6">공연</div></td>
+                  <td><div class="td py-6">12345</div></td>
+                  <td><div class="td py-6">현대적인 의상과 라이브연주가 함께하는 『상상(想像)-상상하는 우리춤』</div></td>
+                  <td><div class="td py-6">2022.05.01~2022.05.31</div></td>
+                  <td><div class="td py-6">2022.04.01</div></td>
+                  <td><div class="td py-6">당일권</div></td>
+                  <td>
+                    <div class="td py-6">
+                      <label class="checkbox checkbox-none ma-0 pa-0">
+                      <input type="checkbox" name="checkboxGroup">
+                      <span class="label label-none"></span>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="td py-6">
+                      <label class="checkbox checkbox-none ma-0 pa-0">
+                      <input type="checkbox" name="checkboxGroup">
+                      <span class="label label-none"></span>
+                      </label>
+                    </div>
+                  </td>
+                  <td><div class="td py-6">&nbsp;</div></td>
+                  <td><div class="td py-6">-</div></td>
+                  <td><div class="td py-6">V</div></td>
+                  <td><div class="td py-6">-</div></td>
+                  <td>
+                    <div class="td py-9 px-7">
+                    <button href="#" class="btn-h32 btn-grayline" style="height: 30px; width: 55px;">설정</button>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="td py-9 px-7">
+                    <button href="#" class="btn-h32 btn-grayline" style="height: 30px; width: 55px;">삭제</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr id="3">
+                  <td>
+                    <div class="td dragHandle cu-m" style="padding: 17.5px;">
+                      <img src="../../../img/svg/icons/td_change.svg" alt="" />
+                    </div>
+                  </td>
+                  <td><div class="td">3</div></td>
+                  <td>
+                    <div class="td">
+                      <label class="checkbox checkbox-none ma-0 pa-0">
+                      <input type="checkbox" name="checkboxGroup">
+                      <span class="label label-none"></span>
+                      </label>
+                    </div>
+                  </td>
+                  <td><div class="td py-6">공연</div></td>
+                  <td><div class="td py-6">12345</div></td>
+                  <td><div class="td py-6">현대적인 의상과 라이브연주가 함께하는 『상상(想像)-상상하는 우리춤』</div></td>
+                  <td><div class="td py-6">2022.05.01~2022.05.31</div></td>
+                  <td><div class="td py-6">2022.04.01</div></td>
+                  <td><div class="td py-6">당일권</div></td>
+                  <td>
+                    <div class="td py-6">
+                      <label class="checkbox checkbox-none ma-0 pa-0">
+                      <input type="checkbox" name="checkboxGroup">
+                      <span class="label label-none"></span>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="td py-6">
+                      <label class="checkbox checkbox-none ma-0 pa-0">
+                      <input type="checkbox" name="checkboxGroup">
+                      <span class="label label-none"></span>
+                      </label>
+                    </div>
+                  </td>
+                  <td><div class="td py-6">&nbsp;</div></td>
+                  <td><div class="td py-6">-</div></td>
+                  <td><div class="td py-6">V</div></td>
+                  <td>
+                    <div class="td py-6">
+                      <a class="t-underline" href="#">0</a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="td py-9 px-7">
+                    <button href="#" class="btn-h32 btn-grayline" style="height: 30px; width: 55px;">설정</button>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="td py-9 px-7">
+                    <button href="#" class="btn-h32 btn-grayline" style="height: 30px; width: 55px;">삭제</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+              
+            <div class="contents-footer mt-48">
+            </div>
+            <button class="btn-top pa-0" id="topButtonImg">
+              <img src="../../../img/svg/icons/top-btn.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // 탑 버튼
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 500) {
+            $("#topButton").fadeIn();
+          } else {
+            $("#topButton").fadeOut();
+          }
+        });
+  
+        $("#topButtonImg").click(function () {
+          $("#table").animate({ scrollTop: 0 }, "300");
+        });
+      });
+      // 가격 폼 자동 콤마
+      $('#inputFix').keyup(function(){
+        $(this).css('color','#000');   
+      });
+      $('#inputFix').blur(function(){
+          var value = $('#inputLabel').text()+$(this).val();
+        
+        alert(value);
+      });
+      function inputNumberFormat(obj) {
+            obj.value = comma(uncomma(obj.value));
+        }
+        function comma(str) {
+            str = String(str);
+            return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+        }
+
+        function uncomma(str) {
+            str = String(str);
+            return str.replace(/[^\d]+/g, '');
+        }
+      // 테이블 순서 편집
+      $(document).ready(function () {
+        $ (" #table-contract ") . tableDnD (
+          {
+            dragHandle: ".dragHandle",
+            onDragClass: "td-drag"
+          }
+        ); });
+    </script>
+  </body>
+</html>

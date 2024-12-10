@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>예외정산 지급조회 - NHN LINKSAM</title>
+
+    <link rel="stylesheet" href="../../../css/lnb.css" />
+    <link rel="stylesheet" href="../../../css/common.css" />
+    <link rel="stylesheet" href="../../../css/reset.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    
+    <script>
+      $(document).ready( function() {
+        $("#lnb").load("../../../html/lnb.html", function() {
+        });
+      });
+    </script>
+  
+  </head>
+  <body>
+    <div id="app">
+      <div id="wrap" class="clear">
+      <!-- lnb -->
+      <div id="lnb" class="lnb"></div>
+        <!-- contents -->
+        <div id="contents" class="contents-area">
+          <div id="top-bar" class="top-bar-area">
+            <!-- 탭 -->
+            <div class="common-tab type-capsule">
+              <div class="common-tab-area">
+                <ul class="common-tab-list">
+                  <li class="common-tab-item">
+                    <!-- 선택된 tab button에 aria-selected="true", 그 외 aria-selected="false" -->
+                    <button type="button" class="common-tab-btn" aria-selected="true">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close-selected ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="table" class="table-area">
+            <div id="lookup-top">
+              <!-- 조회 영역 -->
+              <h2 class="t-18 t-medium mb-12">예외정산 지급조회</h2>
+              <div class="lookup-wrap">
+                <!-- 첫 번째 줄 -->
+                <div class="form-field" style="display: flex;">
+                  <!-- 예외정산일 -->
+                  <label for="payDate" class="form-label mr-8">예외정산일</label>
+                  <div class="input-field" style="width: 149px;">
+                    <input type="date" class="input input-icon" id="currentDate1" required="" style="top: 0;">
+                  </div>
+                  <i class="mx-8 mt-4">-</i>
+                  <div class="input-field" style="width: 149px;">
+                    <input type="date" class="input input-icon" id="currentDate2" required="" style="top: 0;">
+                  </div>
+                  <!-- 카테고리 -->
+                  <label for="category" class="form-label ml-26 mr-8">카테고리</label>
+                  <div class="input-field mr-10">
+                    <select name="selectForm" id="category" style="width: 156px">
+                      <option value="전체">전체</option>
+                      <option value="공연">공연</option>
+                      <option value="전시">전시</option>
+                      <option value="스포츠">스포츠</option>
+                      <option value="링크온">링크온</option>
+                      <option value="연동상품">연동상품</option>
+                    </select>
+                  </div>
+                  <div class="input-field">
+                    <select name="selectForm" id="category" style="width: 156px">
+                      <option value="전체">전체</option>
+                      <option value="공연">공연</option>
+                      <option value="전시">전시</option>
+                      <option value="스포츠">스포츠</option>
+                      <option value="링크온">링크온</option>
+                      <option value="연동상품">연동상품</option>
+                    </select>
+                  </div>
+                  <!-- 파트너명 -->
+                  <label for="partnerName" class="form-label ml-26 mr-8">파트너명</label>
+                  <div class="input-field">
+                    <input type="text" class="input-txt-auto" id="partnerName" placeholder="파트너명" style="width: 320px;">
+                  </div>
+                </div>
+                <!-- 두 번째 줄 -->
+                <div class="form-field mt-30" style="display: flex;">
+                  <!-- 지급처리일 -->
+                  <label for="confirmDate" class="form-label mr-8">지급처리일</label>
+                  <div class="input-field" style="width: 149px;">
+                    <input type="date" class="input input-icon" required="" style="top: 0;">
+                  </div>
+                  <i class="mx-8 mt-4">-</i>
+                  <div class="input-field" style="width: 149px;">
+                    <input type="date" class="input input-icon" required="" style="top: 0;">
+                  </div>
+                  <!-- 상품정보 -->
+                  <label for="productInfo" class="form-label ml-26 mr-8">상품정보</label>
+                  <div class="input-field">
+                    <input type="text" class="input-txt-auto" id="productInfo" placeholder="상품명" style="width: 206px;">
+                    <input type="text" class="input-txt-auto ml-5" id="productInfo" placeholder="상품번호" style="width: 106px;">
+                  </div>
+                  <!-- 상품지급설정 -->
+                  <label for="paymentMan" class="ml-26 form-label mr-8">상품지급설정</label>
+                  <div class="input-field">
+                    <select name="selectForm" id="paymentMan" style="width: 320px">
+                      <option value="전체">전체</option>
+                      <option value="채권양도">채권양도</option>
+                      <option value="가압류">가압류</option>
+                      <option value="지급보류">지급보류</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- 세 번째 줄 -->
+                <div class="form-field mt-30" style="display: flex;">
+                  <!-- 지급상태 -->
+                  <label for="paySitu" class="form-label mr-8">지급상태</label>
+                  <div class="input-field">
+                    <select name="selectForm" id="paySitu" style="width: 320px">
+                      <option value="전체">전체</option>
+                      <option value="지급예정" selected>지급예정</option>
+                      <option value="지급완료">지급완료</option>
+                      <option value="예외지급보류">예외지급보류</option>
+                    </select>
+                  </div>
+                  <!-- 계약정보 -->
+                  <label for="contractInfo" class="form-label ml-26 mr-8">계약정보</label>
+                  <div class="input-field">
+                    <input type="text" class="input-txt-auto" id="contractInfo" placeholder="계약명" style="width: 206px;">
+                    <input type="text" class="input-txt-auto ml-5" id="contractInfo" placeholder="계약번호" style="width: 106px;">
+                  </div>
+                  <!-- 지급주기 -->
+                  <label for="contractMan" class="ml-26 form-label mr-8">지급주기</label>
+                  <div class="input-field">
+                    <select name="selectForm" id="paySitu" style="width: 320px">
+                      <option value="전체" selected>전체</option>
+                      <option value="지급예정">매월</option>
+                      <option value="지급완료">경기단위별</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- 조회 버튼 -->
+                <div>
+                  <button href="#" id="lookup-btn" class="btn-h38 btn-red">조회</button>
+                </div>
+              </div>
+            </div>
+            <!-- 조회 결과 -->
+            <div id="result" class="mt-40">
+              <h2 class="t-18 t-medium mb-12 over-h">
+                조회 결과
+                <span class="t-14 t-normal ml-2">총 312건</span>
+                <div class="f-right">
+                  <button href="#" class="btn-h32 btn-grayline mr-4">예외지급 보류</button>
+                  <button href="#" class="btn-h32 btn-grayline mr-4">예외지급 보류 해제</button>
+                  <button href="#" class="btn-h32 btn-blackline mr-4 price-adjustment">기타금액조정</button>
+                  <button href="#" class="btn-h32 btn-blackline mr-4 operate-fee">현장운영수수료</button>
+                  <button href="#" class="btn-h32 btn-blackline mr-4 cash-management">현장 현금 관리</button>
+                  <button href="#" class="btn-h32 btn-blackline mr-4">엑셀 다운로드</button>
+                  <button href="#" class="btn-h32 btn-black">지출정산서 다운로드</button>
+                </div>
+              </h2>
+              <!-- 조회 결과 테이블 -->
+              <div class="table-scroll-container">
+                <div class="table-scroll">
+                  <table class="table-b03">
+                    <colgroup>
+                    <col style="width: 46px"><col style="width: 100px">
+                    <col style="width: 80px"><col style="width: 70px">
+                    <col style="width: 70px"><col style="width: 250px">
+                    <col style="width: 100px"><col style="width: 150px">
+                    <col style="width: 70px"><col style="width: 70px">
+                    <col style="width: 70px"><col style="width: 100px">
+                    <col style="width: 70px"><col style="width: 60px">
+                    <col style="width: 60px"><col style="width: 60px">
+                    <col style="width: 60px"><col style="width: 60px">
+                    <col style="width: 60px"><col style="width: 110px">
+                    <col style="width: 110px"><col style="width: 110px">
+                    <col style="width: 110px"><col style="width: 110px">
+                    <col style="width: 110px"><col style="width: 110px">
+                    <col style="width: 110px"><col style="width: 110px">
+                    <col style="width: 110px"><col style="width: 110px">
+                    <col style="width: 110px"><col style="width: 110px">
+                    <col style="width: 110px"><col style="width: 110px">
+                    <col style="width: 110px"><col style="width: 110px">
+                    <col style="width: 70px"><col style="width: 80px">
+                    <col style="width: 70px"><col style="width: 100px;">
+                    <col style="width: 70px"><col style="width: 70px;">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>
+                          <div class="th">
+                            <label class="checkbox checkbox-none">
+                              <input type="checkbox" name="checkboxGroupNone">
+                              <span class="label label-none"></span>
+                            </label>
+                          </div>
+                        </th>
+                        <th><div class="th">예외정산일</div></th>
+                        <th><div class="th">지급상태</div></th>
+                        <th><div class="th">카테고리</div></th>
+                        <th><div class="th">상품번호</div></th>
+                        <th><div class="th">상품명</div></th>
+                        <th><div class="th">관람기간</div></th>
+                        <th><div class="th">파트너명</div></th>
+                        <th><div class="th">계약번호</div></th>
+                        <th><div class="th">예외정산차수</div></th>
+                        <th><div class="th">예외정산주기</div></th>
+                        <th><div class="th">예외정산기간</div></th>
+                        <th><div class="th">정산유형</div></th>
+                        <th><div class="th">현장현금관리</div></th>
+                        <th><div class="th">선급금</div></th>
+                        <th><div class="th">위탁판매</div></th>
+                        <th><div class="th">채권양도</div></th>
+                        <th><div class="th">가압류</div></th>
+                        <th><div class="th">지급보류</div></th>
+                        <th><div class="th">예외정산선급금액</div></th>
+                        <th><div class="th">티켓<br>판매금액</div></th>
+                        <th><div class="th">부가상품<br>판매금액</div></th>
+                        <th><div class="th">기타판매금액</div></th>
+                        <th><div class="th">예매수수료</div></th>
+                        <th><div class="th">취소수수료</div></th>
+                        <th><div class="th">우편배송료</div></th>
+                        <th><div class="th">판매수수료</div></th>
+                        <th><div class="th">권종수수료</div></th>
+                        <th><div class="th">현장운영수수료</div></th>
+                        <th><div class="th">기타수수료</div></th>
+                        <th><div class="th">고객수수료분배금액</div></th>
+                        <th><div class="th">기타지급금액</div></th>
+                        <th><div class="th">기타포인트사용금액</div></th>
+                        <th><div class="th">쿠폰금액(파트너)</div></th>
+                        <th><div class="th">현장현금보유금액</div></th>
+                        <th><div class="th">특정권종지급제외금액</div></th>
+                        <th><div class="th">계약번호</div></th>
+                        <th><div class="th">사업부</div></th>
+                        <th><div class="th">계약담당자</div></th>
+                        <th><div class="th">지급처리일</div></th>
+                        <th><div class="th">상품메모</div></th>
+                        <th><div class="th">판매내역보기</div></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="td">
+                            <label class="checkbox checkbox-none">
+                              <input type="checkbox" name="checkboxGroupNone">
+                              <span class="label label-none"></span>
+                            </label>
+                          </div>
+                        </td>
+                        <td><div class="td">2022.08.01</div></td>
+                        <td><div class="td">지급예정</div></td>
+                        <td><div class="td">스포츠</div></td>
+                        <td><div class="td">23345</div></td>
+                        <td><div class="td">2023 LG 트윈스 정규리그</div></td>
+                        <td><div class="td">2022.07.01~2022.07.31</div></td>
+                        <td><div class="td">(주)LG트윈스</div></td>
+                        <td><div class="td t-underline">12345</div></td>
+                        <td><div class="td">2</div></td>
+                        <td><div class="td">경기단위별</div></td>
+                        <td><div class="td t-underline calculate-period" style="cursor: pointer;">2022.03.15~2022.07.31</div></td>
+                        <td><div class="td">청구</div></td>
+                        <td><div class="td">Y</div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td">Y</div></td>
+                        <td><div class="td">Y</div></td>
+                        <td><div class="td">Y</div></td>
+                        <td><div class="td">Y</div></td>
+                        <td><div class="td t-right">1,000,000,000</div></td>
+                        <td><div class="td t-right">1,000,000,000</div></td>
+                        <td><div class="td t-right">1,000,000,000</div></td>
+                        <td><div class="td t-underline t-right">0</div></td>
+                        <td><div class="td t-right">1,000,000,000</div></td>
+                        <td><div class="td t-right">1,000,000,000</div></td>
+                        <td><div class="td t-right">1,000,000,000</div></td>
+                        <td><div class="td t-right">1,000,000,000</div></td>
+                        <td><div class="td t-right">0</div></td>
+                        <td>
+                          <div class="td t-right">
+                            <a class="t-underline t-bold cu-p">0</a>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="td t-right">
+                            <a class="t-underline t-bold cu-p">0</a>
+                          </div>
+                        </td>
+                        <td><div class="td t-right">0</div></td>
+                        <td>
+                          <div class="td t-right">
+                            <a class="t-underline t-bold cu-p">0</a>
+                          </div>
+                        </td>
+                        <td><div class="td t-right">0</div></td>
+                        <td><div class="td t-right">0</div></td>
+                        <td><div class="td t-right">550,000</div></td>
+                        <td><div class="td t-right">1,000,000</div></td>
+                        <td>
+                          <div class="td">
+                            <a class="t-underline t-bold cu-p">12345</a>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="td">스포츠사업팀</div>
+                        </td>
+                        <td>
+                          <div class="td">안태규</div>
+                        </td>
+                        <td>
+                          <div class="td">2022.09.08</div>
+                        </td>
+                        <td>
+                          <div class="td">2</div>
+                        </td>
+                        <td>
+                          <div class="td py-6 px-0">
+                            <button class="btn-h32 btn-grayline" style="background: none;">보기</button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="td">
+                            <label class="checkbox checkbox-none">
+                              <input type="checkbox" name="checkboxGroupNone">
+                              <span class="label label-none"></span>
+                            </label>
+                          </div>
+                        </td>
+                        <td><div class="td">2022.08.01</div></td>
+                        <td><div class="td">지급완료</div></td>
+                        <td><div class="td">스포츠</div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td t-underline"></div></td>
+                        <td><div class="td">3</div></td>
+                        <td><div class="td">경기단위별</div></td>
+                        <td><div class="td t-underline calculate-period" style="cursor: pointer;"></div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-underline t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td>
+                          <div class="td t-right">
+                            <a class="t-underline t-bold cu-p"></a>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="td t-right">
+                            <a class="t-underline t-bold cu-p"></a>
+                          </div>
+                        </td>
+                        <td><div class="td t-right"></div></td>
+                        <td>
+                          <div class="td t-right">
+                            <a class="t-underline t-bold cu-p"></a>
+                          </div>
+                        </td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td><div class="td t-right"></div></td>
+                        <td>
+                          <div class="td">
+                            <a class="t-underline t-bold cu-p"></a>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="td"></div>
+                        </td>
+                        <td>
+                          <div class="td"></div>
+                        </td>
+                        <td>
+                          <div class="td"></div>
+                        </td>
+                        <td>
+                          <div class="td">0</div>
+                        </td>
+                        <td>
+                          <div class="td py-6 px-0">
+                            <button class="btn-h32 btn-grayline" style="background: none;">보기</button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- 탑 버튼 -->
+            <button class="btn-top pa-0" id="topButtonImg">
+              <img src="../../../img/svg/icons/top-btn.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 팝업창 -->
+    <style>
+      .dnd-container { 
+        width: 100%;
+        height: 50px;
+        border: 1px dashed #E8EAF1;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        flex-direction: column;
+        text-align: center;
+      }
+    </style>
+    <!-- 팝업: 기타금액조정 등록 -->
+    <div class="modal etc-price" tabindex="-1" id="modalBasic">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title t-24 t-bold">예외정산 기타금액조정</h3>
+            <button class="close icon-close common-icon ty-sm" data-dismiss="modal"><i>닫기</i></button>
+          </div>
+          <div class="modal-body py-40">
+            <h3 class="mb-12 t-18 t-medium">예외정산 대상</h3>
+            <!-- 테이블 -->
+            <table class="table-b04">
+              <colgroup>
+                <col style="width:148px;"><col>
+                <col style="width:148px;"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="th t-left">예외정산일</div></th>
+                  <td><div class="td t-left">2022.08.01</div></td>
+                  <th><div class="th t-left">파트너명</div></th>
+                  <td><div class="td t-left">(주)LG트윈스</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">상품명</div></th>
+                  <td><div class="td t-left">[8월 오픈특가할인] 빛의시어터 : 구스타프 클림트 (32549)</div></td>
+                  <th><div class="th t-left">계약번호</div></th>
+                  <td><div class="td t-left">14125</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">예외정산차수</div></th>
+                  <td><div class="td t-left">3</div></td>
+                  <th><div class="th t-left">정산유형</div></th>
+                  <td><div class="td t-left">청구</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">예외정산기간</div></th>
+                  <td><div class="td t-left">2022.07.01~2022.07.31</div></td>
+                  <th><div class="th t-left">예외정산주기</div></th>
+                  <td><div class="td t-left">경기단위별</div></td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="mt-40 mb-12 t-18 t-medium over-h">
+              기타 금액 조정
+              <div class="f-right">
+                <button class="btn-h32 btn-black">기타금액 조정 내역</button>
+               </div>     
+             </h3>
+            <!-- 테이블 -->
+            <table class="table-b02">
+              <colgroup>
+              <col style="width: 148px"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="t-left th-form">지급구분</div></th>
+                  <td>
+                    <div class="t-left td-form">
+                      <label class="radio">
+                        <input type="radio" name="payDivision">
+                        <span class="label">청구(예외정산 선급금액에 포함)</span>
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">금액구분</div></th>
+                  <td>
+                    <div class="t-left td-form">
+                      <div class="input-field">
+                        <select name="selectForm" id="priceDivision" style="width:174px;">
+                          <option value="기타판매금액" selected>기타판매금액</option>
+                          <option value="기타수수료">기타수수료</option>
+                          <option value="기타지급금액">기타지급금액</option>
+                        </select>
+                        <span class="t-13 gray-03 ml-8">파트너 판매금액으로 포함되는 금액입니다.</span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">조정금액</div></th>
+                  <td>
+                    <div class="t-left td-form">
+                      <div class="input-field">
+                        <input type="text" class="input input-price" id="inputFix" name="inputFix" onkeyup="inputNumberFormat(this)" style="width: 174px;">
+                        <span class="input-won" style="left: 153px">원</span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">기타조정사유</div></th>
+                  <td>
+                    <div class="t-left td-form">
+                      <textarea class="textarea-memo" maxlength="100" placeholder="기타지급 금액의 근거 내용을 상세히 입력해 주세요." style="height: 100px;"></textarea>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 하단 버튼 영역 -->
+          <div class="modal-footer">
+            <button class="btn-h46 btn-blackline modal-close" data-dismiss="modal" style="width: 200px">닫기</button>
+            <button class="btn-h46 btn-black ml-10" data-dismiss="modal" style="width: 200px">등록</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <!-- 팝업: 기타금액조정 조회 -->
+    <div class="modal etc-price-lookup" tabindex="-1" id="modalBasic">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title t-24 t-bold">예외정산 기타금액조정</h3>
+            <button class="close icon-close common-icon ty-sm" data-dismiss="modal"><i>닫기</i></button>
+          </div>
+          <div class="modal-body py-40">
+            <h3 class="mb-12 t-18 t-medium">예외정산 대상</h3>
+            <!-- 테이블 -->
+            <table class="table-b04">
+              <colgroup>
+                <col style="width:148px;"><col>
+                <col style="width:148px;"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="th t-left">예외정산일</div></th>
+                  <td><div class="td t-left">2022.08.01</div></td>
+                  <th><div class="th t-left">파트너명</div></th>
+                  <td><div class="td t-left">(주)티모넷</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">상품명</div></th>
+                  <td><div class="td t-left">[8월 오픈특가할인] 빛의시어터 : 구스타프 클림트 (32549)</div></td>
+                  <th><div class="th t-left">계약번호</div></th>
+                  <td><div class="td t-left">14125</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">예외정산차수</div></th>
+                  <td><div class="td t-left">3</div></td>
+                  <th><div class="th t-left">정산유형</div></th>
+                  <td><div class="td t-left">청구</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">예외정산기간</div></th>
+                  <td><div class="td t-left">2022.07.01~2022.07.31</div></td>
+                  <th><div class="th t-left">예외정산주기</div></th>
+                  <td><div class="td t-left">매월</div></td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="mt-40 mb-12 t-18 t-medium over-h">
+              조정내역
+              <div class="f-right">
+                <button class="btn-h32 btn-black">기타금액 조정</button>
+               </div>     
+             </h3>
+            <!-- 테이블 -->
+            <table class="table-b01">
+              <colgroup>
+              <col style="width: 46px;"><col style="width: 100px;">
+              <col style="width: 70px;"><col style="width: 250px;">
+              <col style="width: 70px;"><col style="width: 100px;">
+              <col style="width: 100px;"><col style="width: 100px;">
+              <col style="width: 70px;"><col style="width: 100px;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th><div class="th">NO.</div></th>
+                  <th><div class="th">예외정산일</div></th>
+                  <th><div class="th">예외정산차수</div></th>
+                  <th><div class="th">기타조정 사유</div></th>
+                  <th><div class="th">지급구분</div></th>
+                  <th><div class="th">기타수수료</div></th>
+                  <th><div class="th">기타판매금액</div></th>
+                  <th><div class="th">기타지급금액</div></th>
+                  <th><div class="th">등록자</div></th>
+                  <th><div class="th">조정일</div></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><div class="td">1</div></td>
+                  <td><div class="td">2022.08.01</div></td>
+                  <td><div class="td">3</div></td>
+                  <td><div class="td t-left">기타판매금액 추가</div></td>
+                  <td><div class="td">청구</div></td>
+                  <td><div class="td t-right"></div></td>
+                  <td><div class="td t-right">1,000원</div></td>
+                  <td><div class="td t-right"></div></td>
+                  <td><div class="td">신*정</div></td>
+                  <td><div class="td">2022.08.01</div></td>
+                </tr>
+                <tr>
+                  <td><div class="td">2</div></td>
+                  <td><div class="td">2022.08.01</div></td>
+                  <td><div class="td">3</div></td>
+                  <td><div class="td t-left">기타수수료 지급 추가</div></td>
+                  <td><div class="td">청구</div></td>
+                  <td><div class="td t-right">2,000원</div></td>
+                  <td><div class="td t-right"></div></td>
+                  <td><div class="td t-right"></div></td>
+                  <td><div class="td">신*정</div></td>
+                  <td><div class="td">2022.08.05</div></td>
+                </tr>
+                <tr>
+                  <td><div class="td">3</div></td>
+                  <td><div class="td">2022.08.01</div></td>
+                  <td><div class="td">3</div></td>
+                  <td><div class="td t-left">선급내역 차감</div></td>
+                  <td><div class="td">청구</div></td>
+                  <td><div class="td t-right"></div></td>
+                  <td><div class="td t-right"></div></td>
+                  <td><div class="td t-right">-5,000원</div></td>
+                  <td><div class="td">신*정</div></td>
+                  <td><div class="td">2022.08.05</div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 하단 버튼 영역 -->
+          <div class="modal-footer">
+            <button class="btn-h46 btn-blackline modal-close" data-dismiss="modal" style="width: 200px">닫기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 팝업 : 현장 현금 판매 금액 관리 -->
+    <div class="modal stage-cash" tabindex="-1" id="modalBasic">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title t-24 t-bold">예외정산 현금 판매 금액 관리</h3>
+            <button class="close icon-close common-icon ty-sm" data-dismiss="modal"><i>닫기</i></button>
+          </div>
+          <div class="modal-body py-40">
+            <!-- 채무팀 권한인 경우만 노출 -->
+            <h3 class="mb-12 t-18 t-medium">예외정산 대상</h3>
+            <!-- 테이블 -->
+            <table class="table-b04">
+              <colgroup>
+                <col style="width:148px;"><col>
+                <col style="width:148px;"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="th t-left">정산일</div></th>
+                  <td><div class="td t-left">2022.08.01</div></td>
+                  <th><div class="th t-left">파트너명</div></th>
+                  <td><div class="td t-left">(주)티모넷</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">상품명</div></th>
+                  <td><div class="td t-left">[8월 오픈특가할인] 빛의시어터 : 구스타프 클림트 (32549)</div></td>
+                  <th><div class="th t-left">계약번호</div></th>
+                  <td><div class="td t-left">14125</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">예외정산차수</div></th>
+                  <td><div class="td t-left">3</div></td>
+                  <th><div class="th t-left">정산유형</div></th>
+                  <td><div class="td t-left">청구</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">예외정산기간</div></th>
+                  <td><div class="td t-left">2022.07.01~2022.07.31</div></td>
+                  <th><div class="th t-left">예외정산주기</div></th>
+                  <td><div class="td t-left">매월</div></td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="mt-40 mb-12 t-18 t-medium">현금 판매 금액 관리</h3>
+            <!-- 테이블 -->
+            <table class="table-b02">
+              <colgroup>
+              <col style="width: 148px"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="t-left th-form">현금 판매 금액</div></th>
+                  <td><div class="t-left td-form">1,000,000 원</div></td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">현금 수령 주체</div></th>
+                  <td>
+                    <div class="t-left td-form">
+                      <div class="input-field">
+                        <select name="selectForm" id="cashSelect1" style="width:174px;">
+                          <option value="티켓링크">티켓링크</option>
+                          <option value="현장수령">현장수령</option>
+                        </select>
+                        <span class="t-13 gray-03 ml-8">(티켓링크로 현금 판매 금액이 모두 입금되는 경우 선택해주세요. 현금 판매금액을 포함하여 정산이 진행됩니다.)</span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">입금 금액</div></th>
+                  <td>
+                    <div class="t-left td-form">
+                      <div class="input-field">
+                        <input type="text" class="input input-price" id="inputFix" name="inputFix" onkeyup="inputNumberFormat(this)" style="width: 174px;">
+                        <span class="input-won" style="left: 154px;">원</span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="th-form t-left">메모</div></th>
+                  <td>
+                    <div class="t-left td-form">
+                      <textarea class="textarea-memo" placeholder="메모"></textarea>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- '현장 수령' 선택한 경우 -->
+            <h3 class="mt-40 mb-12 t-18 t-medium">현금 판매 금액 관리</h3>
+            <table class="table-b02">
+              <colgroup>
+              <col style="width: 148px"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="t-left th-form">현금 판매 금액</div></th>
+                  <td><div class="t-left td-form">1,000,000 원</div></td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">현금 수령 주체</div></th>
+                  <td>
+                    <div class="t-left td-form">
+                      <div class="input-field">
+                        <select name="selectForm" id="cashSelect1" style="width:174px;">
+                          <option value="티켓링크">티켓링크</option>
+                          <option value="현장수령" selected>현장수령</option>
+                        </select>
+                        <span class="t-13 gray-03 ml-8">(현금 판매금액이 현장에서 수령 된 경우 선택해주세요. 미입금 내역은 지급금액에서 제외 됩니다.)</span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">입금 금액</div></th>
+                  <td>
+                    <div class="t-left td-form">
+                      <div class="input-field">
+                        <input type="text" class="input input-price" id="inputFix" name="inputFix" onkeyup="inputNumberFormat(this)" placeholder="350,000" style="width: 174px;text-align:left;">
+                        <span class="input-won" style="left: 154px;">원</span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="t-left th-form">현장 수령 금액</div></th>
+                  <td><div class="t-left td-form">650,000원</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th-form t-left">메모</div></th>
+                  <td>
+                    <div class="t-left td-form">
+                      <textarea class="textarea-memo" placeholder="메모"></textarea>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 하단 버튼 영역 -->
+          <div class="modal-footer">
+            <button class="btn-h46 btn-blackline modal-close" data-dismiss="modal" style="width: 200px">닫기</button>
+            <button class="btn-h46 btn-black ml-10" data-dismiss="modal" style="width: 200px">등록</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 팝업 : 현장운영수수료 등록 -->
+    <div class="modal stage-register" tabindex="-1" id="modalBasic">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title t-24 t-bold">예외정산 현장운영수수료</h3>
+            <button class="close icon-close common-icon ty-sm" data-dismiss="modal"><i>닫기</i></button>
+          </div>
+          <div class="modal-body py-40">
+            <h3 class="mb-12 t-18 t-medium">예외정산 대상</h3>
+            <!-- 테이블 -->
+            <table class="table-b04">
+              <colgroup>
+                <col style="width:148px;"><col>
+                <col style="width:148px;"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="th t-left">예외정산일</div></th>
+                  <td><div class="td t-left">2022.08.01</div></td>
+                  <th><div class="th t-left">파트너명</div></th>
+                  <td><div class="td t-left">(주)티모넷</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">상품명</div></th>
+                  <td><div class="td t-left">[8월 오픈특가할인] 빛의시어터 : 구스타프 클림트 (32549)</div></td>
+                  <th><div class="th t-left">계약번호</div></th>
+                  <td><div class="td t-left">14125</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">예외정산차수</div></th>
+                  <td><div class="td t-left">3</div></td>
+                  <th><div class="th t-left">정산유형</div></th>
+                  <td><div class="td t-left">청구</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">예외정산기간</div></th>
+                  <td><div class="td t-left">2022.07.01~2022.07.31</div></td>
+                  <th><div class="th t-left">예외정산주기</div></th>
+                  <td><div class="td t-left">매월</div></td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="mt-40 mb-12 t-18 t-medium over-h">
+              수수료 내역
+              <div class="f-right">
+                <button class="btn-h32 btn-black">현장운영수수료 내역</button>
+               </div>     
+             </h3>
+            <!-- 테이블 -->
+            <table class="table-b04">
+              <colgroup>
+                <col style="width:148px;"><col>
+                <col style="width:300px;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="th t-left">현장운영비</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <div class="input-field">
+                        <input type="text" class="input input-txt t-center" value="1" style="width: 114px;" placeholder="수량 입력">
+                        <span class="t-14 gray-03 ml-8">* 150,000원 (1 경기)</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><div class="td t-right">150,000원</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">인건비</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <div class="input-field">
+                        <input type="text" class="input input-txt t-center" value="5" style="width: 114px;" placeholder="수량 입력">
+                        <span class="t-14 gray-03 ml-8">* 50,000원 (1 인)</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><div class="td t-right">250,000원</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">게이트</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <div class="input-field">
+                        <input type="text" class="input input-txt t-center" style="width: 114px;" placeholder="수량 입력">
+                        <span class="t-14 gray-03 ml-8">* 50,000원 (1대)</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><div class="td t-right">0원</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">매표소운영비</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <div class="input-field">
+                        <input type="text" class="input input-txt t-center" style="width: 114px;" placeholder="수량 입력">
+                        <span class="t-14 gray-03 ml-8">* 50,000원 (1 경기)</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><div class="td t-right">0원</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">계약에서 직접입력</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <div class="input-field">
+                        <input type="text" class="input input-txt t-center" style="width: 114px;" placeholder="수량 입력">
+                        <span class="t-14 gray-03 ml-8">* 15,000원 (1 경기)</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><div class="td t-right">0원</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">직접입력</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <div class="input-field">
+                        <input type="text" class="input input-txt t-center" style="width: 114px;" placeholder="수량 입력">
+                        <input type="text" class="input input-txt t-center" style="width: 114px;" placeholder="단가">
+                        <input type="text" class="input input-txt t-center" style="width: 64px;" placeholder="단위">
+                        <input type="text" class="input input-txt t-center" style="width: 114px;" placeholder="수량">
+                        <button class="btn-h32 btn-grayline">추가</button>
+                      </div>
+                    </div>
+                  </td>
+                  <td><div class="td t-right">0원</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">직접입력2</div></th>
+                  <td>
+                    <div class="t-left td-form px-20">
+                      <div class="input-field">
+                        <input type="text" class="input input-txt t-center" style="width: 114px;" placeholder="수량 입력">
+                        <input type="text" class="input input-txt t-center" style="width: 114px;" placeholder="단가">
+                        <input type="text" class="input input-txt t-center" style="width: 64px;" placeholder="단위">
+                        <input type="text" class="input input-txt t-center" style="width: 114px;" placeholder="수량">
+                        <button class="btn-h32 btn-grayline">추가</button>
+                        <button class="btn-h32 btn-grayline">추가</button>
+                      </div>
+                    </div>
+                  </td>
+                  <td><div class="td t-right">0원</div></td>
+                </tr>
+                <tr>
+                  <th colspan="2"><div class="th t-center">합계</div></th>
+                  <td><div class="td t-right t-bold">400,000원</div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 하단 버튼 영역 -->
+          <div class="modal-footer">
+            <button class="btn-h46 btn-blackline modal-close" data-dismiss="modal" style="width: 200px">닫기</button>
+            <button class="btn-h46 btn-black ml-10" data-dismiss="modal" style="width: 200px">등록</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 팝업 : 현장운영수수료 조회 -->
+    <div class="modal stage-lookup" tabindex="-1" id="modalBasic">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title t-24 t-bold">예외정산 현장운영수수료</h3>
+            <button class="close icon-close common-icon ty-sm" data-dismiss="modal"><i>닫기</i></button>
+          </div>
+          <div class="modal-body py-40">
+            <h3 class="mb-12 t-18 t-medium">예외정산 대상</h3>
+            <!-- 테이블 -->
+            <table class="table-b04">
+              <colgroup>
+                <col style="width:148px;"><col>
+                <col style="width:148px;"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="th t-left">예외정산일</div></th>
+                  <td><div class="td t-left">2022.08.01</div></td>
+                  <th><div class="th t-left">파트너명</div></th>
+                  <td><div class="td t-left">(주)티모넷</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">상품명</div></th>
+                  <td><div class="td t-left">[8월 오픈특가할인] 빛의시어터 : 구스타프 클림트 (32549)</div></td>
+                  <th><div class="th t-left">계약번호</div></th>
+                  <td><div class="td t-left">14125</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">예외정산차수</div></th>
+                  <td><div class="td t-left">3</div></td>
+                  <th><div class="th t-left">정산유형</div></th>
+                  <td><div class="td t-left">청구</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">예외정산기간</div></th>
+                  <td><div class="td t-left">2022.07.01~2022.07.31</div></td>
+                  <th><div class="th t-left">예외정산주기</div></th>
+                  <td><div class="td t-left">매월</div></td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="mt-40 mb-12 t-18 t-medium over-h">
+              수수료 내역
+              <div class="f-right">
+                <button class="btn-h32 btn-black">현장운영수수료 등록</button>
+               </div>     
+             </h3>
+            <!-- 테이블 -->
+            <table class="table-b04">
+              <colgroup>
+                <col style="width:148px;"><col>
+                <col style="width:300px;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><div class="th t-left">현장운영비</div></th>
+                  <td><div class="td t-left">1 * 150,000원 (1 경기)</div></td>
+                  <td><div class="td t-right">150,000원</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">인건비</div></th>
+                  <td><div class="td t-left">5 * 50,000원 (1인)</div></td>
+                  <td><div class="td t-right">250,000원</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">게이트</div></th>
+                  <td><div class="td t-left">0 * 50,000원 (1대)</div></td>
+                  <td><div class="td t-right">0원</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">매표소운영비</div></th>
+                  <td><div class="td t-left">0 * 50,000원 (1 경기)</div></td>
+                  <td><div class="td t-right">0원</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">계약에서 직접입력</div></th>
+                  <td><div class="td t-left">0 * 15,000원 (1 경기)</div></td>
+                  <td><div class="td t-right">0원</div></td>
+                </tr>
+                <tr>
+                  <th><div class="th t-left">차수에서 직접입력</div></th>
+                  <td><div class="td t-left">1 * 300,000원 (1 경기)</div></td>
+                  <td><div class="td t-right">300,000원</div></td>
+                </tr>
+                <tr>
+                  <th colspan="2"><div class="th t-left">합계</div></th>
+                  <td><div class="td t-right t-bold">700,000원</div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 하단 버튼 영역 -->
+          <div class="modal-footer">
+            <button class="btn-h46 btn-blackline modal-close" data-dismiss="modal" style="width: 200px">닫기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 케이스뷰 -->
+    <div class="caseview">
+      <button type="button" class="caseview-btn">케이스뷰 on/off</button>
+      <button type="button" class="caseview-btn1">[팝업] 기타금액조정 등록</button>
+      <button type="button" class="caseview-btn2">[팝업] 기타금액조정 조회</button>
+      <button type="button" class="caseview-btn3">[팝업] 현장 현금 판매 금액 관리</button>
+      <button type="button" class="caseview-btn4">[팝업] 현장운영수수료 등록</button>
+      <button type="button" class="caseview-btn5">[팝업] 현장운영수수료 조회</button>
+    </div>
+    <style>
+      .caseview {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1100;
+        min-width: 20px;
+        min-height: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .caseview button {
+        display: block;
+        padding: 5px 10px;
+        border: 0;
+        background: transparent;
+        font-size: 12px;
+        color: #fff;
+        text-align: left;
+      }
+    </style>
+    <script>
+      // 조회결과 버튼 팝업 연결
+      $('.history-register').on('click',  function() {
+        $(".consignsale-register").show();
+      });
+      $('.price-adjustment').on('click', function() {
+        $(".etc-price").show();
+      });
+      $('.operate-fee').on('click', function() {
+        $(".stage-register").show();
+      });
+      $('.cash-management').on('click', function() {
+        $(".stage-cash").toggle();
+      });
+
+      // 모달 닫기
+      $('.close, .modal-close').on('click', function() {
+        $('.modal').hide();
+      })
+
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          // 탑 버튼
+          if ($(this).scrollTop() > 500) {
+            $("#topButton").fadeIn();
+          } else {
+            $("#topButton").fadeOut();
+          }
+        });
+  
+        $("#topButtonImg").click(function () {
+          $("#table").animate({ scrollTop: 0 }, "300");
+        });
+      });
+      // 타입 Date 금일 날짜 출력
+      document.getElementById('currentDate1').value = new Date().toISOString().substring(0, 10);;
+      document.getElementById('currentDate2').value = new Date().toISOString().substring(0, 10);;
+
+      // 케이스뷰
+      $(".caseview-btn").on("click", function () {
+        $(this).siblings().toggle();
+      });
+      $(".caseview-btn1").on("click", function () {
+        $(".etc-price").toggle();
+      });
+      $(".caseview-btn2").on("click", function () {
+        $(".etc-price-lookup").toggle();
+      });
+      $(".caseview-btn3").on("click", function () {
+        $(".stage-cash").toggle();
+      });
+      $(".caseview-btn4").on("click", function () {
+        $(".stage-register").toggle();
+      });
+      $(".caseview-btn5").on("click", function () {
+        $(".stage-lookup").toggle();
+      });
+    </script>
+  </body>
+</html>

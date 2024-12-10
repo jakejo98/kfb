@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>파트너관리 - NHN LINKSAM</title>
+
+    <link rel="stylesheet" href="../../../css/lnb.css" />
+    <link rel="stylesheet" href="../../../css/common.css" />
+    <link rel="stylesheet" href="../../../css/reset.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  
+    <script>
+      $(document).ready( function() {
+        $("#lnb").load("../../../html/lnb.html", function() {
+        });
+      });
+    </script>
+
+  </head>
+  <body>
+    <div id="app">
+      <div id="wrap" class="clear">
+      <!-- lnb -->
+      <div id="lnb" class="lnb"></div>
+        <!-- contents -->
+        <div id="contents" class="contents-area">
+          <div id="top-bar" class="top-bar-area">
+            <!-- 탭 -->
+            <div class="common-tab type-capsule">
+              <div class="common-tab-area">
+                <ul class="common-tab-list">
+                  <li class="common-tab-item">
+                    <!-- 선택된 tab button에 aria-selected="true", 그 외 aria-selected="false" -->
+                    <button type="button" class="common-tab-btn" aria-selected="true">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close-selected ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                  <li class="common-tab-item">
+                    <button type="button" class="common-tab-btn" aria-selected="false">
+                      <span class="common-tab-btn-span">타이틀</span>
+                      <a class="common-icon icon-close ty-xs"></a>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="table" class="table-area">
+            <div id="lookup-top">
+              <h2 class="t-18 t-medium mb-12">파트너관리</h2>
+              <!-- 조회 영역 -->
+              <div class="lookup-wrap">
+                <!-- 첫 번째 줄 -->
+                <div class="form-field" style="display: flex">
+                  <!-- 파트너명 -->
+                  <label for="partnerName" class="form-label mr-8">파트너명</label>
+                  <div class="input-field">
+                    <input type="text" class="input-txt-auto mr-6" id="partnerName" placeholder="직접입력" style="width: 320px;">
+                  </div>
+                  <!-- 사업자번호 -->
+                  <label for="BusinessNum" class="form-label mr-8 ml-26">사업자번호</label>
+                  <div class="input-field">
+                    <input type="text" class="input-txt-auto mr-6" id="BusinessNum" placeholder="사업자번호" style="width: 320px;">
+                  </div>
+                  <!-- 지급상태 -->
+                  <label for="paymentStat" class="form-label ml-26 mr-8">지급상태</label>
+                  <div class="input-field">
+                    <select name="selectForm" id="paymentStat" style="width: 320px">
+                      <option value="전체">전체</option>
+                      <option value="지급보류">지급보류</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- 조회버튼 -->
+                <div>
+                  <button href="#" id="lookup-btn" class="btn-h38 btn-red">조회</button>
+                </div>
+              </div>
+            </div>
+            <!-- 파트너 목록 -->
+            <div id="partner-list" class="mt-40">
+              <h2 class="t-18 t-medium mb-12 over-h">
+                파트너 목록
+                <span class="t-14 t-normal ml-2">총 350건</span>
+                <div class="f-right">
+                  <button href="#" class="btn-h32 btn-blackline mr-4">신규등록</button>
+                  <button href="#" class="btn-h32 btn-blackline">파트너 정보 업데이트</button>
+                </div>
+              </h2>
+              <!-- 파트너 목록 테이블 -->
+              <table class="table-b01">
+                <colgroup>
+                <col style="width: 46px"><col style="width: 120px">
+                <col style="width: 120px"><col style="width: 316px">
+                <col style="width: 200px"><col style="width: 100px">
+                <col style="width: 100px"><col style="width: 100px">
+                <col style="width: 100px"><col style="width: 100px">
+                <col style="width: 270px">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th><div class="th">NO</div></th>
+                    <th><div class="th">파트너번호</div></th>
+                    <th><div class="th">거래처코드</div></th>
+                    <th><div class="th">파트너명</div></th>
+                    <th><div class="th">사업자 주민번호</div></th>
+                    <th><div class="th">사업자 구분</div></th>
+                    <th><div class="th">대표자명</div></th>
+                    <th><div class="th">판매 상품 수</div></th>
+                    <th><div class="th">계약 건수</div></th>
+                    <th><div class="th py-6">계약<br>승인대기 건수</div></th>
+                    <th><div class="th">계약관리</div></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><div class="td">1</div></td>
+                    <td><div class="td">12345</div></td>
+                    <td><div class="td">E12458</div></td>
+                    <td><div class="td">(주)티모넷</div></td>
+                    <td><div class="td">120-81-12345</div></td>
+                    <td><div class="td">법인사업자</div></td>
+                    <td><div class="td">박진우</div></td>
+                    <td><div class="td">10</div></td>
+                    <td><div class="td">7</div></td>
+                    <td><div class="td">1</div></td>
+                    <td>
+                      <div class="td py-9">
+                        <button href="#" class="btn-h32 btn-grayline" style="height: 30px">계약목록 보기</button>
+                        <button href="#" class="btn-h32 btn-grayline" style="height: 30px">신규등록</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">2</div></td>
+                    <td><div class="td">12345</div></td>
+                    <td><div class="td">E12458</div></td>
+                    <td><div class="td">(주)티모넷</div></td>
+                    <td><div class="td">120-81-12345</div></td>
+                    <td><div class="td">법인사업자</div></td>
+                    <td><div class="td">박진우</div></td>
+                    <td><div class="td">10</div></td>
+                    <td><div class="td">7</div></td>
+                    <td><div class="td">1</div></td>
+                    <td>
+                      <div class="td py-9">
+                        <button href="#" class="btn-h32 btn-grayline" style="height: 30px">계약목록 보기</button>
+                        <button href="#" class="btn-h32 btn-grayline" style="height: 30px">신규등록</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">3</div></td>
+                    <td><div class="td">12345</div></td>
+                    <td><div class="td">E12458</div></td>
+                    <td><div class="td">(주)티모넷</div></td>
+                    <td><div class="td">120-81-12345</div></td>
+                    <td><div class="td">법인사업자</div></td>
+                    <td><div class="td">박진우</div></td>
+                    <td><div class="td">10</div></td>
+                    <td><div class="td">7</div></td>
+                    <td><div class="td">1</div></td>
+                    <td>
+                      <div class="td py-9">
+                        <button href="#" class="btn-h32 btn-grayline" style="height: 30px">계약목록 보기</button>
+                        <button href="#" class="btn-h32 btn-grayline" style="height: 30px">신규등록</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">4</div></td>
+                    <td><div class="td">12345</div></td>
+                    <td><div class="td">E12458</div></td>
+                    <td><div class="td">(주)티모넷</div></td>
+                    <td><div class="td">120-81-12345</div></td>
+                    <td><div class="td">법인사업자</div></td>
+                    <td><div class="td">박진우</div></td>
+                    <td><div class="td">10</div></td>
+                    <td><div class="td">7</div></td>
+                    <td><div class="td">1</div></td>
+                    <td>
+                      <div class="td py-9">
+                        <button href="#" class="btn-h32 btn-grayline" style="height: 30px">계약목록 보기</button>
+                        <button href="#" class="btn-h32 btn-grayline" style="height: 30px">신규등록</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">5</div></td>
+                    <td><div class="td">12345</div></td>
+                    <td><div class="td">E12458</div></td>
+                    <td><div class="td">(주)티모넷</div></td>
+                    <td><div class="td">120-81-12345</div></td>
+                    <td><div class="td">법인사업자</div></td>
+                    <td><div class="td">박진우</div></td>
+                    <td><div class="td">10</div></td>
+                    <td><div class="td">7</div></td>
+                    <td><div class="td">1</div></td>
+                    <td>
+                      <div class="td py-9">
+                        <button href="#" class="btn-h32 btn-grayline" style="height: 30px">계약목록 보기</button>
+                        <button href="#" class="btn-h32 btn-grayline" style="height: 30px">신규등록</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">6</div></td>
+                    <td><div class="td">12345</div></td>
+                    <td><div class="td">E12458</div></td>
+                    <td><div class="td">(주)티모넷</div></td>
+                    <td><div class="td">120-81-12345</div></td>
+                    <td><div class="td">법인사업자</div></td>
+                    <td><div class="td">박진우</div></td>
+                    <td><div class="td">10</div></td>
+                    <td><div class="td">7</div></td>
+                    <td><div class="td">1</div></td>
+                    <td>
+                      <div class="td py-9">
+                        <button href="#" class="btn-h32 btn-grayline" style="height: 30px">계약목록 보기</button>
+                        <button href="#" class="btn-h32 btn-grayline" style="height: 30px">신규등록</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">7</div></td>
+                    <td><div class="td">12345</div></td>
+                    <td><div class="td">E12458</div></td>
+                    <td><div class="td">(주)티모넷</div></td>
+                    <td><div class="td">120-81-12345</div></td>
+                    <td><div class="td">법인사업자</div></td>
+                    <td><div class="td">박진우</div></td>
+                    <td><div class="td">10</div></td>
+                    <td><div class="td">7</div></td>
+                    <td><div class="td">1</div></td>
+                    <td>
+                      <div class="td py-9">
+                        <button href="#" class="btn-h32 btn-grayline" style="height: 30px">계약목록 보기</button>
+                        <button href="#" class="btn-h32 btn-grayline" style="height: 30px">신규등록</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">8</div></td>
+                    <td><div class="td">12345</div></td>
+                    <td><div class="td">E12458</div></td>
+                    <td><div class="td">(주)티모넷</div></td>
+                    <td><div class="td">120-81-12345</div></td>
+                    <td><div class="td">법인사업자</div></td>
+                    <td><div class="td">박진우</div></td>
+                    <td><div class="td">10</div></td>
+                    <td><div class="td">7</div></td>
+                    <td><div class="td">1</div></td>
+                    <td>
+                      <div class="td py-9">
+                        <button href="#" class="btn-h32 btn-grayline" style="height: 30px">계약목록 보기</button>
+                        <button href="#" class="btn-h32 btn-grayline" style="height: 30px">신규등록</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">9</div></td>
+                    <td><div class="td">12345</div></td>
+                    <td><div class="td">E12458</div></td>
+                    <td><div class="td">(주)티모넷</div></td>
+                    <td><div class="td">120-81-12345</div></td>
+                    <td><div class="td">법인사업자</div></td>
+                    <td><div class="td">박진우</div></td>
+                    <td><div class="td">10</div></td>
+                    <td><div class="td">7</div></td>
+                    <td><div class="td">1</div></td>
+                    <td>
+                      <div class="td py-9">
+                        <button href="#" class="btn-h32 btn-grayline" style="height: 30px">계약목록 보기</button>
+                        <button href="#" class="btn-h32 btn-grayline" style="height: 30px">신규등록</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="td">10</div></td>
+                    <td><div class="td">12345</div></td>
+                    <td><div class="td">E12458</div></td>
+                    <td><div class="td">(주)티모넷</div></td>
+                    <td><div class="td">120-81-12345</div></td>
+                    <td><div class="td">법인사업자</div></td>
+                    <td><div class="td">박진우</div></td>
+                    <td><div class="td">10</div></td>
+                    <td><div class="td">7</div></td>
+                    <td><div class="td">1</div></td>
+                    <td>
+                      <div class="td py-9">
+                        <button href="#" class="btn-h32 btn-grayline" style="height: 30px">계약목록 보기</button>
+                        <button href="#" class="btn-h32 btn-grayline" style="height: 30px">신규등록</button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- 페이지네이션 영역 -->
+            <div class="contents-footer-nav">
+              <!-- 페이지네이션 -->
+              <nav class="pagination" aria-label="페이지 번호 선택" style="margin-top: 60px;">
+                <ul class="pagination-list">
+                  <li class="pagination-item">
+                    <a href="#" class="pagination-nav pagination-nav-first">
+                      <span class="blind">처음 페이지 보기</span>
+                    </a>
+                  </li>
+                  <li class="pagination-item">
+                    <a href="#" class="pagination-nav pagination-nav-prev">
+                      <span class="blind">이전 페이지 보기</span>
+                    </a>
+                  </li>
+                  <li class="pagination-item">
+                    <a href="#" class="pagination-link">1</a>
+                  </li>
+                  <li class="pagination-item">
+                    <span class="pagination-current" aria-current="true">2</span>
+                  </li>
+                  <li class="pagination-item">
+                    <a href="#" class="pagination-link">3</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a href="#" class="pagination-link">4</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a href="#" class="pagination-link">5</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a href="#" class="pagination-link">6</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a href="#" class="pagination-link">7</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a href="#" class="pagination-link">8</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a href="#" class="pagination-link">9</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a href="#" class="pagination-link">10</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a href="#" class="pagination-nav pagination-nav-next">
+                      <span class="blind">다음 페이지 보기</span>
+                    </a>
+                  </li>
+                  <li class="pagination-item">
+                    <a href="#" class="pagination-nav pagination-nav-last">
+                      <span class="blind">마지막 페이지 보기</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- 탑 버튼 -->
+            <button class="btn-top pa-0" id="topButtonImg">
+              <img src="../../../img/svg/icons/top-btn.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          // 탑 버튼
+          if ($(this).scrollTop() > 500) {
+            $("#topButton").fadeIn();
+          } else {
+            $("#topButton").fadeOut();
+          }
+        });
+  
+        $("#topButtonImg").click(function () {
+          $("#table").animate({ scrollTop: 0 }, "300");
+        });
+      });
+    </script>
+  </body>
+</html>
