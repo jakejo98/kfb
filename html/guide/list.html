@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- UI 공통 css -->
+<link rel="stylesheet" href="../../css/list.css">
+<title>NHN 정산 시스템 퍼블리싱</title>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+<body class="uiguide">
+<header class="uig-header">
+  <div class="uig-header-brand">
+    <h2>은행연합회 퍼블리싱</h2>
+  </div>
+  <div class="uig-header-menu">
+    <div class="d-flex">
+      <a href="html/guide/list.html" class="btn btn-xs btn-dark">HTML</a>
+    </div>
+    <div class="d-flex">
+      <a href="guide.html" class="btn btn-xs btn-purple ml-8">가이드</a>
+    </div>
+  </div>
+</header>
+<div class="uig-wrapper">
+<aside class="uig-sidebar">
+  <div class="uig-guide">
+    <header class="uig-sub-header">
+      <h3 class="uig-sub-hd">GUIDE</h3>
+    </header>
+    <div class="guide-content">
+      <section>
+        <h5 class="guide-hd">Code</h5>
+        <table class="guide-table">
+          <tr>
+            <th>Code Guide</th>
+            <td><a href="#" target="_blank">guide.html</a></td>
+          </tr>
+        </table>
+      </section>
+    </div>
+  </div>
+</aside>
+<main class="uig-main">
+  <div class="guide-main">
+    <header class="uig-sub-header">
+      <h3 class="uig-sub-hd">HTML LIST</h3>
+    </header>
+    <div class="guide-content d-flex">
+      <div class="guide-col">
+        <!-- 01.로그인 -->
+        <section>
+          <h5 class="guide-hd">로그인</h5>
+          <table class="guide-table">
+            <tr>
+              <th>로그인
+                <i title="로그인 페이지">+</i>
+              </th>
+              <td>
+                <a href="html/pages/00_login/1_login.html" target="_blank">html/pages/00_login/1_login.html</a>
+              </td>
+            </tr>
+            <tr>
+              <th>로그인 선택</th>
+              <td>
+                <a href="html/pages/00_login/2_login_select.html" target="_blank">html/pages/00_login/2_login_select.html</a>
+              </td>
+            </tr>
+            <tr>
+              <th>로그인 WELCOME</th>
+              <td>
+                <a href="html/pages/00_login/3_login_welcome.html" target="_blank">html/pages/00_login/3_login_welcome.html</a>
+              </td>
+            </tr>
+          </table>
+        </section>
+      </div><!-- /.guide-col -->
+    </div>
+  </div>
+</main>
+</div>
+
+<script>
+  /* Index Numbering */
+  function buildHeadingNum() {
+    var i = 0;
+    $('.guide-main').find('.guide-hd').each(function() {
+      i++;
+      var no = i + '.';
+      $(this).prepend(no);
+    });
+  }
+  /* Index Numbering */
+  function buildIndexNum() {
+    var i = 0;
+    $('.guide-main .guide-table').find('tbody>tr').each(function() {
+      i++;
+      insertIndexNum($(this), i);
+    });
+  }
+  function insertIndexNum($target, i) {
+    var $i = $('<th class="th-id">' + i + '</th>');
+    $target.prepend($i);
+  }
+
+  /* Fill Links */
+  function fillLinks() {
+    $('.guide-table').find('a').each(function() {
+      var href = $(this).attr('href');
+      var link = $(this).text();
+      if(href == '#') {
+        $(this).attr('href', link);
+      }
+    });
+  }
+
+  /* Project History */
+  function initHistory() {
+    //toggle detail
+    $('#history-list').find('.comment').on('click', function() {
+      $(this).next().toggle();
+      $(this).toggleClass('hide');
+    });
+
+    //add file version
+    $('#history-list > li').each(function() {
+      if($(this).find('.date').text() != '') {
+        addFileVersion($(this).find('.file-list'), $(this).find('.date').text());
+      }
+    });
+  }
+
+  function addFileVersion($fileList, date) {
+    var version = date;
+    $fileList.children('li').each(function() {
+      var changedFile = $(this).text();
+      $('.guide-table').find('a').each(function() {
+        var file = $(this).text();
+        if(file == changedFile) {
+          $('<i class="version">#' + version + '</i>').insertAfter($(this));
+        }
+      });
+    });
+  }
+
+  /* Run */
+  $(function() {
+    buildHeadingNum();
+    buildIndexNum();
+    fillLinks();
+    initHistory();
+  });
+</script>
+
+</body>
+
+</html>
