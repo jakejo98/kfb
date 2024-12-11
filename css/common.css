@@ -1,6 +1,3 @@
-@charset "UTF-8";
-/* @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"); */
-
 /* Import Vendor CSS */
 *,
 *::before,
@@ -284,125 +281,131 @@ body {
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1.4;
-  color: #424344;
+  color: #1D1D1D;
   text-align: left;
   background-color: #fff;
 }
 
 /* colors */
-.tl-red {
-  color: #fa2828 !important;
+.tc-primary {
+  color: #4374C9;
 }
 
-.tl-bk {
-  color: #242428 !important;
+.tc-blue-01 {
+  color: #143067;
 }
 
-.gray-01 {
-  color: #62676c !important;
+.tc-black-01 {
+  color: #1D1D1D;
 }
 
-.gray-02 {
-  color: #878d95 !important;
+.tc-black-02 {
+  color: #2D2D2D;
 }
 
-.gray-03 {
-  color: #a7acb6 !important;
+.tc-gray-01 {
+  color: #555555;
 }
 
-.wt {
-  color: #ffff !important;
+.tc-gray-02 {
+  color: #717171;
 }
 
-.lc-01 {
-  color: #e3e5e8 !important;
+.tc-orange-01 {
+  color: #CC721D;
 }
 
-.lc-02 {
-  color: #dcdde1 !important;
+.tc-orange-02 {
+  color: #FF8F24;
 }
 
-.lc-03 {
-  color: #242424 !important;
+.tc-navy-01 {
+  color: #D0D6E1;
 }
 
-.bg-01 {
-  color: #f6f6f6 !important;
+.tc-navy-02 {
+  color: #F2F3F5;
+}
+
+.tc-white {
+  color: #FFFFFF;
 }
 
 /* text size */
-.t-12 {
-  font-size: 12px !important;
-}
-
-.t-14 {
-  font-size: 14px !important;
-}
-
-.t-16 {
-  font-size: 16px !important;
-}
-
-.t-18 {
-  font-size: 18px !important;
-}
-
-.t-20 {
-  font-size: 20px !important;
-}
-
-.t-22 {
-  font-size: 22px !important;
-}
-
-.t-23 {
-  font-size: 23px !important;
-}
-
-.t-24 {
-  font-size: 24px !important;
-}
-
-.t-26 {
-  font-size: 26px !important;
-}
-
-.t-28 {
-  font-size: 28px !important;
-}
-
-.t-30 {
-  font-size: 30px !important;
-}
-
-.t-32 {
-  font-size: 32px !important;
-}
-
-.t-11 {
+.ts-11 {
   font-size: 11px !important;
 }
 
-.t-13 {
+.ts-13 {
   font-size: 13px !important;
 }
 
-.t-15 {
+.ts-15 {
   font-size: 15px !important;
 }
 
-.t-normal {
+.ts-17 {
+  font-size: 17px !important;
+}
+
+.ts-19 {
+  font-size: 19px !important;
+}
+
+.ts-21 {
+  font-size: 21px !important;
+}
+
+.ts-23 {
+  font-size: 23px !important;
+}
+
+.ts-25 {
+  font-size: 25px !important;
+}
+
+.ts-18 {
+  font-size: 18px !important;
+}
+
+.ts-20 {
+  font-size: 20px !important;
+}
+
+.ts-22 {
+  font-size: 22px !important;
+}
+
+.ts-26 {
+  font-size: 26px !important;
+}
+
+.ts-32 {
+  font-size: 32px !important;
+}
+
+.ts-40 {
+  font-size: 40px !important;
+}
+
+.ts-42 {
+  font-size: 42px !important;
+}
+
+/* text-weight */
+.wt-normal {
   font-weight: 400 !important;
 }
 
-.t-medium {
+.tw-medium {
   font-weight: 500 !important;
 }
 
-.t-bold {
+.tw-bold {
   font-weight: 700 !important;
 }
 
+/* text-align */
 .t-left {
   text-align: left !important;
 }
@@ -417,6 +420,21 @@ body {
 
 .t-underline {
   text-decoration: underline !important;
+}
+
+/* flag */
+.flag {
+  display: inline-block;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #FFFFFF;
+}
+
+.flag.flag_orange {
+  background-color: #FF8F24;
 }
 
 /* button */

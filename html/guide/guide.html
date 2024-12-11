@@ -4,12 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>은행연합회 소비자포털 퍼블리싱 UI GUIDE</title>
-
-
-  <!-- UI 공통 css -->
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <!-- CSS -->
   <link rel="stylesheet" href="../../css/common.css">
-  <link rel="stylesheet" href="../../css/guide.css">
+  <link rel="stylesheet" href="../../css/guide/guide.css">
+  <!-- CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 </head>
 <body class="uiguide">
 <header class="uig-header">
@@ -31,7 +30,8 @@
     <h3>UI Components</h3>
     <nav>
       <a class="nav-link" href="#colors">Colors</a>
-      <a class="nav-link" href="#text">Typography</a>
+      <a class="nav-link" href="#typography">Typography</a>
+      <a class="nav-link" href="#flag">Flag</a>
       <a class="nav-link" href="#button">Button</a>
       <a class="nav-link" href="#common">Common</a>
       <a class="nav-link" href="#table">Table</a>
@@ -40,68 +40,84 @@
     </nav>
   </nav>
 </aside>
- 
 <main class="uig-main">
+<!-- 1. colors -->
 <article class="uig-article" id="colors">
   <h3 class="uig-hd">Colors</h3>
-  
-  <!------------ 1-1. Colors ------------>
   <section class="uig-card">
     <div class="uig-card-header">Colors</div>
     <div class="uig-card-body">
       <div class="src">
-        <p class="tl-red">tl-red #FA2828</p>
-        <p class="tl-bk">tl-bk #242428</p>
-        <p class="gray-01">gray-01 #62676C</p>
-        <p class="gray-02">gray-02 #878D95</p>
-        <p class="gray-03">gray-03 #A7ACB6</p>
-        <p class="lc-01">lc-01 #E3E5E8</p>
-        <p class="lc-02">lc-02 #DCDDE1</p>
-        <p class="lc-03">lc-03 #242424</p>
-        <p class="bg-01">bg-01 #F6F6F6</p>
+        <p class="tc-primary">tc-primary #4374C9</p>
+        <p class="tc-blue-01">tc-blue-01 #143067</p>
+        <p class="tc-black-01">tc-black-01 #1D1D1D</p>
+        <p class="tc-black-02">tc-black-02 #2D2D2D</p>
+        <p class="tc-gray-01">tc-gray-01 #555555</p>
+        <p class="tc-gray-02">tc-gray-02 #717171</p>
+        <p class="tc-orange-01">tc-orange-01 #CC721D</p>
+        <p class="tc-orange-02">tc-orange-02 #FF8F24</p>
+        <p class="tc-navy-01">tc-navy-01 #D0D6E1</p>
+        <p class="tc-navy-02">tc-navy-02 #F2F3F5</p>
+        <p class="tc-white">tc-white #FFFFFF</p>
       </div>
     </div>
   </section>
-  <!------------ // 1-1. Colors ------------>
-
 </article>
-
+<!-- // 1. colors -->
+<!-- 2. typography -->
 <article class="uig-article" id="text">
   <h3 class="uig-hd">Typography</h3>
-
-  <!------------ 2-1. 텍스트 사이즈 ------------>
+  <!-- 2-1. 폰트 -->
+  <section class="uig-card">
+    <div class="uig-card-header">폰트</div>
+    <div class="uig-card-body">
+      <div class="src">
+        <p>프리텐다드 폰트입니다.</p>
+        <p>This is Pretendard Font.</p>
+      </div>
+    </div>
+  </section>
+  <!-- // 2-1. 폰트 -->
+  <!-- 2-2. 텍스트 사이즈 -->
   <section class="uig-card">
     <div class="uig-card-header">텍스트 사이즈</div>
     <div class="uig-card-body">
       <div class="src">
-        <p class="t-11">텍스트 11px</p>
-        <p class="t-12">텍스트 12px</p>
-        <p class="t-13">텍스트 13px</p>
-        <p class="t-14">텍스트 14px</p>
-        <p class="t-15">텍스트 15px</p>
-        <p class="t-16">텍스트 16px</p>
-        <p class="t-18">텍스트 18px</p>
-        <p class="t-20">텍스트 20px</p>
-        <p class="t-22">텍스트 22px</p>
-        <p class="t-24">텍스트 24px</p>
-        <p class="t-26">텍스트 26px</p>
-        <p class="t-28">텍스트 28px</p>
-        <p class="t-30">텍스트 30px</p>
-        <p class="t-32">텍스트 32px</p>
+        <p class="ts-11">텍스트 11px</p>
+        <p class="ts-13">텍스트 13px</p>
+        <p class="ts-15">텍스트 15px</p>
+        <p class="ts-17">텍스트 17px</p>
+        <p class="ts-18">텍스트 18px</p>
+        <p class="ts-19">텍스트 19px</p>
+        <p class="ts-20">텍스트 20px</p>
+        <p class="ts-21">텍스트 21px</p>
+        <p class="ts-22">텍스트 22px</p>
+        <p class="ts-25">텍스트 25px</p>
+        <p class="ts-26">텍스트 26px</p>
+        <p class="ts-32">텍스트 32px</p>
+        <p class="ts-40">텍스트 42px</p>
       </div>
     </div>
   </section>
-  <!------------ // 2-1. 텍스트 사이즈 ------------>
-
-  <!------------ 2-2. 텍스트 스타일 ------------>
+  <!-- // 2-2. 텍스트 사이즈 -->
+  <!-- 2-3. 텍스트 굵기 -->
+  <section class="uig-card">
+    <div class="uig-card-header">텍스트 굵기</div>
+    <div class="uig-card-body">
+      <div class="src">
+        <p class="tw-normal">텍스트 굵기 Normal 400</p>
+        <p class="tw-medium">텍스트 굵기 Medium 500</p>
+        <p class="tw-bold">텍스트 굵기 Bold 700</p>
+        <b>텍스트 굵기 Bold 700</b>
+      </div>
+    </div>
+  </section>
+  <!-- // 2-3. 텍스트 굵기 -->
+  <!-- 2-4. 텍스트 스타일 -->
   <section class="uig-card">
     <div class="uig-card-header">텍스트 스타일</div>
     <div class="uig-card-body">
       <div class="src">
-        <p class="t-normal">텍스트 굵기 Normal 400</p>
-        <p class="t-medium">텍스트 굵기 Medium 500</p>
-        <p class="t-bold">텍스트 굵기 Bold 700</p>
-        <b>텍스트 굵기 Bold 700</b>
         <p class="t-left">텍스트 정렬 좌</p>
         <p class="t-right">텍스트 정렬 우</p>
         <p class="t-center">텍스트 정렬 중간</p>
@@ -109,13 +125,22 @@
       </div>
     </div>
   </section>
-  <!------------ // 2-2. 텍스트 스타일 ------------>
-
+  <!-- // 2-4. 텍스트 스타일 -->
 </article>
-
+<article class="uig-article" id="flag">
+  <h3 class="uig-hd">Flag</h3>
+  <section class="uig-card">
+    <div class="uig-card-header">플래그</div>
+    <div class="uig-card-body">
+      <div class="src">
+        <span class="flag flag_orange">비교공시</span>
+      </div>
+    </div>
+  </section>
+</article>
+<!-- 4. button -->
 <article class="uig-article" id="button">
-  <h3 class="uig-hd">Button</h3>
-    
+  <h3 class="uig-hd">Button</h3>    
     <!------------ 3-1. 버튼 H32 ------------>
     <section class="uig-card">
       <div class="uig-card-header">버튼 H32</div>
@@ -385,7 +410,6 @@
     </section>
     <!------------ // 3-10. 탑버튼 ------------>
 </article>
-
 <article class="uig-article" id="common">
   <h3 class="uig-hd">Common</h3>
   
@@ -631,7 +655,6 @@
   <!------------ // 4-3. 폼 ------------>
 
 </article>
-
 <article class="uig-article" id="table" style="max-width: 1700px;">
   <h3 class="uig-hd">Table</h3>
   
@@ -2716,7 +2739,6 @@
   <!------------ // 5-7. 세로 스크롤 + 가로 스크롤 Table ------------>
 
 </article>
-
 <article class="uig-article" id="lookup" style="max-width: 1700px;">
   <h3 class="uig-hd">조회영역</h3>
 
@@ -3049,7 +3071,6 @@
   <!------------ // 6-4. 조회박스 - 1600px ------------>
 
 </article>
-
 <article class="uig-article" id="popup">
   <h3 class="uig-hd">팝업</h3>
 
@@ -3233,14 +3254,8 @@
     <!------------ // 7-2. 팝업 - 레이어 ------------>
 
 </article>
-
 </main>
 </div>
- 
-<!-- script for uiguide -->
-<script src="./html/ui_guide/lib/highlight/highlight.min.js"></script>
-<!-- <script src="https://unpkg.com/highlightjs-badge/highlightjs-badge.min.js"></script> -->
-
 <script>
   (function() {
     var cards = document.querySelectorAll(".uig-card");
