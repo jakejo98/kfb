@@ -391,7 +391,12 @@ body {
 
 /* popup */
 .ly-pop-wrap {
+  display: none;
   max-width: 472px;
+}
+
+.ly-pop-wrap.active {
+  display: block;
 }
 
 .ly-pop {
@@ -550,6 +555,26 @@ body {
 
 .ly-pop-wrap .ly-pop .ly-pop-main .popup-swiper .swiper-controls .btn-swiper-control.active {
   display: block;
+}
+
+.ly-pop-wrap .ly-pop .ly-pop-footer {
+  padding: 15px 20px;
+}
+
+.ly-pop-wrap .ly-pop .ly-pop-footer .pop-close {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ly-pop-wrap .ly-pop .ly-pop-footer .btn-dismiss-today {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.ly-pop-wrap .ly-pop .ly-pop-footer .btn-pop-close {
+  font-size: 15px;
+  line-height: 20px;
 }
 
 /* Margin */
