@@ -13,6 +13,8 @@
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   <!-- Swiper CDN -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Script -->
+  <script type="module" src="../../js/script.js"></script>
 </head>
 <body class="uiguide">
 <header class="uig-header">
@@ -233,8 +235,12 @@
                 <div class="swiper-controls">
                   <div class="swiper-pagination"></div>
                   <div class="swiper-autoplay-toggle">
-                    <button class="btn-swiper-pause"></button>
-                    <button class="btn-swiper-start"></button>
+                    <button class="btn-swiper-control btn-swiper-pause active">
+                      <span class="common-icon ty-20 icon-swiper-pause"></span>
+                    </button>
+                    <button class="btn-swiper-control btn-swiper-start">
+                      <span class="common-icon ty-20 icon-swiper-start"></span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -249,51 +255,6 @@
 <!-- 4. // popup -->
 </main>
 </div>
-<script>
-  (function() {
-    var cards = document.querySelectorAll(".uig-card");
-    var srcHtml;
-    var codeHtml;
-    var code;
-    cards.forEach(function(card) {
-      if(card.querySelector(".src")) {
-        srcHtml = card.querySelector(".src").innerHTML;
-        codeHtml = "<div class='uig-card-footer folded'><button class='uig-card-footer-toggle' title='toggle'></button><pre><code class='language-html' style='padding:0;'></code></div></pre></div>";
-        
-        card.innerHTML += codeHtml;
-        
-        code = card.querySelector("code");
-        code.textContent = srcHtml;
-      }
-    });
-    $(".uig-card-footer-toggle").on("click", function() {
-      $(this).parent().toggleClass("folded");
-    });
-  })();
-  
-  setTimeout(function() {
-    var options = {
-      contentSelector: ".uiguide",
-      loadDelay: 0,
-      copyIconClass: "fa fa-copy",
-      checkIconClass: "fa fa-check text-success"
-    };
-    // window.highlightJsBadge(options);
-  }, 10);
-</script>    
-
-<!-- script for uiguide -->
-<script>
-  $(function() {
-    var queryString = window.location.search;
-    var urlParams = new URLSearchParams(queryString);
-    if(urlParams.has('modalID')) {
-      var modalSelector = "#" + urlParams.get('modalID');
-      $(modalSelector).modal('show');
-    }
-  });//jQuery Ready
-</script>
-<script src="../../js/swiper.js"></script>
 </body>
 </html>
   
