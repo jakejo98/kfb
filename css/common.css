@@ -337,11 +337,6 @@ body {
   white-space: nowrap;
 }
 
-.btn-popup-close {
-  padding: 2px;
-  border: none !important;
-}
-
 .btn-h38 {
   padding: 7px 10px 7px 18px;
   border: 1px solid transparent;
@@ -410,9 +405,62 @@ body {
   padding: 10px 20px;
 }
 
+.ly-pop-header .btn-icon-popup-close {
+  padding: 2px;
+  border: none;
+}
+
 .ly-pop-main {
   position: relative;
   padding: 16px 16px 60px 16px;
+}
+
+.ly-pop-wrap .ly-pop .ly-pop-main .popup-swiper .swiper-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  font-size: 0px;
+}
+
+.ly-pop-wrap .ly-pop .ly-pop-main .popup-swiper .swiper-controls .btn-swiper-control {
+  display: none;
+}
+
+.ly-pop-wrap .ly-pop .ly-pop-main .popup-swiper .swiper-controls .btn-swiper-control.active {
+  display: block;
+}
+
+.ly-pop-wrap .ly-pop .ly-pop-footer {
+  padding: 15px 20px;
+}
+
+.ly-pop-wrap .ly-pop .ly-pop-footer .pop-close {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ly-pop-wrap .ly-pop .ly-pop-footer .btn-dismiss-today {
+  border: none;
+  font-size: 15px;
+  line-height: 20px;
+  transition: 0.2s all ease;
+}
+
+.ly-pop-wrap .ly-pop .ly-pop-footer .btn-dismiss-today:hover {
+  color: #4374C9;
+  text-decoration: underline;
+}
+
+.ly-pop-wrap .ly-pop .ly-pop-footer .btn-popup-close {
+  border: none;
+  font-size: 15px;
+  line-height: 20px;
+  transition: 0.2s all ease;
 }
 
 /* icon */
@@ -526,17 +574,6 @@ body {
   background-image: url("../img/icon/icon_swiper_button_next.svg");
 }
 
-.ly-pop-wrap .ly-pop .ly-pop-main .popup-swiper .swiper-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 50%;
-  bottom: 24px;
-  transform: translateX(-50%);
-  font-size: 0px;
-}
-
 .ly-pop-wrap .ly-pop .ly-pop-main .popup-swiper .swiper-pagination {
   width: auto;
   position: static;
@@ -547,34 +584,6 @@ body {
   width: 10px;
   height: 10px;
   margin: 0px 4px;
-}
-
-.ly-pop-wrap .ly-pop .ly-pop-main .popup-swiper .swiper-controls .btn-swiper-control {
-  display: none;
-}
-
-.ly-pop-wrap .ly-pop .ly-pop-main .popup-swiper .swiper-controls .btn-swiper-control.active {
-  display: block;
-}
-
-.ly-pop-wrap .ly-pop .ly-pop-footer {
-  padding: 15px 20px;
-}
-
-.ly-pop-wrap .ly-pop .ly-pop-footer .pop-close {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.ly-pop-wrap .ly-pop .ly-pop-footer .btn-dismiss-today {
-  font-size: 15px;
-  line-height: 20px;
-}
-
-.ly-pop-wrap .ly-pop .ly-pop-footer .btn-pop-close {
-  font-size: 15px;
-  line-height: 20px;
 }
 
 /* Margin */
