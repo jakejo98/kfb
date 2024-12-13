@@ -1,11 +1,15 @@
+import { loadFile } from "./common/include.js";
 import { list } from "./guide/list.js";
 import { guide } from "./guide/guide.js";
 import { swiper } from "./lib/swiper.js";
-import { popup } from "./common/popup.js";
+import { main } from "./pages/main.js";
 
 $(document).ready(function(){
-  list();
-  guide();
-  swiper();
-  popup();
-})
+  loadFile(function(){
+    list();
+    guide();
+    swiper();
+    main();
+  });
+});
+
