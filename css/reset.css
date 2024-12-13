@@ -70,7 +70,7 @@ fieldset,
 svg,
 li {
   border: 0;
-  vertical-align: top
+  vertical-align: baseline;
 }
 
 ul,

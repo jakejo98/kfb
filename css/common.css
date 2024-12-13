@@ -12,6 +12,10 @@ legend {
   clip: rect(0, 0, 0, 0);
 }
 
+* {
+  vertical-align: baseline;
+}
+
 *,
 *::before,
 *::after {
@@ -94,7 +98,7 @@ select {
 }
 
 img {
-  vertical-align: middle;
+  vertical-align: baseline;
 }
 
 button,
@@ -217,43 +221,43 @@ body {
 }
 
 .tc-blue-01 {
-  color: #F3F3FF;
+  color: #F2F4FF;
 }
 
 .tc-blue-02 {
-  color: #E6EAF6;
+  color: #E5EBF5;
 }
 
 .tc-blue-03 {
-  color: #BAC2EB;
+  color: #B4C7E9;
 }
 
 .tc-blue-04 {
-  color: #98A5E2;
+  color: #8EACDF;
 }
 
 .tc-blue-05 {
-  color: #7885D8;
+  color: #6990D4;
 }
 
 .tc-blue-06 {
-  color: #5B64CE;
+  color: #4374C9;
 }
 
 .tc-blue-07 {
-  color: #4950A5;
+  color: #365DA1;
 }
 
 .tc-blue-08 {
-  color: #363D7C;
+  color: #284679;
 }
 
 .tc-blue-09 {
-  color: #242852;
+  color: #1B2E50;
 }
 
 .tc-blue-10 {
-  color: #111429;
+  color: #0d1728;
 }
 
 .tc-navy-01 {
@@ -261,95 +265,95 @@ body {
 }
 
 .tc-navy-02 {
-  color: #D2D5E2;
+  color: #D0D6E1;
 }
 
 .tc-navy-03 {
-  color: #A4A9C4;
+  color: #A1ACC2;
 }
 
 .tc-navy-04 {
-  color: #787EA6;
+  color: #7283A4;
 }
 
 .tc-navy-05 {
-  color: #4C5288;
+  color: #435985;
 }
 
 .tc-navy-06 {
-  color: #26246A;
+  color: #143067;
 }
 
 .tc-navy-07 {
-  color: #1D1D54;
+  color: #102652;
 }
 
 .tc-navy-08 {
-  color: #161640;
+  color: #0C1D3E;
 }
 
 .tc-navy-09 {
-  color: #0E0F2A;
+  color: #081329;
 }
 
 .tc-navy-10 {
-  color: #060816;
+  color: #040A15;
 }
 
 .tc-orange-01 {
-  color: #FCF8ED;
+  color: #FDF7EE;
 }
 
 .tc-orange-02 {
-  color: #FCECD1;
+  color: #FFE9D3;
 }
 
 .tc-orange-03 {
-  color: #F9D7A3;
+  color: #FFD2A7;
 }
 
 .tc-orange-04 {
-  color: #F8C376;
+  color: #FFBC7C;
 }
 
 .tc-orange-05 {
-  color: #F7AE45;
+  color: #FFA550;
 }
 
 .tc-orange-06 {
-  color: #F69901;
+  color: #FF8F24;
 }
 
 .tc-orange-07 {
-  color: #C57A06;
+  color: #CC721D;
 }
 
 .tc-orange-08 {
-  color: #945C07;
+  color: #995616;
 }
 
 .tc-orange-09 {
-  color: #623D06;
+  color: #66390E;
 }
 
 .tc-orange-10 {
-  color: #311F05;
+  color: #331D07;
 }
 
 .tc-system-danger {
-  color: #CF193B;
+  color: #D50136;
 }
 
 .tc-system-warning {
-  color: #DD8500;
+  color: #E57C00;
 }
 
 .tc-system-success {
-  color: #007200;
+  color: #006E18;
 }
 
 .tc-system-information {
-  color: #4B30D2;
+  color: #1F53CC;
 }
 
 /* text size */
@@ -473,7 +477,7 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  vertical-align: middle;
+  vertical-align: baseline;
   white-space: nowrap;
 }
 
@@ -611,7 +615,7 @@ body {
   height: 32px;
   font-size: 0;
   line-height: 0;
-  vertical-align: middle;
+  vertical-align: baseline;
 }
 .common-icon::after {
   display: inline-block;
