@@ -37,12 +37,10 @@ function swiperSetting() {
 
     $(pauseBtn).click(function () {
       swiper.autoplay.stop(); 
-      console.log('Swiper autoplay 중지');
     });
 
     $(startBtn).click(function () {
       swiper.autoplay.start();
-      console.log('Swiper autoplay 시작');
     });
   }
 }

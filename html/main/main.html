@@ -6,17 +6,49 @@
   <title>메인 페이지 : 사이드바</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <!-- CSS -->
-  <link rel="stylesheet" href="../../css/common.css">
-  <link rel="stylesheet" href="../../css/reset.css">
-  <link rel="stylesheet" href="../../css/fob.css">
+  <link rel="stylesheet" href="../../css/common/reset.css">
+  <link rel="stylesheet" href="../../css/common/common.css">
+  <link rel="stylesheet" href="../../css/common/include.css">
+  <link rel="stylesheet" href="../../css/pages/fob.css">
   <!-- CDN -->
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   <!-- Script -->
   <script type="module" src="../../js/script.js"></script>
 </head>
 <body>
-  <div class="common_wrap">
+  <div class="common-wrap">
     <!-- header -->
+    <div id="header">
+      <div class="header-inner">
+        <div class="header-util">
+          <ul class="header-util-list">
+            <li class="header-util-item">
+              <a href="#" class="header-util-link">홈</a>
+            </li>
+            <li class="header-util-item">
+              <a href="#" class="header-util-link">사이트맵</a>
+            </li>
+          </ul>
+        </div>
+        <div class="header-zoom-control">
+          <span class="header-zoom-label">화면크기</span>
+          <button type="button" class="btn btn-header-zoot-out">
+            <span class="common-icon icon-header-zoom-out">
+              <span class="blind">화면크기 -</span>
+            </span>
+          </button>
+          <span class="header-zoom-percent">100%</span>
+          <button type="button" class="btn btn-header-zoom-in">
+            <span class="common-icon icon-header-zoom-in">
+              <span class="blind">화면크기 +</span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="header-gnb-area">
+        
+      </div>
+    </div>
     <!-- remote -->
     <div id="remote-tab"></div>
     <main id="content" class="common_container main_page">

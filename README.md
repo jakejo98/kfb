@@ -8,3 +8,8 @@
 #### 커밋할 시 파일명
 - 카테고리>부카테고리
 - ex. 파트너>파트너관리 - 영역 수정
+
+### 코드컨벤션
+- html, css 케밥 케이스 사용 (ex. remote-tab)
+- icon, img 스네이크 케이스 사용 (ex. icon_arrow_right_black)
+- javaScript, 함수명 카멜 케이스 사용 (ex. swiperPopup)

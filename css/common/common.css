@@ -12,10 +12,6 @@ legend {
   clip: rect(0, 0, 0, 0);
 }
 
-* {
-  vertical-align: baseline;
-}
-
 *,
 *::before,
 *::after {
@@ -97,10 +93,6 @@ select {
   word-wrap: normal;
 }
 
-img {
-  vertical-align: baseline;
-}
-
 button,
 [type="button"],
 [type="reset"],
@@ -169,7 +161,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: -0.02em;
-  line-height: 1.4;
+  line-height: 1;
   color: #1D1D1D;
   text-align: left;
   background-color: #fff;
@@ -641,23 +633,41 @@ body {
 }
 
 .icon-arrow-right-white::after {
-  background-image: url('../img/icon/icon_arrow_right_white.svg');
+  background-image: url('../../img/icon/icon_arrow_right_white.svg');
 }
 
 .icon-arrow-right-black::after {
-  background-image: url('../img/icon/icon_arrow_right_black.svg');
+  background-image: url('../../img/icon/icon_arrow_right_black.svg');
 }
 
 .icon-popup-close::after {
-  background-image: url('../img/icon/icon_popup_close.svg');
+  background-image: url('../../img/icon/icon_popup_close.svg');
 }
 
 .icon-swiper-pause::after {
-  background-image: url('../img/icon/icon_swiper_pause.svg');
+  background-image: url('../../img/icon/icon_swiper_pause.svg');
 }
 
 .icon-swiper-start::after {
-  background-image: url('../img/icon/icon_swiper_start.svg');
+  background-image: url('../../img/icon/icon_swiper_start.svg');
+}
+
+.icon-header-zoom-out {
+  width: 9px;
+  height: 1.5px;
+}
+
+.icon-header-zoom-out::after {
+  background-image: url('../../img/icon/icon_header_zoom_out.svg');
+}
+
+.icon-header-zoom-in {
+  width: 9px;
+  height: 9px;
+}
+
+.icon-header-zoom-in {
+  background-image: url('../../img/icon/icon_header_zoom_in.svg');
 }
 
 /* swiper */
@@ -694,7 +704,7 @@ body {
   height: 24px;
   background: center / 100% no-repeat;
   content: "";
-  background-image: url("../img/icon/icon_swiper_button_prev.svg");
+  background-image: url("../../img/icon/icon_swiper_button_prev.svg");
 }
 
 .ly-pop-wrap .ly-pop .ly-pop-main .popup-swiper .swiper-button-next {
@@ -717,7 +727,7 @@ body {
   height: 24px;
   background: center / 100% no-repeat;
   content: "";
-  background-image: url("../img/icon/icon_swiper_button_next.svg");
+  background-image: url("../../img/icon/icon_swiper_button_next.svg");
 }
 
 .ly-pop-wrap .ly-pop .ly-pop-main .popup-swiper .swiper-pagination {
@@ -2227,4 +2237,4 @@ body {
   padding-top: 50px !important;
   padding-bottom: 50px !important;
 }
-  
+

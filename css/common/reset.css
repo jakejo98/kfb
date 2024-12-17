@@ -112,6 +112,10 @@ em {
   font-style: normal
 }
 
+a {
+  display: inline-block;
+}
+
 a,
 a:focus,
 a:active,
@@ -122,6 +126,10 @@ a:hover {
 table {
   border-collapse: collapse;
   border-spacing: 0
+}
+
+img {
+  vertical-align: top;
 }
 
 /* [개발요청] */

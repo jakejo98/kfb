@@ -1,0 +1,126 @@
+/* header */
+#header .header-inner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 1540px;
+  padding: 10px 0px;
+  margin: 0 auto;
+}
+
+#header .header-util-list {
+  display: flex;
+}
+
+#header .header-util-link {
+  position: relative;
+  padding: 0px 15px 0px 14px;
+  font-size: 13px;
+  line-height: 20px;
+  color: #555555;
+}
+
+#header .header-util-link::after {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: translateY(-50%);
+  content: '';
+}
+
+#header .header-zoom-control {
+  display: flex;
+}
+
+#header .header-zoom-label {
+  display: inline-block;
+  padding: 0px 6px 0px 14px;
+  font-size: 13px;
+  line-height: 20px;
+  color: #555555;
+}
+
+#header .btn-header-zoot-out {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #F8F8F8;
+}
+
+#header .btn-header-zoom-in {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #F8F8F8;
+}
+
+#header .header-zoom-percent {
+  display: inline-block;
+  padding: 0px 4px;
+  font-size: 13px;
+  line-height: 20px;
+  color: #555555;
+}
+
+#header .header-gnb-area {
+  display: flex;
+  align-items: center;
+  max-width: 1540px;
+  margin: 0 auto;
+  background-color: beige;
+}
+
+#header .logo-wrap {
+  display: flex;
+}
+
+/* remote-tab */
+#remote-tab {
+  display: flex;
+  align-items: center;
+  width: 120px;
+  height: calc(100% - 116px);
+  background-color: #4374C9;
+}
+
+.remote-tab-list {
+  width: 100%;
+}
+
+.remote-tab-item {
+  width: 100%;
+}
+
+.remote-tab-item:not(:last-of-type) .btn-remote-tab::after {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  width: 72px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(-50%);
+  content: '';
+}
+
+.btn-remote-tab {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  padding: 0px 24px;
+  background-color: #4374C9;
+  color: #FFFFFF;
+}
+
+.btn-remote-tab.active {
+  background-color: #FFFFFF;
+  color: #4374C9;
+}
+
+.btn-remote-tab-txt {
+  font-weight: 700;
+}
