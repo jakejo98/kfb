@@ -632,6 +632,11 @@ body {
   height: 24px;
 }
 
+.common-icon.ty-32 {
+  width: 32px;
+  height: 32px;
+}
+
 .icon-arrow-right-white::after {
   background-image: url('../../img/icon/icon_arrow_right_white.svg');
 }
@@ -668,6 +673,10 @@ body {
 
 .icon-header-zoom-in {
   background-image: url('../../img/icon/icon_header_zoom_in.svg');
+}
+
+.icon-site-menu::after {
+  background-image: url('../../img/icon/icon_site_menu.svg');
 }
 
 /* swiper */
