@@ -426,6 +426,15 @@ body {
   font-weight: 700 !important;
 }
 
+.tw-extrabold {
+  font-weight: 800 !important;
+}
+
+.tw-black {
+  font-weight: 900 !important;
+}
+
+
 /* text-align */
 .ta-left {
   text-align: left !important;
@@ -446,11 +455,11 @@ body {
 /* badge */
 .badge {
   display: inline-block;
-  padding: 8px;
+  padding: 3px 8px;
   border-radius: 6px;
   font-size: 13px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 20px;
   color: #FFFFFF;
 }
 
@@ -473,45 +482,40 @@ body {
   white-space: nowrap;
 }
 
-.btn-h38 {
-  padding: 7px 10px 7px 18px;
-  border: 1px solid transparent;
+.btn-shortcut.ty-sm {
+  padding: 7.5px 10px 7.5px 18px;
+  border: none;
   border-radius: 8px;
 }
 
-.btn-h52 {
-  padding: 12px 10px 12px 18px;
-  border: 1px solid transparent;
-  border-radius: 8px;
-}
-
-.btn-h38-span {
-  display: inline-block;
+.btn-shortcut.ty-sm .btn-shortcut-txt {
+  display: block;
   margin-right: 4px;
   font-size: 15px;
   font-weight: 700;
-  line-height: 22px;
+  line-height: 23px;;
 }
 
-.btn-h52-span {
-  display: inline-block;
+.btn-shortcut.ty-lg {
+  padding: 12.5px 10px 12.5px 18px;
+  border: none;
+  border-radius: 10px;
+}
+
+.btn-shortcut.ty-lg .btn-shortcut-txt {
+  display: block;
   margin-right: 4px;
   font-size: 18px;
   font-weight: 700;
-  line-height: 26px;
+  line-height: 27px;;
 }
 
-.btn-orange {
-  background-color: #CC721D;
-  color: #FFFFFF;
-}
-
-.btn-primary {
+.btn-blue {
   background-color: #4374C9;
   color: #FFFFFF;
 }
 
-.btn-blue {
+.btn-navy {
   background-color: #143067;
   color: #FFFFFF;
 }
@@ -597,6 +601,11 @@ body {
   font-size: 15px;
   line-height: 20px;
   transition: 0.2s all ease;
+}
+
+.ly-pop-wrap .ly-pop .ly-pop-footer .btn-popup-close:hover {
+  color: #4374C9;
+  text-decoration: underline;
 }
 
 /* icon */
