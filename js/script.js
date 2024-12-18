@@ -2,6 +2,7 @@ import { loadFile } from "./common/include.js";
 import { list } from "./guide/list.js";
 import { guide } from "./guide/guide.js";
 import { swiper } from "./lib/swiper.js";
+import { header } from "./common/header.js";
 import { main } from "./pages/main.js";
 
 $(document).ready(function () {
@@ -11,6 +12,7 @@ $(document).ready(function () {
 
   setTimeout(function () {
     swiper();
+    header();
     main();
   }, 100);
 });

@@ -645,6 +645,10 @@ body {
   background-image: url('../../img/icon/icon_arrow_right_black.svg');
 }
 
+.icon-arrow-right-blue::after {
+  background-image: url('../../img/icon/icon_arrow_right_blue.svg');
+}
+
 .icon-popup-close::after {
   background-image: url('../../img/icon/icon_popup_close.svg');
 }
