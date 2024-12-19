@@ -25,5 +25,4 @@ export function loadFile(callback) {
       }
     }
     loadIfExists('#header', '../../html/include/header.html');
-    loadIfExists('#remote-tab', '../../html/include/remote.html');
   }

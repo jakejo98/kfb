@@ -1,0 +1,89 @@
+/* remote-tab */
+.common-container.main-page .common-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 160px 40px 0px 160px;
+  width: 100%;
+  height: 100vh;
+  /* 테스트용 */
+  font-size: 50px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.common-container.main-page #section-01 {
+  background-color: red;
+}
+
+.common-container.main-page #section-02 {
+  background-color: orange;
+}
+
+.common-container.main-page #section-03 {
+  background-color: yellow;
+}
+
+.common-container.main-page #section-04 {
+  background-color: green;
+}
+
+.common-container.main-page #section-05 {
+  background-color: blue;
+}
+
+.common-container.main-page #section-06 {
+  background-color: navy;
+}
+
+#remote-tab {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 120px;
+  height: calc(100% - 116px);
+  background-color: #4374C9;
+}
+
+#remote-tab .remote-tab-list {
+  width: 100%;
+}
+
+#remote-tab .remote-tab-item {
+  width: 100%;
+}
+
+#remote-tab .remote-tab-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 26px;
+  background-color: #4374C9;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+#remote-tab .remote-tab-link.active {
+  font-weight: 900;
+  background-color: #FFFFFF;
+  color: #4374C9;
+}
+
+#remote-tab .remote-tab-item:not(:last-of-type) .remote-tab-link::after {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  width: calc(100% - 48px);
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(-50%);
+  content: '';
+}
+
+

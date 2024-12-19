@@ -688,8 +688,8 @@ body {
   background-image: url('../../img/icon/icon_header_zoom_in.svg');
 }
 
-.icon-site-menu::after {
-  background-image: url('../../img/icon/icon_site_menu.svg');
+.icon-category::after {
+  background-image: url('../../img/icon/icon_category.svg');
 }
 
 /* swiper */
@@ -762,6 +762,12 @@ body {
   width: 10px;
   height: 10px;
   margin: 0px 4px;
+}
+
+/* layout */
+.common-wrap {
+  width: 100%;
+  height: 100%;
 }
 
 /* Margin */
