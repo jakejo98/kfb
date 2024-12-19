@@ -12,6 +12,10 @@ legend {
   clip: rect(0, 0, 0, 0);
 }
 
+* {
+  word-break: keep-all;
+}
+
 *,
 *::before,
 *::after {
@@ -690,6 +694,10 @@ body {
 
 .icon-category::after {
   background-image: url('../../img/icon/icon_category.svg');
+}
+
+.icon-category-close::after {
+  background-image: url('../../img/icon/icon_category_close.svg');
 }
 
 /* swiper */
