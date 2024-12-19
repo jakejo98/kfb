@@ -1,8 +1,8 @@
 export function swiper() {
-  swiperSetting();
+  guidePopupSwiper();
 }
 
-function swiperSetting() {
+function guidePopupSwiper() {
   const swiperContainer = document.querySelector('.popup-swiper');
 
   if (swiperContainer) {

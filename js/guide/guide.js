@@ -1,8 +1,8 @@
-$(document).ready(function(){
+export function guide(){
   initializeCardCodePreview();
   initializeHighlightJsBadge();
   initializeModalFromURL();
-})
+}
 
 // Adds code preview section to cards with ".src" class
 function initializeCardCodePreview() {
