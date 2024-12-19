@@ -1,9 +1,9 @@
-export function list(){
+$(document).ready(function(){
   buildHeadingNum();
   buildIndexNum();
   fillLinks();
   initHistory();
-}
+})
 
 /* Index Numbering */
 function buildHeadingNum() {
