@@ -137,6 +137,7 @@
 #header .header-gnb-link:hover {
   color: #4374C9;
 }
+
 #header .header-gnb-link::after {
   width: 0;
   height: 0;
@@ -354,16 +355,4 @@
   font-weight: 500;
   line-height: 27px;
   color: #717171;
-}
-
-#footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 200px;
-  background-color: black;
-  color: #FFFFFF;
-  font-size: 40px;
-  font-weight: 700;
 }

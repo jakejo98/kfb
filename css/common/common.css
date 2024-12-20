@@ -650,6 +650,11 @@ body {
   height: 32px;
 }
 
+.common-icon.ty-90 {
+  width: 90px;
+  height: 90px;
+}
+
 .icon-arrow-right-white::after {
   background-image: url('../../img/icon/icon_arrow_right_white.svg');
 }
@@ -698,6 +703,98 @@ body {
 
 .icon-category-close::after {
   background-image: url('../../img/icon/icon_category_close.svg');
+}
+
+.icon-rate-fee-item-01::after {
+  background-image: url('../../img/icon/icon-rate-fee-item-01.svg');
+}
+
+.icon-rate-fee-item-02::after {
+  background-image: url('../../img/icon/icon-rate-fee-item-02.svg');
+}
+
+.icon-rate-fee-item-03::after {
+  background-image: url('../../img/icon/icon-rate-fee-item-03.svg');
+}
+
+.icon-rate-fee-item-04::after {
+  background-image: url('../../img/icon/icon-rate-fee-item-04.svg');
+}
+
+.icon-rate-fee-item-05::after {
+  background-image: url('../../img/icon/icon-rate-fee-item-05.svg');
+}
+
+.icon-rate-fee-item-06::after {
+  background-image: url('../../img/icon/icon-rate-fee-item-06.svg');
+}
+
+.icon-rate-fee-item-07::after {
+  background-image: url('../../img/icon/icon-rate-fee-item-07.svg');
+}
+
+.icon-rate-fee-item-08::after {
+  background-image: url('../../img/icon/icon-rate-fee-item-08.svg');
+}
+
+.icon-fin-svc-item-01::after {
+  background-image: url('../../img/icon/icon-fin-svc-item-01.svg');
+}
+
+.icon-fin-svc-item-02::after {
+  background-image: url('../../img/icon/icon-fin-svc-item-02.svg');
+}
+
+.icon-fin-svc-item-03::after {
+  background-image: url('../../img/icon/icon-fin-svc-item-03.svg');
+}
+
+.icon-fin-svc-item-04::after {
+  background-image: url('../../img/icon/icon-fin-svc-item-04.svg');
+}
+
+.icon-fin-svc-item-05::after {
+  background-image: url('../../img/icon/icon-fin-svc-item-05.svg');
+}
+
+.icon-fin-svc-item-06::after {
+  background-image: url('../../img/icon/icon-fin-svc-item-06.svg');
+}
+
+.icon-fin-svc-item-07::after {
+  background-image: url('../../img/icon/icon-fin-svc-item-07.svg');
+}
+
+.icon-fin-svc-item-08::after {
+  background-image: url('../../img/icon/icon-fin-svc-item-08.svg');
+}
+
+.icon-vishing-item-01 {
+  background-image: url('../../img/icon/icon-vishing-item-01.svg');
+}
+
+.icon-vishing-item-02 {
+  background-image: url('../../img/icon/icon-vishing-item-02.svg');
+}
+
+.icon-vishing-item-03 {
+  background-image: url('../../img/icon/icon-vishing-item-03.svg');
+}
+
+.icon-vishing-item-04 {
+  background-image: url('../../img/icon/icon-vishing-item-04.svg');
+}
+
+.icon-vishing-item-05 {
+  background-image: url('../../img/icon/icon-vishing-item-05.svg');
+}
+
+.icon-vishing-item-06 {
+  background-image: url('../../img/icon/icon-vishing-item-06.svg');
+}
+
+.icon-vishing-item-07 {
+  background-image: url('../../img/icon/icon-vishing-item-07.svg');
 }
 
 /* swiper */
