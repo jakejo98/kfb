@@ -1,0 +1,56 @@
+/* bread-crumb */
+#bread-crumb {
+  margin-top: 116px;
+  width: 100%;
+  height: 63px;
+  position: fixed;
+  align-self: stretch;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 260px;
+  border-radius: 6px;
+  border-bottom: solid 1px #d8d8d8;
+}
+
+.bread-crumb-list {
+  gap: 14px;
+  display: flex;
+}
+
+.bread-crumb-list-item .ellipse {
+  width: 4px;
+  height: 4px;
+  background-color: #d8d8d8;
+  border-radius: 100%;
+}
+
+.bread-crumb-list-item {
+  display: flex;
+  align-items: center;
+}
+
+.bread-crumb-list-span {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #555555;
+}
+
+.bread-crumb-list-span.active {
+  font-weight: bold;
+  color: #1d1d1d;
+}
+
+/* icon */
+.icon-home {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-home::after {
+  background-image: url('../../img/icon/home_icon_24.svg');
+}
