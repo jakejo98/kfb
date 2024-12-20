@@ -289,6 +289,30 @@
   content: '';
 }
 
+.common-container.main-page .common-section.section-main .quick-search-area {
+  margin-top: 16px;
+}
+
+.common-container.main-page .common-section.section-main .quick-search-form {
+  display: flex;
+  gap: 8px;
+}
+
+.common-container.main-page .common-section.section-main .quick-search-select {
+  display: block;
+  position: relative;
+  width: 259px;
+  height: 60px;
+  padding: 14.5px 16px;
+  border: 2px solid #4374C9;
+  border-radius: 8px;
+  background: url('../../img/icon/icon-quick-search-select.svg') center right 16px / 24px 24px no-repeat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  color: #1D1D1D;
+}
+
 .common-container.main-page #section-02 {
   background-color: orange;
 }

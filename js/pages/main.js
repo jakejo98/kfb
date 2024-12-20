@@ -3,6 +3,7 @@ export function main() {
   fullPage();
   categoryControl();
   quickMenuControl();
+  quickSearchControl();
 }
 
 // 메인페이지 팝업창
@@ -146,6 +147,14 @@ function quickMenuControl() {
   }
 }
 
+function quickSearchControl(){
+  const searchBtn = $('.section-main .btn-quick-search');
+  const isActive = 'active';
+
+  $(searchBtn).click(function(){
+    $(this).addClass(isActive).parent().siblings().find(searchBtn).removeClass(isActive);
+  })
+}
 
 
 

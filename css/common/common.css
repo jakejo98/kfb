@@ -769,31 +769,31 @@ body {
   background-image: url('../../img/icon/icon-fin-svc-item-08.svg');
 }
 
-.icon-vishing-item-01 {
+.icon-vishing-item-01::after {
   background-image: url('../../img/icon/icon-vishing-item-01.svg');
 }
 
-.icon-vishing-item-02 {
+.icon-vishing-item-02::after {
   background-image: url('../../img/icon/icon-vishing-item-02.svg');
 }
 
-.icon-vishing-item-03 {
+.icon-vishing-item-03::after {
   background-image: url('../../img/icon/icon-vishing-item-03.svg');
 }
 
-.icon-vishing-item-04 {
+.icon-vishing-item-04::after {
   background-image: url('../../img/icon/icon-vishing-item-04.svg');
 }
 
-.icon-vishing-item-05 {
+.icon-vishing-item-05::after {
   background-image: url('../../img/icon/icon-vishing-item-05.svg');
 }
 
-.icon-vishing-item-06 {
+.icon-vishing-item-06::after {
   background-image: url('../../img/icon/icon-vishing-item-06.svg');
 }
 
-.icon-vishing-item-07 {
+.icon-vishing-item-07::after {
   background-image: url('../../img/icon/icon-vishing-item-07.svg');
 }
 
