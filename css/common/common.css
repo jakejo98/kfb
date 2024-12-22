@@ -471,6 +471,22 @@ body {
   background-color: #FF8F24;
 }
 
+/* flag */
+.flag {
+  display: inline-block;
+  width: 61px;
+  height: 25px;
+  border-radius: 6px;
+  padding: 2.5px 8px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.flag.flag-orange {
+  background-color: #FF8F24;
+}
 
 /* button */
 *[role="button"] {
@@ -650,6 +666,11 @@ body {
   height: 32px;
 }
 
+.common-icon .ty-40 {
+  width: 40px;
+  height: 40px;
+}
+
 .common-icon.ty-90 {
   width: 90px;
   height: 90px;
@@ -706,95 +727,99 @@ body {
 }
 
 .icon-rate-fee-item-01::after {
-  background-image: url('../../img/icon/icon-rate-fee-item-01.svg');
+  background-image: url('../../img/icon/icon_rate_fee_item_01.svg');
 }
 
 .icon-rate-fee-item-02::after {
-  background-image: url('../../img/icon/icon-rate-fee-item-02.svg');
+  background-image: url('../../img/icon/icon_rate_fee_item_02.svg');
 }
 
 .icon-rate-fee-item-03::after {
-  background-image: url('../../img/icon/icon-rate-fee-item-03.svg');
+  background-image: url('../../img/icon/icon_rate_fee_item_03.svg');
 }
 
 .icon-rate-fee-item-04::after {
-  background-image: url('../../img/icon/icon-rate-fee-item-04.svg');
+  background-image: url('../../img/icon/icon_rate_fee_item_04.svg');
 }
 
 .icon-rate-fee-item-05::after {
-  background-image: url('../../img/icon/icon-rate-fee-item-05.svg');
+  background-image: url('../../img/icon/icon_rate_fee_item_05.svg');
 }
 
 .icon-rate-fee-item-06::after {
-  background-image: url('../../img/icon/icon-rate-fee-item-06.svg');
+  background-image: url('../../img/icon/icon_rate_fee_item_06.svg');
 }
 
 .icon-rate-fee-item-07::after {
-  background-image: url('../../img/icon/icon-rate-fee-item-07.svg');
+  background-image: url('../../img/icon/icon_rate_fee_item_07.svg');
 }
 
 .icon-rate-fee-item-08::after {
-  background-image: url('../../img/icon/icon-rate-fee-item-08.svg');
+  background-image: url('../../img/icon/icon_rate_fee_item_08.svg');
 }
 
 .icon-fin-svc-item-01::after {
-  background-image: url('../../img/icon/icon-fin-svc-item-01.svg');
+  background-image: url('../../img/icon/icon_fin_svc_item_01.svg');
 }
 
 .icon-fin-svc-item-02::after {
-  background-image: url('../../img/icon/icon-fin-svc-item-02.svg');
+  background-image: url('../../img/icon/icon_fin_svc_item_02.svg');
 }
 
 .icon-fin-svc-item-03::after {
-  background-image: url('../../img/icon/icon-fin-svc-item-03.svg');
+  background-image: url('../../img/icon/icon_fin_svc_item_03.svg');
 }
 
 .icon-fin-svc-item-04::after {
-  background-image: url('../../img/icon/icon-fin-svc-item-04.svg');
+  background-image: url('../../img/icon/icon_fin_svc_item_04.svg');
 }
 
 .icon-fin-svc-item-05::after {
-  background-image: url('../../img/icon/icon-fin-svc-item-05.svg');
+  background-image: url('../../img/icon/icon_fin_svc_item_05.svg');
 }
 
 .icon-fin-svc-item-06::after {
-  background-image: url('../../img/icon/icon-fin-svc-item-06.svg');
+  background-image: url('../../img/icon/icon_fin_svc_item_06.svg');
 }
 
 .icon-fin-svc-item-07::after {
-  background-image: url('../../img/icon/icon-fin-svc-item-07.svg');
+  background-image: url('../../img/icon/icon_fin_svc_item_07.svg');
 }
 
 .icon-fin-svc-item-08::after {
-  background-image: url('../../img/icon/icon-fin-svc-item-08.svg');
+  background-image: url('../../img/icon/icon_fin_svc_item_08.svg');
 }
 
 .icon-vishing-item-01::after {
-  background-image: url('../../img/icon/icon-vishing-item-01.svg');
+  background-image: url('../../img/icon/icon_vishing_item_01.svg');
 }
 
 .icon-vishing-item-02::after {
-  background-image: url('../../img/icon/icon-vishing-item-02.svg');
+  background-image: url('../../img/icon/icon_vishing_item_02.svg');
 }
 
 .icon-vishing-item-03::after {
-  background-image: url('../../img/icon/icon-vishing-item-03.svg');
+  background-image: url('../../img/icon/icon_vishing_item_03.svg');
 }
 
 .icon-vishing-item-04::after {
-  background-image: url('../../img/icon/icon-vishing-item-04.svg');
+  background-image: url('../../img/icon/icon_vishing_item_04.svg');
 }
 
 .icon-vishing-item-05::after {
-  background-image: url('../../img/icon/icon-vishing-item-05.svg');
+  background-image: url('../../img/icon/icon_vishing_item_05.svg');
 }
 
 .icon-vishing-item-06::after {
-  background-image: url('../../img/icon/icon-vishing-item-06.svg');
+  background-image: url('../../img/icon/icon_vishing_item_06.svg');
 }
 
 .icon-vishing-item-07::after {
-  background-image: url('../../img/icon/icon-vishing-item-07.svg');
+  background-image: url('../../img/icon/icon_vishing_item_07.svg');
+}
+
+.icon-quick-search-white::after {
+  background-image: url('../../img/icon/icon_quick_search_white.svg');
 }
 
 /* swiper */

@@ -4,6 +4,8 @@ export function main() {
   categoryControl();
   quickMenuControl();
   quickSearchControl();
+  rateFeeControl();
+  consInfoControl();
 }
 
 // 메인페이지 팝업창
@@ -148,15 +150,47 @@ function quickMenuControl() {
 }
 
 function quickSearchControl(){
-  const searchBtn = $('.section-main .btn-quick-search');
+  const searchBtn = $('.section-main .btn-quick-search-tab');
+  const searchFormItem = $('.section-main .quick-search-area-item')
   const isActive = 'active';
 
   $(searchBtn).click(function(){
+    const BtnIndex = $(this).parent().index();
+
     $(this).addClass(isActive).parent().siblings().find(searchBtn).removeClass(isActive);
+    $(searchFormItem).eq(BtnIndex).addClass(isActive).siblings().removeClass(isActive)
   })
 }
 
+function rateFeeControl(){
+  const rateFeeLink = $('.section-rate-fee .rate-fee-box-link');
+  const rateFeeIcon = $('.section-rate-fee .common-icon');
+  const isBlack = 'icon-arrow-right-black';
+  const isBlue = 'icon-arrow-right-blue';
 
+  $(rateFeeLink).mouseenter(function(){
+    $(this).find(rateFeeIcon).removeClass(isBlack).addClass(isBlue);
+  })
+
+  $(rateFeeLink).mouseleave(function(){
+    $(this).find(rateFeeIcon).removeClass(isBlue).addClass(isBlack);
+  })
+}
+
+function consInfoControl(){
+  const applyCivil = $('.apply-civil');
+  const applyCivilIcon = $('.common-icon');
+  const isWhite = 'icon-arrow-right-white';
+  const isBlack = 'icon-arrow-right-black';
+
+  $(applyCivil).mouseenter(function(){
+    $(this).find(applyCivilIcon).removeClass(isBlack).addClass(isWhite);
+  })
+  
+  $(applyCivil).mouseleave(function(){
+    $(this).find(applyCivilIcon).removeClass(isWhite).addClass(isBlack);
+  })
+}
 
 
 
