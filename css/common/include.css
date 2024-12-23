@@ -6,14 +6,14 @@
   z-index: 1000;
   width: 100%;
   background-color: #FFFFFF;
+  box-sizing: border-box;
 }
 
 #header .header-util-wrap .header-inner{
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  max-width: 1540px;
-  padding: 10px 0px;
+  padding: 10px 80px;
 }
 
 #header .header-util-list {
@@ -93,8 +93,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1540px;
-  padding: 0px 0px 0px 120px;
+  padding: 0px 80px;
 }
 
 #header .logo-wrap {
@@ -119,9 +118,15 @@
   margin-right: 26px;
 }
 
-@media screen and (max-width: 1539px) {
+@media screen and (max-width: 1619px) {
   #header .header-gnb-item:not(:last-of-type) {
     margin-right: 0px;
+  }
+}
+
+@media screen and (min-width: 1620px) {
+  #header .header-gnb-item:not(:last-of-type) {
+    margin-right: 26px;
   }
 }
 

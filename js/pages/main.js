@@ -6,6 +6,7 @@ export function main() {
   quickSearchControl();
   rateFeeControl();
   consInfoControl();
+  finProdControl();
 }
 
 // 메인페이지 팝업창
@@ -192,7 +193,28 @@ function consInfoControl(){
   })
 }
 
+function finProdControl(){
+  const faqLibraryBtn = $('.section-fin-prod .btn-faq-library-tab');
+  const faqLibraryItem = $('.section-fin-prod .faq-library-item');
+  const faqLibraryMoreLink = $('.section-fin-prod .faq-library-more-link');
+  const isActive = 'active';
+  let btnIndex = 0;
 
+  $(faqLibraryBtn).click(function(){
+    btnIndex = $(this).parent().index();
+    
+    $(this).addClass(isActive).parent().siblings().find(faqLibraryBtn).removeClass(isActive);
+    $(faqLibraryItem).eq(btnIndex).addClass(isActive).siblings().removeClass(isActive);
+
+    // 추후 실제 URL
+    if(btnIndex === 0) {
+      $(faqLibraryMoreLink).attr('href', '자주하는 질문 페이지')
+    } else if(btnIndex === 1) {
+      $(faqLibraryMoreLink).attr('href', '자료실 페이지')
+    }
+  })
+  
+}
 
 
 

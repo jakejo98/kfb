@@ -6,6 +6,7 @@
   top: 116px;
   left: 0px;
   width: 120px;
+  z-index: 10;
   height: calc(100% - 116px);
   background-color: #4374C9;
 }
@@ -63,14 +64,23 @@
   height: 100vh;
 }
 
-.common-container.main-page .common-section .common-section-inner {
-  width: 100%;
-  max-width: 1280px;
+@media screen and (max-width: 1400px) {
+  .common-container.main-page .common-section .common-section-inner {
+    width: 100%;
+    max-width: 1200px;
+  }
+}
+
+@media screen and (min-width: 1401px) {
+  .common-container.main-page .common-section .common-section-inner {
+    width: 100%;
+    max-width: 1280px;
+  }
 }
 
 /* 메인 */
 .common-container.main-page .common-section.section-main {
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.92) 69%, rgba(255, 255, 255, 0) 100%), radial-gradient(circle at 0 0, #b398ff, rgba(173, 152, 255, 0)), conic-gradient(from 0.2turn, #dfe8ff 0, #ad98ff 0);
+  background: url('../../img/pages/main/section_main_bg.jpg') no-repeat center center / cover;
 }
 
 .common-container.main-page .common-section.section-main .section-heading-item {
@@ -501,7 +511,7 @@
   left: 0px;
   width: 100%;
   height: 100%;
-  background: url('../../img/icon/icon_fin_svc_money.svg') no-repeat top -43px center / cover;
+  background: url('../../img/icon/icon_fin_svc_money.svg') no-repeat top -43px center ;
   content: '';
 }
 
@@ -560,10 +570,40 @@
   gap: 24px;
 }
 
+
+.common-container.main-page .common-section.section-cons-info .apply-civil-area-item:nth-of-type(1) {
+  width: 302px;
+}
+
+.common-container.main-page .common-section.section-cons-info .apply-civil-area-item:nth-of-type(2) {
+  width: 411px;
+}
+
+.common-container.main-page .common-section.section-cons-info .apply-civil-area-item:nth-of-type(3) {
+  width: 247.5px;
+}
+
+.common-container.main-page .common-section.section-cons-info .apply-civil-area-item:nth-of-type(4) {
+  width: 247.5px;
+}
+
+.common-container.main-page .common-section.section-cons-info .apply-civil-area-item:nth-of-type(2) .apply-civil::after {
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 411px;
+  height: 194px;
+  background: url('../../img/icon/icon_apply_civil_wallet.svg');
+  content: '';
+}
+
 .common-container.main-page .common-section.section-cons-info .apply-civil {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+  width: 100%;
   height: 194px;
   padding: 32px 28px;
   border-radius: 16px;
@@ -581,22 +621,6 @@
 
 .common-container.main-page .common-section.section-cons-info .apply-civil:hover .apply-civil-desc {
   color: #FFFFFF;
-}
-
-.common-container.main-page .common-section.section-cons-info .apply-civil-area-item:nth-of-type(1) .apply-civil{
-  width: 302px;
-}
-
-.common-container.main-page .common-section.section-cons-info .apply-civil-area-item:nth-of-type(2) .apply-civil{
-  width: 411px;
-}
-
-.common-container.main-page .common-section.section-cons-info .apply-civil-area-item:nth-of-type(3) .apply-civil{
-  width: 247.5px;
-}
-
-.common-container.main-page .common-section.section-cons-info .apply-civil-area-item:nth-of-type(4) .apply-civil{
-  width: 247.5px;
 }
 
 .common-container.main-page .common-section.section-cons-info .apply-civil-heading {
@@ -680,6 +704,514 @@
   color: #555555;
 }
 
+.common-container.main-page .common-section.section-fin-edu {
+  background-color: #FFFFFF;
+}
+
+.common-container.main-page .common-section.section-fin-edu .financial-education-wrap {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  padding: 60px 0px;
+  background-color: #FFFFFF;
+}
+
+.common-container.main-page .common-section.section-fin-edu .financial-education-wrap::before {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: -100%;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  content: '';
+}
+
+.common-container.main-page .common-section.section-fin-edu .financial-education-wrap::after {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  right: -100%;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  content: '';
+}
+
+.common-container.main-page .common-section.section-fin-edu .financial-education-area-list {
+  display: flex;
+  gap: 24px;
+}
+
+.common-container.main-page .common-section.section-fin-edu .financial-education-area-item {
+  width: calc((100% - 48px) / 3);
+}
+
+.common-container.main-page .common-section.section-fin-edu .financial-education {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: 290px;
+  padding: 36px 40px;
+  border-radius: 24px;
+  background-color: #F5F6FB;
+}
+
+.common-container.main-page .common-section.section-fin-edu .section-heading {
+  margin-bottom: 36px;
+}
+
+.common-container.main-page .common-section.section-fin-edu .section-heading-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 50px;
+}
+
+.common-container.main-page .common-section.section-fin-edu .financial-education-heading-title {
+  margin-bottom: 16px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 39px;
+}
+
+.common-container.main-page .common-section.section-fin-edu .financial-education-heading-desc {
+  font-size: 19px;
+  line-height: 29px;
+  color: #555555;
+}
+
+.common-container.main-page .common-section.section-fin-edu .financial-education-banner-wrap {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  padding: 60px 0px 128px 0px;
+  background-color: #F2F3F5;
+}
+
+.common-container.main-page .common-section.section-fin-edu .financial-education-banner-wrap::before {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: -100%;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #F2F3F5;
+  content: '';
+}
+
+.common-container.main-page .common-section.section-fin-edu .financial-education-banner-wrap::after {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  right: -100%;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #F2F3F5;
+  content: '';
+}
+
+.common-container.main-page .common-section.section-fin-edu .financial-education-banner-list {
+  display: flex;
+  gap: 24px;
+}
+
+.common-container.main-page .common-section.section-fin-edu .financial-education-banner-item {
+  width: calc((100% - 48px) / 3);
+}
+
+.common-container.main-page .common-section.section-fin-edu .financial-education-banner {
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.common-container.main-page .common-section.section-fin-edu .financial-education-banner-img {
+  width: 100%;
+}
+
+.common-container.main-page .common-section.section-fin-prod {
+  background-color: #F2F3F5;
+}
+
+.common-container.main-page .common-section.section-fin-prod .common-section-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.common-container.main-page .common-section.section-fin-prod .section-heading {
+  margin-bottom: 26px;
+}
+
+.common-container.main-page .common-section.section-fin-prod .section-heading-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 50px;
+}
+
+.common-container.main-page .common-section.section-fin-prod .financial-product-list {
+  display: flex;
+  gap: 24px;
+}
+
+.common-container.main-page .common-section.section-fin-prod .financial-product-item {
+  width: calc((100% - 72px) / 4);
+}
+
+.common-container.main-page .common-section.section-fin-prod .financial-product-item:nth-of-type(1) .financial-product {
+  background-color: #102652;
+}
+
+.common-container.main-page .common-section.section-fin-prod .financial-product-item:nth-of-type(2) .financial-product {
+  background-color: #4374C9;
+}
+
+.common-container.main-page .common-section.section-fin-prod .financial-product-item:nth-of-type(3) .financial-product {
+  background-color: #FFFFFF;
+}
+
+.common-container.main-page .common-section.section-fin-prod .financial-product-item:nth-of-type(4) .financial-product {
+  background-color: #FFFFFF;
+}
+
+.common-container.main-page .common-section.section-fin-prod .financial-product-item:nth-of-type(3) .financial-product::before {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  background: url('../../img/icon/icon_financial_prouct_piggy_bank.svg') no-repeat center center / contain;
+  content: '';
+}
+
+.common-container.main-page .common-section.section-fin-prod .financial-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 194px;
+  padding: 28px 32px;
+  border-radius: 16px;
+}
+
+.common-container.main-page .common-section.section-fin-prod .financial-product-heading {
+  display: flex;
+  align-items: center;
+}
+
+.common-container.main-page .common-section.section-fin-prod .financial-product-heading-title {
+  margin-right: 3px;
+  font-size: 22px;
+  font-family: 700;
+  line-height: 33px;
+}
+
+.common-container.main-page .common-section.section-fin-prod .financial-product-item:nth-of-type(1) .financial-product-heading-title {
+  color: #FFFFFF;
+}
+
+.common-container.main-page .common-section.section-fin-prod .financial-product-item:nth-of-type(2) .financial-product-heading-title {
+  color: #FFFFFF;
+}
+
+.common-container.main-page .common-section.section-fin-prod .financial-product-item:nth-of-type(3) .financial-product-heading-title {
+  color: #1D1D1D;
+}
+
+.common-container.main-page .common-section.section-fin-prod .financial-product-item:nth-of-type(4) .financial-product-heading-title {
+  color: #1D1D1D;
+}
+
+.common-container.main-page .common-section.section-fin-prod .financial-product-desc {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 23px;
+}
+
+
+.common-container.main-page .common-section.section-fin-prod .financial-product-item:nth-of-type(1) .financial-product-desc {
+  color: #FFFFFF;
+}
+
+.common-container.main-page .common-section.section-fin-prod .financial-product-item:nth-of-type(2) .financial-product-desc {
+  color: #FFFFFF;
+}
+
+.common-container.main-page .common-section.section-fin-prod .financial-product-item:nth-of-type(3) .financial-product-desc {
+  color: #1D1D1D;
+}
+
+.common-container.main-page .common-section.section-fin-prod .financial-product-item:nth-of-type(4) .financial-product-desc {
+  color: #1D1D1D;
+}
+
+.common-container.main-page .common-section.section-fin-prod .financial-product-board-wrap {
+  display: flex;
+  gap: 24px;
+}
+
+.common-container.main-page .common-section.section-fin-prod .faq-library-area {
+  width: calc((100% - 24px) / 2);
+  height: 420px;
+  padding: 40px;
+  border-radius: 24px;
+  background-color: #FFFFFF;
+}
+
+.common-container.main-page .common-section.section-fin-prod .faq-library-tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 13px 0px;
+  border-bottom: 1px solid #1D1D1D;
+}
+
+.common-container.main-page .common-section.section-fin-prod .faq-library-tab-list {
+  display: flex;
+  align-items: center;
+}
+
+.common-container.main-page .common-section.section-fin-prod .faq-library-tab-item:nth-of-type(1) .btn-faq-library-tab {
+  padding: 0px 17px 0px 0px;
+}
+
+.common-container.main-page .common-section.section-fin-prod .faq-library-tab-item:nth-of-type(2) .btn-faq-library-tab {
+  padding: 0px 0px 0px 18px;
+}
+
+.common-container.main-page .common-section.section-fin-prod .faq-library-tab-item:nth-of-type(2) .btn-faq-library-tab::before {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 1px;
+  height: 16px;
+  background-color: #D8D8D8;
+  transform: translateY(-50%);
+  content: '';
+}
+
+.common-container.main-page .common-section.section-fin-prod .faq-library-tab-item .btn-faq-library-tab {
+  position: relative;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 33px;
+  color: #717171;
+}
+
+.common-container.main-page .common-section.section-fin-prod .faq-library-tab-item .btn-faq-library-tab.active {
+  color: #1D1D1D;
+}
+
+.common-container.main-page .common-section.section-fin-prod .faq-library-more-link {
+  display: flex;
+  align-items: center;
+}
+
+.common-container.main-page .common-section.section-fin-prod .faq-library-more-link-txt {
+  position: relative;
+  margin-right: 2px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 23px;
+}
+
+.common-container.main-page .common-section.section-fin-prod .bank-new-product-area {
+  width: calc((100% - 24px) / 2);
+  height: 420px;
+  padding: 40px;
+  border-radius: 24px;
+  background-color: #FFFFFF;
+}
+
+.common-container.main-page .common-section.section-fin-prod .faq-library-item {
+  display: none;
+}
+
+.common-container.main-page .common-section.section-fin-prod .faq-library-item.active {
+  display: block;
+}
+
+.common-container.main-page .common-section.section-fin-prod .faq-library-board {
+  margin-top: 16px;
+}
+
+.common-container.main-page .common-section.section-fin-prod .faq-library-board-item {
+  position: relative;
+  padding: 6px 0px 6px 0px;
+}
+
+.common-container.main-page .common-section.section-fin-prod .faq-library-board-item:not(:last-of-type)::after {
+  display: inline-block;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background-color: #F2F3F5;
+  content: '';
+}
+
+.common-container.main-page .common-section.section-fin-prod .faq-library-board-item:first-of-type {
+  padding: 0px 0px 6px 0px;
+}
+
+.common-container.main-page .common-section.section-fin-prod .faq-library-board-item:last-of-type {
+  padding: 6px 0px 0px 0px;
+}
+
+.common-container.main-page .common-section.section-fin-prod .faq-library-board-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 5.5px 0px;
+}
+
+.common-container.main-page .common-section.section-fin-prod .faq-library-board-subject {
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 23px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-prod .faq-library-board-subject {
+    width: 411px;
+  }
+}
+
+@media screen and (min-width: 1401px) {
+  .common-container.main-page .common-section.section-fin-prod .faq-library-board-subject {
+    width: 451px;
+  }
+}
+
+.common-container.main-page .common-section.section-fin-prod .faq-library-board-date {
+  width: 81px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 23px;
+  color: #555555;
+  text-align: right;
+}
+
+.common-container.main-page .common-section.section-fin-prod .bank-new-product-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0px;
+  border-bottom: 1px solid #1D1D1D;
+}
+
+.common-container.main-page .common-section.section-fin-prod .bank-new-product-heading-title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 33px;
+}
+
+.common-container.main-page .common-section.section-fin-prod .bank-new-product-item {
+  position: relative;
+  padding: 6px 0px;
+}
+
+.common-container.main-page .common-section.section-fin-prod .bank-new-product-item:first-of-type {
+  padding: 0px 0px 6px 0px;
+}
+
+.common-container.main-page .common-section.section-fin-prod .bank-new-product-item:last-of-type {
+  padding: 6px 0px 0px 0px;
+}
+
+.common-container.main-page .common-section.section-fin-prod .bank-new-product-item:not(:last-of-type)::after {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #F2F3F5;
+  content: '';
+}
+
+.common-container.main-page .common-section.section-fin-prod .bank-new-product-more-link {
+  display: flex;
+  align-items: center;
+}
+
+.common-container.main-page .common-section.section-fin-prod .bank-new-product-more-link-txt {
+  margin-right: 2px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 23px;
+}
+
+.common-container.main-page .common-section.section-fin-prod .bank-new-product {
+  margin-top: 16px;
+}
+
+.common-container.main-page .common-section.section-fin-prod .bank-new-product-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 5.5px 0px;
+}
+
+.common-container.main-page .common-section.section-fin-prod .bank-new-product-status-product {
+  width: 39px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 23px;
+  color: #FF8F24;
+}
+
+.common-container.main-page .common-section.section-fin-prod .bank-new-product-bank-type {
+  width: 76px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 23px;
+}
+
+.common-container.main-page .common-section.section-fin-prod .bank-new-product-subject {
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 23px;
+  color: #555555;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-prod .bank-new-product-subject {
+    width: 304px;
+  }
+}
+
+@media screen and (min-width: 1401px) {
+  .common-container.main-page .common-section.section-fin-prod .bank-new-product-subject {
+    width: 264px;
+  }
+}
+
+.common-container.main-page .common-section.section-fin-prod .bank-new-product-date {
+  width: 81px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 23px;
+  color: #555555;
+  text-align: right;
+}
+
 .common-container.main-page #section-01 {
   display: none;
 }
@@ -693,16 +1225,17 @@
 }
 
 .common-container.main-page #section-04 {
-  display: flex;
+  display: none;
 }
 
 .common-container.main-page #section-05 {
-  background-color: blue;
+  display: none;
 }
 
 .common-container.main-page #section-06 {
-  background-color: navy;
+  display: flex;
 }
+
 
 
 
