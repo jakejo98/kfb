@@ -1247,6 +1247,8 @@
   text-align: right;
 }
 
-
+.common-section {
+  display: none !important;
+}
 
 

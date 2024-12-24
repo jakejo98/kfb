@@ -30,97 +30,6 @@ function swiperPopup() {
   })
 }
 
-// 풀페이지 원본
-// function fullPage() {
-//   const sections = Array.from(document.querySelectorAll('.common-section')).filter(section =>
-//     section.parentElement.classList.contains('main-page')
-//   );
-
-//   // #footer를 섹션 목록에 마지막으로 추가합니다.
-//   const footer = document.querySelector('#footer');
-//   if (footer) {
-//     sections.push(footer);
-//   }
-
-//   const links = document.querySelectorAll('.remote-tab-link');
-
-//   const footerLink = document.createElement('a');
-//   footerLink.href = '#';
-//   footerLink.classList.add('remote-tab-link');
-//   footerLink.textContent = 'Footer Section';  // 푸터 섹션에 대한 링크 텍스트 추가
-//   document.querySelector('#footer').appendChild(footerLink);  // 추가한 링크를 #footer에 붙여 넣음
-  
-//   // links에 footerLink 추가
-//   const newLinks = [...links, footerLink];
-
-//   let currentSectionIndex = 0;
-//   let isScrolling = false;
-
-//   if (sections.length === 0 || sections.length !== newLinks.length) {
-//     console.error('조건에 맞는 섹션이 없거나 섹션과 링크의 수가 일치하지 않습니다!');
-//     return;
-//   }
-
-//   function goToSection(index) {
-//     if (index < 0 || index >= sections.length) {
-//       return;
-//     }
-
-//     sections.forEach(section => section.classList.remove('active'));
-//     sections[index].classList.add('active');
-
-//     newLinks.forEach(link => link.classList.remove('active'));
-    
-//     // 마지막 섹션일 경우, 직전 인덱스의 링크에 active 클래스 추가
-//     if (index === sections.length - 1) {
-//       newLinks[index - 1].classList.add('active');
-//     } else {
-//       newLinks[index].classList.add('active');
-//     }
-
-//     window.scrollTo({
-//       top: sections[index].offsetTop,
-//       behavior: 'smooth'
-//     });
-
-//     currentSectionIndex = index;
-//   }
-
-//   newLinks.forEach((link, index) => {
-//     link.addEventListener('click', (e) => {
-//       e.preventDefault();
-//       goToSection(index);
-//     });
-//   });
-
-//   window.addEventListener('wheel', (e) => {
-//     e.preventDefault();
-
-//     if (isScrolling) {
-//       return;
-//     }
-
-//     isScrolling = true;
-//     let sectionIndex = currentSectionIndex;
-
-//     if (e.deltaY > 0) {
-//       if (sectionIndex < sections.length - 1) {
-//         goToSection(sectionIndex + 1);
-//       }
-//     } else {
-//       if (sectionIndex > 0) {
-//         goToSection(sectionIndex - 1);
-//       }
-//     }
-
-//     setTimeout(() => {
-//       isScrolling = false;
-//     }, 1000); // 타임아웃 후 스크롤을 다시 가능하게 설정
-//   }, { passive: false });
-
-//   goToSection(0);  // 처음에는 첫 번째 섹션으로 이동
-// }
-
 function fullPage() {
   const sections = Array.from(document.querySelectorAll('.common-section')).filter(section =>
     section.parentElement.classList.contains('main-page')
@@ -132,22 +41,13 @@ function fullPage() {
     sections.push(footer);
   }
 
-  const links = document.querySelectorAll('.remote-tab-link');
-
-  const footerLink = document.createElement('a');
-  footerLink.href = '#';
-  footerLink.classList.add('remote-tab-link');
-  footerLink.textContent = 'Footer Section';  // 푸터 섹션에 대한 링크 텍스트 추가
-  document.querySelector('#footer').appendChild(footerLink);  // 추가한 링크를 #footer에 붙여 넣음
-  
-  // links에 footerLink 추가
-  const newLinks = [...links, footerLink];
+  const links = Array.from(document.querySelectorAll('.remote-tab-link'));
 
   let currentSectionIndex = 0;
   let isScrolling = false;
 
-  if (sections.length === 0 || sections.length !== newLinks.length) {
-    console.error('조건에 맞는 섹션이 없거나 섹션과 링크의 수가 일치하지 않습니다!');
+  if (sections.length === 0 || sections.length !== links.length + 1) {
+    console.error('조건에 맞는 섹션이 없거나 섹션과 링크의 수가 맞지 않습니다!');
     return;
   }
 
@@ -159,13 +59,13 @@ function fullPage() {
     sections.forEach(section => section.classList.remove('active'));
     sections[index].classList.add('active');
 
-    newLinks.forEach(link => link.classList.remove('active'));
-    
-    // 마지막 섹션일 경우, 직전 인덱스의 링크에 active 클래스 추가
+    links.forEach(link => link.classList.remove('active'));
+
+    // 마지막 섹션(footer)일 경우, 직전 링크에 active 클래스 추가
     if (index === sections.length - 1) {
-      newLinks[index - 1].classList.add('active');
+      links[links.length - 1].classList.add('active');
     } else {
-      newLinks[index].classList.add('active');
+      links[index].classList.add('active');
     }
 
     window.scrollTo({
@@ -176,7 +76,7 @@ function fullPage() {
     currentSectionIndex = index;
   }
 
-  newLinks.forEach((link, index) => {
+  links.forEach((link, index) => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       goToSection(index);
@@ -208,9 +108,8 @@ function fullPage() {
     }, 1000); // 타임아웃 후 스크롤을 다시 가능하게 설정
   }, { passive: false });
 
-  goToSection(0);  // 처음에는 첫 번째 섹션으로 이동
+  goToSection(0); // 처음에는 첫 번째 섹션으로 이동
 }
-
 
 function categoryControl() {
   const category = $('.category-area');
