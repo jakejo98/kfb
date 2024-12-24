@@ -25,4 +25,5 @@ export function loadFile(callback) {
       }
     }
     loadIfExists('#header', '../../html/include/header.html');
+    loadIfExists('#footer', '../../html/include/footer.html');
   }
