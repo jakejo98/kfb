@@ -1,5 +1,15 @@
 export function header(){
+  gnbControl();
   subMenuControl();
+}
+
+function gnbControl(){
+  const gnbLink = $('.header-gnb-link');
+  const isActive = 'active';
+
+  $(gnbLink).click(function(){
+    $(this).addClass(isActive).parent().siblings().find(gnbLink).removeClass(isActive);
+  })
 }
 
 function subMenuControl(){

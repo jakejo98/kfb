@@ -548,6 +548,7 @@ body {
 .ly-pop-wrap {
   display: none;
   max-width: 472px;
+  background-color: #FFFFFF;
 }
 
 .ly-pop-wrap.active {
