@@ -92,7 +92,7 @@ function fullPage() {
     // 스크롤이 이동한 후 일정 시간이 지난 뒤 스크롤을 허용하도록 설정
     setTimeout(() => {
       isScrolling = false;
-    }, 500); // 타임아웃 시간을 조금 늘려서 이동이 완료될 때까지 기다림
+    }, 1000); // 타임아웃 시간을 조금 늘려서 이동이 완료될 때까지 기다림
   }, { passive: false });
 
   goToSection(0);
