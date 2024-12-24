@@ -352,3 +352,10 @@
   line-height: 27px;
   color: #717171;
 }
+
+/* footer */
+#footer {
+  width: 100%;
+  height: 300px;
+  background-color: yellow;
+}
