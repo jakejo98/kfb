@@ -64,6 +64,10 @@
   height: 100vh;
 }
 
+.common-container.main-page .common-section .common-section-inner {
+  position: relative;
+}
+
 @media screen and (max-width: 1400px) {
   .common-container.main-page .common-section .common-section-inner {
     width: 100%;
@@ -149,7 +153,11 @@
   font-weight: 600;
   line-height: 26px;
   background-color: #143067;
-  color : #F2F3F5
+  color : #F2F3F5;
+}
+
+.common-container.main-page .common-section.section-main .btn-quick-menu:hover {
+  text-decoration: underline;
 }
 
 .common-container.main-page .common-section.section-main .btn-quick-menu.active {
@@ -251,32 +259,12 @@
   font-weight: 600;
   line-height: 53px;
   color: #555555;
-  transition: 0.2s all ease-out;
+  transition: 0.25s all ease;
 }
 
 .common-container.main-page .common-section.section-main .btn-quick-search-tab:hover {
-  color: #4374C9;;
-}
-
-.common-container.main-page .common-section.section-main .btn-quick-search-tab::after {
-  width: 0;
-  height: 0;
-  background-color: transparent;
-  transition: 0.2s all ease-out;
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0px;
-  z-index: 10001;
-  transform: translateX(-50%);
-}
-
-.common-container.main-page .common-section.section-main .btn-quick-search-tab:hover::after {
-  width: calc(100% - 24px);
-  height: 4px;
-  background-color: #4374C9;
-  transform: translateX(-50%) scaleX(1);
-  transition: 0.2s all ease-out;
+  font-weight: 700;
+  color: #1D1D1D;
 }
 
 .common-container.main-page .common-section.section-main .btn-quick-search-tab.active {
@@ -339,6 +327,15 @@
   font-weight: 500;
   line-height: 27px;
   color: #1D1D1D;
+  transition: 0.25s all ease;
+}
+
+.common-container.main-page .common-section.section-main .quick-search-select:hover {
+  box-shadow: 0px 0px 0px 4px rgba(67, 116, 201, 0.25);
+}
+
+.common-container.main-page .common-section.section-main .quick-search-select + .quick-search-select {
+  margin-left: 8px;
 }
 
 .common-container.main-page .common-section.section-main .btn-quick-search {
@@ -349,8 +346,11 @@
   background-color: #4374C9;
 }
 
-.common-container.main-page .common-section.section-main .quick-search-select + .quick-search-select {
-  margin-left: 8px;
+.common-container.main-page .common-section.section-main .ly-pop-wrap {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 10;
 }
 
 /* 금리/수수료 */
@@ -515,6 +515,15 @@
   content: '';
 }
 
+.common-container.main-page .common-section.section-fin-svc .fin-svc-area-item:not(:nth-of-type(-n+1)) .fin-svc {
+  border: 2px solid transparent;
+  transition: 0.25s all ease;
+}
+
+.common-container.main-page .common-section.section-fin-svc .fin-svc-area-item:not(:nth-of-type(-n+1)) .fin-svc:hover {
+  border: 2px solid #143067;
+}
+
 .common-container.main-page .common-section.section-fin-svc .fin-svc {
   display: flex;
   flex-direction: column;
@@ -608,11 +617,12 @@
   padding: 32px 28px;
   border-radius: 16px;
   background-color: #F5F6FB;
-  transition: 0.2s all ease-out;
+  transition: 0.25s all ease;
 }
 
 .common-container.main-page .common-section.section-cons-info .apply-civil:hover {
   background-color: #365DA1;
+  scale: 1.05;
 }
 
 .common-container.main-page .common-section.section-cons-info .apply-civil:hover .apply-civil-heading-title {
@@ -689,6 +699,11 @@
   padding: 36px 40px;
   border-radius: 24px;
   background-color: #F5F6FB;
+  transition: 0.25s all ease;
+}
+
+.common-container.main-page .common-section.section-cons-info .consumer-disclosure:hover {
+  scale: 1.05;
 }
 
 .common-container.main-page .common-section.section-cons-info .consumer-disclosure-heading-title {
@@ -760,6 +775,11 @@
   padding: 36px 40px;
   border-radius: 24px;
   background-color: #F5F6FB;
+  transition: 0.25s all ease;
+}
+
+.common-container.main-page .common-section.section-fin-edu .financial-education:hover {
+  scale: 1.05;
 }
 
 .common-container.main-page .common-section.section-fin-edu .section-heading {
@@ -828,12 +848,17 @@
 }
 
 .common-container.main-page .common-section.section-fin-edu .financial-education-banner {
-  overflow: hidden;
   border-radius: 16px;
 }
 
 .common-container.main-page .common-section.section-fin-edu .financial-education-banner-img {
   width: 100%;
+  border-radius: 16px;
+  transition: 0.25s all ease;
+}
+
+.common-container.main-page .common-section.section-fin-edu .financial-education-banner-img:hover {
+  scale: 1.05;
 }
 
 .common-container.main-page .common-section.section-fin-prod {
@@ -843,7 +868,6 @@
 .common-container.main-page .common-section.section-fin-prod .common-section-inner {
   display: flex;
   flex-direction: column;
-  gap: 32px;
 }
 
 .common-container.main-page .common-section.section-fin-prod .section-heading {
@@ -901,6 +925,11 @@
   height: 194px;
   padding: 28px 32px;
   border-radius: 16px;
+  transition: 0.25s all ease;
+}
+
+.common-container.main-page .common-section.section-fin-prod .financial-product:hover {
+  scale: 1.05;
 }
 
 .common-container.main-page .common-section.section-fin-prod .financial-product-heading {
@@ -957,6 +986,7 @@
 .common-container.main-page .common-section.section-fin-prod .financial-product-board-wrap {
   display: flex;
   gap: 24px;
+  margin-top: 32px;
 }
 
 .common-container.main-page .common-section.section-fin-prod .faq-library-area {
@@ -1166,12 +1196,16 @@
   padding: 5.5px 0px;
 }
 
+.common-container.main-page .common-section.section-fin-prod .bank-new-product-link:hover .bank-new-product-subject {
+  text-decoration: underline;
+}
+
 .common-container.main-page .common-section.section-fin-prod .bank-new-product-status-product {
   width: 39px;
   font-size: 15px;
   font-weight: 700;
   line-height: 23px;
-  color: #FF8F24;
+  color: #CC721D;
 }
 
 .common-container.main-page .common-section.section-fin-prod .bank-new-product-bank-type {
@@ -1189,6 +1223,7 @@
   color: #555555;
   white-space: nowrap;
   text-overflow: ellipsis;
+  transition: 1s all ease;
 }
 
 @media screen and (max-width: 1400px) {
@@ -1213,7 +1248,7 @@
 }
 
 .common-container.main-page #section-01 {
-  display: none;
+  display: flex;
 }
 
 .common-container.main-page #section-02 {
@@ -1233,7 +1268,7 @@
 }
 
 .common-container.main-page #section-06 {
-  display: flex;
+  display: none;
 }
 
 

@@ -136,32 +136,23 @@
   font-size: 21px;
   font-weight: 700;
   line-height: 32px;
-  transition: 0.2s all ease;
+  transition: 0.25s all ease;
 }
 
 #header .header-gnb-link:hover {
   color: #4374C9;
 }
 
-#header .header-gnb-link::after {
-  width: 0;
-  height: 0;
-  background-color: transparent;
-  transition: 0.2s all ease;
-  content: '';
+#header .header-gnb-link.active::after {
+  display: inline-block;
   position: absolute;
-  left: 50%;
   bottom: -4px;
-  z-index: 10001;
-  transform: translateX(-50%);
-}
-
-#header .header-gnb-link:hover::after {
+  left: 0px;
   width: 100%;
   height: 4px;
   background-color: #4374C9;
-  transform: translateX(-50%) scaleX(1);
-  transition: 0.2s all ease;
+  content: '';
+  z-index: 10001;
 }
 
 #header .btn-category {
