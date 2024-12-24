@@ -1,5 +1,6 @@
 export function swiper() {
   guidePopupSwiper();
+  footerBannerSwiper();
 }
 
 function guidePopupSwiper() {
@@ -43,4 +44,20 @@ function guidePopupSwiper() {
       swiper.autoplay.start();
     });
   }
+}
+
+function footerBannerSwiper(){
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1, // 한번에 보이는 슬라이드 수
+    loop: true, // 슬라이드 루프 활성화
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+  
 }
