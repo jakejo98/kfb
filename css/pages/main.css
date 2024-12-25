@@ -3,12 +3,18 @@
   display: flex;
   align-items: center;
   position: fixed;
-  top: 116px;
+  bottom: 0px;
   left: 0px;
   width: 120px;
   z-index: 10;
-  height: calc(100% - 116px);
+  height: calc(100vh - 116px);
   background-color: #4374C9;
+}
+
+#remote-tab.abs{
+  position: absolute;
+  top: inherit;
+  bottom: 0;
 }
 
 #remote-tab .remote-tab-list {
@@ -83,6 +89,10 @@
 }
 
 /* 메인 */
+.common-container.main-page {
+  position: relative;
+}
+
 .common-container.main-page .common-section.section-main {
   background: url('../../img/pages/main/section_main_bg.jpg') no-repeat center center / cover;
 }
@@ -720,6 +730,7 @@
 }
 
 .common-container.main-page .common-section.section-fin-edu {
+  overflow: hidden;
   background-color: #FFFFFF;
 }
 
@@ -1245,10 +1256,6 @@
   line-height: 23px;
   color: #555555;
   text-align: right;
-}
-
-.common-section {
-  display: none !important;
 }
 
 

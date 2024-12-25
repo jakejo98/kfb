@@ -5,6 +5,10 @@ export function swiper() {
 
 function guidePopupSwiper() {
   const swiperContainer = document.querySelector('.popup-swiper');
+  const controlBtn = $('.btn-swiper-control');
+  const pauseBtn = $('.popup-swiper .btn-swiper-pause');
+  const startBtn = $('.popup-swiper .btn-swiper-start');
+  const isActive = 'active';
 
   if (swiperContainer) {
     const swiper = new Swiper(".popup-swiper", {
@@ -16,21 +20,14 @@ function guidePopupSwiper() {
         el: ".swiper-pagination",
         clickable: true,
       },
-      spaceBetween: 16,
-      loop: true,
       autoplay: {
         delay: 2000,
+        disableOnInteraction: false
       },
+      slidesPerView: 1,
+      slidesPerGroup: 1, 
+      loop: true,
     });
-
-    swiperControls(swiper); 
-  }
-
-  function swiperControls(swiper) {
-    const controlBtn = $('.btn-swiper-control');
-    const pauseBtn = $('.btn-swiper-pause');
-    const startBtn = $('.btn-swiper-start');
-    const isActive = 'active';
 
     $(controlBtn).click(function () {
       $(this).removeClass(isActive).siblings().addClass(isActive);
@@ -46,18 +43,43 @@ function guidePopupSwiper() {
   }
 }
 
-function footerBannerSwiper(){
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1, // 한번에 보이는 슬라이드 수
-    loop: true, // 슬라이드 루프 활성화
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-  
+function footerBannerSwiper() {
+  const swiperContainer = document.querySelector('.footer-banner-swiper');
+  const pauseBtn = $('#footer .btn-swiper-pause');
+  const startBtn = $('#footer .btn-swiper-start');
+  const isActive = 'active';
+
+  if(swiperContainer) {
+    var swiper = new Swiper(".footer-banner-swiper", {
+      slidesPerView: 7, 
+      slidesPerGroup: 1, // 그룹으로 이동하는 슬라이드 개수
+      autoplay: {
+        delay: 2000, // 자동 재생 간격 2초
+        disableOnInteraction: false, 
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      loop: true,
+    });
+
+    $(pauseBtn).click(function(){
+      $(this).removeClass(isActive);
+      $(startBtn).addClass(isActive)
+    })
+
+    $(startBtn).click(function(){
+      $(this).removeClass(isActive);
+      $(pauseBtn).addClass(isActive);
+    })
+
+    $(pauseBtn).click(function () {
+      swiper.autoplay.stop(); 
+    });
+
+    $(startBtn).click(function () {
+      swiper.autoplay.start();
+    });
+  }
 }
