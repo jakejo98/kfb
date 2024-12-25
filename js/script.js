@@ -17,7 +17,7 @@ $(document).ready(function(){
 
   // 로드 후 실행 함수
   loadFile(function(){
-    
+    swiper();
     header();
     footer();
 
@@ -26,7 +26,6 @@ $(document).ready(function(){
       // 가이드 함수
       guideControl();
 
-      swiper();
       main();
     }
   })
