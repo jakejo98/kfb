@@ -14,16 +14,17 @@ function guideControl() {
 $(document).ready(function(){
   const currentFile = window.location.pathname.split("/").pop();
 
-  // 가이드 함수
-  guideControl();
-  
   // 로드 후 실행 함수
   loadFile(function(){
-    swiper();
+    
     header();
     
     // main.html 일 경우
     if (currentFile === "main.html") {
+      // 가이드 함수
+      guideControl();
+
+      swiper();
       main();
     }
   })

@@ -45,15 +45,25 @@
 /* sub_body */
 .common-main {
   padding: 40px 80px;
+  display: flex;
 }
 
-/* sub-aside */
+/* 사이드바 */
+.side-lnb-area {
+  width: 300px;
+  margin-right: 56px;
+}
+
 .sub-aside {
   width: 300px;
+  position: fixed;
 }
 
 .sub-aside-list {
   border: 1px solid #d8d8d8;
+  overflow: hidden;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
 }
 
 .sub-aside-title {
@@ -65,7 +75,8 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background-image: url('../../img/bg/sub_aside_title_bg.png')
+  background-image: url('../../img/bg/sub_aside_title_bg.png');
+  overflow: hidden;
 }
 
 .sub-aside-title-txt {
@@ -103,6 +114,326 @@
   color: #ffffff;
 }
 
+/* 사이드바 서브 리스트 */
+.sub-aside-active-list {
+  background-color: #f5f6fb;
+  padding-block: 15px;
+}
+
+.sub-aside-active-list-item {
+  font-size: 17px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  height: 38px;
+  padding-inline: 32px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sub-aside-active-list-txt {
+  font-weight: 600;
+  color: #717171;
+}
+
+.sub-aside-active-list-txt:hover {
+  color: #1d1d1d; 
+}
+
+.sub-aside-active-list-txt.active {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #1d1d1d; 
+  text-underline-position : under;
+}
+
+.sub-aside-active-list-txt::before {
+  width: 3px;
+  height: 3px;
+  background-color: #143067;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  content: "";
+}
+
+/* content */
+.contents-area {
+  margin-left: 56px;
+  width: 100%;
+}
+
+.contents-title {
+  height: 79px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 39px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  color: #1d1d1d;
+  font-weight: bold;
+}
+
+.contents-sub-title-area {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.contents-sub-title {
+  height: 44px;
+  padding: 4px 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid 3px #1d1d1d;
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.contents-sub-info {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 24px;
+}
+
+/* content - COFIX 공시 */
+.cofix-box-area {
+  display: flex;
+  gap: 20px;
+}
+
+.cofix-box {
+  padding: 32px 16px;
+  border-radius: 24px;
+  border: solid 1px #ff8f24;
+  box-shadow: 0 6px 12px 0 rgba(204, 114, 29, 0.2);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  gap: 8px;
+}
+
+.cofix-box-title {
+  height: 27px;
+  display: flex;
+  align-items: center;
+}
+
+.cofix-box-title span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2d2d2d;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.cofix-box-date {
+  height: 21px;
+  display: flex;
+  align-items: center;
+}
+
+.cofix-box-date span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #717171;
+}
+
+.cofix-box-percentage {
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.cofix-box-percentage span {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #cc721d;
+}
+
+.tip-area {
+  display: flex;
+  align-items: center;
+}
+
+.tip-area span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555555;
+}
+
+.comment-box {
+  width: 100%;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  padding: 24px;
+  margin-block: 40px;
+}
+
+.comment-box-title {
+  display: flex;
+  align-items: center;
+  height: 27px;
+}
+
+.comment-box-title span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.comment-box-list-item {
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.5;
+  display: flex;
+}
+
+.comment-box-list-item-marker-area {
+  width: 12px;
+  height: 100%;
+}
+
+.comment-box-list-item-marker {
+  vertical-align: middle;
+  width: 3px;
+  height: 3px;
+  background-color: #1d1d1d;
+  display: inline-block;
+  margin-right: 9px;
+}
+
+.comment-box-list-item:first-child {
+  margin-top: 16px;
+}
+
+/* contents - COFIX 통계 */
+.cofix-search {
+  padding: 16px;
+  background-color: #f5f6fb;
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cofix-search-area {
+  display: flex;
+  align-items: center;
+}
+
+.search-download-area {
+  display: flex;
+  align-items: center;
+}
+
+.scale-txt {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* selectbox */
+.cofix-selectbox {
+  height: 38px;
+  padding: 7.5px 35px 7.5px 14px;
+  border-radius: 6px;
+  border: solid 1px #8e8e8e;
+  background: url(../../img/icon/icon_cofix_select_arrow.svg) center right 8px / 20px 20px no-repeat #ffffff;
+}
+
+.cofix-selectbox:focus {
+  border: 2px solid #1d1d1d;
+}
+
+.cofix-selectbox option {
+  height: 23px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* btn */
+.btn-xs {
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.btn-xs.ty-sm {
+  height: 38px;
+  padding: 7.5px 10px;
+}
+
+.btn-xs span {
+  height: 23px;
+  line-height: 1.5;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.btn-blue:hover {
+  background-color: #365DA1;
+}
+
+.btn-bl-line {
+  background-color: #ffffff;
+  border: 1px solid #365da1;
+  color: #365da1;
+}
+
+.btn-bl-line:hover {
+  background-color: #F5F6FB;
+}
+
+/* table */
+table {
+  width: 100%;
+  border-spacing: 0;
+  letter-spacing: -0.03em;
+  overflow: auto;
+  table-layout: fixed;
+  word-break: break-all;
+}
+
+table,
+th,
+td {
+  border-collapse: collapse;
+}
+
+.table-b01 {
+  width: 100%;
+}
+
+.table-b01 .th {
+  background-color: #F2F3F5;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.table-b01 .th, .td {
+  padding: 16px 12px;
+  text-align: center;
+}
+
+.table-b01 th, td {
+  border-bottom: solid 1px #D8D8D8;
+  border-right: solid 1px #D8D8D8;
+}
+
+.table-b01 tr > th:last-child, .table-b01 tr > td:last-child {
+  border-right: none;
+}
+
 /* icon */
 .icon-home {
   width: 24px;
@@ -117,11 +448,38 @@
   width: 24px;
   height: 24px;
 }
-
+    
 .icon-sub-arrow-toggle.active::after {
   background-image: url('../../img/icon/icon_arrow_toggle_up.svg');
 }
 
 .icon-sub-arrow-toggle::after {
   background-image: url('../../img/icon/icon_arrow_toggle_down.svg');
+}
+
+.icon-tip {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-tip::after {
+  background-image: url('../../img/icon/icon_tip.svg');
+}
+
+.icon-comment {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-comment::after {
+  background-image: url('../../img/icon/icon_comment.svg');
+}
+
+.icon-excel {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-excel::after {
+  background-image: url('../../img/icon/icon_excel.svg');
 }
