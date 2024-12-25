@@ -355,17 +355,237 @@
 
 /* footer */
 #footer {
+  width: 100%;
+}
+
+#footer .footer-inner {
+  position: relative;
+}
+
+@media screen and (max-width: 1400px) {
+  #footer .footer-inner {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0px 40px;
+  }
+}
+
+@media screen and (min-width: 1401px) {
+  #footer .footer-inner {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+#footer .footer-banner {
+  position: relative;
+  width: 100%;
+  background-color: #F2F3F5;
+}
+
+#footer .footer-banner::before {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  width: 100%;
+  height: 1px;
+  background-color: #C6C6C6;
+  content: '';
+}
+
+#footer .footer-banner .footer-inner {
+  display: flex;
+}
+
+#footer .footer-banner-swiper {
+  max-width: 1295px;
+  padding: 16px 0px;
+  background-color: #FFFFFF;
+}
+
+#footer .footer-banner-swiper .swiper-img {
+  width: 100%;
+}
+
+#footer .swiper-controls {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 1000000;
-  width: 100%;
-  height: 100vh;
-  background-color: yellow;
+  min-width: 105px;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
-#footer .footer-inner {
+#footer .swiper-button-prev::after {
+  width: 24px;
+  height: 24px;
+  background: center / 100% no-repeat;
+  background-image: url('../../img/icon/icon_footer_swiper_button_prev.svg');
+  content: '';
+}
+
+#footer .swiper-button-next::after {
+  width: 24px;
+  height: 24px;
+  background: center / 100% no-repeat;
+  background-image: url('../../img/icon/icon_footer_swiper_button_next.svg');
+  content: '';
+}
+
+#footer .btn-swiper-pause {
+  display: none;
+}
+
+#footer .btn-swiper-pause.active {
+  display: block;
+}
+
+#footer .btn-swiper-start {
+  display: none;
+}
+
+#footer .btn-swiper-start.active {
+  display: block;
+}
+
+#footer .footer-info {
+  padding: 48px 0px 64px 0px;
+  background-color: #081329;
+}
+
+#footer .footer-link-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+#footer .footer-nav-list {
+  display: flex;
+}
+
+#footer .footer-nav-item:not(:last-of-type) {
+  margin-right: 30px;
+}
+
+#footer .footer-nav-item:nth-of-type(2) .footer-nav-link {
+  color: #4374C9;
+}
+
+#footer .footer-nav-link {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  color: #FFFFFF;
+}
+
+#footer .footer-site-list {
+  display: flex;
+  gap: 8px;
+}
+
+#footer .footer-site-item {
+  position: relative;
+}
+
+#footer .btn-footer-site {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 224px;
+  border: 1px solid #FFFFFF;
+  padding: 8.5px 42px 8.5px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+
+#footer .btn-footer-site::before {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  right: 41px;
+  width: 1px;
+  height: 40px;
+  background-color: #FFFFFF;
+  content: '';
+}
+
+#footer .btn-footer-site::after {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: url('../../img/icon/icon_footer_site.svg');
+  content: '';
+}
+
+#footer .footer-site-item:nth-of-type(1) .footer-site-sub {
+  top: -253px;
+}
+
+#footer .footer-site-item:nth-of-type(2) .footer-site-sub {
+  top: -295px;
+}
+
+#footer .footer-site-sub {
+  display: none;
+  position: absolute;
+  left: 0px;
+  z-index: 10;
+  border: 1px solid #FFFFFF;
+  border-bottom: none;
   width: 100%;
-  max-width: 1400px;
+  background-color: #081329;
+}
+
+#footer .footer-site-sub.active {
+  display: block;
+}
+
+#footer .footer-site-sub-link {
+  padding: 9.5px 42px 9.5px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+
+#footer .footer-address {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+
+#footer .footer-address-item + .footer-address-item {
+  margin-top: 4px;
+}
+
+#footer .footer-copyright {
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+
+#footer .footer-sns {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+#footer .footer-sns-list {
+  display: flex;
+}
+
+#footer .footer-sns-item + .footer-sns-item {
+  margin-left: 8px;
 }

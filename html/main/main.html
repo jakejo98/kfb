@@ -11,11 +11,11 @@
   <link rel="stylesheet" href="../../css/common/include.css">
   <link rel="stylesheet" href="../../css/pages/main.css">
   <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <!-- CDN -->
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   <!-- Swiper CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <!-- Script -->
   <script type="module" src="../../js/script.js"></script>
 </head>
@@ -525,18 +525,22 @@
                       </a>
                     </li>
                   </ul>
-                  <div class="swiper-button-next"></div>
-                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next">
+                    <span class="blind">스와이퍼 이전 페이지로 이동</span>
+                  </div>
+                  <div class="swiper-button-prev">
+                    <span class="blind">스와이퍼 다음 페이지로 이동</span>
+                  </div>
                   <div class="swiper-controls">
                     <div class="swiper-pagination"></div>
                     <div class="swiper-autoplay-toggle">
                       <button class="btn btn-swiper-control btn-swiper-pause active">
-                        <span class="common-icon ty-20 icon-swiper-pause">
+                        <span class="common-icon ty-20 icon-popup-swiper-pause">
                           <span class="blind">스와이퍼 정지</span>
                         </span>
                       </button>
                       <button class="btn btn-swiper-control btn-swiper-start">
-                        <span class="common-icon ty-20 icon-swiper-start">
+                        <span class="common-icon ty-20 icon-popup-swiper-start">
                           <span class="blind">스와이퍼 시작</span>
                         </span>
                       </button>

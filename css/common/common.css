@@ -693,12 +693,20 @@ body {
   background-image: url('../../img/icon/icon_popup_close.svg');
 }
 
-.icon-swiper-pause::after {
-  background-image: url('../../img/icon/icon_swiper_pause.svg');
+.icon-popup-swiper-pause::after {
+  background-image: url('../../img/icon/icon_popup_swiper_pause.svg');
 }
 
-.icon-swiper-start::after {
-  background-image: url('../../img/icon/icon_swiper_start.svg');
+.icon-popup-swiper-start::after {
+  background-image: url('../../img/icon/icon_popup_swiper_start.svg');
+}
+
+.icon-footer-swiper-pause::after {
+  background-image: url('../../img/icon/icon_footer_swiper_pause.svg');
+}
+
+.icon-footer-swiper-start {
+  background-image: url('../../img/icon/icon_footer_swiper_start.svg');
 }
 
 .icon-header-zoom-out {
@@ -726,6 +734,15 @@ body {
 .icon-category-close::after {
   background-image: url('../../img/icon/icon_category_close.svg');
 }
+
+.icon-footer-sns-facebook::after {
+  background-image: url('../../img/icon/icon_footer_sns_facebook.svg');
+}
+
+.icon-footer-sns-instagram::after {
+  background-image: url('../../img/icon/icon_footer_sns_instagram.svg');
+}
+
 
 .icon-rate-fee-item-01::after {
   background-image: url('../../img/icon/icon_rate_fee_item_01.svg');
@@ -857,7 +874,7 @@ body {
   height: 24px;
   background: center / 100% no-repeat;
   content: "";
-  background-image: url("../../img/icon/icon_swiper_button_prev.svg");
+  background-image: url("../../img/icon/icon_popup_swiper_button_prev.svg");
 }
 
 .ly-pop-wrap .ly-pop .ly-pop-main .popup-swiper .swiper-button-next {
@@ -880,7 +897,7 @@ body {
   height: 24px;
   background: center / 100% no-repeat;
   content: "";
-  background-image: url("../../img/icon/icon_swiper_button_next.svg");
+  background-image: url("../../img/icon/icon_popup_swiper_button_next.svg");
 }
 
 .ly-pop-wrap .ly-pop .ly-pop-main .popup-swiper .swiper-pagination {
@@ -889,10 +906,16 @@ body {
   margin-right: 8px;
 }
 
-.ly-pop-wrap .ly-pop .ly-pop-main .popup-swiper .swiper-pagination .swiper-pagination-bullet{
+.ly-pop-wrap .ly-pop .ly-pop-main .popup-swiper .swiper-pagination .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   margin: 0px 4px;
+  background-color: #C6C6C6;
+  opacity: 1;
+}
+
+.ly-pop-wrap .ly-pop .ly-pop-main .popup-swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #4374C9;
 }
 
 /* layout */

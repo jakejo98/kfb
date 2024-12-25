@@ -3,6 +3,7 @@ import { swiper } from "./lib/swiper.js";
 import { list } from "./guide/list.js";
 import { guide } from "./guide/guide.js";
 import { header } from "./common/header.js";
+import { footer } from "./common/footer.js";
 import { main } from "./pages/main.js";
 
 function guideControl() {
@@ -21,7 +22,8 @@ $(document).ready(function(){
   loadFile(function(){
     swiper();
     header();
-    
+    footer();
+
     // main.html 일 경우
     if (currentFile === "main.html") {
       main();
