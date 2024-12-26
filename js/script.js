@@ -7,12 +7,13 @@ import { footer } from "./common/footer.js";
 import { main } from "./pages/main.js";
 
 $(document).ready(function(){
-  // 조건문 적용을 위한 변수
   const currentFile = window.location.pathname.split("/").pop();
-
-  // 가이드 실행 함수
-  list();
-  guide();
+  // 가이드 조건문
+  if(currentFile === "list.html") {
+    list();
+  } else if(currentFile === "guide.html") {
+    guide();
+  }
 
   // 로드 후 실행 함수 (공통)
   loadFile(function(){
