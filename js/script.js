@@ -9,7 +9,6 @@ import { main } from "./pages/main.js";
 function guideControl() {
   list();
   guide();
-  swiper();
 }
 
 $(document).ready(function(){
