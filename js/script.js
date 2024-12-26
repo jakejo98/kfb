@@ -6,15 +6,15 @@ import { header } from "./common/header.js";
 import { footer } from "./common/footer.js";
 import { main } from "./pages/main.js";
 
-function guideControl() {
-  list();
-  guide();
-}
-
 $(document).ready(function(){
+  // 조건문 적용을 위한 변수
   const currentFile = window.location.pathname.split("/").pop();
 
-  // 로드 후 실행 함수
+  // 가이드 실행 함수
+  list();
+  guide();
+
+  // 로드 후 실행 함수 (공통)
   loadFile(function(){
     swiper();
     header();
@@ -22,9 +22,6 @@ $(document).ready(function(){
 
     // main.html 일 경우
     if (currentFile === "main.html") {
-      // 가이드 함수
-      guideControl();
-
       main();
     }
   })
