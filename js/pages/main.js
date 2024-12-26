@@ -31,138 +31,96 @@ function swiperPopup() {
 }
 
 function fullPage() {
-  console.log("Initializing fullPage function...");
-  
   const sections = Array.from(document.querySelectorAll('.common-section')).filter(section => 
     section.parentElement.classList.contains('main-page')
   );
 
-  console.log("Filtered sections:", sections);
-  console.log(".common-section length:", sections.length);  // .common-section의 길이 출력
-
-  // #footer를 섹션 목록에 마지막으로 추가합니다.
   const footer = document.querySelector('#footer');
-  if (footer) {
-    sections.push(footer);
-    console.log("#footer added to sections:", footer);
-  }
+  if (footer) sections.push(footer);
 
   const links = Array.from(document.querySelectorAll('.remote-tab-link'));
-  console.log("Links:", links);
-
   let currentSectionIndex = 0;
   let isScrolling = false;
 
-  if (sections.length === 0 || sections.length !== links.length + 1) {
-    console.error('조건에 맞는 세션이 없거나 섂션과 링크의 수가 맞지 않습니다!');
-    console.log("sections.length:", sections.length);
-    console.log("links.length:", links.length);
-    return;
-  }
+  if (sections.length === 0 || sections.length !== links.length + 1) return;
+
+  const remoteTab = document.querySelector('#remote-tab');
 
   function goToSection(index) {
-    console.log(`Navigating to section ${index}`);
-    
-    if (index < 0 || index >= sections.length) {
-      console.warn("Index out of bounds:", index);
-      return;
-    }
+    if (index < 0 || index >= sections.length) return;
 
-    sections.forEach((section, i) => {
-      section.classList.toggle('active', i === index);
-      console.log(`Section ${i} active state:`, i === index);
-    });
+    sections.forEach((section, i) => 
+      section.classList.toggle('active', i === index)
+    );
 
     links.forEach((link, i) => {
-      if (index === sections.length - 1) {
-        link.classList.toggle('active', i === links.length - 1);
-      } else {
-        link.classList.toggle('active', i === index);
-      }
-      console.log(`Link ${i} active state:`, link.classList.contains('active'));
+      link.classList.toggle('active', index === sections.length - 1 ? i === links.length - 1 : i === index);
     });
-
-    const remoteTab = document.querySelector('#remote-tab');
-    
-    // #footer로 이동할 때는 'abs' 클래스 추가
-    if (index === sections.length - 1) {
-      if (remoteTab) {
-        remoteTab.classList.add('abs');
-        console.log("#remote-tab added 'abs' class");
-      }
-    } else {
-      // 그 외의 섹션으로 이동할 때는 'abs' 클래스 삭제
-      if (remoteTab) {
-        remoteTab.classList.remove('abs');
-        console.log("#remote-tab removed 'abs' class");
-      }
-    }
 
     window.scrollTo({
       top: sections[index].offsetTop,
       behavior: 'smooth'
     });
 
-    console.log("Scrolling to:", sections[index].offsetTop);
-
     currentSectionIndex = index;
   }
+
+  // IntersectionObserver 설정
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const index = sections.indexOf(entry.target);
+        if (remoteTab) {
+          if (index === sections.length - 1) {
+            remoteTab.classList.add('abs');
+          } else {
+            remoteTab.classList.remove('abs');
+          }
+        }
+      }
+    });
+  }, { threshold: 0.8 }); // 섹션의 절반 이상이 보일 때 트리거
+
+  // 각 섹션에 Observer 연결
+  sections.forEach(section => observer.observe(section));
 
   links.forEach((link, index) => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
-      console.log(`Link ${index} clicked`);
       goToSection(index);
     });
   });
 
   window.addEventListener('wheel', (e) => {
-    e.preventDefault();
+    const categoryArea = document.querySelector('.category-area.active');
 
-    if (isScrolling || document.querySelector('.category-area.active')) {
+    if (categoryArea) {
+      // category-area에서 기본 스크롤 동작을 허용
       return;
     }
 
+    e.preventDefault();
+    if (isScrolling) return;
+
     isScrolling = true;
-    let sectionIndex = currentSectionIndex;
+    const sectionIndex = currentSectionIndex;
 
-    if (e.deltaY > 0) {
-      console.log("Scrolling down...");
-      if (sectionIndex < sections.length - 1) {
-        goToSection(sectionIndex + 1);
-      } else {
-        console.log("Already at the last section.");
-      }
-    } else {
-      console.log("Scrolling up...");
-      if (sectionIndex > 0) {
-        goToSection(sectionIndex - 1);
-      } else {
-        console.log("Already at the first section.");
-      }
-    }
-
-    // 스크롤 후 'abs' 클래스를 다시 확인
-    const remoteTab = document.querySelector('#remote-tab');
-    if (remoteTab) {
-      if (currentSectionIndex === sections.length - 1) {
-        remoteTab.classList.add('abs');
-        console.log("#remote-tab added 'abs' class after scroll");
-      } else {
-        remoteTab.classList.remove('abs');
-        console.log("#remote-tab removed 'abs' class after scroll");
-      }
+    if (e.deltaY > 0 && sectionIndex < sections.length - 1) {
+      goToSection(sectionIndex + 1);
+    } else if (e.deltaY < 0 && sectionIndex > 0) {
+      goToSection(sectionIndex - 1);
     }
 
     setTimeout(() => {
       isScrolling = false;
-      console.log("Scrolling unlocked.");
-    }, 1000); // 타임아웃 후 스크롤을 다시 가능하게 설정
+    }, 1000);
   }, { passive: false });
 
-  console.log("Navigating to the first section...");
-  goToSection(0); // 처음에는 첫 번째 섹션으로 이동
+  goToSection(0);
 }
+
+
+
 
 
 
