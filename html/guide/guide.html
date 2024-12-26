@@ -299,8 +299,48 @@
     </div>
   </section>
 </article>
-<!-- // 5. popup -->
 </main>
 </div>
+<script>
+$(document).ready(function(){
+  const swiperContainer = document.querySelector('.popup-swiper');
+  const controlBtn = $('.btn-swiper-control');
+  const pauseBtn = $('.popup-swiper .btn-swiper-pause');
+  const startBtn = $('.popup-swiper .btn-swiper-start');
+  const isActive = 'active';
+
+  if (swiperContainer) {
+    const swiper = new Swiper(".popup-swiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
+      },
+      slidesPerView: 1,
+      slidesPerGroup: 1, 
+      loop: true,
+    });
+
+    $(controlBtn).click(function () {
+      $(this).removeClass(isActive).siblings().addClass(isActive);
+    });
+
+    $(pauseBtn).click(function () {
+      swiper.autoplay.stop(); 
+    });
+
+    $(startBtn).click(function () {
+      swiper.autoplay.start();
+    });
+  }
+})
+</script>
 </body>
 </html>
