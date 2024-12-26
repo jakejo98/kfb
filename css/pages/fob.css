@@ -49,14 +49,8 @@
 }
 
 /* 사이드바 */
-.side-lnb-area {
-  width: 300px;
-  margin-right: 56px;
-}
-
 .sub-aside {
   width: 300px;
-  position: fixed;
 }
 
 .sub-aside-list {
