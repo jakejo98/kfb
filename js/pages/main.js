@@ -1,11 +1,9 @@
 export function main() {
   swiperPopup();
   fullPage();
-  categoryControl();
   quickMenuControl();
   quickSearchControl();
   rateFeeControl();
-  consInfoControl();
   finProdControl();
 }
 
@@ -119,29 +117,6 @@ function fullPage() {
   goToSection(0);
 }
 
-
-
-
-
-
-
-
-
-function categoryControl() {
-  const category = $('.category-area');
-  const isActiveCategoryBtn = $('.btn-category');
-  const nonActiveCategoryBtn = $('.btn-category-close');
-  const isActive = 'active';
-
-  $(isActiveCategoryBtn).click(function () {
-    $(category).addClass(isActive);
-  });
-
-  $(nonActiveCategoryBtn).click(function () {
-    $(category).removeClass(isActive);
-  });
-}
-
 function quickMenuControl() {
   const secHeading = $('.section-main .section-heading-item');
   const quickMenuBtnItem = $('.section-main .quick-menu-tab-item');
@@ -201,21 +176,6 @@ function rateFeeControl(){
 
   $(rateFeeLink).mouseleave(function(){
     $(this).find(rateFeeIcon).removeClass(isBlue).addClass(isBlack);
-  })
-}
-
-function consInfoControl(){
-  const applyCivil = $('.apply-civil');
-  const applyCivilIcon = $('.common-icon');
-  const isWhite = 'icon-arrow-right-white';
-  const isBlack = 'icon-arrow-right-black';
-
-  $(applyCivil).mouseenter(function(){
-    $(this).find(applyCivilIcon).removeClass(isBlack).addClass(isWhite);
-  })
-  
-  $(applyCivil).mouseleave(function(){
-    $(this).find(applyCivilIcon).removeClass(isWhite).addClass(isBlack);
   })
 }
 

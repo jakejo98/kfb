@@ -1,6 +1,7 @@
 export function header(){
   gnbControl();
   subMenuControl();
+  categoryControl();
 }
 
 function gnbControl(){
@@ -26,4 +27,14 @@ function subMenuControl(){
   $(gnb).mouseleave(function(){
     $(subMenu).removeClass(isActive);
   })
+}
+
+function categoryControl(){
+  const category = $('.category-area');
+  const categoryActiveBtn = $('.btn-category');
+  const categoryCloseBtn = $('.btn-category-close')
+  const gnbLink = $('.header-gnb-link');
+  const subMenu = $('.sub-menu-wrap');
+  const isActive = 'active';
+
 }
