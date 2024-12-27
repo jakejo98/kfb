@@ -403,7 +403,7 @@
 #footer .footer-banner-swiper {
   max-width: 1295px;
   padding: 16px 0px;
-  background-color: #FFFFFF;
+  background-color: #F2F3F5;
 }
 
 #footer .footer-banner-swiper .swiper-img {
@@ -527,18 +527,11 @@
   content: '';
 }
 
-#footer .footer-site-item:nth-of-type(1) .footer-site-sub {
-  top: -253px;
-}
-
-#footer .footer-site-item:nth-of-type(2) .footer-site-sub {
-  top: -295px;
-}
-
 #footer .footer-site-sub {
   display: none;
   position: absolute;
   left: 0px;
+  bottom: 42px;
   z-index: 10;
   border: 1px solid #FFFFFF;
   border-bottom: none;
@@ -546,9 +539,6 @@
   background-color: #081329;
 }
 
-#footer .footer-site-sub.active {
-  display: block;
-}
 
 #footer .footer-site-sub-link {
   padding: 9.5px 42px 9.5px 16px;

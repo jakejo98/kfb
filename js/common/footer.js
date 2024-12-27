@@ -3,16 +3,16 @@ export function footer(){
 }
 
 function footerSiteControl(){
-  const expandedItem = $('.footer-site-item')
+  const expandedItem = $('.footer-site-item');
   const expandedBtn = $('.btn-footer-site');
   const subList = $('.footer-site-sub');
-  const isActive = 'active'
 
   $(expandedBtn).click(function(){
-    $(this).parent().find(subList).addClass(isActive);
+    $(this).parent().find(subList).slideToggle(250);
+    $(this).parent().siblings().find(subList).slideUp(250);
   })
 
   $(expandedItem).mouseleave(function(){
-    $(this).parent().find(subList).removeClass(isActive);
+    $(subList).slideUp(250);
   })
 }
