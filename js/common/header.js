@@ -14,27 +14,33 @@ function gnbControl(){
 }
 
 function subMenuControl(){
-  const gnb = $('.header-gnb-area');
+  const gnb = $('.header-gnb')
   const gnbLink = $('.header-gnb-link');
-  const subMenu = $('.sub-menu-wrap');
-  const isActive = 'active';
+  const dimmed = $('#header .dimmed')
+  const subMenu = $('.sub-menu-wrap')
 
   $(gnbLink).mouseenter(function(){
-    $(this).parent().find(subMenu).addClass(isActive);
-    $(this).parent().siblings().find(subMenu).removeClass(isActive);
+    $(dimmed).slideDown(300);
+    $(this).parent().find(subMenu).slideDown(300);
+    $(this).parent().siblings().find(subMenu).slideUp(300);
   })
 
   $(gnb).mouseleave(function(){
-    $(subMenu).removeClass(isActive);
+    $(dimmed).slideUp(300);
+    $(subMenu).slideUp(300);
   })
 }
 
 function categoryControl(){
   const category = $('.category-area');
   const categoryActiveBtn = $('.btn-category');
-  const categoryCloseBtn = $('.btn-category-close')
-  const gnbLink = $('.header-gnb-link');
-  const subMenu = $('.sub-menu-wrap');
-  const isActive = 'active';
+  const categoryCloseBtn = $('.btn-category-close');
 
+  $(categoryActiveBtn).click(function(){
+    $(category).fadeIn(500);
+  })
+
+  $(categoryCloseBtn).click(function(){
+    $(category).fadeOut(500);
+  })
 }
