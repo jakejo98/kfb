@@ -276,6 +276,19 @@
   transition: 0.25s all ease;
 }
 
+.common-container.main-page .common-section.section-main .btn-quick-search-tab::after {
+  display: inline-block;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 0%;
+  height: 4px;
+  background-color: #4374C9;
+  transform: translateX(-50%);
+  transition: 0.25s all ease;
+  content: '';
+}
+
 .common-container.main-page .common-section.section-main .btn-quick-search-tab:hover {
   font-weight: 700;
   color: #1D1D1D;
@@ -287,15 +300,7 @@
 }
 
 .common-container.main-page .common-section.section-main .btn-quick-search-tab.active::after {
-  display: inline-block;
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
   width: calc(100% - 24px);
-  height: 4px;
-  background-color: #4374C9;
-  transform: translateX(-50%);
-  content: '';
 }
 
 .common-container.main-page .common-section.section-main .quick-search-area {
