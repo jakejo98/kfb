@@ -679,6 +679,7 @@ body {
   padding: 0px 6px;
   border: none;
   font-size: 17px;
+  font-weight: 500;
   line-height: 26px;
   transition: 0.2s all ease;
 }
