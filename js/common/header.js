@@ -16,17 +16,14 @@ function gnbControl(){
 function subMenuControl(){
   const gnb = $('.header-gnb')
   const gnbLink = $('.header-gnb-link');
-  const dimmed = $('#header .dimmed')
   const subMenu = $('.sub-menu-wrap')
 
   $(gnbLink).mouseenter(function(){
-    $(dimmed).slideDown(300);
     $(this).parent().find(subMenu).slideDown(300);
     $(this).parent().siblings().find(subMenu).slideUp(300);
   })
 
   $(gnb).mouseleave(function(){
-    $(dimmed).slideUp(300);
     $(subMenu).slideUp(300);
   })
 }

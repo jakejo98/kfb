@@ -262,27 +262,27 @@
                 <ul class="swiper-wrapper">
                   <li class="swiper-slide">
                     <a href="#" class="swiper-link">
-                      <img src="../../img/popup/popup_slide_img_01.jpg" alt="스와이퍼 팝업 이미지1">
+                      <img src="../../img/popup/popup_slide_img_01.png" class="swiper-img" alt="스와이퍼 팝업 이미지1">
                     </a>
                   </li>
                   <li class="swiper-slide">
                     <a href="#" class="swiper-link">
-                      <img src="../../img/popup/popup_slide_img_02.jpg" alt="스와이퍼 팝업 이미지2">
+                      <img src="../../img/popup/popup_slide_img_02.png" class="swiper-img" alt="스와이퍼 팝업 이미지2">
                     </a>
                   </li>
                   <li class="swiper-slide">
                     <a href="#" class="swiper-link">
-                      <img src="../../img/popup/popup_slide_img_03.jpg" alt="스와이퍼 팝업 이미지3">
+                      <img src="../../img/popup/popup_slide_img_03.png" class="swiper-img" alt="스와이퍼 팝업 이미지3">
                     </a>
                   </li>
                   <li class="swiper-slide">
                     <a href="#" class="swiper-link">
-                      <img src="../../img/popup/popup_slide_img_04.jpg" alt="스와이퍼 팝업 이미지4">
+                      <img src="../../img/popup/popup_slide_img_04.png" class="swiper-img" alt="스와이퍼 팝업 이미지4">
                     </a>
                   </li>
                   <li class="swiper-slide">
                     <a href="#" class="swiper-link">
-                      <img src="../../img/popup/popup_slide_img_05.jpg" alt="스와이퍼 팝업 이미지5">
+                      <img src="../../img/popup/popup_slide_img_05.png" class="swiper-img" alt="스와이퍼 팝업 이미지5">
                     </a>
                   </li>
                 </ul>
@@ -319,46 +319,5 @@
 </article>
 </main>
 </div>
-<script>
-$(document).ready(function(){
-  const swiperContainer = document.querySelector('.popup-swiper');
-  const controlBtn = $('.btn-swiper-control');
-  const pauseBtn = $('.popup-swiper .btn-swiper-pause');
-  const startBtn = $('.popup-swiper .btn-swiper-start');
-  const isActive = 'active';
-
-  if (swiperContainer) {
-    const swiper = new Swiper(".popup-swiper", {
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      autoplay: {
-        delay: 2000,
-        disableOnInteraction: false
-      },
-      slidesPerView: 1,
-      slidesPerGroup: 1, 
-      loop: true,
-    });
-
-    $(controlBtn).click(function () {
-      $(this).removeClass(isActive).siblings().addClass(isActive);
-    });
-
-    $(pauseBtn).click(function () {
-      swiper.autoplay.stop(); 
-    });
-
-    $(startBtn).click(function () {
-      swiper.autoplay.start();
-    });
-  }
-})
-</script>
 </body>
 </html>
