@@ -90,11 +90,14 @@ function fullPage() {
   });
 
   window.addEventListener('wheel', (e) => {
-    const categoryArea = document.querySelector('.category-area.active');
+    const categoryArea = document.querySelector('.category-area');
+    const body = document.body;
 
-    if (categoryArea) {
-      // category-area에서 기본 스크롤 동작을 허용
+    if (categoryArea && window.getComputedStyle(categoryArea).display === 'block') {
+      body.style.overflow = 'hidden';
       return;
+    } else {
+      body.style.overflow = 'visible';
     }
 
     e.preventDefault();
@@ -201,15 +204,3 @@ function finProdControl(){
   })
   
 }
-
-
-
-
-
-
-
-
-
-
-
-

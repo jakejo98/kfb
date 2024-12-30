@@ -5,7 +5,7 @@
   position: fixed;
   bottom: 0px;
   left: 0px;
-  width: 120px;
+  width: 140px;
   z-index: 10;
   height: calc(100vh - 116px);
   background-color: #4374C9;
@@ -32,9 +32,9 @@
   position: relative;
   width: 100%;
   height: 100px;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 26px;
+  line-height: 30px;
   background-color: #4374C9;
   color: #FFFFFF;
   text-align: center;
@@ -65,7 +65,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 116px 40px 0px 160px;
+  padding: 116px 40px 0px 180px;
   width: 100%;
   height: 100vh;
 }
@@ -219,6 +219,10 @@
   width: calc(100% / 7);
 }
 
+.common-container.main-page .common-section.section-main .quick-menu-link:hover .common-icon {
+  scale: 1.1;
+}
+
 .common-container.main-page .common-section.section-main .quick-menu-box {
   display: flex;
   flex-direction: column;
@@ -228,11 +232,12 @@
 
 .common-container.main-page .common-section.section-main .quick-menu-box .common-icon {
   padding: 5px;
+  transition: 0.25s all ease;
 }
 
 .common-container.main-page .common-section.section-main .quick-menu-title {
   margin-top: 4px;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
   line-height: 20px;
   text-align: center;
@@ -558,12 +563,13 @@
 .common-container.main-page .common-section.section-fin-svc .fin-svc-heading-title {
   margin-bottom: 20px;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 35px;
 }
 
 .common-container.main-page .common-section.section-fin-svc .fin-svc-heading-desc {
   font-size: 17px;
+  font-weight: 500;
   line-height: 26px;
   color: #555555;
 }
@@ -651,7 +657,7 @@
 .common-container.main-page .common-section.section-cons-info .apply-civil-heading-title {
   margin-right: 3px;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 33px;
   transition: 0.2s all ease-out;
 }
@@ -670,7 +676,7 @@
 
 .common-container.main-page .common-section.section-cons-info .apply-civil-desc {
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 23px;
   transition: 0.2s all ease-out;
 }
@@ -727,12 +733,13 @@
 .common-container.main-page .common-section.section-cons-info .consumer-disclosure-heading-title {
   margin-bottom: 16px;
   font-size: 26px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 39px;
 }
 
 .common-container.main-page .common-section.section-cons-info .consumer-disclosure-heading-desc {
   font-size: 19px;
+  font-weight: 500;
   line-height: 29px;
   color: #555555;
 }
@@ -790,12 +797,13 @@
 .common-container.main-page .common-section.section-fin-edu .financial-education-heading-title {
   margin-bottom: 16px;
   font-size: 26px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 39px;
 }
 
 .common-container.main-page .common-section.section-fin-edu .financial-education-heading-desc {
   font-size: 19px;
+  font-weight: 500;
   line-height: 29px;
   color: #555555;
 }
@@ -896,6 +904,7 @@
   position: absolute;
   top: 0px;
   right: 0px;
+  z-index: 1;
   width: 100%;
   height: 100%;
   background: url('../../img/icon/icon_financial_prouct_piggy_bank.svg') no-repeat center center / contain;
@@ -926,7 +935,7 @@
 .common-container.main-page .common-section.section-fin-prod .financial-product-heading-title {
   margin-right: 3px;
   font-size: 22px;
-  font-family: 700;
+  font-weight: 500;
   line-height: 33px;
 }
 
@@ -947,9 +956,11 @@
 }
 
 .common-container.main-page .common-section.section-fin-prod .financial-product-desc {
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 23px;
+  position: relative;
+  z-index: 2;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 26px;
 }
 
 
@@ -977,7 +988,6 @@
 
 .common-container.main-page .common-section.section-fin-prod .faq-library-area {
   width: calc((100% - 24px) / 2);
-  height: 420px;
   padding: 40px;
   border-radius: 24px;
   background-color: #FFFFFF;
@@ -1019,9 +1029,9 @@
 
 .common-container.main-page .common-section.section-fin-prod .faq-library-tab-item .btn-faq-library-tab {
   position: relative;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 700;
-  line-height: 33px;
+  line-height: 39px;
   color: #717171;
 }
 
@@ -1037,14 +1047,13 @@
 .common-container.main-page .common-section.section-fin-prod .faq-library-more-link-txt {
   position: relative;
   margin-right: 2px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
-  line-height: 23px;
+  line-height: 27px;
 }
 
 .common-container.main-page .common-section.section-fin-prod .bank-new-product-area {
   width: calc((100% - 24px) / 2);
-  height: 420px;
   padding: 40px;
   border-radius: 24px;
   background-color: #FFFFFF;
@@ -1094,19 +1103,23 @@
   padding: 5.5px 0px;
 }
 
+.common-container.main-page .common-section.section-fin-prod .faq-library-board-link:hover .faq-library-board-subject {
+  text-decoration: underline;
+}
+
 .common-container.main-page .common-section.section-fin-prod .faq-library-board-subject {
   overflow: hidden;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 23px;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 26px;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
 .common-container.main-page .common-section.section-fin-prod .faq-library-board-date {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
-  line-height: 23px;
+  line-height: 26px;
   color: #555555;
 }
 
@@ -1119,9 +1132,9 @@
 }
 
 .common-container.main-page .common-section.section-fin-prod .bank-new-product-heading-title {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 700;
-  line-height: 33px;
+  line-height: 39px;
 }
 
 .common-container.main-page .common-section.section-fin-prod .bank-new-product-item {
@@ -1153,9 +1166,9 @@
 
 .common-container.main-page .common-section.section-fin-prod .bank-new-product-more-link-txt {
   margin-right: 2px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
-  line-height: 23px;
+  line-height: 27px;
 }
 
 .common-container.main-page .common-section.section-fin-prod .bank-new-product {
@@ -1175,31 +1188,31 @@
 }
 
 .common-container.main-page .common-section.section-fin-prod .bank-new-product-status-product {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 700;
-  line-height: 23px;
-  color: #CC721D;
+  line-height: 26px;
+  color: #FF8F24;
 }
 
 .common-container.main-page .common-section.section-fin-prod .bank-new-product-bank-type {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 700;
-  line-height: 23px;
+  line-height: 26px;
 }
 
 .common-container.main-page .common-section.section-fin-prod .bank-new-product-subject {
   overflow: hidden;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 23px;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 26px;
   color: #555555;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
 .common-container.main-page .common-section.section-fin-prod .bank-new-product-date {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
-  line-height: 23px;
+  line-height: 26px;
   color: #555555;
 }

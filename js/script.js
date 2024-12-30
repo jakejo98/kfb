@@ -13,6 +13,7 @@ $(document).ready(function(){
     list();
   } else if(currentFile === "guide.html") {
     guide();
+    swiper();
   }
 
   // 로드 후 실행 함수 (공통)
