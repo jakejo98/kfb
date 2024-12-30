@@ -530,22 +530,29 @@ body {
   line-height: 27px;;
 }
 
-.btn-xs {
+.btn-h38 {
   border-radius: 6px;
   display: flex;
   align-items: center;
+  height: 38px;
 }
 
-.btn-xs.ty-sm {
-  height: 38px;
+.btn-h38.ty-xs {
   padding: 7.5px 10px;
 }
 
-.btn-xs span {
+.btn-h38 span {
   height: 23px;
   line-height: 1.5;
   font-size: 15px;
   font-weight: 500;
+}
+
+.btn-h40 {
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  height: 40px;
 }
 
 .btn-blue {
@@ -580,6 +587,12 @@ body {
 
 .btn-bl-line:hover {
   background-color: #F5F6FB;
+}
+
+.btn-bc-line {
+  background-color: #ffffff;
+  border: 1px solid #1D1D1D !important;
+  color: #1D1D1D;
 }
 
 /* popup */
