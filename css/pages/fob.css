@@ -1,21 +1,23 @@
 /* bread-crumb */
 #bread-crumb {
-  margin-top: 116px;
   width: 100%;
   height: 63px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   gap: 8px;
-  padding: 12px 260px;
-  border-radius: 6px;
+  padding: 12px 20px;
+  margin-top: 116px;
   border-bottom: solid 1px #d8d8d8;
 }
 
 .bread-crumb-list {
   gap: 14px;
   display: flex;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0px 20px;
 }
 
 .bread-crumb-list-item .ellipse {
@@ -42,118 +44,124 @@
   color: #1d1d1d;
 }
 
-/* sub_body */
-.common-main {
-  padding: 40px 80px 160px;
-  display: flex;
-}
-
 /* 사이드바 */
-.sub-aside {
+#remote-wrap {
   min-width: 300px;
+  border: 1px solid #D8D8D8;
+  border-radius: 24px 24px 0px 0px;
+  letter-spacing: 1px;
 }
 
-.sub-aside-list {
-  border: 1px solid #d8d8d8;
-  overflow: hidden;
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
-}
-
-.sub-aside-title {
-  width: 100%;
-  height: 84px;
-  background-color: #4374c9;
-  padding: 24px 0;
+#remote-wrap .remote-heading {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 10px;
-  background-image: url('../../img/bg/sub_aside_title_bg.png');
-  overflow: hidden;
+  align-items: center;
+  border-radius: 24px 24px 0px 0px;
+  padding: 24px 0px;
+  background: url('../../img/pages/fob/fob_remote_bg.png') no-repeat center/cover;
 }
 
-.sub-aside-title-txt {
+#remote-wrap .remote-heading-title {
   font-size: 24px;
-  font-weight: bold;
-  line-height: 1.5;
-  letter-spacing: 1px;
-  color: #ffffff;
+  font-weight: 700;
+  line-height: 36px;
+  color: #FFFFFF;
 }
-
-.sub-aside-subtitle {
+#remote-wrap .remote-link {
+  position: relative;
   padding: 16px 32px;
-  width: 100%;
-  height: 59px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  border-bottom: solid 1px #f5f6fb;
-}
-
-.sub-aside-subtitle.active {
-  background-color: #365da1;
-}
-
-.sub-aside-subtitle-txt {
-  color: #1d1d1d;
   font-size: 18px;
-  line-height: 1.5;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.sub-aside-subtitle-txt.active {
-  color: #ffffff;
-}
-
-/* 사이드바 서브 리스트 */
-.sub-aside-active-list {
-  background-color: #f5f6fb;
-  padding-block: 15px;
-}
-
-.sub-aside-active-list-item {
-  font-size: 17px;
-  line-height: 1.5;
-  letter-spacing: 1px;
-  height: 38px;
-  padding-inline: 32px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.sub-aside-active-list-txt {
   font-weight: 600;
+  line-height: 27px;
+  background-color: #FFFFFF;
+  color: #1D1D1D;
+}
+
+#remote-wrap .remote-link::after {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  width: 24px;
+  height: 24px;
+  background-image: url('../../img/icon/icon_arrow_toggle_down.svg');
+  transform: translateY(-50%);
+  content: '';
+}
+
+#remote-wrap .remote-link.active {
+  background-color: #365DA1;
+  color: #FFFFFF;
+}
+
+#remote-wrap .remote-link.active::after {
+  background-image: url('../../img/icon/icon_arrow_toggle_up.svg');
+}
+
+#remote-wrap .remote-sub-list {
+  padding: 15px 0px;
+  background-color: #F5F6FB;
+}
+
+#remote-wrap .remote-sub-link {
+  position: relative;
+  padding: 6px 0px 6px 47px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 26px;
   color: #717171;
+  transition: 0.25s all ease;
 }
 
-.sub-aside-active-list-txt:hover {
-  color: #1d1d1d; 
-}
-
-.sub-aside-active-list-txt.active {
-  font-weight: bold;
-  text-decoration: underline;
-  color: #1d1d1d; 
-  text-underline-position : under;
-}
-
-.sub-aside-active-list-txt::before {
+#remote-wrap .remote-sub-link::before {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 36px;
   width: 3px;
   height: 3px;
   background-color: #143067;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 8px;
-  content: "";
+  transform: translateY(-50%);
+  content: '';
+}
+
+#remote-wrap .remote-sub-link:hover {
+  color: #1D1D1D;
+}
+
+#remote-wrap .remote-sub-link.active {
+  font-weight: 700;
+  color: #1D1D1D;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+#remote-wrap .remote-sub {
+  display: none;
+}
+
+#remote-wrap .remote-sub.active {
+  display: block;
+}
+
+#remote-wrap.rate-fee .remote-item:nth-of-type(6) .remote-link::after {
+  display: none;
+}
+
+/* 서브 페이지 공통 */
+.common-container.fob-page {
+  display: flex;
+  justify-content: center;
+  gap: 56px;
+  padding: 40px 0px 160px 0px;
+}
+
+.common-section.section-fob {
+  max-width: 1044px;
 }
 
 /* content */
 .contents-area {
-  margin-left: 56px;
   width: 100%;
 }
 
