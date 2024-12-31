@@ -50,7 +50,7 @@
 
 /* 사이드바 */
 .sub-aside {
-  width: 300px;
+  min-width: 300px;
 }
 
 .sub-aside-list {
