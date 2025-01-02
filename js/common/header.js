@@ -54,8 +54,7 @@ function zoomControl() {
     index += 0.05; // 0.05씩 증가
     index = parseFloat(index.toFixed(2)); // 소수점 두 자리까지 고정
     $('body').css({
-      'transform-origin': '50% 0px',
-      'transform': `scale(${index})` // scale 적용
+      'zoom': index
     });
     $(percent).text(Math.round(index * calPercent) + "%"); // 정수로 변환하여 출력
   });
@@ -64,8 +63,7 @@ function zoomControl() {
     index -= 0.05; // 0.05씩 감소
     index = parseFloat(index.toFixed(2)); // 소수점 두 자리까지 고정
     $('body').css({
-      'transform-origin': '50% 0px',
-      'transform': `scale(${index})`
+      'zoom': index
     });
     $(percent).text(Math.round(index * calPercent) + "%"); // 정수로 변환하여 출력
   });
