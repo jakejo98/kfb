@@ -1,0 +1,12 @@
+/* 어드민 페이지 공통 */
+.common-container.admin-page {
+  position: relative;
+}
+
+.common-container.admin-page .common-section {
+  padding: 76px 0 0 250px;
+}
+
+.common-container.admin-page .common-section .common-section-inner {
+  padding: 60px 40px;
+}

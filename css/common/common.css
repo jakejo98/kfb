@@ -924,6 +924,14 @@ body {
   background-image: url('../../img/icon/icon_excel.svg');
 }
 
+.icon-admin-header-setting::after {
+  background-image: url('../../img/icon/icon_admin_header_setting.svg');
+}
+
+.icon-admin-header-logout::after {
+  background-image: url('../../img/icon/icon_admin_header_logout.svg');
+}
+
 /* swiper */
 .ly-pop-wrap .ly-pop .ly-pop-main .popup-swiper {
   position: static;

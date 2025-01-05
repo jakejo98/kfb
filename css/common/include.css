@@ -600,3 +600,191 @@
 #footer .footer-sns-item + .footer-sns-item {
   margin-left: 8px;
 }
+
+/* admin-header */
+#admin-header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  width: 100%;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+}
+
+#admin-header .header-gnb-wrap {
+  position: relative;
+}
+
+#admin-header .header-inner {
+  height: 76px;
+  background-color: #143067;
+  display: flex;
+  align-items: center;
+}
+
+#admin-header .logo-wrap {
+  display: flex;
+  width: 250px;
+}
+
+#admin-header .logo-img {
+  width: 250px;
+  height: 44px;
+}
+
+#admin-header .header-gnb-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#admin-header .header-gnb-list {
+  display: flex;
+  padding: 0 118.5px;
+}
+
+#admin-header .header-gnb-item {
+  height: 76px;
+  display: flex;
+  align-items: center;
+}
+
+#admin-header .header-gnb-item.active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#admin-header .header-gnb-link {
+  position: relative;
+  padding: 0 32px;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 32px;
+  transition: 0.25s all ease;
+  color: #FFFFFF;
+}
+
+#admin-header .header-util-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 12px;
+}
+
+#admin-header .header-util-list {
+  display: flex;
+}
+
+#admin-header .header-util-item {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  padding: 16px;
+}
+
+#admin-header .header-util-link {
+  font-size: 17px;
+  font-weight: bold;
+  margin-left: 8px;
+  color: #FFFFFF;
+}
+
+#admin-header .header-util-line-item {
+  padding: 0 4px 0 2px;
+  display: flex;
+  align-items: center;
+}
+
+#admin-header .header-util-line {
+  height: 16px;
+  width: 2px;
+  opacity: 0.2;
+  background-color: #FFFFFF;
+}
+
+/* 어드민 remote-tab */
+#admin-remote-tab {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 250px;
+  z-index: 10;
+  height: calc(100vh - 76px);
+  background-color: #F2F3F5;
+  flex-direction: column;
+}
+
+#admin-remote-tab .remote-tab-list {
+  width: 100%;
+  padding: 8px 12px;
+}
+
+#admin-remote-tab .remote-tab-item {
+  display: flex;
+  flex-direction: column;
+}
+
+#admin-remote-tab .remote-tab-link {
+  border-radius: 8px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-block: 8px;
+  padding: 12px 16px;
+}
+
+#admin-remote-tab .remote-tab-link:hover {
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.08), 0 0 4px 0 rgba(0, 0, 0, 0.15);
+  background-color: #F5F6FB;
+}
+
+#admin-remote-tab .remote-tab-item-txt {
+  text-align: left;
+  font-weight: bold;
+  color: #1D1D1D;
+  font-size: 17px;
+  line-height: 50px;
+}
+
+#admin-remote-tab .remote-tab-item.active .remote-tab-link {
+  background-color: #143067;
+}
+
+#admin-remote-tab .remote-tab-item.active .remote-tab-item-txt {
+  color: #FFFFFF;
+}
+
+#admin-remote-tab .sub-menu {
+  display: none;
+  width: 100%;
+}
+
+#admin-remote-tab .remote-tab-item.active .sub-menu {
+  display: block;
+}
+
+#admin-remote-tab .sub-menu-list {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+#admin-remote-tab .sub-menu-item {
+  height: 37px;
+  display: flex;
+  align-items: center;
+  padding-left: 16px; 
+}
+
+#admin-remote-tab .sub-menu-link {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#admin-remote-tab .sub-menu-link.active {
+  color: #143067;
+}
