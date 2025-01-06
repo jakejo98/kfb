@@ -6,6 +6,7 @@ import { header } from "./common/header.js";
 import { footer } from "./common/footer.js";
 import { remote } from "./common/remote.js";
 import { main } from "./pages/main.js";
+import { admin } from "./common/admin.js";
 
 $(document).ready(function(){
   const currentFile = window.location.pathname.split("/").pop();
@@ -16,7 +17,10 @@ $(document).ready(function(){
     guide();
     swiper();
   }
-
+  if (currentFile.startsWith("admin")) {
+    admin();
+  }
+  
   // 로드 후 실행 함수 (공통)
   loadFile(function(){
     swiper();
@@ -27,5 +31,6 @@ $(document).ready(function(){
     if (currentFile === "main.html") {
       main();
     }
+    
   })
 })

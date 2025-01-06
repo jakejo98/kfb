@@ -649,6 +649,7 @@
   height: 76px;
   display: flex;
   align-items: center;
+  transition: 0.25s all ease;
 }
 
 #admin-header .header-gnb-item.active {
@@ -661,7 +662,6 @@
   font-size: 21px;
   font-weight: bold;
   line-height: 32px;
-  transition: 0.25s all ease;
   color: #FFFFFF;
 }
 
@@ -715,6 +715,7 @@
   height: calc(100vh - 76px);
   background-color: #F2F3F5;
   flex-direction: column;
+  overflow: auto;
 }
 
 #admin-remote-tab .remote-tab-list {
@@ -734,6 +735,7 @@
   align-items: center;
   margin-block: 8px;
   padding: 12px 16px;
+  transition: 0.25s all ease;
 }
 
 #admin-remote-tab .remote-tab-link:hover {
@@ -760,6 +762,7 @@
 #admin-remote-tab .sub-menu {
   display: none;
   width: 100%;
+  transition: 0.25s all ease;
 }
 
 #admin-remote-tab .remote-tab-item.active .sub-menu {
@@ -771,6 +774,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
   flex-direction: column;
+  transition: 0.25s all ease;
 }
 
 #admin-remote-tab .sub-menu-item {
@@ -778,11 +782,13 @@
   display: flex;
   align-items: center;
   padding-left: 16px; 
+  transition: 0.25s all ease;
 }
 
 #admin-remote-tab .sub-menu-link {
   font-size: 15px;
   font-weight: bold;
+  transition: 0.25s all ease;
 }
 
 #admin-remote-tab .sub-menu-link.active {
