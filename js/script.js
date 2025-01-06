@@ -4,6 +4,7 @@ import { list } from "./guide/list.js";
 import { guide } from "./guide/guide.js";
 import { header } from "./common/header.js";
 import { footer } from "./common/footer.js";
+import { remote } from "./common/remote.js";
 import { main } from "./pages/main.js";
 
 $(document).ready(function(){
@@ -21,7 +22,7 @@ $(document).ready(function(){
     swiper();
     header();
     footer();
-
+    remote();
     // main.html 일 경우
     if (currentFile === "main.html") {
       main();
