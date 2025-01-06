@@ -16,8 +16,8 @@ function remoteHandler(){
     $(firstDepLink).click(function(){
       if($(this).hasClass(isActive)) {
         $(this).removeClass(isActive);
-        $(this).find(secondDep).removeClass(isActive);
-        $(this).find(secondDepLink).removeClass(isActive);
+        $(this).parent().find(secondDep).removeClass(isActive);
+        $(this).parent().find(secondDepLink).removeClass(isActive);
       }
       else if($(this).parent().has(secondDep).length > 0) {
       $(this).addClass(isActive).parent().siblings().find(firstDepLink).removeClass(isActive);
