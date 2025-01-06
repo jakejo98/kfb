@@ -14,11 +14,17 @@ function remoteHandler(){
   if(isRemote) {
     // 리스트 활성화
     $(firstDepLink).click(function(){
-      if($(this).parent().has(secondDep).length > 0) {
+      if($(this).hasClass(isActive)) {
+        $(this).removeClass(isActive);
+        $(this).find(secondDep).removeClass(isActive);
+        $(this).find(secondDepLink).removeClass(isActive);
+      }
+      else if($(this).parent().has(secondDep).length > 0) {
       $(this).addClass(isActive).parent().siblings().find(firstDepLink).removeClass(isActive);
       $(this).parent().find(secondDep).addClass(isActive).parent().siblings().find(secondDep).removeClass(isActive);
       $(this).parent().find(secondDepItem).eq(0).find(secondDepLink).addClass(isActive).parents(firstDepItem).siblings().find(secondDepLink).removeClass(isActive);
-      } else {
+      } 
+      else {
         $(this).addClass(isActive).parent().siblings().find(firstDepLink).removeClass(isActive);
         $(secondDep).removeClass(isActive);
       }
