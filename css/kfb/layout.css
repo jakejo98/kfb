@@ -1,0 +1,114 @@
+@charset "euc-kr";
+
+/* common */
+#wrap {position:relative; width:100%;}
+
+/* layout */
+#header { position:relative; width:100%; margin:0 auto;}
+
+	#topSide { position:relative; width:100%; margin:auto; height:39px; border-bottom:solid 1px #e3e3e3; font-size:14px; letter-spacing:normal;}
+	#topSide .area { position:relative; width:1200px; margin:0 auto; font-size:0;}
+	#topSide .area .snsArea { position:absolute; top:0; left:0; border-left:solid 1px #e3e3e3;}
+	#topSide .area .snsArea span {border-right:solid 1px #e3e3e3; display:inline-block;}
+	#topSide .area .sideArea { position:absolute; top:0; right:0; font-size:0; line-height:normal;}
+	#topSide .area .sideArea li { margin-left:20px; display:inline-block;}
+	#topSide .area .sideArea li.menu a { color:#666; font-size:13px; height:39px; vertical-align:middle; display:table-cell; text-decoration:none;}
+	#topSide .area .sideArea li.menu a:hover { color:#000;}
+	#topSide:after{ content:""; display:block; clear:both;}
+	
+	#topNavi { position:relative; z-index:10; width:100%; height:98px; margin:0 auto; background:#fff;}
+	#topNavi .area { position:relative; width:1200px; margin:0 auto; font-size:0;}
+	#topNavi .area> h1 { position:absolute; z-index:11; top:20px; left:0;}
+	#topNavi .area .topMenu { position:relative; z-index:10; top:36px; right:20px; margin:0 auto; text-align:left;}
+	#topNavi .area .topMenu .menuArea {display:inline-block; margin-left:289px;}
+	#topNavi .area .topMenu .menuArea .main { vertical-align:middle; display:table-cell; text-align:center;}
+	#topNavi .area .topMenu .menuArea .main> h2 a { padding:0 16px; height:53px; text-align:center; vertical-align:middle; display:table-cell;}
+	#topNavi .area .topMenu .menuArea .main2 { vertical-align:middle; display:table-cell; text-align:center;}
+	#topNavi .area .topMenu .menuArea .main2> h2 a { padding:0 27px; height:62px; text-align:center; vertical-align:middle; display:table-cell;}
+	#topNavi .area .topMenu .menuArea .main3 { vertical-align:middle; display:table-cell; text-align:center;}
+	#topNavi .area .topMenu .menuArea .main3> h2 a { padding:0 25px 0 15px; height:62px; text-align:center; vertical-align:middle; display:table-cell;}
+	#topNavi .area .topMenu .menuArea .main4 { vertical-align:middle; display:table-cell; text-align:center;}
+	#topNavi .area .topMenu .menuArea .main4> h2 a { padding:0 30px 0 0; height:62px; text-align:center; vertical-align:middle; display:table-cell;}
+	#topNavi .area .topMenu .menuArea .main5 { vertical-align:middle; display:table-cell; text-align:center;}
+	#topNavi .area .topMenu .menuArea .main5> h2 a { padding:0 30px 0 0; height:62px; text-align:center; vertical-align:middle; display:table-cell;}
+		
+	#topNavi .area .topMenu .menuArea .subMenu { position:absolute; left:0; border-top:solid 1px #e3e3e3; border-bottom:solid 1px #e3e3e3; width:100%; background:#fff; font-size:16px; display:table; }
+	#topNavi .area .topMenu .menuArea .subMenu .h2Area { background:#; border-left:solid 1px #e3e3e3; border-right:solid 1px #e3e3e3; width:194px; padding-top:29px; vertical-align:top; display:table-cell; }
+	#topNavi .area .topMenu .menuArea .subMenu .h2Area> h2 { font-size:24px; letter-spacing:-0.06em; line-height:1.3em;}
+	#topNavi .area .topMenu .menuArea .subMenu .back01 { background:url(../images/common/header_smenuback01.png) no-repeat center bottom;}
+	#topNavi .area .topMenu .menuArea .subMenu .back02 { background:url(../images/common/header_smenuback02.png) no-repeat center bottom;}
+	#topNavi .area .topMenu .menuArea .subMenu .back03 { background:url(../images/common/header_smenuback03.png) no-repeat center bottom;}
+	#topNavi .area .topMenu .menuArea .subMenu .back04 { background:url(../images/common/header_smenuback04.png) no-repeat center bottom;}
+	#topNavi .area .topMenu .menuArea .subMenu .back05 { background:url(../images/common/header_smenuback05.png) no-repeat center bottom;}
+	#topNavi .area .topMenu .menuArea .subMenu .minH { height:220px;}
+	#topNavi .area .topMenu .menuArea .subMenu .subArea { display:table; border-bottom:solid 1px #e3e3e3; line-height:normal;}
+	#topNavi .area .topMenu .menuArea .subMenu .subArea:last-child { border-bottom:none;}
+	#topNavi .area .topMenu .menuArea .subMenu .subArea .sub { width:200px; border-right:solid 1px #e3e3e3; padding:20px 0; vertical-align:top; display:table-cell;}
+	#topNavi .area .topMenu .menuArea .subMenu .subArea .sub a { text-decoration:none;}
+	#topNavi .area .topMenu .menuArea .subMenu .subArea .sub a:hover { color:#0087cf;}
+	#topNavi .area .topMenu .menuArea .subMenu .subArea .sub h3 a { font-size:17px; color:#004685; text-align:center; width:160px; padding:10px 0; line-height:1.3em; display:inline-block;}
+	#topNavi .area .topMenu .menuArea .subMenu .subArea .sub h4 { padding:0; margin:0 auto; font-size:14px; line-height:1.5em;}
+	#topNavi .area .topMenu .menuArea .subMenu .subArea .sub h4 a { width:160px; padding:6px 0; border-top:solid 1px #f1f1f1; color:#555; font-weight:normal; text-align:left; display:inline-block;}
+	#topNavi .area .sitemenu { position:absolute; z-index:11; top:52px; right:0px;}
+	#topNavi:after{ content:""; display:block; clear:both;}
+	
+	#topNavi_Fix { position:fixed; top:0; z-index:10; width:100%; height:98px; margin:0 auto; background:#fff;}
+	#topNavi_Fix .area { position:relative; width:1200px; margin:0 auto; font-size:0;}
+	#topNavi_Fix .area> h1 { position:absolute; z-index:11; top:20px; left:0;}
+	#topNavi_Fix .area .topMenu { position:relative; z-index:10; top:36px; left:0; margin:0 auto; text-align:left;}
+	#topNavi_Fix .area .topMenu .menuArea {display:inline-block; margin-left:322px;}
+	#topNavi_Fix .area .topMenu .menuArea .main { vertical-align:middle; display:table-cell; text-align:center;}
+	#topNavi_Fix .area .topMenu .menuArea .main> h2 a { padding:0 30px; height:62px; text-align:center; vertical-align:middle; display:table-cell;}
+	#topNavi_Fix .area .topMenu .menuArea .subMenu { position:absolute; left:0; border-top:solid 1px #e3e3e3; border-bottom:solid 1px #e3e3e3; width:100%; background:#fff; font-size:16px; display:table; }
+	#topNavi_Fix .area .topMenu .menuArea .subMenu .h2Area { background:#; border-left:solid 1px #e3e3e3; border-right:solid 1px #e3e3e3; width:194px; padding-top:29px; vertical-align:top; display:table-cell; }
+	#topNavi_Fix .area .topMenu .menuArea .subMenu .h2Area> h2 { font-size:24px; letter-spacing:-0.06em; line-height:1.3em;}
+	#topNavi_Fix .area .topMenu .menuArea .subMenu .back01 { background:url(../images/common/header_smenuback01.png) no-repeat center bottom;}
+	#topNavi_Fix .area .topMenu .menuArea .subMenu .back02 { background:url(../images/common/header_smenuback02.png) no-repeat center bottom;}
+	#topNavi_Fix .area .topMenu .menuArea .subMenu .back03 { background:url(../images/common/header_smenuback03.png) no-repeat center bottom;}
+	#topNavi_Fix .area .topMenu .menuArea .subMenu .back04 { background:url(../images/common/header_smenuback04.png) no-repeat center bottom;}
+	#topNavi_Fix .area .topMenu .menuArea .subMenu .back05 { background:url(../images/common/header_smenuback05.png) no-repeat center bottom;}
+	#topNavi_Fix .area .topMenu .menuArea .subMenu .minH { height:220px;}
+	#topNavi_Fix .area .topMenu .menuArea .subMenu .subArea { display:table; border-bottom:solid 1px #e3e3e3; line-height:normal;}
+	#topNavi_Fix .area .topMenu .menuArea .subMenu .subArea:last-child { border-bottom:none;}
+	#topNavi_Fix .area .topMenu .menuArea .subMenu .subArea .sub { width:200px; border-right:solid 1px #e3e3e3; padding:20px 0; vertical-align:top; display:table-cell;}
+	#topNavi_Fix .area .topMenu .menuArea .subMenu .subArea .sub a { text-decoration:none;}
+	#topNavi_Fix .area .topMenu .menuArea .subMenu .subArea .sub a:hover { color:#0087cf;}
+	#topNavi_Fix .area .topMenu .menuArea .subMenu .subArea .sub h3 a { font-size:17px; color:#004685; text-align:center; width:160px; padding:10px 0; display:inline-block;}
+	#topNavi_Fix .area .topMenu .menuArea .subMenu .subArea .sub h4 { padding:0; margin:0 auto; font-size:14px; line-height:1.5em;}
+	#topNavi_Fix .area .topMenu .menuArea .subMenu .subArea .sub h4 a { width:160px; padding:6px 0; border-top:solid 1px #f1f1f1; color:#555; font-weight:normal; text-align:left; display:inline-block;}
+	#topNavi_Fix .area .sitemenu { position:absolute; z-index:11; top:52px; right:0px;}
+	#topNavi_Fix:after{ content:""; display:block; clear:both;}
+	
+	
+	#FooterLink { position:relative; width:100%; margin:0 auto; background:#fff; border-top:solid 1px #004685; font-size:0; line-height:normal;}
+	#FooterLink .area { position:relative; width:1200px; margin:0 auto;}
+	#FooterLink .area .logoArea { width:1110px; text-align:left; vertical-align:middle; display:table-cell;}
+	#FooterLink .area .btnArea { width:90px; background:#f6f6f6; vertical-align:middle; display:table-cell;}
+	#FooterLink .area .btnArea .btn { margin-top:11px; display:inline-block;}
+	#FooterLink .area .btnArea .btn a { background:#fff; border:solid 1px #e3e3e3; width:56px; height:21px; font-size:12px; color:#979797; text-align:center; text-decoration:none; vertical-align:middle; display:table-cell; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px;}
+	#FooterLink .area .btnArea .btn a:hover { background:#e3e3e3; color:#555;}
+	#FooterLink:after{ content:""; display:block; clear:both;}
+	
+	
+	#Footer { position:relative; width:100%; margin:0 auto; background:#fff; border-top:solid 1px #e3e3e3; padding-top:30px; font-size:14px;}
+	#Footer .copyArea { position:relative; width:1200px; margin:0 auto; color:#848484;}
+	#Footer .copyArea h1 { position:absolute; left:0;}
+	#Footer .copyArea .copy { position:relative; margin-left:180px; color:#555555; font-size:13px; text-align:left; line-height:1.6em;}
+	#Footer .copyArea .copy .side { line-height:normal; font-size:0;}
+	#Footer .copyArea .copy .side span { margin-right:20px;}
+	#Footer .copyArea .copy .side a { font-size:14px; color:#111; font-weight:bold; letter-spacing:-0.05em;}
+	#Footer .copyArea .copy .address { position: relative; margin-top:15px; letter-spacing:normal;}
+	#Footer .copyArea .copy .address .gap { margin-left:20px;}
+	#Footer .copyArea .linkArea { position:absolute; top:0; right:0; line-height:normal;}
+	#Footer .copyArea .linkArea .link { font-size:13px; color:#555555; display:table;}
+	#Footer .copyArea .linkArea .link li { padding-left:5px;}
+	#Footer .copyArea .linkArea .link .area { position:relative; text-align:left; display:table-cell;}
+	#Footer .copyArea .linkArea .link .area .box { width:178px; height:39px; border:solid 1px #979797; vertical-align:middle; display:table-cell;}
+	#Footer .copyArea .linkArea .link .area .box p { margin-left:5px;}
+	#Footer .copyArea .linkArea .link .area .box .more { position:absolute; top:11px; right:11px; font-size:0;}
+	#Footer .copyArea .linkArea .link .area .box .list { position:absolute; left:5px; bottom:40px; border:solid 1px #979797; background:#f9f9f9; padding:5px 0; width:178px; display:none;}
+	#Footer .copyArea .linkArea .link .area .box .list a { width:168px; padding:5px; color:#555555; display:inline-block;}
+	#Footer .copyArea .linkArea .link .area .box .list a:hover { color:#000;}
+	#Footer .copyArea .linkArea .banner { margin-top:10px; font-size:0; text-align:right; padding-bottom:10px;}
+	#Footer .copyArea .linkArea .banner span { margin-left:10px;}
+	#Footer:after{ content:""; display:block; clear:both;}

@@ -1,0 +1,75 @@
+@charset "euc-kr";
+
+
+/* ######  2019 Start */
+
+
+/* consumer */
+.freebranch_info { background:url(../images/consumer/freebranch_info_img01.png) no-repeat right bottom;}
+
+
+/* btn */
+.btnTableIn_view02 a {border:solid 1px #e1e1e1; background:#eeeeee; color:#000; font-size:14px; font-weight:bold; padding:5px; line-height:normal; display:inline-block; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px;}
+.btnTableIn_view02 a:hover { background:#e1e1e1;}
+
+
+/* layer */
+.layerArea { position:relative; z-index:1; background:#fff; border:solid 8px #004685;}
+.layerArea_freebranch { width:690px; margin:0 auto;}
+.layerArea .close { position:absolute; top:12px; right:12px;}
+.layerArea .title { background:#1689fc; font-size:18px; font-weight:bold; color:#fff; padding:12px 20px;}
+.layerArea .infoArea { margin:0 25px; padding:25px 0 35px 0; font-size:14px;}
+.layerArea .infoArea .info { margin-top:20px;}
+.layerArea .infoArea .comment { color:#666; line-height:1.4em;}
+.layerArea .infoArea .comment li { background:url(../images/btn/bul_comment_1.png) no-repeat left 10px; padding:0 0 7px 8px;}
+.layerArea .infoArea .comment li:last-child { padding-bottom:0;}
+.layerArea:after{ content:""; display:block; clear:both;}
+
+
+/* ######  2019 End */
+
+/* ######  2020-01-15 Start */
+
+.wid30 { width:30px;}
+.wid35 { width:35px;}
+.wid55 { width:55px;}
+.wid95 { width:95px;}
+
+#Content .PageTitleArea .h4Tab5line02 { position:relative; border-bottom:solid 1px #0087cf; display:table;}
+#Content .PageTitleArea .h4Tab5line02 li { width:240px; vertical-align:middle; display:table-cell;}
+#Content .PageTitleArea .h4Tab5line02 li:last-child a { border-right:none; width:240px;}
+#Content .PageTitleArea .h4Tab5line02 li a { width:239px; height:49px; font-size:17px; color:#0087cf; font-weight:bold; border-right:solid 1px #0087cf; text-align:center; vertical-align:middle; display:table-cell;}
+#Content .PageTitleArea .h4Tab5line02 li a:hover { background:#fafafa;}
+#Content .PageTitleArea .h4Tab5line02 li a.show { background:#0087cf; color:#fff;}
+
+.searchBox .itemArea .item02 { background:url(../images/btn/bul_searchitem01.png) no-repeat left center; padding-left:10px; color:#0087cf; font-size:16px; font-weight:bold; width:112px; display:inline-block;}
+
+.searchBox .timecateSelFix { position:relative; width:100%; margin:0 auto; display:table; text-align:center; border-bottom:solid 1px #e3e3e3; padding:13px 0 30px 0;}
+.searchBox .timecateSelFix .list { margin:0 auto; display:table; font-size:0; line-height:normal;}
+.searchBox .timecateSelFix .list li { margin-top:15px; margin-right:6px; display:inline-block;}
+.searchBox .timecateSelFix .list li:last-child { margin-right:0;}
+.searchBox .timecateSelFix .list li a { background:#939393; padding:0 15px; width:136px; height:40px; font-size:15px; color:#fff; text-align:center; vertical-align:middle; display:table-cell; -webkit-border-radius:9px; -moz-border-radius:9px; border-radius:9px;}
+.searchBox .timecateSelFix .list li a:hover { background:#004685;}
+.searchBox .timecateSelFix .list li a.show { background:#004685; color:#fff;}
+
+
+.searchitemBox { position:relative; background:#f2f2f2; border:solid 1px #e3e3e3; font-size:16px; text-align:left; line-height:100%;}
+.searchitemBox strong { position:absolute; top:0; left:0; background:#fff; padding:15px 20px; color:#004685;}
+.searchitemBox .info { margin-left:120px; display:table;}
+.searchitemBox .info li { padding:15px 25px 15px 0; display:table-cell;}
+.searchitemBox .info li span { color:#0087cf;}
+
+.resultList_ty02 td .openTxt02 { position:relative; padding:20px; background:#fafafa; color:#555; font-size:15px; text-align:left;}
+.resultList_ty02 td .openTxt02 ul { width:100%; border-bottom:solid 1px #e3e3e3; display:table;}
+.resultList_ty02 td .openTxt02 ul:last-child { border-bottom:none;}
+.resultList_ty02 td .openTxt02 ul li { padding:7px 10px; display:table-cell;}
+.resultList_ty02 td .openTxt02 ul li:first-child { width:200px; color:#004685; font-weight:bold;}
+
+.resultList_ty02 td .openTxt03 { position:relative; padding:20px; color:#555; font-size:15px; text-align:left;}
+.resultList_ty02 td .openTxt03 ul { width:100%; border-bottom:solid 1px #e3e3e3; display:table;}
+.resultList_ty02 td .openTxt03 ul:last-child { border-bottom:none;}
+.resultList_ty02 td .openTxt03 ul li { padding:7px 10px; display:table-cell;}
+.resultList_ty02 td .openTxt03 ul li:first-child { width:170px; color:#004685; font-weight:bold;}
+
+
+/* ######  2020-01-15 End */
