@@ -30,11 +30,8 @@ function subMenuControl() {
     e.preventDefault(); // 링크 기본 동작 방지
     e.stopPropagation(); // 이벤트 전파 중단
 
-    // 현재 클릭된 sub-menu-link의 remote-tab-item을 찾음
-    const currentTabItem = $(this).closest('.remote-tab-item');
-
     // 클릭된 remote-tab-item의 sub-menu 내에서만 active 제거
-    currentTabItem.find('.sub-menu-link').removeClass('active');
+    $('.sub-menu-link').removeClass('active');
     // 클릭된 sub-menu-link에 active 클래스 추가
     $(this).addClass('active');
   });
