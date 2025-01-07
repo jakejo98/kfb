@@ -26,12 +26,12 @@ function remoteControl() {
 }
 
 function subMenuControl() {
-  $('.sub-menu-link').on('click', function (e) {
+  $('.sub-menu-item').on('click', function (e) {
     e.preventDefault(); // 링크 기본 동작 방지
     e.stopPropagation(); // 이벤트 전파 중단
 
     // 클릭된 remote-tab-item의 sub-menu 내에서만 active 제거
-    $('.sub-menu-link').removeClass('active');
+    $('.sub-menu-item').removeClass('active');
     // 클릭된 sub-menu-link에 active 클래스 추가
     $(this).addClass('active');
   });
