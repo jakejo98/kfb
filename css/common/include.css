@@ -781,7 +781,7 @@
   height: 37px;
   display: flex;
   align-items: center;
-  padding-left: 16px; 
+  margin-left: 8px;
   transition: 0.25s all ease;
 }
 
@@ -789,8 +789,14 @@
   font-size: 15px;
   font-weight: bold;
   transition: 0.25s all ease;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  padding-left: 9px;
 }
 
-#admin-remote-tab .sub-menu-link.active {
+#admin-remote-tab .sub-menu-item.active .sub-menu-link {
   color: #143067;
+  border-left: 4px solid #0c1d3e;
+  padding-left: 5px;
 }

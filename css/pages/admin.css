@@ -14,3 +14,87 @@ a, a:hover, a:focus {
 .common-container.admin-page .common-section .common-section-inner {
   padding: 60px 40px;
 }
+
+/* login main */
+.admin-login-wrap {
+  display: flex;
+  height: 100vh;
+}
+
+.admin-login-inner {
+  padding-inline: 300px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-logo-img {
+  width: 143px;
+}
+
+.login-welcome-txt {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 56px;
+  margin-bottom: 36px;
+}
+
+.admin-input-id-area, .admin-input-pw-area {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px #D8D8D8;
+}
+
+.admin-login-input {
+  height: 69px;
+  padding: 18px 0 18px 10px;
+  font-size: 22px;
+  font-weight: 500;
+  width: 100%;
+  border: none;
+}
+
+.admin-login-input::placeholder {
+  color: #8E8E8E;
+}
+
+.admin-login-input:hover {
+  background: none;
+}
+
+.admin-login-input:focus {
+  outline: none;
+}
+
+.icon-admin-input {
+  width: 28px;
+  height: 28px;
+  margin-inline: 10px;
+}
+
+.icon-id {
+  background-image: url(../../img/icon/icon_admin_input_id.svg);
+}
+
+.icon-pw {
+  background-image: url(../../img/icon/icon_admin_input_pw.svg);
+}
+
+.admin-login-bg {
+  background-image: url(../../img/pages/admin/login_bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
