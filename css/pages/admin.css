@@ -19,6 +19,7 @@ a, a:hover, a:focus {
 .admin-login-wrap {
   display: flex;
   height: 100vh;
+  justify-content: space-between;
 }
 
 .admin-login-inner {
@@ -91,10 +92,224 @@ a, a:hover, a:focus {
   background-image: url(../../img/icon/icon_admin_input_pw.svg);
 }
 
+.admin-login-util-area {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 34px;
+}
+
+.admin-save-login {
+  display: none;
+}
+
+.admin-save-login + label {
+  cursor: pointer
+}
+
+.save-login-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.save-login-txt {
+  font-size: 18px;
+  color: #1D1D1D;
+  margin-left: 8px;
+}
+
+.admin-save-login + label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid #555555;
+}
+
+.admin-save-login:checked + label::before {
+  content: "";
+  background-color: #4374C9;
+  border: none;
+  background-image: url(../../img/icon/icon_admin_check.svg);
+  background-position: 50%;
+  background-size: 16px;
+}
+
+.search-id-pw-link {
+  margin-right: 10px;
+}
+
+.search-id-pw-link:hover .search-id-pw-txt {
+  color: #1B2E50;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.search-id-pw-txt {
+  font-size: 18px;
+  color: #1D1D1D;
+}
+
 .admin-login-bg {
   background-image: url(../../img/pages/admin/login_bg.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  width: 810px;
+}
+
+.login-btn-area {
+  width: 100%;
+  margin-top: 58px;
+}
+
+.btn-blue.login-btn {
+  padding: 0 24px;
+  height: 64px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.btn-blue.login-btn span {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+/* 아이디/비밀번호 찾기 페이지 */
+.admin-modify-wrap {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   height: 100vh;
+}
+
+.admin-search-area {
+  width: 689px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.admin-user-modify-area {
+  width: 540px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.search-id-pw-title-area {
+  width: 100%;
+  height: 45px;
+}
+
+.search-id-pw-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2D2D2D;
+}
+
+.search-id-pw-info-txt, .search-id-pw-site-txt {
+  font-size: 15px;
+  color: #1D1D1D;
+}
+
+.admin-modify-wrap .search-input-title-area {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.search-input-left-area {
+  width: 160px;
+  height: 60px;
+  background-color: #F8F8F8;
+  z-index: -2;
+  position: relative;
+  padding: 24px 16px;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.search-input-left-area .search-title-txt {
+  font-size: 17px;
+  font-weight: bold;
+  color: #1D1D1D;
+}
+
+.search-input-title-area .search-input {
+  padding: 11px 18px;
+  border-radius: 8px;
+  border: 1px solid #8E8E8E;
+  height: 48px;
+  width: 200px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.search-input-title-area .search-input:focus {
+  outline: none;
+  background-color: #F8F8F8;
+}
+
+.search-input::placeholder {
+  font-size: 17px;
+  font-weight: 500;
+  color: #8E8E8E;
+}
+
+.search-input-title-area .search-select {
+  padding: 11px 44px 11px 18px;
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(../../img/icon/icon_select_arrow_down.svg) calc(100% - 18px) center no-repeat;
+  background-size: 24px;
+}
+
+.search-confirm-btn-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 76px;
+}
+
+.search-cancel-btn {
+  padding: 11px 16px;
+  border-radius: 8px;
+  height: 48px;
+}
+
+.search-confirm-btn {
+  padding: 11px 45px;
+  border-radius: 8px;
+  height: 48px;
+}
+
+th {
+  padding: 0
+}
+
+.table-b02 tr {
+  border-top: 1px solid #C6C6C6;
+  border-bottom: 1px solid #C6C6C6;
+  height: 60px;
+}
+
+.table-b02 th {
+  padding-inline: 16px;
+  background-color: #F8F8F8;
+  width: 160px;
+  text-align: right;
+}
+
+.table-b02 td {
+  padding-inline: 32px;
 }
