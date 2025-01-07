@@ -1037,12 +1037,12 @@ td {
   line-height: 1.5;
 }
 
-.table-b01 .th, .td {
+.table-b01 .th, .table-b01 .td {
   padding: 16px 12px;
   text-align: center;
 }
 
-.table-b01 th, td {
+.table-b01 th, .table-b01 td {
   border-bottom: solid 1px #D8D8D8;
   border-right: solid 1px #D8D8D8;
 }
