@@ -21,69 +21,85 @@
 <body>
   <!-- 메인 -->
   <main id="admin-main" class="common-section section-main">
-    <section class="admin-modify-wrap">
-      <div class="admin-user-modify-area">
-        <div class="search-input-title-area mt-20">
-          <table class="table-b02">
-            <tbody>
-              <tr>
-                <th>
-                  <span class="search-title-txt">아이디</span>
-                </th>
-                <td>
-                  <input type="text" class="search-input">
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  <span class="search-title-txt">은행명</span>
-                </th>
-                <td>
-                  <select name="bank-name" class="search-input search-select">
-                    <option value="iM뱅크(구 대구은행)">iM뱅크(구 대구은행)</option>
-                    <option value="iM뱅크(구 대구은행)">iM뱅크(구 대구은행)</option>
-                    <option value="iM뱅크(구 대구은행)">iM뱅크(구 대구은행)</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  <span class="search-title-txt">연락처</span>
-                </th>
-                <td>
-                  <input type="text" class="search-input" placeholder="02-1234-1234" style="width: 150px">
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  <span class="search-title-txt">휴대전화</span>
-                </th>
-                <td>
-                  <input type="text" class="search-input" placeholder="01012341234" style="width: 142px">
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  <span class="search-title-txt">사용레벨</span>
-                </th>
-                <td>
-                  <select name="user-level" class="search-input search-select" style="width: 160px">
-                    <option value="관리자">관리자</option>
-                    <option value="관리자">관리자</option>
-                    <option value="관리자">관리자</option>
-                  </select>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="search-confirm-btn-area" style="margin-top: 56px">
-          <button type="button" class="btn btn-bc-line search-cancel-btn">
-            <span>뒤로</span>
-          </button>
-          <button type="button" class="btn btn-blue search-confirm-btn ml-12">
-            <span>확인</span>
-          </button>
+    <section class="admin-login-wrap">
+      <!-- 팝업 -->
+      <div class="ly-pop-admin-wrap ly-pop-wrap active">
+        <div class="ly-pop">
+          <div class="ly-pop-header">
+            <button class="btn btn-icon-popup-close">
+              <span class="common-icon ty-20 icon-popup-close">
+                <span class="blind">팝업창 닫기</span>
+              </span>
+            </button>
+          </div>
+          <div class="ly-pop-main ly-admin-pop-main">
+            <section class="admin-modify-popup-wrap">
+              <div class="admin-user-modify-area">
+                <div class="search-input-title-area mt-20">
+                  <table class="table-b02">
+                    <tbody>
+                      <tr>
+                        <th>
+                          <span class="search-title-txt">아이디</span>
+                        </th>
+                        <td>
+                          <input type="text" class="search-input">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <span class="search-title-txt">은행명</span>
+                        </th>
+                        <td>
+                          <select name="bank-name" class="search-input search-select">
+                            <option value="iM뱅크(구 대구은행)">iM뱅크(구 대구은행)</option>
+                            <option value="iM뱅크(구 대구은행)">iM뱅크(구 대구은행)</option>
+                            <option value="iM뱅크(구 대구은행)">iM뱅크(구 대구은행)</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <span class="search-title-txt">연락처</span>
+                        </th>
+                        <td>
+                          <input type="text" class="search-input" placeholder="02-1234-1234" style="width: 150px">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <span class="search-title-txt">휴대전화</span>
+                        </th>
+                        <td>
+                          <input type="text" class="search-input" placeholder="01012341234" style="width: 142px">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <span class="search-title-txt">사용레벨</span>
+                        </th>
+                        <td>
+                          <select name="user-level" class="search-input search-select" style="width: 160px">
+                            <option value="관리자">관리자</option>
+                            <option value="관리자">관리자</option>
+                            <option value="관리자">관리자</option>
+                          </select>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="search-confirm-btn-area" style="margin-top: 56px">
+                  <button type="button" class="btn btn-bc-line search-cancel-btn">
+                    <span>뒤로</span>
+                  </button>
+                  <button type="button" class="btn btn-blue search-confirm-btn ml-12">
+                    <span>확인</span>
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </section>
