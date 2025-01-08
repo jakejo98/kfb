@@ -192,6 +192,18 @@ a, a:hover, a:focus {
   height: 100vh;
 }
 
+.ly-admin-pop-main {
+  padding: 0;
+}
+
+.admin-modify-popup-wrap {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .admin-search-area {
   width: 689px;
   display: flex;
@@ -319,9 +331,10 @@ th {
 }
 
 /* 어드민 팝업 */
-#admin-main .ly-pop-wrap {
+.ly-pop-admin-wrap {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  max-width: none;
 }
