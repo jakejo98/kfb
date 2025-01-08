@@ -13,8 +13,10 @@
   <link rel="stylesheet" href="../../css/common/common.css">
   <link rel="stylesheet" href="../../css/common/include.css">
   <link rel="stylesheet" href="../../css/pages/admin.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <!-- CDN -->
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <!-- Script -->
   <script type="module" src="../../js/script.js"></script>
 </head>
@@ -58,6 +60,76 @@
       <div class="admin-login-bg">
       </div>
     </section>
+    <!-- 팝업 -->
+    <div class="ly-pop-wrap active">
+      <div class="ly-pop">
+        <div class="ly-pop-header">
+          <button class="btn btn-icon-popup-close">
+            <span class="common-icon ty-20 icon-popup-close">
+              <span class="blind">팝업창 닫기</span>
+            </span>
+          </button>
+        </div>
+        <div class="ly-pop-main">
+          <div class="swiper popup-swiper">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <a href="#" class="swiper-link">
+                  <img src="../../img/popup/popup_slide_img_01.png" class="swiper-img" alt="스와이퍼 팝업 이미지1">
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="#" class="swiper-link">
+                  <img src="../../img/popup/popup_slide_img_02.png" class="swiper-img" alt="스와이퍼 팝업 이미지2">
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="#" class="swiper-link">
+                  <img src="../../img/popup/popup_slide_img_03.png" class="swiper-img" alt="스와이퍼 팝업 이미지3">
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="#" class="swiper-link">
+                  <img src="../../img/popup/popup_slide_img_04.png" class="swiper-img" alt="스와이퍼 팝업 이미지4">
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="#" class="swiper-link">
+                  <img src="../../img/popup/popup_slide_img_05.png" class="swiper-img" alt="스와이퍼 팝업 이미지5">
+                </a>
+              </li>
+            </ul>
+            <div class="swiper-button-next">
+              <span class="blind">스와이퍼 이전 페이지로 이동</span>
+            </div>
+            <div class="swiper-button-prev">
+              <span class="blind">스와이퍼 다음 페이지로 이동</span>
+            </div>
+            <div class="swiper-controls">
+              <div class="swiper-pagination"></div>
+              <div class="swiper-autoplay-toggle">
+                <button class="btn btn-swiper-control btn-swiper-pause active">
+                  <span class="common-icon ty-20 icon-popup-swiper-pause">
+                    <span class="blind">스와이퍼 정지</span>
+                  </span>
+                </button>
+                <button class="btn btn-swiper-control btn-swiper-start">
+                  <span class="common-icon ty-20 icon-popup-swiper-start">
+                    <span class="blind">스와이퍼 시작</span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ly-pop-footer">
+          <div class="pop-close">
+            <button class="btn btn-dismiss-today">오늘 하루 이 창을 열지 않음</button>
+            <button class="btn btn-popup-close">닫기</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 </body>
 </html>

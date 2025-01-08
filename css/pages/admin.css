@@ -16,6 +16,10 @@ a, a:hover, a:focus {
 }
 
 /* login main */
+.admin-main {
+  position: relative;
+}
+
 .admin-login-wrap {
   display: flex;
   height: 100vh;
@@ -312,4 +316,12 @@ th {
 
 .table-b02 td {
   padding-inline: 32px;
+}
+
+/* 어드민 팝업 */
+#admin-main .ly-pop-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

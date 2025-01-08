@@ -19,6 +19,7 @@ $(document).ready(function(){
   }
   if (currentFile.startsWith("admin")) {
     admin();
+    swiper();
   }
   
   // 로드 후 실행 함수 (공통)
