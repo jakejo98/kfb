@@ -515,6 +515,7 @@
 }
 
 #footer .footer-banner .footer-inner {
+  display: flex;
   box-sizing: border-box;
 }
 
@@ -552,16 +553,10 @@
   content: '';
 }
 
-#footer .footer-banner .footer-inner {
-  display: flex;
-}
-
 #footer .footer-banner-swiper {
   padding: 16px 0px;
   background-color: #F2F3F5;
 }
-
-
 
 @media screen and (min-width: 1200px) {
   #footer .footer-banner-swiper {
@@ -574,8 +569,8 @@
 }
 
 #footer .footer-banner-controls {
-  width: 105px;
   display: flex;
+  flex: 0 0 105px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -587,10 +582,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 3px;
   position: relative;
 }
 
 #footer .swiper-button-prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: auto;
+  left: auto;
+  width: 24px;
+  height: 24px;
   border: none;
   background-color: transparent;
 }
@@ -604,6 +608,14 @@
 }
 
 #footer .swiper-button-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: auto;
+  left: auto;
+  width: 24px;
+  height: 24px;
   border: none;
   background-color: transparent;
 }
@@ -629,6 +641,11 @@
   background-color: transparent;
 }
 
+#footer .swiper-autoplay-toggle {
+  width: 24px;
+  height: 24px;
+}
+
 #footer .btn-swiper-pause.active {
   display: block;
 }
@@ -643,16 +660,43 @@
   display: block;
 }
 
+#footer .footer-banner-category-link {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 23px;
+  border-radius: 8px;
+  padding: 4px 10px;
+  background-color: #FFF;
+}
+
 #footer .footer-info {
   padding: 48px 0px 80px 0px;
   background-color: #081329;
 }
 
+#footer .footer-info .footer-inner {
+  padding: 0px 22px;
+}
+
 #footer .footer-link-wrap {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1199px) {
+  #footer .footer-link-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #footer .footer-link-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 }
 
 #footer .footer-nav-list {
@@ -771,8 +815,8 @@
 
 #footer .footer-sns {
   position: absolute;
-  right: 0px;
-  bottom: 0px;
+  right: 22px;
+  bottom: 80px;
 }
 
 #footer .footer-sns-list {
