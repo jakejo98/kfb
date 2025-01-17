@@ -229,7 +229,7 @@ h4 { position:relative; letter-spacing:-0.04em;}
 .h5Area { position:relative; letter-spacing:-0.04em;}
 .h5Area h5 {background:url(../images/btn/h5_line.png) repeat-x left bottom; font-size:24px; color:#000; padding-bottom:5px; line-height:normal; display:inline-block;}
 
-h6 { position:relative; background:url(../images/btn/h6_bul.png) no-repeat center left; font-size:21px; color:#004685; padding-left:24px; margin-top:40px; letter-spacing:-0.06em; line-height:normal;}
+h6 { position:relative; background:url(../../img/kfb/h6_bul.png) no-repeat center left; font-size:21px; color:#004685; padding-left:24px; margin-top:40px; letter-spacing:-0.06em; line-height:normal;}
 .title_h7 { position:relative; margin:10px 0 5px 0; background:#e3e3e3; padding:5px 20px; font-size:16px; font-weight:bold; color:#000; line-height:normal; display:inline-block; -webkit-border-radius:14px; -moz-border-radius:14px; border-radius:14px;}
 .title_tableName { position:relative; text-align:center; font-size:15px; font-weight:bold; color:#000; margin-bottom:8px; line-height:1.5em;}
 .title_tableName_2 { position:relative; text-align:center; font-size:18px; font-weight:bold; color:#000; margin-bottom:8px; line-height:1.5em;}
@@ -621,6 +621,8 @@ h6 { position:relative; background:url(../images/btn/h6_bul.png) no-repeat cente
 .Resultitle .info .rightArea.vb { vertical-align:bottom;}
 .Resultitle .info .btnArea { vertical-align:middle; display:inline-block;;}
 .Resultitle .info .btnArea a.btn01 { border:solid 1px #7f7f7f; background:#939393; color:#fff; font-size:14px; padding:0 20px; height:26px; text-decoration:none; vertical-align:middle; display:table-cell;}
+/* 20250116 수정 */
+.Resultitle .info .btnArea a.btn01:hover {background-color:#004685 !important;}
 .Resultitle .info .btnArea a.btn02 { background:url(../images/btn/btnbul_go02.png) no-repeat 5px 5px #fff; border-bottom:solid 1px #004685; color:#004685; font-size:17px; font-weight:bold; padding:0 10px 3px 17px; text-decoration:none; text-align:left; vertical-align:middle; display:table-cell;}
 .Resultitle .info .btnArea a.btn02:hover { background:url(../images/btn/btnbul_go02.png) no-repeat 5px 5px #fff; color:#000;}
 .Resultitle .info .btnArea a.btn03 { border:solid 1px #7f7f7f; background:#939393; color:#fff; font-size:14px; padding:0 20px; height:26px; text-decoration:none; vertical-align:middle; display:table-cell;}
@@ -779,6 +781,9 @@ h6 { position:relative; background:url(../images/btn/h6_bul.png) no-repeat cente
 .resultList_ty01 td .openTxt01 .addTxt:last-child { border-bottom:none; padding-bottom:0;}
 .resultList_ty01 td .openTxt01 .addTxt .addTitle { font-size:16px; color:#000; font-weight:bold;}
 .resultList_ty01 td.pd0 {padding:0px;}
+/* 20250116 수정 */
+.resultList_ty01 th {background:#435985;border-color:#a1acc2;color:#FFF;}
+.resultList_ty01 th.item01 {background:#435985;}
 
 .resultList_ty02 { width:100%; margin:0 auto; text-align:center; border-top:solid 1px #0087cf;}
 .resultList_ty02 th { background:#e4f1f7; color:#404f57; padding:7px 10px; height:34px; border-bottom:solid 1px #0087cf; border-left:solid 1px #0087cf; font-size:15px; line-height:1.3em;}
@@ -793,6 +798,9 @@ h6 { position:relative; background:url(../images/btn/h6_bul.png) no-repeat cente
 .resultList_ty02 td .openTxt01 .addTxt:last-child { border-bottom:none; padding-bottom:0;}
 .resultList_ty02 td .openTxt01 .addTxt .addTitle { font-size:16px; color:#000; font-weight:bold;}
 .resultList_ty02 td.pd0 {padding:0px;}
+/* 20250116 수정 */
+.resultList_ty02 th { background:#435985;border-color:#a1acc2;color:#FFF;}
+.resultList_ty02 th.item01 {background:#435985;}
 
 .resultList_ty03 { width:100%; margin:0 auto; text-align:center; border-top:solid 1px #0087cf;}
 .resultList_ty03 th { background:#e4f1f7; font-weight:normal; color:#404f57; padding:7px 3px; border-bottom:solid 1px #0087cf; border-left:solid 1px #0087cf; font-size:13px; line-height:1.4em;}
@@ -806,6 +814,9 @@ h6 { position:relative; background:url(../images/btn/h6_bul.png) no-repeat cente
 .resultList_ty03 td .openTxt01 .addTxt:last-child { border-bottom:none; padding-bottom:0;}
 .resultList_ty03 td .openTxt01 .addTxt .addTitle { font-size:16px; color:#000; font-weight:bold;}
 .resultList_ty03 td.pd0 {padding:0px;}
+/* 20250116 수정 */
+.resultList_ty03 th { background:#435985;border-color:#a1acc2;color:#FFF;}
+.resultList_ty03 th.item01 {background:#435985;}
 
 .resultList_ty04 { width:100%; margin:0 auto; text-align:center; border-top:solid 1px #0087cf;}
 .resultList_ty04 th { background:#e4f1f7; color:#404f57; padding:7px 10px; height:34px; border-bottom:solid 1px #0087cf; border-left:solid 1px #0087cf; font-size:15px; line-height:1.3em;}
@@ -821,7 +832,9 @@ h6 { position:relative; background:url(../images/btn/h6_bul.png) no-repeat cente
 .resultList_ty04 td .openTxt01 .addTxt:last-child { border-bottom:none; padding-bottom:0;}
 .resultList_ty04 td .openTxt01 .addTxt .addTitle { font-size:16px; color:#000; font-weight:bold;}
 .resultList_ty04 td.pd0 {padding:0px;}
-
+/* 20250116 수정 */
+.resultList_ty04 th { background:#435985;border-color:#a1acc2;color:#FFF;}
+.resultList_ty04 th.item01 {background:#435985;}
 
 .resultList_ty05 { width:100%; margin:0 auto; text-align:center; border-top:solid 1px #0087cf;}
 .resultList_ty05 th { background:#e4f1f7; color:#404f57; padding:7px 10px; height:34px; border-bottom:solid 1px #0087cf; border-left:solid 1px #0087cf; font-size:15px; line-height:1.3em;}
@@ -837,7 +850,9 @@ h6 { position:relative; background:url(../images/btn/h6_bul.png) no-repeat cente
 .resultList_ty05 td .openTxt01 .addTxt:last-child { border-bottom:none; padding-bottom:0;}
 .resultList_ty05 td .openTxt01 .addTxt .addTitle { font-size:16px; color:#000; font-weight:bold;}
 .resultList_ty05 td.pd0 {padding:0px;}
-
+/* 20250116 수정 */
+.resultList_ty05 th { background:#435985;border-color:#a1acc2;color:#FFF;}
+.resultList_ty05 th.item01 {background:#435985;}
 
 .taCon_ty01 { width:100%; margin:0 auto; text-align:center; border-top:solid 1px #cccccc;}
 .taCon_ty01 th { background:#f7f7f7; color:#555; padding:7px 5px; height:26px; border-bottom:solid 1px #cccccc; border-right:solid 1px #cccccc; font-size:15px; line-height:1.3em;}
@@ -953,6 +968,8 @@ h6 { position:relative; background:url(../images/btn/h6_bul.png) no-repeat cente
 /* popup */
 .popupArea { position:relative; margin:0 auto;}
 .popupArea .close { background:#0087cf; text-align:right; font-size:0; line-height:normal;}
+/* 20250116 수정 */
+.popupArea .close { background:#435985;}
 .popupArea> .title { border-bottom:solid 1px #004685; font-size:22px; font-weight:bold; text-align:center; color:#004685; padding:30px 0; line-height:normal; letter-spacing:-0.05em;}
 .popupArea .info { line-height:1.9em;}
 .popupArea .usernoteArea { position:relative; margin:0 auto; width:740px; padding:30px; text-align:left;}
