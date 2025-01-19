@@ -51,7 +51,6 @@ function footerBannerSwiper() {
 
   if(swiperContainer) {
     var swiper = new Swiper(".footer-banner-swiper", {
-      slidesPerView: 7, 
       slidesPerGroup: 1, // 그룹으로 이동하는 슬라이드 개수
       autoplay: {
         delay: 2000, // 자동 재생 간격 2초
@@ -62,6 +61,17 @@ function footerBannerSwiper() {
         prevEl: ".swiper-button-prev",
       },
       loop: true,
+      breakpoints: {
+        1200: {
+          slidesPerView: 7,
+        },
+        768: {
+          slidesPerView: 5,
+        }, 
+        0: {
+          slidesPerView: 2,
+        }
+      }
     });
 
     $(pauseBtn).click(function(){
