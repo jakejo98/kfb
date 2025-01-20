@@ -10,7 +10,7 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,dd,form,fieldset,legend,input,button,select,textarea {margin:0; padding:0}
-html {overflow-y:scroll; font-family:'Nanum Gothic','³ª´®°íµñ','¸¼Àº °íµñ','Malgun Gothic','µ¸¿ò','dotum'; text-align:center; color:#222; font-size:16px; line-height:1.5em;}
+html {overflow-y:scroll; font-family:'Pretendard','³ª´®°íµñ','¸¼Àº °íµñ','Malgun Gothic','µ¸¿ò','dotum'; text-align:center; color:#222; font-size:16px; line-height:1.5em;}
 body {position:relative;width:100%;}
 fieldset,img,iframe {border:none;}
 dl,ul,ol, li {list-style:none;}
@@ -22,9 +22,9 @@ caption, legend { display:; text-indent:-10000px; font-size:0; line-height:norma
 label {cursor:pointer;}
 .blind {visibility:hidden; width:0; height:0; padding:0; overflow:hidden; line-height:0;}
 
-input { font-family:'Nanum Gothic','³ª´®°íµñ','¸¼Àº °íµñ','Malgun Gothic','µ¸¿ò','dotum'; color:#222; background:#fff; font-size:16px; border:solid 1px #c4c4c4; height:32px;}
-select { font-family:'Nanum Gothic','³ª´®°íµñ','¸¼Àº °íµñ','Malgun Gothic','µ¸¿ò','dotum'; color:#222; background:#fff; font-size:16px; border:solid 1px #c4c4c4; height:34px;}
-textarea { font-family:'Nanum Gothic','³ª´®°íµñ','¸¼Àº °íµñ','Malgun Gothic','µ¸¿ò','dotum'; color:#222; background:#fff; font-size:16px; border:solid 1px #c4c4c4;}
+input { font-family:'Pretendard','³ª´®°íµñ','¸¼Àº °íµñ','Malgun Gothic','µ¸¿ò','dotum'; color:#222; background:#fff; font-size:16px; border:solid 1px #c4c4c4; height:32px;}
+select { font-family:'Pretendard','³ª´®°íµñ','¸¼Àº °íµñ','Malgun Gothic','µ¸¿ò','dotum'; color:#222; background:#fff; font-size:16px; border:solid 1px #c4c4c4; height:34px;}
+textarea { font-family:'Pretendard','³ª´®°íµñ','¸¼Àº °íµñ','Malgun Gothic','µ¸¿ò','dotum'; color:#222; background:#fff; font-size:16px; border:solid 1px #c4c4c4;}
 input:hover, select:hover, textarea:hover { background:#fafafa;}
 
 img {max-width:100%}

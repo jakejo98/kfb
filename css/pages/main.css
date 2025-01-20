@@ -64,6 +64,11 @@
   position: relative;
 }
 
+.common-container.main-page a:link, .common-container.main-page a:visited, .common-container.main-page a:hover, .common-container.main-page a:focus, .common-container.main-page a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
 .common-container.main-page .common-section {
   display: flex;
   justify-content: center;
@@ -76,25 +81,14 @@
 
 .common-container.main-page .common-section .common-section-inner {
   position: relative;
+  width: 100%;
+  max-width: 1280px;
+  scale: 0.9;
 }
 
 .common-container.main-page .common-section .common-section-inner {
   scale: 0.9;
 } 
-
-@media screen and (max-width: 1400px) {
-  .common-container.main-page .common-section .common-section-inner {
-    width: 100%;
-    max-width: 1200px;
-  }
-}
-
-@media screen and (min-width: 1401px) {
-  .common-container.main-page .common-section .common-section-inner {
-    width: 100%;
-    max-width: 1280px;
-  }
-}
 
 /* 메인페이지 - 메인 */
 .common-container.main-page .common-section.section-main {
