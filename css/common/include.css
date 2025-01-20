@@ -504,7 +504,8 @@
   display: block;
 }
 
-#footer a:hover {
+#footer a:link, #footer a:visited, #footer a:hover, #footer a:focus, #footer a:active {
+  color: inherit;
   text-decoration: none;
 }
 
