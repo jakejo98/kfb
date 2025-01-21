@@ -95,6 +95,7 @@ select {
 
 select {
   word-wrap: normal;
+  -webkit-appearance: none;
 }
 
 button,

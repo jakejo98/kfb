@@ -48,24 +48,36 @@ function zoomControl() {
   const decBtn = $('.btn-header-zoom-out');
   const percent = $('.header-zoom-percent');
   const calPercent = 100;
-  let index = 1; // 초기 index 값
+  let index = parseFloat(localStorage.getItem('zoomLevel')) || 1; // Zoom 초기값 (localStorage에서 가져옴)
 
+  // 초기 Zoom 값 적용
+  $('body').css({
+    'zoom': index
+  });
+  $(percent).text(Math.round(index * calPercent) + "%");
+
+  // 확대 버튼 클릭 이벤트
   $(incBtn).click(function () {
     index += 0.05; // 0.05씩 증가
-    index = parseFloat(index.toFixed(2)); // 소수점 두 자리까지 고정
-    $('body').css({
-      'zoom': index
-    });
-    $(percent).text(Math.round(index * calPercent) + "%"); // 정수로 변환하여 출력
+    index = parseFloat(index.toFixed(2)); // 소수점 두 자리로 고정
+    updateZoom(index);
   });
 
+  // 축소 버튼 클릭 이벤트
   $(decBtn).click(function () {
     index -= 0.05; // 0.05씩 감소
-    index = parseFloat(index.toFixed(2)); // 소수점 두 자리까지 고정
-    $('body').css({
-      'zoom': index
-    });
-    $(percent).text(Math.round(index * calPercent) + "%"); // 정수로 변환하여 출력
+    index = parseFloat(index.toFixed(2)); // 소수점 두 자리로 고정
+    updateZoom(index);
   });
+
+  // Zoom 업데이트 함수
+  function updateZoom(newZoom) {
+    $('body').css({
+      'zoom': newZoom
+    });
+    $(percent).text(Math.round(newZoom * calPercent) + "%"); // Zoom 값을 %로 표시
+    localStorage.setItem('zoomLevel', newZoom); // Zoom 값 저장
+  }
 }
+
 
