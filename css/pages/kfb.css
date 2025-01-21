@@ -477,3 +477,448 @@
   background-color: #004685;
   color: #FFF;
 }
+
+/* 민원 신청 */
+#Content .contentWrap .contentArea .contents-title {
+  font-size: 39px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #1D1D1D;
+  height: 69px;
+}
+
+#Content .contentWrap .contentArea .complaint-list {
+  margin-top: 20px;
+}
+
+#Content .contentWrap .contentArea .complaint-list-item {
+  padding-top: 8px;
+  font-size: 16px;
+  color: #1D1D1D;
+  line-height: 1.5;
+  position: relative; /* ::before를 상대적으로 배치 */
+  padding-left: 20px; /* 아이템 내용 간격 조정 */
+}
+
+.complaint-list .complaint-list-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 24px;
+  background-image: url('../../img/icon/icon_list_head.svg');
+  background-size: cover; /* 이미지 크기 조정 */
+  background-repeat: no-repeat;
+}
+
+#Content .contentWrap .contentArea .bank-btn-area {
+  padding: 10px 15px;
+}
+
+#Content .contentWrap .contentArea .bank-btn-area .bank-btn-sub-area:last-child {
+  margin-top: 12px;
+}
+
+#Content .contentWrap .contentArea .bank-service-btn {
+  padding: 10px 18px;
+  border-radius: 100px;
+  background-color: #F8F8F8;
+  font-size: 14px;
+  font-weight: 600;
+  height: 41px;
+  margin-right: 12px;
+}
+
+#Content .contentWrap .contentArea .bank-service-btn:hover {
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.16);
+  color: #143067;
+  transition: 0.25s all ease;
+}
+
+#Content .contentWrap .contentArea .inquiry-area {
+  margin-top: 12px;
+  display: flex;
+  width: 100%;
+  gap: 12px;
+}
+
+#Content .contentWrap .contentArea .inquiry-box {
+  background-color: #F5F6FB;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+#Content .contentWrap .contentArea .inquiry-txt {
+  font-size: 16px;
+  color: #2D2D2D;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+/* 민원 버튼 */
+.btn-sky-line {
+  background-color: #FFFFFF;
+  border: solid 1px #4374C9;
+  border-radius: 8px;
+  height: 48px;
+  padding: 11px 16px;
+  color: #4374C9;
+}
+
+.btn-sky-line:hover {
+  background-color: #F5F6FB;
+}
+
+#Content .contentWrap .contentArea .btn-sky-line span {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.icon-goto {
+  background: url('../../img/icon/icon_goto.svg');
+}
+
+/* 민원 작성하러 가기 버튼 */
+#Content .contentWrap .contentArea .complaint-go-btn-area {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+#Content .contentWrap .contentArea .complaint-go-btn {
+  width: 320px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Content .contentWrap .contentArea .complaint-go-btn span {
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* 민원 폼 */
+#Content .contentWrap .contentArea .complaint-form-area {
+  margin-top: 20px;
+}
+
+#Content .contentWrap .contentArea .complaint-form-content {
+  border: 1px solid #C6C6C6;
+  padding: 48px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+#Content .contentWrap .contentArea .complaint-form-title-area {
+  height: 45px;
+  border-bottom: 2px solid #1D1D1D;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#Content .contentWrap .contentArea .complaint-form-title {
+  font-size: 22px;
+  font-weight: bold;
+  height: 33px;
+  margin-bottom: 12px;
+}
+
+#Content .contentWrap .contentArea .complaint-form-title-info {
+  display: flex;
+  align-items: center;
+}
+
+#Content .contentWrap .contentArea .complaint-form-title-info .title-info {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.essential {
+  color: #D50136;
+  font-size: 19px;
+  font-weight: bold;
+  height: 13px;
+}
+
+#Content .contentWrap .contentArea .input-title {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* 민원 input text */
+#Content .contentWrap .contentArea .complaint-input {
+  display: block;
+  border: solid 1px #8E8E8E;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  padding: 24px 18px;
+  height: 48px;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+#Content .contentWrap .contentArea .complaint-input:disabled {
+  background-color: #F8F8F8;
+}
+
+#Content .contentWrap .contentArea .complaint-input:disabled {
+  color: #8E8E8E;
+}
+
+#Content .contentWrap .contentArea .complaint-input-area {
+  display: flex;
+}
+
+#Content .contentWrap .contentArea .complaint-input-area .input-area {
+  display: flex;
+}
+
+/* 민원 : 본인인증 */
+#Content .contentWrap .contentArea .name-certification {
+  width: 160px;
+}
+
+#Content .contentWrap .contentArea .certification-btn {
+  padding: 11px 16px;
+  height: 48px;
+}
+
+#Content .contentWrap .contentArea .certification-btn span {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+  height: 26px;
+}
+
+/* 민원 : width */
+#Content .contentWrap .contentArea .w-320 {
+  width: 320px;
+}
+
+#Content .contentWrap .contentArea .w-100 {
+  width: 100%;
+}
+
+/* 민원 : 질문 박스 */
+#Content .contentWrap .contentArea .complaint-input-area.complaint-comment {
+  background-color: #F5F6FB;
+  padding: 24px;
+  border-radius: 12px;
+  display: block;
+}
+
+#Content .contentWrap .contentArea .complaint-input-area.complaint-comment .input-title {
+  margin-bottom: 24px;
+}
+
+#Content .contentWrap .contentArea .complaint-input-radio-area {
+  display: flex;
+  align-items: center;
+}
+
+#Content .contentWrap .contentArea .complaint-input-radio-label {
+  margin-left: 8px;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #1D1D1D;
+}
+
+#Content .contentWrap .contentArea .complaint-input-radio {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #8E8E8E;
+}
+
+#Content .contentWrap .contentArea .complaint-input-radio-area input[type="radio"]:checked {
+  background-color: #000;
+}
+
+/* 민원 : 라디오 박스 */
+#Content .contentWrap .contentArea .radio-box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#Content .contentWrap .contentArea .radio-box .complaint-input-radio-area {
+  width: 160px;
+}
+
+#Content .contentWrap .contentArea .radio-box .input-area {
+  margin-bottom: 20px;
+  align-items: start;
+}
+
+#Content .contentWrap .contentArea .radio-box .input-area:last-child {
+  display: block;
+}
+
+.icon-complaint-info {
+  background: url("../../img/icon/icon_complaint_info.svg")
+}
+
+#Content .contentWrap .contentArea .self-submit-info {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+
+#Content .contentWrap .contentArea .self-submit-info-txt {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* 민원 : textarea */
+#Content .contentWrap .contentArea .complaint-textarea {
+  padding: 24px 18px;
+  height: 200px;
+  resize: none;
+}
+
+/* 민원 : 파일 업로드 button */
+.icon-complaint-file-upload {
+  background: url("../../img/icon/icon_complaint_file_upload.svg");
+}
+
+/* 민원 : 파일 업로드 */
+#Content .contentWrap .contentArea .complaint-file-item {
+  padding: 8px 8px 8px 18px;
+  border-radius: 50px;
+  border: solid 1px #8E8E8E;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+#Content .contentWrap .contentArea .complaint-file-item span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-right: 20px;
+}
+
+#Content .contentWrap .contentArea .file-item-area {
+  align-items: center;
+}
+
+.icon-complaint-file-cancel {
+  background: url('../../img/icon/icon_complaint_file_cancel.svg');
+}
+
+/* 민원 : 버튼 */
+.btn-h48 {
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  height: 48px;
+}
+
+.btn-h64 {
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  height: 64px;
+}
+
+.btn-h64 span {
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.btn-h48 span {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+#Content .contentWrap .contentArea .l-btn {
+  padding: 0 16px;
+}
+
+#Content .contentWrap .contentArea .xl-btn {
+  padding: 0 24px;
+  border-radius: 8px;
+}
+
+.btn-blue:disabled {
+  background: #E4E4E4;
+  border: solid 1px #D8D8D8;
+  color: #717171;
+}
+
+.btn-bc-line:hover {
+  background-color: #F5F6FB;
+}
+
+/* 민원 : submit */
+#Content .contentWrap .contentArea .submit-area {
+  justify-content: center;
+  align-items: center;
+}
+
+#Content .contentWrap .contentArea .continue-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 민원 팝업 */
+.ly-pop-complaint-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: none;
+}
+
+.complaint-continue-area {
+  padding: 40px;
+  width: 698px;
+}
+
+.complaint-popup-wrap {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.complaint-continue-area .popup-title-area {
+  width: 100%;
+}
+
+.popup-title-area .popup-title {
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.ly-complaint-pop-main {
+  padding: 0;
+}
+
+.complaint-continue-pop-wrap {
+  height: 100vh;
+}

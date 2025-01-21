@@ -10,6 +10,7 @@ import { admin } from "./common/admin.js";
 
 $(document).ready(function(){
   const currentFile = window.location.pathname.split("/").pop();
+  const isMain = $('.section-main');
   // 가이드 조건문
   if(currentFile === "list.html") {
     list();
@@ -28,8 +29,9 @@ $(document).ready(function(){
     header();
     footer();
     remote();
-    // main.html 일 경우
-    if (currentFile === "main.html") {
+    
+    // Main
+    if (isMain) {
       main();
     }
     
