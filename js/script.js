@@ -10,17 +10,17 @@ import { admin } from "./common/admin.js";
 
 $(document).ready(function(){
   const currentFile = window.location.pathname.split("/").pop();
-  const isMain = $('.section-main');
   // 가이드 조건문
   if(currentFile === "list.html") {
     list();
   } else if(currentFile === "guide.html") {
     guide();
     swiper();
-  }
-  if (currentFile.startsWith("admin")) {
+  } else if (currentFile.startsWith("admin")) {
     admin();
     swiper();
+  } else if (currentFile.startsWith("main")) {
+    main();
   }
   
   // 로드 후 실행 함수 (공통)
@@ -29,11 +29,5 @@ $(document).ready(function(){
     header();
     footer();
     remote();
-    
-    // Main
-    if (isMain) {
-      main();
-    }
-    
   })
 })
