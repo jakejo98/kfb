@@ -19,9 +19,7 @@ $(document).ready(function(){
   } else if (currentFile.startsWith("admin")) {
     admin();
     swiper();
-  } else if (currentFile.startsWith("main")) {
-    main();
-  }
+  } 
   
   // 로드 후 실행 함수 (공통)
   loadFile(function(){
@@ -29,5 +27,8 @@ $(document).ready(function(){
     header();
     footer();
     remote();
+    if(currentFile.startsWith("main")) {
+      main();
+    }
   })
 })

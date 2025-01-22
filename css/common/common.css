@@ -607,6 +607,18 @@ body {
   display: block;
 }
 
+@media screen and (max-width: 1399px) {
+  .ly-pop-wrap.active {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .ly-pop-wrap.active {
+    display: block;
+  }
+}
+
 .ly-pop {
   border-radius: 8px;
   box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.2);
