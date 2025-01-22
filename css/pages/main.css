@@ -1,14 +1,22 @@
 /* 메인페이지 remote-tab */
-#remote-tab {
-  display: flex;
-  align-items: center;
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  width: 140px;
-  z-index: 10;
-  height: calc(100vh - 116px);
-  background-color: #4374C9;
+@media screen and (max-width: 1399px) {
+  #remote-tab {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #remote-tab {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 140px;
+    z-index: 10;
+    height: calc(100vh - 116px);
+    background-color: #4374C9;
+  }
 }
 
 #remote-tab.abs{
@@ -60,8 +68,16 @@
 }
 
 /* 메인페이지 공통 */
-.common-container.main-page {
-  position: relative;
+@media screen and (max-width: 1399px) {
+  .common-container.main-page {
+    padding: 104px 16px 80px 16px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page {
+    position: relative;
+  }
 }
 
 .common-container.main-page a:link, .common-container.main-page a:visited, .common-container.main-page a:hover, .common-container.main-page a:focus, .common-container.main-page a:active {
@@ -69,30 +85,54 @@
   text-decoration: none;
 }
 
-.common-container.main-page .common-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 116px 40px 0px 180px;
-  width: 100%;
-  height: 100vh;
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 116px 40px 0px 180px;
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section + .common-section {
+    margin-top: 48px;
+  }
 }
 
 .common-container.main-page .common-section .common-section-inner {
   position: relative;
-  width: 100%;
-  max-width: 1280px;
-  scale: 0.9;
 }
 
-.common-container.main-page .common-section .common-section-inner {
-  scale: 0.9;
-} 
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section .common-section-inner {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section .common-section-inner {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    scale: 0.9;
+  }
+}
 
 /* 메인페이지 - 메인 */
-.common-container.main-page .common-section.section-main {
-  background: url('../../img/pages/main/section_main_bg.jpg') no-repeat center center / cover;
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-main {
+    background: url('../../img/pages/main/section_main_bg.jpg') no-repeat center center / cover;
+  }
 }
 
 .common-container.main-page .common-section.section-main .section-heading-item {
