@@ -68,6 +68,16 @@
 }
 
 /* 메인페이지 공통 */
+.common-container.main-page * {
+  box-sizing: border-box;
+}
+
+.common-container.main-page .btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (max-width: 1399px) {
   .common-container.main-page {
     padding: 104px 16px 80px 16px;
