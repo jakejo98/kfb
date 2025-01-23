@@ -197,9 +197,9 @@ function finProdControl(){
 
     // 추후 실제 URL
     if(btnIndex === 0) {
-      $(faqLibraryMoreLink).attr('href', '자주하는 질문 페이지')
+      $(faqLibraryMoreLink).attr('href', '/minwon/faq.php')
     } else if(btnIndex === 1) {
-      $(faqLibraryMoreLink).attr('href', '자료실 페이지')
+      $(faqLibraryMoreLink).attr('href', '/finedu/data.php')
     }
   })
   
