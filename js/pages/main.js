@@ -1,10 +1,17 @@
-export function main() {
+export function commonMain() {
   swiperPopup();
-  fullPage();
+  // fullPage();
   quickMenuControl();
   quickSearchControl();
   rateFeeControl();
   finProdControl();
+}
+
+export function desktopMain(){
+}
+
+export function respondMain(){
+  
 }
 
 // 메인페이지 팝업창
@@ -126,6 +133,8 @@ function quickMenuControl() {
   const quickMenuBtn = $('.section-main .btn-quick-menu');
   const quickMenuAreaItem = $('.section-main .quick-menu-area-item');
   const isActive = 'active';
+  const v1 = 'radius_v1';
+  const v2 = 'radius_v2';
 
   btnTab();
 
@@ -139,17 +148,13 @@ function quickMenuControl() {
       $(secHeading).eq(btnIndex).addClass(isActive).siblings().removeClass(isActive);
 
       if (quickMenuBtnItem.eq(0).find(quickMenuBtn).hasClass(isActive)) {
-        quickMenuBtnItem.eq(1).find(quickMenuBtn).css('border-radius', '0px 16px 0px 0px');
+        quickMenuBtnItem.eq(1).find(quickMenuBtn).removeClass('radius_v2').addClass('radius_v1');
+      } else if(quickMenuBtnItem.eq(1).find(quickMenuBtn).hasClass(isActive)) {
+        quickMenuBtnItem.eq(1).find(quickMenuBtn).removeClass('radius_v1, radius_v2');
+      } else if(quickMenuBtnItem.eq(2).find(quickMenuBtn).hasClass(isActive)) {
+        quickMenuBtnItem.eq(1).find(quickMenuBtn).removeClass('radius_v1').addClass('radius_v2');
       }
-      else if (quickMenuBtnItem.eq(1).find(quickMenuBtn).hasClass(isActive)) {
-        quickMenuBtnItem.eq(1).find(quickMenuBtn).css('border-radius', '0px 0px 0px 0px');
-      }
-      else if (quickMenuBtnItem.eq(2).find(quickMenuBtn).hasClass(isActive)) {
-        quickMenuBtnItem.eq(1).find(quickMenuBtn).css('border-radius', '0px 0px 16px 0px');
-      }
-      else {
-        quickMenuBtnItem.eq(1).find(quickMenuBtn).css('border-radius', '');
-      }
+      
     })
   }
 }
