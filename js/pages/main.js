@@ -1,6 +1,6 @@
 export function commonMain() {
   swiperPopup();
-  // fullPage();
+  fullPage();
   quickMenuControl();
   quickSearchControl();
   rateFeeControl();
@@ -161,7 +161,7 @@ function quickMenuControl() {
 
 function quickSearchControl(){
   const searchBtn = $('.section-main .btn-quick-search-tab');
-  const searchFormItem = $('.section-main .quick-search-area-item')
+  const searchFormItem = $('.section-main .quick-search-item')
   const isActive = 'active';
 
   $(searchBtn).click(function(){
