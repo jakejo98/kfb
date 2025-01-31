@@ -1,6 +1,6 @@
 export function commonMain() {
   swiperPopup();
-  fullPage();
+  // fullPage();
   quickMenuControl();
   quickSearchControl();
   rateFeeControl();
