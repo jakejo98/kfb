@@ -435,6 +435,7 @@
 
 @media screen and (max-width: 1399px) {
   .common-container.main-page .common-section.section-main .quick-search-title {
+    margin-bottom: 20px;
     font-size: 20px;
     font-weight: 700;
     line-height: 30px;
@@ -477,18 +478,49 @@
   justify-content: center;
 }
 
-.common-container.main-page .common-section.section-main .quick-search-tab-item {
-  padding: 0px 12px;
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-main .quick-search-tab-item {
+    padding: 0px 6px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-main .quick-search-tab-item {
+    padding: 0px 12px;
+  }
 }
 
 .common-container.main-page .common-section.section-main .btn-quick-search-tab {
   position: relative;
-  padding: 0px 24px;
-  font-size: 22px;
   font-weight: 600;
-  line-height: 53px;
   color: #555555;
-  transition: 0.25s all ease;
+}
+
+@media screen and (max-width: 767px) {
+  .common-container.main-page .common-section.section-main .btn-quick-search-tab {
+    padding: 0px 12.8px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .common-container.main-page .common-section.section-main .btn-quick-search-tab {
+    padding: 0px 24px;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-main .btn-quick-search-tab {
+    font-size: 16px;
+    line-height: 44px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-main .btn-quick-search-tab {
+    font-size: 22px;
+    line-height: 53px;
+    transition: 0.25s all ease;
+  }
 }
 
 .common-container.main-page .common-section.section-main .btn-quick-search-tab::after {
@@ -504,9 +536,11 @@
   content: '';
 }
 
-.common-container.main-page .common-section.section-main .btn-quick-search-tab:hover {
-  font-weight: 700;
-  color: #1D1D1D;
+@media screen and (min-width: 1200px) {
+  .common-container.main-page .common-section.section-main .btn-quick-search-tab:hover {
+    font-weight: 700;
+    color: #1D1D1D;
+  }
 }
 
 .common-container.main-page .common-section.section-main .btn-quick-search-tab.active {
@@ -522,7 +556,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 16px;
+  margin: 16px 0px 0px 0px;
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-main .quick-search {
+    margin: 16px 0px 16px 0px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-main .quick-search {
+    margin: 16px 0px 0px 0px;
+  }
 }
 
 .common-container.main-page .common-section.section-main .quick-search-item {
