@@ -405,12 +405,24 @@
   align-items: center;
 }
 
-.common-container.main-page .common-section.section-main .quick-menu-title {
-  margin-top: 4px;
-  font-size: 17px;
-  font-weight: 500;
-  line-height: 20px;
-  text-align: center;
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-main .quick-menu-title {
+    padding: 7.5px 0px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 17px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-main .quick-menu-title {
+    margin-top: 4px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+  }
 }
 
 .common-container.main-page .common-section.section-main .quick-search-wrap {
@@ -552,23 +564,27 @@
   width: 100%;
 }
 
-.common-container.main-page .common-section.section-main .quick-search {
+.common-container.main-page .common-section.section-main .quick-search-select-wrap {
   display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 16px 0px 0px 0px;
 }
 
-@media screen and (max-width: 1399px) {
-  .common-container.main-page .common-section.section-main .quick-search {
-    margin: 16px 0px 16px 0px;
+@media screen and (max-width: 767px) {
+  .common-container.main-page .common-section.section-main .quick-search-select-wrap {
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
-@media screen and (min-width: 1400px) {
-  .common-container.main-page .common-section.section-main .quick-search {
-    margin: 16px 0px 0px 0px;
+@media screen and (min-width: 768px) {
+  .common-container.main-page .common-section.section-main .quick-search-select-wrap {
+    justify-content: center;
+    align-items: center;
   }
+}
+
+.common-container.main-page .common-section.section-main .quick-search-select-wrap {
+  margin: 16px 0px;
 }
 
 .common-container.main-page .common-section.section-main .quick-search-item {
@@ -580,41 +596,142 @@
 }
 
 .common-container.main-page .common-section.section-main .quick-search-form {
-  display: flex;
-  align-items: center;
-  margin-right: 16px;
+  display: flex;  
+}
+
+@media screen and (max-width: 767px) {
+  .common-container.main-page .common-section.section-main .quick-search-form {
+    width: calc(100% - 88px);
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .common-container.main-page .common-section.section-main .quick-search-form {
+    align-items: center;
+    margin-right: 16px;
+  }
 }
 
 .common-container.main-page .common-section.section-main .quick-search-select {
   display: block;
   position: relative;
-  width: 259px;
-  height: 60px;
-  padding: 14.5px 16px;
-  border: 2px solid #4374C9;
   border-radius: 8px;
   background: url('../../img/icon/icon_quick_search_select.svg') center right 16px / 24px 24px no-repeat;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 27px;
   color: #1D1D1D;
-  transition: 0.25s all ease;
 }
 
-.common-container.main-page .common-section.section-main .quick-search-select:hover {
-  box-shadow: 0px 0px 0px 4px rgba(67, 116, 201, 0.25);
+@media screen and (max-width: 767px) {
+  .common-container.main-page .common-section.section-main .quick-search-select {
+    width: 100%;
+    height: 48px;
+    padding: 11px 16px;
+    border: 1px solid #4374C9;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 26px;
+  }
 }
 
-.common-container.main-page .common-section.section-main .quick-search-select + .quick-search-select {
-  margin-left: 8px;
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-main .quick-search-select {
+    width: 240px;
+    height: 48px;
+    padding: 11px 16px;
+    border: 1px solid #4374C9;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 26px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-main .quick-search-select {
+    width: 259px;
+    height: 60px;
+    border: 2px solid #4374C9;
+    padding: 14.5px 16px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    transition: 0.25s all ease;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-main .quick-search-select:hover {
+    box-shadow: 0px 0px 0px 4px rgba(67, 116, 201, 0.25);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .common-container.main-page .common-section.section-main .quick-search-select + .quick-search-select {
+    margin-top: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .common-container.main-page .common-section.section-main .quick-search-select + .quick-search-select {
+    margin-left: 8px;
+  }
 }
 
 .common-container.main-page .common-section.section-main .btn-quick-search {
-  width: 60px;
-  height: 60px;
-  padding: 10px;
-  border-radius: 16px;
   background-color: #4374C9;
+}
+
+@media screen and (max-width: 767px) {
+  .common-container.main-page .common-section.section-main .btn-quick-search {
+    min-width: 80px;
+    height: 104px;
+    border-radius: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1399px){
+  .common-container.main-page .common-section.section-main .btn-quick-search {
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+    border-radius: 12px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .common-container.main-page .common-section.section-main .btn-quick-search .common-icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-main .btn-quick-search .common-icon.ty-40 {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-main .btn-quick-search {
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .common-container.main-page .common-section.section-main .btn-quick-search .btn-quick-search-txt {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #FFFFFF;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .common-container.main-page .common-section.section-main .btn-quick-search .btn-quick-search-txt {
+    display: none;
+  }
 }
 
 .common-container.main-page .common-section.section-main .ly-pop-wrap {
@@ -629,65 +746,143 @@
   background-color: #FFFFFF;
 }
 
-.common-container.main-page .common-section.section-rate-fee .section-heading {
-  margin-bottom: 38px;
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-rate-fee .section-heading {
+    margin-bottom: 20px;
+  }
 }
 
-.common-container.main-page .common-section.section-rate-fee .section-heading-title {
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 59px;
-  text-align: center;
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-rate-fee .section-heading {
+    margin-bottom: 38px;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-rate-fee .section-heading-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-rate-fee .section-heading-title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 59px;
+    text-align: center;
+  }
 }
 
 .common-container.main-page .common-section.section-rate-fee .rate-fee-area-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
 }
 
-.common-container.main-page .common-section.section-rate-fee .rate-fee-area-item {
-  width: calc((100% - 48px) / 3);
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-rate-fee .rate-fee-area-list {
+    gap: 12px;
+  }
 }
 
-.common-container.main-page .common-section.section-rate-fee .rate-fee-area-item:nth-of-type(-n+3) .rate-fee {
-  height: 380px;
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-rate-fee .rate-fee-area-list {
+    gap: 24px;
+  }
 }
 
-.common-container.main-page .common-section.section-rate-fee .rate-fee-area-item:nth-of-type(n+4):nth-child(-n+6) .rate-fee {
-  height: 320px;
+@media screen and (max-width: 767px) {
+  .common-container.main-page .common-section.section-rate-fee .rate-fee-area-item {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-rate-fee .rate-fee-area-item {
+    width: calc((100% - 12px) / 2);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-rate-fee .rate-fee-area-item {
+    width: calc((100% - 48px) / 3);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .common-container.main-page .common-section.section-rate-fee .rate-fee-area-item .rate-fee {
+    min-height: 211px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-rate-fee .rate-fee-area-item:nth-of-type(-n+4) .rate-fee {
+    height: 260px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-rate-fee .rate-fee-area-item:nth-of-type(-n+3) .rate-fee {
+    height: 366px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-rate-fee .rate-fee-area-item:nth-of-type(n+5):nth-child(-n+6) .rate-fee {
+    height: 211px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-rate-fee .rate-fee-area-item:nth-of-type(n+4):nth-child(-n+6) .rate-fee {
+    height: 286px;
+  }
 }
 
 .common-container.main-page .common-section.section-rate-fee .rate-fee-area-item:nth-of-type(n+1) .rate-fee::after {
-  background-image: url('../../img/icon/icon_rate_fee_piggy_bank.svg');
+  background: url('../../img/icon/icon_rate_fee_piggy_bank.svg') center/cover no-repeat;
 }
 
 .common-container.main-page .common-section.section-rate-fee .rate-fee-area-item:nth-of-type(n+2) .rate-fee::after {
-  background-image: url('../../img/icon/icon_rate_fee_rate_return.svg');
+  background: url('../../img/icon/icon_rate_fee_rate_return.svg') center/cover no-repeat;
 }
 
 .common-container.main-page .common-section.section-rate-fee .rate-fee-area-item:nth-of-type(n+3) .rate-fee::after {
-  background-image: url('../../img/icon/icon_rate_fee_bank_fee.svg');
+  background: url('../../img/icon/icon_rate_fee_bank_fee.svg') center/cover no-repeat;
 }
 
 .common-container.main-page .common-section.section-rate-fee .rate-fee-area-item:nth-of-type(n+4) .rate-fee::after {
-  background-image: url('../../img/icon/icon_rate_fee_donut_graph.svg');
+  background: url('../../img/icon/icon_rate_fee_donut_graph.svg') center/cover no-repeat;
 }
 
 .common-container.main-page .common-section.section-rate-fee .rate-fee-area-item:nth-of-type(n+5) .rate-fee::after {
-  background-image: url('../../img/icon/icon_rate_fee_retire_pension.svg');
+  background: url('../../img/icon/icon_rate_fee_retire_pension.svg') center/cover no-repeat;
 }
 
 .common-container.main-page .common-section.section-rate-fee .rate-fee-area-item:nth-of-type(n+6) .rate-fee::after {
-  background-image: url('../../img/icon/icon_rate_fee_elec_cal.svg');
+  background: url('../../img/icon/icon_rate_fee_elec_cal.svg') center/cover no-repeat;
 }
 
 .common-container.main-page .common-section.section-rate-fee .rate-fee {
   position: relative;
   width: 100%;
-  padding: 40px;
-  border-radius: 16px;
   background-color: #F5F6FB;
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-rate-fee .rate-fee {
+    padding: 20px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-rate-fee .rate-fee {
+    padding: 40px;
+    border-radius: 16px;
+  }
 }
 
 .common-container.main-page .common-section.section-rate-fee .rate-fee::after {
@@ -700,24 +895,77 @@
   content: '';
 }
 
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-rate-fee .rate-fee::after {
+    right: 20px;
+    bottom: 20px;
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-rate-fee .rate-fee::after {
+    width: 168px;
+    height: 168px;
+  }
+}
+
 .common-container.main-page .common-section.section-rate-fee .rate-fee-heading {
   display: flex;
   align-items: center;
 }
 
-.common-container.main-page .common-section.section-rate-fee .rate-fee-title {
-  margin-right: 12px;
-  font-size: 25px;
-  font-weight: 700;
-  line-height: 38px;
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-rate-fee .rate-fee-title {
+    margin-right: 6px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+  }
 }
 
-.common-container.main-page .common-section.section-rate-fee .rate-fee-box {
-  margin-top: 32px;
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-rate-fee .rate-fee-title {
+    margin-right: 12px;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 38px;
+  }
 }
 
-.common-container.main-page .common-section.section-rate-fee .rate-fee-box-item:not(:last-of-type) {
-  margin-bottom: 16px;
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-rate-fee .flag.flag-orange {
+    width: auto;
+    height: auto;
+    padding: 2.5px 8px;
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-rate-fee .rate-fee-box {
+    margin-top: 24px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-rate-fee .rate-fee-box {
+    margin-top: 32px;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-rate-fee .rate-fee-box-item:not(:last-of-type) {
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-rate-fee .rate-fee-box-item:not(:last-of-type) {
+    margin-bottom: 16px;
+  }
 }
 
 .common-container.main-page .common-section.section-rate-fee .rate-fee-box-link {
@@ -729,14 +977,28 @@
   display: inline-block;
   position: relative;
   margin-right: 2px;
-  font-size: 18px;
   font-weight: 700;
-  line-height: 27px;
-  transition: 0.2s all ease-out;
 }
 
-.common-container.main-page .common-section.section-rate-fee .rate-fee-box-link:hover {
-  color: #4374C9;
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-rate-fee .rate-fee-box-txt {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-rate-fee .rate-fee-box-txt {
+    font-size: 18px;
+    line-height: 27px;
+    transition: 0.2s all ease-out;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-rate-fee .rate-fee-box-link:hover {
+    color: #4374C9;
+  }
 }
 
 .common-container.main-page .common-section.section-rate-fee .icon-arrow-right-black {
@@ -748,37 +1010,85 @@
 }
 
 /* 메인페이지 - 금융 서비스 */
-.common-container.main-page .common-section.section-fin-svc {
-  background-color: #F2F3F5;
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-svc {
+    background-color: #F2F3F5;
+  }
 }
 
-.common-container.main-page .common-section.section-fin-svc .section-heading {
-  margin-bottom: 115px;
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-fin-svc .section-heading {
+    margin-bottom: 20px;
+  }
 }
 
-.common-container.main-page .common-section.section-fin-svc .section-heading-title {
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 59px;
-  text-align: center;
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-svc .section-heading {
+    margin-bottom: 115px;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-fin-svc .section-heading-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-svc .section-heading-title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 59px;
+    text-align: center;
+  }
 }
 
 .common-container.main-page .common-section.section-fin-svc .fin-svc-area-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
 }
 
-.common-container.main-page .common-section.section-fin-svc .fin-svc-area-item {
-  width: calc((100% - 48px) / 3);
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-fin-svc .fin-svc-area-list {
+    gap: 12px;
+  }
 }
 
-.common-container.main-page .common-section.section-fin-svc .fin-svc-area-item:nth-of-type(-n+1) .fin-svc {
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-svc .fin-svc-area-list {
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-fin-svc .fin-svc-area-item {
+    width: calc((100% - 12px) / 2);
+  }
+  
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-svc .fin-svc-area-item {
+    width: calc((100% - 48px) / 3);
+  }
+  
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-fin-svc .fin-svc-area-item:nth-of-type(1) {
+    display: none;
+  }
+}
+
+.common-container.main-page .common-section.section-fin-svc .fin-svc-area-item:nth-of-type(1) .fin-svc {
   position: relative;
   background-color: inherit;
 }
 
-.common-container.main-page .common-section.section-fin-svc .fin-svc-area-item:nth-of-type(-n+1) .fin-svc::after {
+.common-container.main-page .common-section.section-fin-svc .fin-svc-area-item:nth-of-type(1) .fin-svc::after {
   display: inline-block;
   position: absolute;
   top: 0px;
@@ -789,13 +1099,17 @@
   content: '';
 }
 
-.common-container.main-page .common-section.section-fin-svc .fin-svc-area-item:not(:nth-of-type(-n+1)) .fin-svc {
-  border: 2px solid transparent;
-  transition: 0.25s all ease;
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-svc .fin-svc-area-item:not(:nth-of-type(1)) .fin-svc {
+    border: 2px solid transparent;
+    transition: 0.25s all ease;
+  }
 }
 
-.common-container.main-page .common-section.section-fin-svc .fin-svc-area-item:not(:nth-of-type(-n+1)) .fin-svc:hover {
-  border: 2px solid #143067;
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-svc .fin-svc-area-item:not(:nth-of-type(1)) .fin-svc:hover {
+    border: 2px solid #143067;
+  }
 }
 
 .common-container.main-page .common-section.section-fin-svc .fin-svc {
@@ -804,24 +1118,66 @@
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  height: 272px;
-  padding: 32px 40px;
-  border-radius: 24px;
   background-color: #FFFFFF;
 }
 
-.common-container.main-page .common-section.section-fin-svc .fin-svc-heading-title {
-  margin-bottom: 20px;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 35px;
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-fin-svc .fin-svc {
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-fin-svc .fin-svc {
+    padding: 16px;
+    border: 2px solid #F2F3F5;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-svc .fin-svc {
+    height: 272px;
+    padding: 32px 40px;
+    border-radius: 24px;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-fin-svc .fin-svc-heading-title {
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-svc .fin-svc-heading-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 35px;
+  }
 }
 
 .common-container.main-page .common-section.section-fin-svc .fin-svc-heading-desc {
-  font-size: 17px;
   font-weight: 500;
-  line-height: 26px;
   color: #555555;
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-fin-svc .fin-svc-heading-desc {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-svc .fin-svc-heading-desc {
+    font-size: 17px;
+    line-height: 26px;
+  }
 }
 
 /* 메인페이지 - 소비자 정보 */

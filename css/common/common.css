@@ -804,8 +804,12 @@ body {
   background-image: url('../../img/icon/icon_category.svg');
 }
 
-.icon-category-close::after {
-  background-image: url('../../img/icon/icon_category_close.svg');
+.icon-category-close-black::after {
+  background-image: url('../../img/icon/icon_category_close_black.svg');
+}
+
+.icon-category-close-white::after {
+  background-image: url('../../img/icon/icon_category_close_white.svg');
 }
 
 .icon-footer-sns-facebook::after {
