@@ -122,6 +122,16 @@
     padding: 116px 40px 0px 180px;
     width: 100%;
     height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s all ease
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.active {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -619,6 +629,7 @@
   border-radius: 8px;
   background: url('../../img/icon/icon_quick_search_select.svg') center right 16px / 24px 24px no-repeat;
   color: #1D1D1D;
+  -webkit-appearance: none;
 }
 
 @media screen and (max-width: 767px) {
@@ -1188,50 +1199,126 @@
 .common-container.main-page .common-section.section-cons-info .common-section-inner {
   display: flex;
   flex-direction: column;
-  gap: 60px;
 }
 
-.common-container.main-page .common-section.section-cons-info .section-heading {
-  margin-bottom: 40px;
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-cons-info .common-section-inner {
+    gap: 48px;
+  }
 }
 
-.common-container.main-page .common-section.section-cons-info .section-heading-title {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 50px;
-  text-align: center;
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-cons-info .common-section-inner {
+    gap: 60px;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-cons-info .section-heading {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-cons-info .section-heading {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-cons-info .section-heading-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-cons-info .section-heading-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 50px;
+    text-align: center;
+  }
 }
 
 .common-container.main-page .common-section.section-cons-info .apply-civil-area-list {
   display: flex;
-  gap: 24px;
 }
 
-
-.common-container.main-page .common-section.section-cons-info .apply-civil-area-item:nth-of-type(1) {
-  width: 302px;
+@media screen and (max-width: 767px) {
+  .common-container.main-page .common-section.section-cons-info .apply-civil-area-list {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
 }
 
-.common-container.main-page .common-section.section-cons-info .apply-civil-area-item:nth-of-type(2) {
-  width: 411px;
+@media screen and (max-width: 767px) {
+  .common-container.main-page .common-section.section-cons-info .apply-civil-area-list::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-.common-container.main-page .common-section.section-cons-info .apply-civil-area-item:nth-of-type(3) {
-  width: 247.5px;
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-cons-info .apply-civil-area-list {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
 }
 
-.common-container.main-page .common-section.section-cons-info .apply-civil-area-item:nth-of-type(4) {
-  width: 247.5px;
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-cons-info .apply-civil-area-list {
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .common-container.main-page .common-section.section-cons-info .apply-civil-area-item {
+    min-width: 40%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-cons-info .apply-civil-area-item {
+    width: calc((100% - 12px) / 2);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-cons-info .apply-civil-area-item:nth-of-type(1) {
+    width: 302px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-cons-info .apply-civil-area-item:nth-of-type(2) {
+    width: 411px;
+  }
+  
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-cons-info .apply-civil-area-item:nth-of-type(3) {
+    width: 247.5px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-cons-info .apply-civil-area-item:nth-of-type(4) {
+    width: 247.5px;
+  }
 }
 
 .common-container.main-page .common-section.section-cons-info .apply-civil-area-item:nth-of-type(2) .apply-civil::after {
   display: inline-block;
   position: absolute;
+  top: 0px;
   right: 0px;
-  bottom: 0px;
-  width: 411px;
-  height: 194px;
-  background: url('../../img/icon/icon_apply_civil_wallet.svg');
+  width: 100%;
+  height: 100%;
+  background: url('../../img/icon/icon_apply_civil_wallet.svg') center/cover no-repeat;
   content: '';
 }
 
@@ -1241,19 +1328,43 @@
   justify-content: space-between;
   position: relative;
   width: 100%;
-  height: 194px;
-  padding: 32px 28px;
-  border-radius: 16px;
   background-color: #F5F6FB;
-  transition: 0.25s all ease;
+  gap: 24px
+}
+
+@media screen and (max-width: 767px) {
+  .common-container.main-page .common-section.section-cons-info .apply-civil {
+    height: 126px;
+    padding: 16px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-cons-info .apply-civil {
+    height: 142px;
+    padding: 24px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-cons-info .apply-civil {
+    height: 194px;
+    padding: 32px 28px;
+    border-radius: 16px;
+    transition: 0.25s all ease;
+  }
 }
 
 .common-container.main-page .common-section.section-cons-info .apply-civil-area-item:nth-of-type(1) .apply-civil {
   background-color: #365DA1;
 }
 
-.common-container.main-page .common-section.section-cons-info .apply-civil:hover {
-  scale: 1.05;
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-cons-info .apply-civil:hover {
+    scale: 1.05;
+  }
 }
 
 .common-container.main-page .common-section.section-cons-info .apply-civil-heading {
@@ -1263,9 +1374,21 @@
 
 .common-container.main-page .common-section.section-cons-info .apply-civil-heading-title {
   margin-right: 3px;
-  font-size: 22px;
   font-weight: 700;
-  line-height: 33px;
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-cons-info .apply-civil-heading-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-cons-info .apply-civil-heading-title {
+    font-size: 22px;
+    line-height: 33px;
+  }
 }
 
 .common-container.main-page .common-section.section-cons-info .apply-civil-area-item:nth-of-type(1) .apply-civil-heading-title {
@@ -1284,61 +1407,195 @@
 
 .common-container.main-page .common-section.section-cons-info .consumer-disclosure-area-list {
   display: flex;
-  gap: 24px;
 }
 
-.common-container.main-page .common-section.section-cons-info .consumer-disclosure-area-item {
-  width: calc((100% - 24px) / 2);
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-cons-info .consumer-disclosure-area-list {
+    gap: 12px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-cons-info .consumer-disclosure-area-list {
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-cons-info .consumer-disclosure-area-item {
+    width: calc((100% - 12px) / 2);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-cons-info .consumer-disclosure-area-item {
+    width: calc((100% - 24px) / 2);
+  }
 }
 
 .common-container.main-page .common-section.section-cons-info .consumer-disclosure-area-item .consumer-disclosure::after {
   display: inline-block;
   position: absolute;
-  right: 20px;
-  bottom: 0px;
-  width: 200px;
-  height: 200px;
   content: '';
 }
 
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-cons-info .consumer-disclosure-area-item .consumer-disclosure::after {
+    width: 124px;
+    height: 124px;
+    right: 0px;
+    bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-cons-info .consumer-disclosure-area-item .consumer-disclosure::after {
+    width: 200px;
+    height: 200px;
+    right: 20px;
+    bottom: 0px;
+  }
+}
+
 .common-container.main-page .common-section.section-cons-info .consumer-disclosure-area-item:nth-of-type(1) .consumer-disclosure::after {
-  background-image: url('../../img/icon/icon_consumer_disclosure_type.svg');
+  background: url('../../img/icon/icon_consumer_disclosure_type.svg') center/cover no-repeat;
 }
 
 .common-container.main-page .common-section.section-cons-info .consumer-disclosure-area-item:nth-of-type(2) .consumer-disclosure::after {
-  background-image: url('../../img/icon/icon_consumer_disclosure_company.svg');
+  background: url('../../img/icon/icon_consumer_disclosure_company.svg') center/cover no-repeat;
 }
 
 .common-container.main-page .common-section.section-cons-info .consumer-disclosure {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   flex-direction: column;
   position: relative;
   width: 100%;
-  height: 300px;
-  padding: 36px 40px;
-  border-radius: 24px;
-  background-color: #F5F6FB;
-  transition: 0.25s all ease;
+  background-color: #F5F6FB;  
 }
 
-.common-container.main-page .common-section.section-cons-info .consumer-disclosure:hover {
-  scale: 1.05;
+@media screen and (max-width: 767px) {
+  .common-container.main-page .common-section.section-cons-info .consumer-disclosure {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .common-container.main-page .common-section.section-cons-info .consumer-disclosure {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-cons-info .consumer-disclosure {
+    height: 220px;
+    padding: 24px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-cons-info .consumer-disclosure {
+    height: 300px;
+    padding: 36px 40px;
+    border-radius: 24px;
+    transition: 0.25s all ease;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .common-container.main-page .common-section.section-cons-info .consumer-disclosure-img-box {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .common-container.main-page .common-section.section-cons-info .consumer-disclosure-img-box {
+    display: none;
+  }
+}
+
+.common-container.main-page .common-section.section-cons-info .consumer-disclosure-area-item .consumer-disclosure-img-box::after {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  transform: translate(-50%, -50%);
+  content: '';
+}
+
+.common-container.main-page .common-section.section-cons-info .consumer-disclosure-area-item:nth-of-type(1) .consumer-disclosure-img-box::after {
+  background: url('../../img/icon/icon_consumer_disclosure_type.svg') center/cover no-repeat;
+}
+
+.common-container.main-page .common-section.section-cons-info .consumer-disclosure-area-item:nth-of-type(2) .consumer-disclosure-img-box::after {
+  background: url('../../img/icon/icon_consumer_disclosure_company.svg') center/cover no-repeat;
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-cons-info .consumer-disclosure:hover {
+    scale: 1.05;
+  }
 }
 
 .common-container.main-page .common-section.section-cons-info .consumer-disclosure-heading-title {
-  margin-bottom: 16px;
-  font-size: 26px;
   font-weight: 700;
-  line-height: 39px;
+}
+
+@media screen and (max-width: 767px) {
+  .common-container.main-page .common-section.section-cons-info .consumer-disclosure-heading-title  {
+    margin-bottom: 0px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-cons-info .consumer-disclosure-heading-title {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-cons-info .consumer-disclosure-heading-title {
+    margin-bottom: 16px;
+    font-size: 26px;
+    line-height: 39px;
+  }
 }
 
 .common-container.main-page .common-section.section-cons-info .consumer-disclosure-heading-desc {
-  font-size: 19px;
   font-weight: 500;
-  line-height: 29px;
   color: #555555;
+}
+
+@media screen and (max-width: 767px) {
+  .common-container.main-page .common-section.section-cons-info .consumer-disclosure-heading-desc {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-cons-info .consumer-disclosure-heading-desc {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-cons-info .consumer-disclosure-heading-desc {
+    font-size: 19px;
+    line-height: 29px;
+  }
 }
 
 /* 메인페이지 - 금융 교육센터 */
@@ -1352,17 +1609,53 @@
   justify-content: center;
   position: relative;
   width: 100%;
-  padding: 60px 0px;
   background-color: #FFFFFF;
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-wrap {
+    padding: 60px 0px;
+  }
 }
 
 .common-container.main-page .common-section.section-fin-edu .financial-education-area-list {
   display: flex;
-  gap: 24px;
 }
 
-.common-container.main-page .common-section.section-fin-edu .financial-education-area-item {
-  width: calc((100% - 48px) / 3);
+@media screen and (max-width: 767px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-area-list {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-area-list {
+    gap: 12px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-area-list {
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-area-item {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-area-item {
+    width: calc((100% - 24px) / 3);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-area-item {
+    width: calc((100% - 48px) / 3);
+  }
 }
 
 .common-container.main-page .common-section.section-fin-edu .financial-education {
@@ -1371,78 +1664,206 @@
   align-items: flex-start;
   flex-direction: column;
   width: 100%;
-  height: 290px;
-  padding: 36px 40px;
-  border-radius: 24px;
   background-color: #F5F6FB;
-  transition: 0.25s all ease;
 }
 
-.common-container.main-page .common-section.section-fin-edu .financial-education:hover {
-  scale: 1.05;
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education {
+    height: 200px;
+    padding: 24px;
+    border-radius: 10px;
+  }
 }
 
-.common-container.main-page .common-section.section-fin-edu .section-heading {
-  margin-bottom: 78px;
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education {
+    height: 290px;
+    padding: 36px 40px;
+    border-radius: 24px;
+    transition: 0.25s all ease;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education:hover {
+    scale: 1.05;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-fin-edu .section-heading {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-edu .section-heading {
+    margin-bottom: 78px;
+  }
 }
 
 .common-container.main-page .common-section.section-fin-edu .section-heading-title {
-  font-size: 42px;
   font-weight: 700;
-  line-height: 59px;
-  text-align: center;
+  text-align: center; 
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-fin-edu .section-heading-title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-edu .section-heading-title {
+    font-size: 42px;
+    line-height: 59px;
+  }
 }
 
 .common-container.main-page .common-section.section-fin-edu .financial-education-heading-title {
-  margin-bottom: 16px;
-  font-size: 26px;
   font-weight: 700;
-  line-height: 39px;
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-heading-title {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-heading-title {
+    margin-bottom: 16px;
+    font-size: 26px;
+    line-height: 39px;
+  }
 }
 
 .common-container.main-page .common-section.section-fin-edu .financial-education-heading-desc {
-  font-size: 19px;
   font-weight: 500;
-  line-height: 29px;
   color: #555555;
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-heading-desc {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-heading-desc {
+    font-size: 19px;
+    line-height: 29px;
+  }
 }
 
 .common-container.main-page .common-section.section-fin-edu .financial-education-banner-wrap {
   display: flex;
   justify-content: center;
   position: relative;
-  z-index: 2;
   width: 100%;
-  padding: 60px 0px 128px 0px;
-  background-color: #F2F3F5;
 }
 
-.common-container.main-page .common-section.section-fin-edu .financial-education-banner-wrap::before {
-  display: inline-block;
-  position: absolute;
-  top: 0px;
-  left: 50%;
-  z-index: -1;
-  width: 200%;
-  height: 100%;
-  background-color: #F2F3F5;
-  transform: translateX(-50%);
-  content: '';
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-banner-wrap {
+    margin-top: 48px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-banner-wrap {
+    z-index: 2;
+    padding: 60px 0px 128px 0px;
+    background-color: #F2F3F5;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-banner-wrap::before {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    z-index: -1;
+    width: 200%;
+    height: 100%;
+    background-color: #F2F3F5;
+    transform: translateX(-50%);
+    content: '';
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-banner-wrap .section-heading {
+    display: none;
+  }
 }
 
 .common-container.main-page .common-section.section-fin-edu .financial-education-banner-list {
   display: flex;
-  gap: 24px;
 }
 
-.common-container.main-page .common-section.section-fin-edu .financial-education-banner-item {
-  width: calc((100% - 48px) / 3);
+@media screen and (max-width: 767px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-banner-list {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-banner-list {
+    gap: 12px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-banner-list {
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-banner-item {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-banner-item {
+    width: calc((100% - 24px) / 3);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-banner-item {
+    width: calc((100% - 48px) / 3);
+  }
 }
 
 .common-container.main-page .common-section.section-fin-edu .financial-education-banner {
   position: relative;
+  height: 200px;
   border-radius: 16px;
   padding: 40px;
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-banner {
+    height: 140px;
+    border-radius: 10px;
+    padding: 24px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-banner {
+    height: 200px;
+    border-radius: 16px;
+    padding: 40px;
+  }
 }
 
 .common-container.main-page .common-section.section-fin-edu .financial-education-banner::after {
@@ -1453,8 +1874,19 @@
   z-index: 1;
   width: 100%;
   height: 100%;
-  border-radius: 16px;
   content: '';
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-banner::after {
+    border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-banner::after {
+    border-radius: 16px;
+  }
 }
 
 .common-container.main-page .common-section.section-fin-edu .financial-education-banner-item:nth-of-type(1) .financial-education-banner::after {
@@ -1488,10 +1920,22 @@
 .common-container.main-page .common-section.section-fin-edu .financial-education-banner-heading-desc {
   position: relative;
   z-index: 2;
-  font-size: 21px;
   font-weight: 700;
-  line-height: 29px;
   color: #FFFFFF;
+}
+
+@media screen and (max-width: 1399px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-banner-heading-desc {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .common-container.main-page .common-section.section-fin-edu .financial-education-banner-heading-desc {
+    font-size: 21px;
+    line-height: 29px;
+  }
 }
 
 /* 메인페이지 - 금융 상품안내 */
@@ -1548,7 +1992,7 @@
   z-index: 1;
   width: 100%;
   height: 100%;
-  background: url('../../img/icon/icon_financial_prouct_piggy_bank.svg') no-repeat center center / contain;
+  background: url('../../img/icon/icon_financial_prouct_piggy_bank.svg') center/cover no-repeat;
   content: '';
 }
 

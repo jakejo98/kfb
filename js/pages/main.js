@@ -8,11 +8,15 @@ export function commonMain() {
 export function desktopMain(){
   rateFeeControl();
   fullPage();
+  desktopConsBtnHandler();
+  desktopEduBtnHandler();
 }
 
 export function respondMain(){
   resetRateFeeControl();
   destroyFullPage();
+  respondConsBtnHandler();
+  respondEduBtnHandler();
 }
 
 // 메인페이지 팝업창
@@ -37,7 +41,6 @@ function swiperPopup() {
 }
 
 function fullPage() {
-  if (window.innerWidth <= 1399) return; // 모바일 및 태블릿에서는 실행 X
 
   const sections = Array.from(document.querySelectorAll('.common-section')).filter(section => 
     section.parentElement.classList.contains('main-page')
@@ -56,22 +59,32 @@ function fullPage() {
 
   function goToSection(index) {
     if (index < 0 || index >= sections.length) return;
-
-    sections.forEach((section, i) => 
-      section.classList.toggle('active', i === index)
-    );
-
+  
+    sections.forEach((section, i) => {
+      if (i === sections.length - 1) {
+        // 푸터에는 active 클래스 추가 X
+        section.classList.remove('active');
+      } else if (index === sections.length - 1 && i === sections.length - 2) {
+        // 마지막 섹션 유지 (푸터 이동 시에도)
+        section.classList.add('active');
+      } else {
+        section.classList.toggle('active', i === index);
+      }
+    });
+  
     links.forEach((link, i) => {
       link.classList.toggle('active', index === sections.length - 1 ? i === links.length - 1 : i === index);
     });
-
+  
     window.scrollTo({
       top: sections[index].offsetTop,
       behavior: 'smooth'
     });
-
+  
     currentSectionIndex = index;
   }
+  
+  
 
   // IntersectionObserver 설정
   const observer = new IntersectionObserver((entries) => {
@@ -243,7 +256,53 @@ function finProdControl(){
       $(faqLibraryMoreLink).attr('href', '/finedu/data.php')
     }
   })
-  
 }
 
+function desktopConsBtnHandler(){
+  const consumerBtn = $('.section-cons-info .btn-shortcut');
+  const consumerIcon = $('.section-cons-info .common-icon');
+  const typeSmall = 'ty-sm'
+  const typeLarge = 'ty-lg';
+  const ty18 = 'ty-18';
+  const ty24 = 'ty-24';
+
+  $(consumerBtn).removeClass(typeSmall).addClass(typeLarge);
+  $(consumerIcon).removeClass(ty18).addClass(ty24);
+}
+
+function respondConsBtnHandler(){
+  const consumerBtn = $('.section-cons-info .btn-shortcut');
+  const consumerIcon = $('.section-cons-info .common-icon');
+  const typeSmall = 'ty-sm'
+  const typeLarge = 'ty-lg';
+  const ty18 = 'ty-18';
+  const ty24 = 'ty-24';
+
+  $(consumerBtn).removeClass(typeLarge).addClass(typeSmall);
+  $(consumerIcon).removeClass(ty24).addClass(ty18);
+}
+
+function desktopEduBtnHandler(){
+  const eduBtn = $('.section-fin-edu .btn-shortcut');
+  const eduIcon = $('.section-cons-info .common-icon');
+  const typeSmall = 'ty-sm'
+  const typeLarge = 'ty-lg';
+  const ty18 = 'ty-18';
+  const ty24 = 'ty-24';
+
+  $(eduBtn).removeClass(typeSmall).addClass(typeLarge);
+  $(eduIcon).removeClass(ty18).addClass(ty24);
+}
+
+function respondEduBtnHandler(){
+  const eduBtn = $('.section-fin-edu .btn-shortcut');
+  const eduIcon = $('.section-cons-info .common-icon');
+  const typeSmall = 'ty-sm'
+  const typeLarge = 'ty-lg';
+  const ty18 = 'ty-18';
+  const ty24 = 'ty-24';
+
+  $(eduBtn).removeClass(typeLarge).addClass(typeSmall);
+  $(eduIcon).removeClass(ty24).addClass(ty18);
+}
 
