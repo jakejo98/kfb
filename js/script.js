@@ -2,7 +2,7 @@ import { loadFile } from "./common/include.js";
 import { swiper } from "./lib/swiper.js";
 import { list } from "./guide/list.js";
 import { guide } from "./guide/guide.js";
-import { header } from "./common/header.js";
+import { commonHeader, desktopHeader, respondHeader } from "./common/header.js";
 import { footer } from "./common/footer.js";
 import { remote } from "./common/remote.js";
 import { commonMain, desktopMain, respondMain } from "./pages/main.js";
@@ -24,8 +24,10 @@ function checkMain() {
   windowWidth = updateWidth();
   if(windowWidth > 1399) {
     desktopMain();
+    desktopHeader();
   } else {
     respondMain();
+    respondHeader();
   }
 }
 
@@ -45,7 +47,7 @@ $(document).ready(function(){
   // 로드 후 실행 함수 (공통)
   loadFile(function(){
     swiper();
-    header();
+    commonHeader();
     footer();
     remote();
     if(currentFile.startsWith("main")) {

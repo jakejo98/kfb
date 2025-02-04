@@ -1,8 +1,19 @@
-export function header(){
+export function commonHeader(){
+  zoomControl();
+  categoryControl();
+}
+
+export function desktopHeader(){
+  desktopHeaderBtnControl();
+  checkDesktopCategory();
   gnbControl();
   subMenuControl();
-  categoryControl();
-  zoomControl();
+}
+
+export function respondHeader(){
+  respondHeaderBtnControl();
+  checkRespondCategory();
+  resetGnbControl();
 }
 
 function gnbControl(){
@@ -12,6 +23,13 @@ function gnbControl(){
   $(gnbLink).click(function(){
     $(this).addClass(isActive).parent().siblings().find(gnbLink).removeClass(isActive);
   })
+}
+
+function resetGnbControl(){
+  const gnbLink = $('.header-gnb-link');
+  const isActive = 'active';
+
+  $(gnbLink).removeClass(isActive);
 }
 
 function subMenuControl(){
@@ -29,17 +47,57 @@ function subMenuControl(){
   })
 }
 
-function categoryControl(){
-  const category = $('.category-area');
+function desktopHeaderBtnControl(){
   const categoryActiveBtn = $('.btn-category');
   const categoryCloseBtn = $('.btn-category-close');
+  const isRespond = 'respond';
+  const isDesktop = 'desktop';
+
+  $(categoryActiveBtn).removeClass(isRespond).addClass(isDesktop);
+  $(categoryCloseBtn).removeClass(isRespond).addClass(isDesktop);
+}
+
+function respondHeaderBtnControl(){
+  const categoryActiveBtn = $('.btn-category');
+  const categoryCloseBtn = $('.btn-category-close');
+  const isRespond = 'respond';
+  const isDesktop = 'desktop';
+
+  $(categoryActiveBtn).removeClass(isDesktop).addClass(isRespond);
+  $(categoryCloseBtn).removeClass(isDesktop).addClass(isRespond);
+}
+
+function checkDesktopCategory(){
+  const categoryRespond = $('.category-area.respond')
+  $(categoryRespond).css('display', 'none');
+}
+
+function checkRespondCategory(){
+  const categoryDesktop = $('.category-area.desktop');
+  $(categoryDesktop).css('display', 'none');
+}
+
+function categoryControl(){
+  const categoryDesktop = $('.category-area.desktop');
+  const categoryRespond = $('.category-area.respond')
+  const categoryActiveBtn = $('.btn-category');
+  const categoryCloseBtn = $('.btn-category-close');
+  const isDesktop = 'desktop';
 
   $(categoryActiveBtn).click(function(){
-    $(category).fadeIn(500);
+    if($(this).hasClass(isDesktop)){
+      $(categoryDesktop).fadeIn(500);
+    } else {
+      $(categoryRespond).fadeIn(500);
+    }
   })
 
   $(categoryCloseBtn).click(function(){
-    $(category).fadeOut(500);
+    if($(this).hasClass(isDesktop)){
+      $(categoryDesktop).fadeOut(500);
+    } else {
+      $(categoryRespond).fadeOut(500);
+    }
   })
 }
 

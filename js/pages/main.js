@@ -1,17 +1,18 @@
 export function commonMain() {
   swiperPopup();
-  // fullPage();
   quickMenuControl();
   quickSearchControl();
-  rateFeeControl();
   finProdControl();
 }
 
 export function desktopMain(){
+  rateFeeControl();
+  fullPage();
 }
 
 export function respondMain(){
-  
+  resetRateFeeControl();
+  destroyFullPage();
 }
 
 // 메인페이지 팝업창
@@ -36,6 +37,8 @@ function swiperPopup() {
 }
 
 function fullPage() {
+  if (window.innerWidth <= 1399) return; // 모바일 및 태블릿에서는 실행 X
+
   const sections = Array.from(document.querySelectorAll('.common-section')).filter(section => 
     section.parentElement.classList.contains('main-page')
   );
@@ -84,29 +87,21 @@ function fullPage() {
         }
       }
     });
-  }, { threshold: 0.8 }); // 섹션의 절반 이상이 보일 때 트리거
+  }, { threshold: 0.8 });
 
   // 각 섹션에 Observer 연결
   sections.forEach(section => observer.observe(section));
 
+  // 네비게이션 클릭 이벤트 등록
   links.forEach((link, index) => {
-    link.addEventListener('click', (e) => {
+    link.addEventListener('click', function onClick(e) {
       e.preventDefault();
       goToSection(index);
     });
   });
 
-  window.addEventListener('wheel', (e) => {
-    const categoryArea = document.querySelector('.category-area');
-    const body = document.body;
-
-    if (categoryArea && window.getComputedStyle(categoryArea).display === 'block') {
-      body.style.overflow = 'hidden';
-      return;
-    } else {
-      body.style.overflow = 'visible';
-    }
-
+  // 휠 스크롤 이벤트 등록
+  function wheelHandler(e) {
     e.preventDefault();
     if (isScrolling) return;
 
@@ -122,9 +117,44 @@ function fullPage() {
     setTimeout(() => {
       isScrolling = false;
     }, 1000);
-  }, { passive: false });
+  }
+
+  window.addEventListener('wheel', wheelHandler, { passive: false });
 
   goToSection(0);
+
+  // fullPage 기능 해제 함수 내부에서 사용될 데이터 저장
+  fullPage._observer = observer;
+  fullPage._wheelHandler = wheelHandler;
+  fullPage._links = links;
+  fullPage._sections = sections;
+  fullPage._remoteTab = remoteTab;
+}
+
+function destroyFullPage() {
+  if (!fullPage._observer) return;
+
+  console.log("FullPage 기능 해제됨");
+
+  // Observer 해제
+  fullPage._observer.disconnect();
+
+  // 네비게이션 클릭 이벤트 제거
+  fullPage._links.forEach(link => link.replaceWith(link.cloneNode(true)));
+
+  // 휠 스크롤 이벤트 제거
+  window.removeEventListener('wheel', fullPage._wheelHandler);
+
+  // 클래스 제거
+  fullPage._sections.forEach(section => section.classList.remove('active'));
+  if (fullPage._remoteTab) fullPage._remoteTab.classList.remove('abs');
+
+  // 저장된 속성 제거
+  delete fullPage._observer;
+  delete fullPage._wheelHandler;
+  delete fullPage._links;
+  delete fullPage._sections;
+  delete fullPage._remoteTab;
 }
 
 function quickMenuControl() {
@@ -187,6 +217,12 @@ function rateFeeControl(){
   })
 }
 
+function resetRateFeeControl(){
+  const rateFeeLink = $('.section-rate-fee .rate-fee-box-link');
+
+  $(rateFeeLink).off('click mouseenter mouseleave');
+}
+
 function finProdControl(){
   const faqLibraryBtn = $('.section-fin-prod .btn-faq-library-tab');
   const faqLibraryItem = $('.section-fin-prod .faq-library-item');
@@ -209,3 +245,5 @@ function finProdControl(){
   })
   
 }
+
+
