@@ -7,6 +7,7 @@ import { footer } from "./common/footer.js";
 import { remote } from "./common/remote.js";
 import { commonMain, desktopMain, respondMain } from "./pages/main.js";
 import { admin } from "./common/admin.js";
+import { minwon } from "./pages/minwon.js";
 
 let windowWidth = 0;
 
@@ -66,6 +67,9 @@ $(document).ready(function(){
     if(currentFile.startsWith("main")) {
       commonMain();
       checkMain();
+    }
+    if(currentFile === "apply_write.php") {
+      minwon();
     }
   })
 })
