@@ -14,6 +14,7 @@ export function respondHeader(){
   respondCategoryControl();
   disableRespondCategory();
   respondCategoryHandler();
+  repondCategoryBlockLink();
 }
 
 function subMenuControl(){
@@ -195,5 +196,29 @@ function respondCategoryHandler(){
     $(prveBtn).click(function(){
       $(this).parent(thirdDepth).removeClass(isActive);
     })
+
+    $(thirdDepth).click(function(event){
+      let horizontalOffset = event.pageX;
+      
+      if(horizontalOffset <= 60 ) {
+        $(thirdDepth).removeClass(isActive);
+      }
+    })
   }
+}
+
+function repondCategoryBlockLink(){
+  const firstDepthLink = $('.category-area.respond .category-link');
+  const secondDepthLink = $('.category-area.respond .category-sub-link')
+  const isHasSubLink = 'has-sub-link'
+
+  $(firstDepthLink).click(function(event){
+    event.preventDefault();
+  })
+
+  $(secondDepthLink).click(function(event){
+    if($(this).hasClass(isHasSubLink)) {
+      event.preventDefault();
+    }
+  })
 }
