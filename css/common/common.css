@@ -745,6 +745,11 @@ body {
   height: 40px;
 }
 
+.common-icon.ty-60 {
+  width: 60px;
+  height: 60px;
+}
+
 .common-icon.ty-90 {
   width: 90px;
   height: 90px;
