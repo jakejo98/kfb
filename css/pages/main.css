@@ -67,6 +67,10 @@
   content: '';
 }
 
+#header + .main-page #header {
+  background-color: yellow;
+}
+
 /* 메인페이지 공통 */
 .common-container.main-page * {
   box-sizing: border-box;
@@ -103,7 +107,7 @@
 
 @media screen and (max-width: 1199px) { 
   .common-container.main-page {
-    padding: 104px 16px 80px 16px;
+    padding: 80px 16px 80px 16px;
   }
 }
 

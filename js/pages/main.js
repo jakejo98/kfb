@@ -7,7 +7,7 @@ export function commonMain() {
 
 export function desktopMain(){
   rateFeeControl();
-  fullPage();
+  // fullPage();
   desktopMainTabIconHandler();
   desktopConsBtnHandler();
   desktopEduBtnHandler();
@@ -16,7 +16,7 @@ export function desktopMain(){
 
 export function respondMain(){
   resetRateFeeControl();
-  destroyFullPage();
+  // destroyFullPage();
   respondMainTabIconHandler();
   respondConsBtnHandler();
   respondEduBtnHandler();

@@ -222,3 +222,35 @@ function repondCategoryBlockLink(){
     }
   })
 }
+
+export function headerPageHandler(){
+  isHeaderPage();
+  getHeaderPageTitle();
+
+  function isHeaderPage() {
+    const currentFile = window.location.pathname.split("/").pop();
+    const headerPage = $('.header-page-wrap');
+
+    if(!currentFile.startsWith("main")){
+      $(headerPage).css('display', 'flex');
+    } else {
+      $(headerPage).css('display', 'none');
+    }
+  }
+
+  function getHeaderPageTitle(){
+    const currentFile = window.location.pathname.split("/").pop();
+    const headerPageTitle = $('.header-page-wrap .header-page-title');
+
+    if(!currentFile.startsWith("main")) {
+      const getTitle = $('#bread-crumb .bread-crumb-list-item span.active').text();
+      $(headerPageTitle).text('').text(getTitle);
+    }
+  }
+}
+
+export function destroyHeaderPageHandler(){
+  const headerPage = $('.header-page-wrap');
+
+  $(headerPage).css('display', 'none');
+}

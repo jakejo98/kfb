@@ -131,7 +131,7 @@
 @media screen and (max-width: 1199px) {
   #header .header-gnb-wrap .header-inner {
     align-items: center;
-    padding: 10px 22px;
+    padding: 8px 10px;
   }
 }
 
@@ -161,22 +161,56 @@
   box-sizing: border-box;
 }
 
-#header .logo-wrap .logo-link {
-  height: 60px;
+@media screen and (max-width: 1199px) {
+  #header .logo-wrap .logo-link {
+    height: 40px;
+  }
 }
 
-#header .logo-img {
-  width: 140px;
-  height: 60px;
+@media screen and (min-width: 1200px) {
+  #header .logo-wrap .logo-link {
+    height: 60px;
+  }
 }
 
-#header .logo-wrap .logo-csp-link {
-  height: 60px;
+@media screen and (max-width: 1199px) {
+  #header .logo-img {
+    width: 94px;
+    height: 40px;
+  }
 }
 
-#header .logo-csp-img {
-  width: 110px;
-  height: 60px;
+@media screen and (min-width: 1200px) {
+  #header .logo-img {
+    width: 140px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  #header .logo-wrap .logo-csp-link {
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #header .logo-wrap .logo-csp-link {
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  #header .logo-csp-img {
+    width: 74px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #header .logo-csp-img {
+    width: 110px;
+    height: 60px;
+  }
 }
 
 #header .header-gnb-area {
@@ -732,6 +766,41 @@
   background-color: #E4E4E4;
   content: '';
 }
+
+@media screen and (max-width: 767px) {
+  #header .header-page-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 48px;
+    background-color: #F5F6FB;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #header .header-page-wrap {
+    display: none;
+  }
+}
+
+#header .header-page-wrap .header-page-title {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+#header .header-page-wrap .btn-header-page-prev {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+}
+
 
 /* footer */
 #footer a {

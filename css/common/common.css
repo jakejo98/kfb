@@ -954,6 +954,10 @@ body {
   background-image: url('../../img/icon/icon_admin_header_logout.svg');
 }
 
+.icon-header-page-prev::after {
+  background-image: url('../../img/icon/icon_header_page_prev.svg');
+}
+
 /* swiper */
 .ly-pop-wrap .ly-pop .ly-pop-main .popup-swiper {
   position: static;

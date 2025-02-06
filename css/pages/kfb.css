@@ -1,25 +1,70 @@
 /* bread-crumb */
 #bread-crumb {
   width: 100%;
-  height: 63px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 8px;
-  margin-top: 116px;
-  border-bottom: solid 1px #d8d8d8;
   box-sizing: border-box;
   font-family: 'Pretendard';
 }
 
+@media screen and (max-width: 767px) {
+  #bread-crumb {
+    margin-top: 114px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  #bread-crumb {
+    margin-top: 56px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  #bread-crumb {
+    border-bottom: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #bread-crumb {
+    border-bottom: solid 1px #d8d8d8;
+    margin-top: 116px;
+  }
+}
+
 .bread-crumb-list {
-  gap: 14px;
+  gap: 8px;
   display: flex;
   width: 100%;
   max-width: 1600px;
   padding: 12px 22px;
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 1199px) {
+  .bread-crumb-list {
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .bread-crumb-list {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .bread-crumb-list {
+    padding: 3px 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .bread-crumb-list {
+    padding: 12px 22px;
+  }
 }
 
 .bread-crumb-list-item .ellipse {
@@ -35,10 +80,25 @@
 }
 
 .bread-crumb-list-span {
-  font-size: 17px;
+  display: inline-block;
   font-weight: 500;
-  line-height: 1.5;
   color: #555555;
+}
+
+@media screen and (max-width: 1199px) {
+  .bread-crumb-list-span {
+    padding: 6px 0px 7px 0px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .bread-crumb-list-span {
+    padding: 6px 6px 7px 6px;
+    font-size: 17px;
+    line-height: 26px;
+  }
 }
 
 .bread-crumb-list-span.active {
@@ -54,6 +114,18 @@
   letter-spacing: 1px;
   box-sizing: border-box;
   font-family: 'Pretendard' !important;
+}
+
+@media screen and (max-width: 1199px) {
+  #remote-wrap {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #remote-wrap {
+    display: block;
+  }
 }
 
 #remote-wrap a:link, #remote-wrap a:visited, #remote-wrap a:hover, #remote-wrap a:focus, #remote-wrap a:active {
@@ -172,6 +244,10 @@
   box-sizing: border-box;
 }
 
+#Content .contentWrap .contentScrollAreaWrap {
+  overflow-x: auto;
+}
+
 #Content .contentWrap .contentScrollArea {
   overflow-x: auto;
 }
@@ -193,11 +269,11 @@
 }
 
 #Content .contentWrap .contentArea .commentBox {
-  border: 1px solid #284679;
+  border: 1px solid #435985;
 }
 
 #Content .contentWrap .contentArea .commentBox .title {
-  color: #284679;
+  color: #435985;
   background: url('../../img/btn/bul_comment_title_1.png') no-repeat left top;
 }
 
@@ -300,6 +376,7 @@
 /* radio */
 #Content .contentWrap .contentArea .searchBox .itemArea .check {
   font-size: 17px;
+  line-height: 1.5;
 }
 
 /* 검색 버튼 */
@@ -316,6 +393,20 @@
 }
 
 /* 테이블 영역 */
+#Content .contentWrap .contentArea .data-container {
+  overflow-y: auto;
+  max-height: 550px;
+}
+
+#Content .contentWrap .contentArea .data-container table {
+  table-layout: auto;
+}
+
+#Content .contentWrap .contentArea .resultList_ty01 thead {
+  position: sticky;
+  top: 0px;
+}
+
 #Content .contentWrap .contentArea .resultList_ty01 th {
   border-bottom: solid 1px #a1acc2;
   border-left: solid 1px #a1acc2;
@@ -328,6 +419,11 @@
 
 #Content .contentWrap .contentArea .resultList_ty01 th a {
   color: #FFF !important;
+}
+
+#Content .contentWrap .contentArea .resultList_ty02 thead {
+  position: sticky;
+  top: 0px;
 }
 
 #Content .contentWrap .contentArea .resultList_ty02 th {
@@ -344,6 +440,11 @@
   color: #FFF !important;
 }
 
+#Content .contentWrap .contentArea .resultList_ty03 thead {
+  position: sticky;
+  top: 0px;
+}
+
 #Content .contentWrap .contentArea .resultList_ty03 th {
   border-bottom: solid 1px #a1acc2;
   border-left: solid 1px #a1acc2;
@@ -356,6 +457,11 @@
 
 #Content .contentWrap .contentArea .resultList_ty03 th a {
   color: #FFF !important;
+}
+
+#Content .contentWrap .contentArea .resultList_ty04 thead {
+  position: sticky;
+  top: 0px;
 }
 
 #Content .contentWrap .contentArea .resultList_ty04 th {
@@ -372,6 +478,11 @@
   color: #FFF !important;
 }
 
+#Content .contentWrap .contentArea .resultList_ty05 thead {
+  position: sticky;
+  top: 0px;
+}
+
 #Content .contentWrap .contentArea .resultList_ty05 th {
   border-bottom: solid 1px #a1acc2;
   border-left: solid 1px #a1acc2;
@@ -386,6 +497,11 @@
   color: #FFF !important;
 }
 
+#Content .contentWrap .contentArea .data-container .trust_goods .item {
+  position: sticky;
+  top: 0px;
+}
+
 /* commentBox1 */
 #Content .contentWrap .contentArea .commentBox1 {
   border: solid 1px #284679;
@@ -397,16 +513,31 @@
 }
 
 /* taCon */
+#Content .contentWrap .contentArea .taCon_ty01 thead {
+  position: sticky;
+  top: 0px;
+}
+
 #Content .contentWrap .contentArea .taCon_ty01 th {
   background-color: #435985;
   border-color: #a1acc2;
   color: #FFF;
 }
 
+#Content .contentWrap .contentArea .taCon_ty02 thead {
+  position: sticky;
+  top: 0px;
+}
+
 #Content .contentWrap .contentArea .taCon_ty02 th {
   background-color: #435985;
   border-color: #a1acc2;
   color: #FFF;
+}
+
+#Content .contentWrap .contentArea .taCon_ty03 thead {
+  position: sticky;
+  top: 0px;
 }
 
 #Content .contentWrap .contentArea .taCon_ty03 th {
@@ -513,25 +644,30 @@
   background-repeat: no-repeat;
 }
 
-#Content .contentWrap .contentArea .bank-btn-area {
+#Content .contentWrap .contentArea .bank-area {
   padding: 10px 15px;
 }
 
-#Content .contentWrap .contentArea .bank-btn-area .bank-btn-sub-area:last-child {
-  margin-top: 12px;
+#Content .contentWrap .contentArea .bank-area-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 12px;
 }
 
-#Content .contentWrap .contentArea .bank-service-btn {
+#Content .contentWrap .contentArea .bank-area-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px 18px;
   border-radius: 100px;
   background-color: #F8F8F8;
   font-size: 14px;
   font-weight: 600;
   height: 41px;
-  margin-right: 12px;
+  box-sizing: border-box;
 }
 
-#Content .contentWrap .contentArea .bank-service-btn:hover {
+#Content .contentWrap .contentArea .bank-area-link:hover {
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.16);
   color: #143067;
   transition: 0.25s all ease;
@@ -614,6 +750,10 @@
   margin-top: 20px;
 }
 
+#Content .contentWrap .contentArea .complaint-form-area * {
+  box-sizing: border-box;
+}
+
 #Content .contentWrap .contentArea .complaint-form-content {
   border: 1px solid #C6C6C6;
   padding: 48px;
@@ -688,6 +828,8 @@
 
 #Content .contentWrap .contentArea .complaint-input-area .input-area {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* 민원 : 본인인증 */
@@ -921,4 +1063,277 @@
 
 .complaint-continue-pop-wrap {
   height: 100vh;
+}
+
+/* Footer */
+#footer {
+  border-top: none !important;
+  padding-top: 0px !important;
+}
+
+/* 은행점포 유형 */
+#Content .contentWrap .sp_store_content .contentArea .PageTitleArea {
+  margin: 0px 0px 58px 0px;
+}
+
+/* 민원 - qna */
+#Content .contentWrap .contentArea .qna-area * {
+  box-sizing: border-box;
+}
+
+#Content .contentWrap .contentArea .qna-area {
+  margin-top: 20px;
+}
+
+/* 민원 - qna tab */
+#Content .contentWrap .contentArea .qna-tab-list {
+  display: flex;
+  align-items: center;
+}
+
+#Content .contentWrap .contentArea .qna-tab-list-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+#Content .contentWrap .contentArea .tab-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+}
+
+#Content .contentWrap .contentArea .tab-btn.active {
+  background-color: #555555;
+  transition: 0.25s all ease;
+}
+
+#Content .contentWrap .contentArea .tab-btn:hover {
+  background-color: #F2F3F5;
+  transition: 0.25s all ease;
+}
+
+#Content .contentWrap .contentArea .tab-btn.active:hover {
+  background-color: #555555;
+  text-decoration: underline;
+  text-underline-position : under;
+  text-decoration-color: #FFFFFF;
+  transition: 0.25s all ease;
+}
+
+#Content .contentWrap .contentArea .tab-btn .tab-btn-txt {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.3;
+  color: #555555;
+}
+
+#Content .contentWrap .contentArea .tab-btn.active .tab-btn-txt {
+  color: #FFFFFF;
+}
+
+/* tip */
+#Content .contentWrap .contentArea .tip-area {
+  display: flex;
+  align-items: center;
+}
+
+#Content .contentWrap .contentArea .tip-txt {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* qna - search */
+#Content .contentWrap .contentArea .search-area .search-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #143067;
+  letter-spacing: normal;
+}
+
+/* qna - input */
+
+#Content .contentWrap .contentArea .search-input-area {
+  display: flex;
+  position: relative;
+}
+
+#Content .contentWrap .contentArea .complaint-input.search-input {
+  height: 38px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #1D1D1D;
+  padding: 18px 11px;
+}
+
+#Content .contentWrap .contentArea .complaint-input.search-input:focus {
+  border: solid 1px #4374C9;
+  outline: solid 1px #4374C9;
+  box-shadow: 2px 2px 6px 0 rgba(42, 73, 127, 0.16);
+}
+
+#Content .contentWrap .contentArea .input-cancel-btn {
+  display: none;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 18px;
+  top: 6px;
+}
+
+.icon-input-cancel-btn {
+  background: url("../../img/icon/icon_input_cancel_btn.svg");
+}
+
+#Content .contentWrap .contentArea .complaint-input.search-select {
+  -webkit-appearance: none; /* 크롬 화살표 없애기 */
+  -moz-appearance: none;    /* 파이어폭스 화살표 없애기 */
+  appearance: none;         /* 화살표 없애기 */
+  background: url("../../img/icon/icon_select_arrow_down.svg") no-repeat #FFFFFF;
+  background-size: 20px; /* 화살표 크기를 20px로 설정 */
+  background-position: calc(100% - 8px) center; /* 오른쪽에서 8px 떨어지게 위치 조정 */
+  padding: 7.5px 46px 7.5px 14px;
+}
+
+/* qna - qna list */
+#Content .contentWrap .contentArea .qna-QA {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F5F6FB;
+  flex-shrink: 0; /* 크기 축소 방지 */
+  box-sizing: border-box;
+}
+
+#Content .contentWrap .contentArea .qna-q-list-item {
+  padding: 24px;
+  border: 1px solid #E4E4E4;
+  border-radius: 16px;
+}
+
+#Content .contentWrap .contentArea .qna-QA-section {
+  display: flex;
+}
+
+#Content .contentWrap .contentArea .qna-QA .qna-QA-type {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: normal;
+  font-weight: bold;
+}
+
+#Content .contentWrap .contentArea .qna-QA .qna-QA-type.q {
+  color: #365DA1;
+}
+
+#Content .contentWrap .contentArea .qna-QA .qna-QA-type.a {
+  color: #1D1D1D;
+}
+
+#Content .contentWrap .contentArea .qna-QA-txt-area {
+  margin-left: 10px;
+}
+
+#Content .contentWrap .contentArea .qna-q-category {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #717171;
+}
+
+#Content .contentWrap .contentArea .qna-q-txt {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #365DA1;
+}
+
+#Content .contentWrap .contentArea .qna-a-txt {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #555555;
+}
+
+#Content .contentWrap .contentArea .qna-a-txt-area {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.qna-a-txt-container {
+  display: flex; /* 텍스트와 버튼이 한 줄로 이어지도록 설정 */
+  width: 100%;
+}
+
+.more-button {
+  color: #4374C9;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 5px;
+  float: right;
+  margin-top: 48px;
+  shape-outside: border-box;
+  margin-right: 20px;
+}
+
+#Content .contentWrap .contentArea .qna-a-txt-area {
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+#Content .contentWrap .contentArea .qna-a-txt-area.expanded {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+#Content .contentWrap .contentArea .qna-a-txt-area.expanded .more-button {
+  float: unset;
+  margin-top: 0;
+}
+
+/* pagination */
+#Content .contentWrap .contentArea .sub-pagination-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Content .contentWrap .contentArea .sub-pagination-list {
+  display: flex;
+}
+
+#Content .contentWrap .contentArea .pagination-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Content .contentWrap .contentArea .pagination-btn.active {
+  border: 1px solid #365DA1;
+}
+
+#Content .contentWrap .contentArea .pagination-number {
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #555555;
+}
+
+#Content .contentWrap .contentArea .pagination-btn.active .pagination-number {
+  color: #365DA1;
 }
