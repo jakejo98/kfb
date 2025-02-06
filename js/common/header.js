@@ -1,35 +1,19 @@
 export function commonHeader(){
   zoomControl();
-  categoryControl();
+  subMenuControl();
 }
 
 export function desktopHeader(){
   desktopHeaderBtnControl();
-  checkDesktopCategory();
-  gnbControl();
-  subMenuControl();
+  desktopCategoryControl();
+  disableDesktopCategory();
 }
 
 export function respondHeader(){
   respondHeaderBtnControl();
-  checkRespondCategory();
-  resetGnbControl();
-}
-
-function gnbControl(){
-  const gnbLink = $('.header-gnb-link');
-  const isActive = 'active';
-
-  $(gnbLink).click(function(){
-    $(this).addClass(isActive).parent().siblings().find(gnbLink).removeClass(isActive);
-  })
-}
-
-function resetGnbControl(){
-  const gnbLink = $('.header-gnb-link');
-  const isActive = 'active';
-
-  $(gnbLink).removeClass(isActive);
+  respondCategoryControl();
+  disableRespondCategory();
+  respondCategoryHandler();
 }
 
 function subMenuControl(){
@@ -67,39 +51,70 @@ function respondHeaderBtnControl(){
   $(categoryCloseBtn).removeClass(isDesktop).addClass(isRespond);
 }
 
-function checkDesktopCategory(){
+function disableDesktopCategory(){
   const categoryRespond = $('.category-area.respond')
+  const respondFirstDepthLink = $('.category-area.respond .category-link');
+  const respondSecondDepth = $('.category-area.respond .category-sub');
+  const respondThirdDepth = $('.category-sub-detail');
+  const isActive = 'active';
+
   $(categoryRespond).css('display', 'none');
+  $(respondFirstDepthLink).off('click');
+  $(respondFirstDepthLink).removeClass(isActive);
+  $(respondSecondDepth).removeClass(isActive);
+  $(respondThirdDepth).removeClass(isActive);
 }
 
-function checkRespondCategory(){
+function disableRespondCategory(){
   const categoryDesktop = $('.category-area.desktop');
   $(categoryDesktop).css('display', 'none');
 }
 
-function categoryControl(){
-  const categoryDesktop = $('.category-area.desktop');
-  const categoryRespond = $('.category-area.respond')
-  const categoryActiveBtn = $('.btn-category');
-  const categoryCloseBtn = $('.btn-category-close');
-  const isDesktop = 'desktop';
+function desktopCategoryControl(){
+  const desktopCategory = $('.category-area.desktop');
+  const desktopActiveBtn = $('.btn-category.desktop');
+  const desktopCloseBtn = $('.btn-category-close.desktop');
+  const isDekstop = 'desktop';
 
-  $(categoryActiveBtn).click(function(){
-    if($(this).hasClass(isDesktop)){
-      $(categoryDesktop).fadeIn(500);
-    } else {
-      $(categoryRespond).fadeIn(500);
+  $(desktopActiveBtn).click(function(){
+    if($(this).hasClass(isDekstop)){
+      $(desktopCategory).fadeIn(500);
     }
   })
 
-  $(categoryCloseBtn).click(function(){
-    if($(this).hasClass(isDesktop)){
-      $(categoryDesktop).fadeOut(500);
-    } else {
-      $(categoryRespond).fadeOut(500);
+  $(desktopCloseBtn).click(function(){
+    if($(this).hasClass(isDekstop)) {
+      $(desktopCategory).css('display', 'none');
     }
   })
 }
+
+function respondCategoryControl(){ 
+  const respondCategory = $('.category-area.respond');
+  const respondActiveBtn = $('.btn-category.respond');
+  const respondCloseBtn = $('.btn-category-close.respond');
+  const respondFirstDepthLink = $('.category-area.respond .category-link');
+  const respondSecondDepth = $('.category-area.respond .category-sub');
+  const respondThirdDepth = $('.category-sub-detail');
+  const isRespond = 'respond';
+  const isActive = 'active';
+
+  $(respondActiveBtn).click(function(){
+    if($(this).hasClass(isRespond)) {
+      $(respondCategory).fadeIn(500);
+    }
+  })
+
+  $(respondCloseBtn).click(function(){
+    if($(this).hasClass(isRespond)) {
+      $(respondCategory).css('display', 'none');
+      $(respondFirstDepthLink).removeClass(isActive);
+      $(respondSecondDepth).removeClass(isActive);
+      $(respondThirdDepth).removeClass(isActive);
+    }
+  })
+}
+
 
 function zoomControl() {
   const incBtn = $('.btn-header-zoom-in');
@@ -138,4 +153,47 @@ function zoomControl() {
   }
 }
 
+function respondCategoryHandler(){
+  firstDepthHandler();
+  secondDepthHandler();
+  thirdDepthHandler();
 
+  function firstDepthHandler(){
+    const firstDepthLink = $('.category-area.respond .category-link');
+    const secondDepth = $('.category-area.respond .category-sub');
+    const isActive = 'active';
+  
+    $(firstDepthLink).click(function(){
+      if($(this).hasClass(isActive)) {
+        $(this).removeClass(isActive)
+        $(this).parent().find(secondDepth).removeClass(isActive);
+      } else {
+        $(this).addClass(isActive);
+        $(this).parent().find(secondDepth).addClass(isActive);
+      }
+    })
+  }
+
+  function secondDepthHandler(){
+    const secondDepthLink = $('.category-area.respond .category-sub-link');
+    const thirdDepth = $('.category-area.respond .category-sub-detail');
+    const hasChild = 'has-sub-link'
+    const isActive = 'active';
+
+    $(secondDepthLink).click(function(){
+      if($(this).hasClass(hasChild)) {
+        $(this).parent().find(thirdDepth).addClass(isActive);
+      }
+    })
+  }
+
+  function thirdDepthHandler(){
+    const thirdDepth = $('.category-area.respond .category-sub-detail');
+    const prveBtn = $('.category-area.respond .category-sub-detail .btn-category-sub-detail-prev');
+    const isActive = 'active';
+
+    $(prveBtn).click(function(){
+      $(this).parent(thirdDepth).removeClass(isActive);
+    })
+  }
+}

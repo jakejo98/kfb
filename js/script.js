@@ -18,15 +18,27 @@ function updateWidth(){
 $(window).resize(function(){
   windowWidth = updateWidth();
   checkMain();
+  checkHeader();
 });
-// 윈도우 너비에 조건부로 작동하는 함수
+
+// 메인페이지 반응형 제어
 function checkMain() {
   windowWidth = updateWidth();
+  // 기본 반응형 제어
   if(windowWidth > 1399) {
     desktopMain();
-    desktopHeader();
   } else {
     respondMain();
+  }
+}
+
+// 헤더 반응형 제어(1200px)
+function checkHeader(){
+  windowWidth = updateWidth();
+  // 기본 반응형 제어
+  if(windowWidth > 1199) {
+    desktopHeader();
+  } else {
     respondHeader();
   }
 }
@@ -48,6 +60,7 @@ $(document).ready(function(){
   loadFile(function(){
     swiper();
     commonHeader();
+    checkHeader();
     footer();
     remote();
     if(currentFile.startsWith("main")) {

@@ -8,15 +8,19 @@ export function commonMain() {
 export function desktopMain(){
   rateFeeControl();
   fullPage();
+  desktopMainTabIconHandler();
   desktopConsBtnHandler();
   desktopEduBtnHandler();
+  desktopFinProdIconHandler();
 }
 
 export function respondMain(){
   resetRateFeeControl();
   destroyFullPage();
+  respondMainTabIconHandler();
   respondConsBtnHandler();
   respondEduBtnHandler();
+  respondFinProdIconHandler();
 }
 
 // 메인페이지 팝업창
@@ -41,7 +45,6 @@ function swiperPopup() {
 }
 
 function fullPage() {
-
   const sections = Array.from(document.querySelectorAll('.common-section')).filter(section => 
     section.parentElement.classList.contains('main-page')
   );
@@ -170,6 +173,22 @@ function destroyFullPage() {
   delete fullPage._remoteTab;
 }
 
+function desktopMainTabIconHandler() {
+  const mainIcon = $('.section-main .quick-menu-wrap .common-icon');
+  const ty60 = 'ty-60';
+  const ty90 = 'ty-90';
+
+  $(mainIcon).removeClass(ty60).addClass(ty90);
+}
+
+function respondMainTabIconHandler(){
+  const mainIcon = $('.section-main .quick-menu-wrap .common-icon');
+  const ty60 = 'ty-60';
+  const ty90 = 'ty-90';
+
+  $(mainIcon).removeClass(ty90).addClass(ty60);
+}
+
 function quickMenuControl() {
   const secHeading = $('.section-main .section-heading-item');
   const quickMenuBtnItem = $('.section-main .quick-menu-tab-item');
@@ -256,6 +275,26 @@ function finProdControl(){
       $(faqLibraryMoreLink).attr('href', '/finedu/data.php')
     }
   })
+}
+
+function desktopFinProdIconHandler(){
+  const finprodItem = $('.financial-product-wrap .financial-product-item');
+  const finprodIcon = $('.common-icon');
+  const typeBlack = 'icon-arrow-right-black';
+  const typeWhite = 'icon-arrow-right-white';
+
+  $(finprodItem).eq(0).find(finprodIcon).removeClass(typeBlack).addClass(typeWhite);
+  $(finprodItem).eq(1).find(finprodIcon).removeClass(typeBlack).addClass(typeWhite);
+}
+
+function respondFinProdIconHandler(){
+  const finprodItem = $('.financial-product-wrap .financial-product-item');
+  const finprodIcon = $('.common-icon');
+  const typeBlack = 'icon-arrow-right-black';
+  const typeWhite = 'icon-arrow-right-white';
+
+  $(finprodItem).eq(0).find(finprodIcon).removeClass(typeWhite).addClass(typeBlack);
+  $(finprodItem).eq(1).find(finprodIcon).removeClass(typeWhite).addClass(typeBlack);
 }
 
 function desktopConsBtnHandler(){
