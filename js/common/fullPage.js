@@ -118,7 +118,7 @@ export function destroyFullPage() {
 
   // 휠 스크롤 이벤트 제거
   if (fullPage._wheelHandler) {
-    window.removeEventListener('wheel', fullPage._wheelHandler);
+    window.removeEventListener('wheel', fullPage._wheelHandler, { passive: false });
   }
 
   // 클래스 제거
