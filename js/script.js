@@ -2,6 +2,7 @@ import { loadFile } from "./common/include.js";
 import { swiper } from "./lib/swiper.js";
 import { list } from "./guide/list.js";
 import { guide } from "./guide/guide.js";
+import { fullPage, destroyFullPage } from "./common/fullPage.js";
 import { commonHeader, desktopHeader, respondHeader, headerPageHandler, destroyHeaderPageHandler } from "./common/header.js";
 import { footer } from "./common/footer.js";
 import { remote } from "./common/remote.js";
@@ -31,8 +32,10 @@ function checkMain() {
   // 기본 반응형 제어
   if(windowWidth > 1399) {
     desktopMain();
+    fullPage();
   } else {
     respondMain();
+    destroyFullPage();
   }
 }
 

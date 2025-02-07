@@ -400,11 +400,14 @@
 
 #Content .contentWrap .contentArea .data-container table {
   table-layout: auto;
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
 #Content .contentWrap .contentArea .resultList_ty01 thead {
   position: sticky;
   top: 0px;
+  z-index: 100;
 }
 
 #Content .contentWrap .contentArea .resultList_ty01 th {
@@ -424,6 +427,7 @@
 #Content .contentWrap .contentArea .resultList_ty02 thead {
   position: sticky;
   top: 0px;
+  z-index: 100;
 }
 
 #Content .contentWrap .contentArea .resultList_ty02 th {
@@ -440,9 +444,14 @@
   color: #FFF !important;
 }
 
+#Content .contentWrap .contentArea .resultList_ty02.stress_loan tr:not(:first-of-type) td {
+  border-right: none;
+}
+
 #Content .contentWrap .contentArea .resultList_ty03 thead {
   position: sticky;
   top: 0px;
+  z-index: 100;
 }
 
 #Content .contentWrap .contentArea .resultList_ty03 th {
@@ -462,6 +471,7 @@
 #Content .contentWrap .contentArea .resultList_ty04 thead {
   position: sticky;
   top: 0px;
+  z-index: 100;
 }
 
 #Content .contentWrap .contentArea .resultList_ty04 th {
@@ -478,9 +488,18 @@
   color: #FFF !important;
 }
 
+#Content .contentWrap .contentArea .resultList_ty04.loan_gap td.item03 {
+  border-right: none;
+}
+
+#Content .contentWrap .contentArea .resultList_ty04.loan_gap td:not(:last-of-type).item02 {
+  border-right: none;
+}
+
 #Content .contentWrap .contentArea .resultList_ty05 thead {
   position: sticky;
   top: 0px;
+  z-index: 100;
 }
 
 #Content .contentWrap .contentArea .resultList_ty05 th {
@@ -497,9 +516,31 @@
   color: #FFF !important;
 }
 
+#Content .contentWrap .contentArea .resultList_ty05.loan_reduce_new tr:nth-of-type(8n+2) td:last-of-type {
+  border-right: none;
+}
+
+#Content .contentWrap .contentArea .resultList_ty05.loan_reduce_new tr:nth-of-type(8n+3) td:last-of-type {
+  border-right: none;
+}
+
+#Content .contentWrap .contentArea .resultList_ty05.loan_reduce_new tr:nth-of-type(8n+4) td:last-of-type {
+  border-right: none;
+}
+
+#Content .contentWrap .contentArea .resultList_ty05.loan_reduce_new tr:nth-of-type(8n+6) td:last-of-type {
+  border-right: none;
+}
+
+#Content .contentWrap .contentArea .resultList_ty05.loan_reduce_new tr:nth-of-type(8n+7) td:last-of-type {
+  border-right: none;
+}
+
+
 #Content .contentWrap .contentArea .data-container .trust_goods .item {
   position: sticky;
   top: 0px;
+  z-index: 100;
 }
 
 /* commentBox1 */
@@ -516,6 +557,7 @@
 #Content .contentWrap .contentArea .taCon_ty01 thead {
   position: sticky;
   top: 0px;
+  z-index: 100;
 }
 
 #Content .contentWrap .contentArea .taCon_ty01 th {
@@ -527,6 +569,7 @@
 #Content .contentWrap .contentArea .taCon_ty02 thead {
   position: sticky;
   top: 0px;
+  z-index: 100;
 }
 
 #Content .contentWrap .contentArea .taCon_ty02 th {
@@ -538,6 +581,7 @@
 #Content .contentWrap .contentArea .taCon_ty03 thead {
   position: sticky;
   top: 0px;
+  z-index: 100;
 }
 
 #Content .contentWrap .contentArea .taCon_ty03 th {
@@ -545,6 +589,21 @@
   border-color: #a1acc2;
   color: #FFF;
 }
+
+#Content .contentWrap .contentArea .pan_table {
+  border-top: none;
+}
+
+#Content .contentWrap .contentArea .pan_table thead {
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+}
+
+#Content .contentWrap .contentArea .pan_table thead th {
+  border-top: 1px solid #555;
+}
+
 
 /* trust_goods */
 #Content .contentWrap .contentArea .trust_goods .item {

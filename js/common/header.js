@@ -53,6 +53,7 @@ function respondHeaderBtnControl(){
 }
 
 function disableDesktopCategory(){
+  const doc = $('html');
   const categoryRespond = $('.category-area.respond')
   const respondFirstDepthLink = $('.category-area.respond .category-link');
   const respondSecondDepth = $('.category-area.respond .category-sub');
@@ -64,14 +65,18 @@ function disableDesktopCategory(){
   $(respondFirstDepthLink).removeClass(isActive);
   $(respondSecondDepth).removeClass(isActive);
   $(respondThirdDepth).removeClass(isActive);
+  $(doc).css('overflow-y', 'scroll');
 }
 
 function disableRespondCategory(){
+  const doc = $('html');
   const categoryDesktop = $('.category-area.desktop');
   $(categoryDesktop).css('display', 'none');
+  $(doc).css('overflow-y', 'scroll');
 }
 
 function desktopCategoryControl(){
+  const doc = $('html');
   const desktopCategory = $('.category-area.desktop');
   const desktopActiveBtn = $('.btn-category.desktop');
   const desktopCloseBtn = $('.btn-category-close.desktop');
@@ -80,17 +85,20 @@ function desktopCategoryControl(){
   $(desktopActiveBtn).click(function(){
     if($(this).hasClass(isDekstop)){
       $(desktopCategory).fadeIn(500);
+      $(doc).css('overflow-y', 'hidden');
     }
   })
 
   $(desktopCloseBtn).click(function(){
     if($(this).hasClass(isDekstop)) {
       $(desktopCategory).css('display', 'none');
+      $(doc).css('overflow-y', 'scroll');
     }
   })
 }
 
 function respondCategoryControl(){ 
+  const doc = $('html');
   const respondCategory = $('.category-area.respond');
   const respondActiveBtn = $('.btn-category.respond');
   const respondCloseBtn = $('.btn-category-close.respond');
@@ -103,6 +111,7 @@ function respondCategoryControl(){
   $(respondActiveBtn).click(function(){
     if($(this).hasClass(isRespond)) {
       $(respondCategory).fadeIn(500);
+      $(doc).css('overflow-y', 'hidden');
     }
   })
 
@@ -112,6 +121,7 @@ function respondCategoryControl(){
       $(respondFirstDepthLink).removeClass(isActive);
       $(respondSecondDepth).removeClass(isActive);
       $(respondThirdDepth).removeClass(isActive);
+      $(doc).css('overflow-y', 'scroll');
     }
   })
 }
