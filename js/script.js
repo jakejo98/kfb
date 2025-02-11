@@ -10,6 +10,7 @@ import { commonMain, desktopMain, respondMain } from "./pages/main.js";
 import { admin } from "./common/admin.js";
 import { minwon } from "./pages/minwon.js";
 import { desktopKfb, respondKfb } from "./pages/kfb.js";
+import { disclosureData, resetDisclosureData } from "./pages/disclosureData.js";
 
 let windowWidth = 0;
 
@@ -23,7 +24,8 @@ $(window).resize(function(){
   checkMain();
   checkHeader();
   checkKfb();
-  checkHeaderPage()
+  checkHeaderPage();
+  checkDisclosureData();
 });
 
 // 메인페이지 반응형 제어
@@ -72,6 +74,15 @@ function checkHeaderPage(){
   }
 }
 
+function checkDisclosureData() {
+  windowWidth = updateWidth();
+  if(windowWidth < 768) {
+    disclosureData();
+  } else {
+    resetDisclosureData();
+  }
+}
+
 $(document).ready(function(){
   const currentFile = window.location.pathname.split("/").pop();
   // 가이드 조건문
@@ -94,6 +105,7 @@ $(document).ready(function(){
     remote();
     checkKfb();
     checkHeaderPage()
+    checkDisclosureData();
     if(currentFile.startsWith("main")) {
       commonMain();
       checkMain();
