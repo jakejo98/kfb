@@ -4,7 +4,7 @@ export function desktopKfb(){
 
 export function respondKfb(){
   respondBreadHandler();
-  timeCateSelExpanded();
+  timeCateSelToggle();
   getTimeCateSel();
 }
 
@@ -32,7 +32,7 @@ function respondBreadHandler(){
   }
 }
 
-function timeCateSelExpanded(){
+function timeCateSelToggle(){
   const timeCateSel = $('.timecateSel');
   const timeCateSelBtn = $('.btn-timeCateSel-filter')
   const timeCateSelList = $('.timecateSel .list');
@@ -40,7 +40,11 @@ function timeCateSelExpanded(){
 
   if(timeCateSel.length > 0) {
     $(timeCateSelBtn).click(function(){
-      $(this).parent().find(timeCateSelList).addClass(isActive);
+      if($(this).siblings(timeCateSelList).hasClass(isActive)) {
+        $(timeCateSelList).removeClass(isActive)
+      } else {
+        $(timeCateSelList).addClass(isActive);
+      }
     })
   } 
 }
