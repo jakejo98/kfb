@@ -1,5 +1,6 @@
 export function desktopKfb(){
   desktopBreadHandler();
+  resetTimeCateSelToggle();
 }
 
 export function respondKfb(){
@@ -33,28 +34,28 @@ function respondBreadHandler(){
 }
 
 function timeCateSelToggle(){
-  const timeCateSel = $('.timecateSel');
   const timeCateSelBtn = $('.btn-timeCateSel-filter')
   const timeCateSelList = $('.timecateSel .list');
   const isActive = 'active';
 
-  if(timeCateSel.length > 0) {
-    $(timeCateSelBtn).click(function(){
-      if($(this).siblings(timeCateSelList).hasClass(isActive)) {
-        $(timeCateSelList).removeClass(isActive)
-      } else {
-        $(timeCateSelList).addClass(isActive);
-      }
-    })
-  } 
+  $(timeCateSelBtn).click(function(){
+    if($(this).siblings(timeCateSelList).hasClass(isActive)) {
+      $(timeCateSelList).removeClass(isActive)
+    } else {
+      $(timeCateSelList).addClass(isActive);
+    }
+  })
+}
+
+function resetTimeCateSelToggle(){
+  const timeCateSelBtn = $('.btn-timeCateSel-filter');
+
+  $(timeCateSelBtn).off('click');
 }
 
 function getTimeCateSel(){
-  const timeCateSel = $('.timecateSel');
   const timeCateSelLink = $('.timecateSel .list li a.show').text();
   const timeCateSelBtn = $('.btn-timeCateSel-filter')
 
-  if(timeCateSel.length > 0) {
-    timeCateSelBtn.text(timeCateSelLink);
-  }
+  timeCateSelBtn.text(timeCateSelLink);
 }

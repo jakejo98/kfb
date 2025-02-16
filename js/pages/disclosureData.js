@@ -11,9 +11,9 @@ function filterHandler(){
   const selFilter = $('.selFilter');
   const selFilterBtn = $('.btn-selFilter');
   const selFilterTxt = $('.btn-selFilter-txt');
-  const bankArea = $('.bankSel');
-  const itemArea = $('.itemArea');
-  const btnArea = $('.btnArea');
+  const bankArea = $('.searchBox .bankSel');
+  const itemArea = $('.searchBox .itemArea');
+  const btnArea = $('.searchBox .btnArea');
   const isShow = 'show';
   const isHide = 'hide';
 
@@ -40,9 +40,9 @@ function resetFilterHandler(){
   const selFilter = $('.selFilter');
   const selFilterBtn = $('.btn-selFilter');
   const selFilterTxt = $('.btn-selFilter-txt');
-  const bankArea = $('.bankSel');
-  const itemArea = $('.itemArea');
-  const btnArea = $('.btnArea');
+  const bankArea = $('.searchBox .bankSel');
+  const itemArea = $('.searchBox .itemArea');
+  const btnArea = $('.searchBox .btnArea');
   const isShow = 'show';
   const isHide = 'hide';
 
