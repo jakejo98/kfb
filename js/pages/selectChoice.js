@@ -8,6 +8,7 @@ export function selectChoiceHandler(){
     $(expandedBtn).click(function(){
       if(!$(this).siblings(groupList).hasClass(isActive)){
         $(this).siblings(groupList).addClass(isActive)
+        $(this).parents('ul').siblings().find(groupList).removeClass(isActive);
       } else {
         $(this).siblings(groupList).removeClass(isActive)
       }
