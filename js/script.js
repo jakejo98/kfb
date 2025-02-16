@@ -11,6 +11,7 @@ import { admin } from "./common/admin.js";
 import { minwon } from "./pages/minwon.js";
 import { desktopKfb, respondKfb } from "./pages/kfb.js";
 import { disclosureData, resetDisclosureData } from "./pages/disclosureData.js";
+import { selectChoiceHandler, resetSelectChoiceHandler } from "./pages/selectChoice.js";
 
 let windowWidth = 0;
 
@@ -26,6 +27,7 @@ $(window).resize(function(){
   checkKfb();
   checkHeaderPage();
   checkDisclosureData();
+  checkSelectChoice();
 });
 
 // 메인페이지 반응형 제어
@@ -83,6 +85,15 @@ function checkDisclosureData() {
   }
 }
 
+function checkSelectChoice(){
+  windowWidth = updateWidth();
+  if(windowWidth < 1200) {
+    selectChoiceHandler();
+  } else {
+    resetSelectChoiceHandler();
+  }
+}
+
 $(document).ready(function(){
   const currentFile = window.location.pathname.split("/").pop();
   // 가이드 조건문
@@ -106,6 +117,7 @@ $(document).ready(function(){
     checkKfb();
     checkHeaderPage()
     checkDisclosureData();
+    checkSelectChoice();
     if(currentFile.startsWith("main")) {
       commonMain();
       checkMain();
